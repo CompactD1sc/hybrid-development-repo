@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<addonlist>
+    <addon name="xbmc-skins/skin.hybrid">
+        <localdir>D:\Repository\SourceFiles\skin.hybrid.dev</localdir>
+		<skipenglish>true</skipenglish>
+	</addon>
+</addonlist>
