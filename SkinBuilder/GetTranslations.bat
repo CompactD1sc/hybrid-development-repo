@@ -5,6 +5,6 @@
  Echo Downloading Translations
  ECHO ----------------------------------------
 
- START /B /WAIT D:\Repository\SkinBuilder\xbmc-langdload.exe D:\Repository\SkinBuilder\%1.xml
+ START /B /WAIT D:\Repository\trunk\SkinBuilder\xbmc-langdload.exe D:\Repository\trunk\SkinBuilder\%1.xml
  
   pause
