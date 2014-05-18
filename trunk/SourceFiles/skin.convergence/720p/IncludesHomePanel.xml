@@ -594,16 +594,16 @@
 			<control type="group">
 				<!-- Movies Playlist-->
 				<visible>
-					[Container(9000).HasFocus(1) + StringCompare(Window(home).Property(HomePlayListOne.Type),Movie)]|
-					[Container(9000).HasFocus(2) + StringCompare(Window(home).Property(HomePlayListTwo.Type),Movie)]|
-					[Container(9000).HasFocus(3) + StringCompare(Window(home).Property(HomePlayListThree.Type),Movie)]|
-					[Container(9000).HasFocus(4) + StringCompare(Window(home).Property(HomePlayListFour.Type),Movie)]|
-					[Container(9000).HasFocus(5) + StringCompare(Window(home).Property(HomePlayListFive.Type),Movie)]|
-					[Container(9000).HasFocus(6) + StringCompare(Window(home).Property(HomePlayListSix.Type),Movie)]|
-					[Container(9000).HasFocus(7) + StringCompare(Window(home).Property(HomePlayListSeven.Type),Movie)]|
-					[Container(9000).HasFocus(8) + StringCompare(Window(home).Property(HomePlayListEight.Type),Movie)]|
-					[Container(9000).HasFocus(9) + StringCompare(Window(home).Property(HomePlayListNine.Type),Movie)]|
-					[Container(9000).HasFocus(10) + StringCompare(Window(home).Property(HomePlayListTen.Type),Movie)]
+					[Container(9000).HasFocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Movie)]|
+					[Container(9000).HasFocus(2) + StringCompare(Window(Home).Property(HomePlayListTwo.Type),Movie)]|
+					[Container(9000).HasFocus(3) + StringCompare(Window(Home).Property(HomePlayListThree.Type),Movie)]|
+					[Container(9000).HasFocus(4) + StringCompare(Window(Home).Property(HomePlayListFour.Type),Movie)]|
+					[Container(9000).HasFocus(5) + StringCompare(Window(Home).Property(HomePlayListFive.Type),Movie)]|
+					[Container(9000).HasFocus(6) + StringCompare(Window(Home).Property(HomePlayListSix.Type),Movie)]|
+					[Container(9000).HasFocus(7) + StringCompare(Window(Home).Property(HomePlayListSeven.Type),Movie)]|
+					[Container(9000).HasFocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Movie)]|
+					[Container(9000).HasFocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Movie)]|
+					[Container(9000).HasFocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Movie)]
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
@@ -780,16 +780,16 @@
 			<control type="group">
 				<!-- Episodes playlist -->
 				<visible>
-					[Container(9000).HasFocus(1) + StringCompare(Window(home).Property(HomePlayListOne.Type),Episode)]|
-					[Container(9000).HasFocus(2) + StringCompare(Window(home).Property(HomePlayListTwo.Type),Episode)]|
-					[Container(9000).HasFocus(3) + StringCompare(Window(home).Property(HomePlayListThree.Type),Episode)]|
-					[Container(9000).HasFocus(4) + StringCompare(Window(home).Property(HomePlayListFour.Type),Episode)]|
-					[Container(9000).HasFocus(5) + StringCompare(Window(home).Property(HomePlayListFive.Type),Episode)]|
-					[Container(9000).HasFocus(6) + StringCompare(Window(home).Property(HomePlayListSix.Type),Episode)]|
-					[Container(9000).HasFocus(7) + StringCompare(Window(home).Property(HomePlayListSeven.Type),Episode)]|
-					[Container(9000).HasFocus(8) + StringCompare(Window(home).Property(HomePlayListEight.Type),Episode)]|
-					[Container(9000).HasFocus(9) + StringCompare(Window(home).Property(HomePlayListNine.Type),Episode)]|
-					[Container(9000).HasFocus(10) + StringCompare(Window(home).Property(HomePlayListTen.Type),Episode)]
+					[Container(9000).HasFocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Episode)]|
+					[Container(9000).HasFocus(2) + StringCompare(Window(Home).Property(HomePlayListTwo.Type),Episode)]|
+					[Container(9000).HasFocus(3) + StringCompare(Window(Home).Property(HomePlayListThree.Type),Episode)]|
+					[Container(9000).HasFocus(4) + StringCompare(Window(Home).Property(HomePlayListFour.Type),Episode)]|
+					[Container(9000).HasFocus(5) + StringCompare(Window(Home).Property(HomePlayListFive.Type),Episode)]|
+					[Container(9000).HasFocus(6) + StringCompare(Window(Home).Property(HomePlayListSix.Type),Episode)]|
+					[Container(9000).HasFocus(7) + StringCompare(Window(Home).Property(HomePlayListSeven.Type),Episode)]|
+					[Container(9000).HasFocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Episode)]|
+					[Container(9000).HasFocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Episode)]|
+					[Container(9000).HasFocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Episode)]
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
@@ -966,16 +966,16 @@
 			<control type="group">
 				<!-- Music Playlist -->
 				<visible>
-					[Container(9000).HasFocus(1) + StringCompare(Window(home).Property(HomePlayListOne.Type),Music)]|
-					[Container(9000).HasFocus(2) + StringCompare(Window(home).Property(HomePlayListTwo.Type),Music)]|
-					[Container(9000).HasFocus(3) + StringCompare(Window(home).Property(HomePlayListThree.Type),Music)]|
-					[Container(9000).HasFocus(4) + StringCompare(Window(home).Property(HomePlayListFour.Type),Music)]|
-					[Container(9000).HasFocus(5) + StringCompare(Window(home).Property(HomePlayListFive.Type),Music)]|
-					[Container(9000).HasFocus(6) + StringCompare(Window(home).Property(HomePlayListSix.Type),Music)]|
-					[Container(9000).HasFocus(7) + StringCompare(Window(home).Property(HomePlayListSeven.Type),Music)]|
-					[Container(9000).HasFocus(8) + StringCompare(Window(home).Property(HomePlayListEight.Type),Music)]|
-					[Container(9000).HasFocus(9) + StringCompare(Window(home).Property(HomePlayListNine.Type),Music)]|
-					[Container(9000).HasFocus(10) + StringCompare(Window(home).Property(HomePlayListTen.Type),Music)]
+					[Container(9000).HasFocus(1) + StringCompare(Window(Home).Property(HomePlayListOne.Type),Music)]|
+					[Container(9000).HasFocus(2) + StringCompare(Window(Home).Property(HomePlayListTwo.Type),Music)]|
+					[Container(9000).HasFocus(3) + StringCompare(Window(Home).Property(HomePlayListThree.Type),Music)]|
+					[Container(9000).HasFocus(4) + StringCompare(Window(Home).Property(HomePlayListFour.Type),Music)]|
+					[Container(9000).HasFocus(5) + StringCompare(Window(Home).Property(HomePlayListFive.Type),Music)]|
+					[Container(9000).HasFocus(6) + StringCompare(Window(Home).Property(HomePlayListSix.Type),Music)]|
+					[Container(9000).HasFocus(7) + StringCompare(Window(Home).Property(HomePlayListSeven.Type),Music)]|
+					[Container(9000).HasFocus(8) + StringCompare(Window(Home).Property(HomePlayListEight.Type),Music)]|
+					[Container(9000).HasFocus(9) + StringCompare(Window(Home).Property(HomePlayListNine.Type),Music)]|
+					[Container(9000).HasFocus(10) + StringCompare(Window(Home).Property(HomePlayListTen.Type),Music)]
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
@@ -1324,7 +1324,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
 	<include name="MusicCDThumbLayout">
 		<itemlayout height="165" width="182">
 			<control type="image">
@@ -1375,5 +1374,4 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
 </includes>

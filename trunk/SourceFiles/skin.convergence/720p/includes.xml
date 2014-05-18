@@ -237,8 +237,8 @@
 		<control type="group">
 			<left>190r</left>
 			<top>55r</top>
-			<animation effect="fade" time="250" condition="Window.Previous(home)">WindowOpen</animation>
-			<animation effect="fade" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<control type="button" id="801">
 				<description>Now Playing</description>
 				<left>45</left>
@@ -327,7 +327,7 @@
 				<width>45</width>
 				<height>45</height>
 				<onclick>Dialog.Close(all,true)</onclick>
-				<onclick>ActivateWindow(home)</onclick>
+				<onclick>ActivateWindow(Home)</onclick>
 				<texturefocus border="5">FloorButtons/FloorHomeFO.png</texturefocus>
 				<texturenofocus border="5">FloorButtons/FloorHomeNF.png</texturenofocus>
 				<onleft>803</onleft>
@@ -377,7 +377,7 @@
 				<height>45</height>
 				<label>31003</label>
 				<font>-</font>
-				<onclick>ActivateWindow(home)</onclick>
+				<onclick>ActivateWindow(Home)</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
@@ -392,7 +392,7 @@
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
+				<texture>icon_Home.png</texture>
 			</control>
 		</control>
 	</include-->
@@ -1552,8 +1552,8 @@
 		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(MediaPanelTrans),10)">Conditional</animation>
 	</include>
 	<include name="KBurnsAnimateFanart">
-		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(noanimatefanart)">Conditional</animation>
-		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(noanimatefanart)">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(noanimateFanart)">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(noanimateFanart)">Conditional</animation>
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<left>0</left>
@@ -1561,15 +1561,15 @@
 		<width>1280</width>
 		<height>720</height>
 	</include>
-	<include name="ArtistExtraFanArt">
+	<include name="ArtistExtraFanart">
 		<control type="multiimage" id="5043">
 			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+			<imagepath background="true">$INFO[Player.FolderPath,,../extraFanart/]</imagepath>
 			<visible>Player.HasAudio</visible>
 		</control>
 		<control type="multiimage" id="5044">
 			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
 			<visible>Player.HasAudio + IsEmpty(Control.GetLabel(5043))</visible>
 		</control>
 	</include>
@@ -1589,18 +1589,18 @@
 		</control>
 	</include>
 	<include name="ClearButtonChoice">
-		<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,Hidden)</onclick>
-		<onclick>Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
-		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Playlist)</onclick>
-		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Sub)</onclick>
-		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Stats)</onclick>
-		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Type)</onclick>
-		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(home).Property(UsrSelectBtn)].Widget)</onclick>
+		<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,Hidden)</onclick>
+		<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
+		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Playlist)</onclick>
+		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Sub)</onclick>
+		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Stats)</onclick>
+		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Type)</onclick>
+		<onclick condition="Window.IsVisible(2114)">Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Widget)</onclick>
 	</include>
 	<include name="CloseMenuChoice">
 		<onclick condition="Window.IsVisible(2114)">Dialog.Close(2114)</onclick>
 		<onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
-		<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
+		<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 		<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 		<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 	</include>
@@ -1672,16 +1672,16 @@
 	</include>
 	<include name="MenuPlayListCheck">
 		<visible>
-			!IsEmpty(Skin.String(HomeMenu.1.Playlist)) + Skin.String(HomeMenu.1.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.1) |
-			!IsEmpty(Skin.String(HomeMenu.2.Playlist)) + Skin.String(HomeMenu.2.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.2) |
-			!IsEmpty(Skin.String(HomeMenu.3.Playlist)) + Skin.String(HomeMenu.3.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.3) |
-			!IsEmpty(Skin.String(HomeMenu.4.Playlist)) + Skin.String(HomeMenu.4.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.4) |
-			!IsEmpty(Skin.String(HomeMenu.5.Playlist)) + Skin.String(HomeMenu.5.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.5) |
-			!IsEmpty(Skin.String(HomeMenu.6.Playlist)) + Skin.String(HomeMenu.6.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.6) |
-			!IsEmpty(Skin.String(HomeMenu.7.Playlist)) + Skin.String(HomeMenu.7.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.7) |
-			!IsEmpty(Skin.String(HomeMenu.8.Playlist)) + Skin.String(HomeMenu.8.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.8) |
-			!IsEmpty(Skin.String(HomeMenu.9.Playlist)) + Skin.String(HomeMenu.9.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.9) |
-			!IsEmpty(Skin.String(HomeMenu.10.Playlist)) + Skin.String(HomeMenu.10.Type,Playlists) + StringCompare(Window(home).Property(UsrSelectBtn),HomeMenu.10)
+			!IsEmpty(Skin.String(HomeMenu.1.Playlist)) + Skin.String(HomeMenu.1.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.1) |
+			!IsEmpty(Skin.String(HomeMenu.2.Playlist)) + Skin.String(HomeMenu.2.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.2) |
+			!IsEmpty(Skin.String(HomeMenu.3.Playlist)) + Skin.String(HomeMenu.3.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.3) |
+			!IsEmpty(Skin.String(HomeMenu.4.Playlist)) + Skin.String(HomeMenu.4.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.4) |
+			!IsEmpty(Skin.String(HomeMenu.5.Playlist)) + Skin.String(HomeMenu.5.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.5) |
+			!IsEmpty(Skin.String(HomeMenu.6.Playlist)) + Skin.String(HomeMenu.6.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.6) |
+			!IsEmpty(Skin.String(HomeMenu.7.Playlist)) + Skin.String(HomeMenu.7.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.7) |
+			!IsEmpty(Skin.String(HomeMenu.8.Playlist)) + Skin.String(HomeMenu.8.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.8) |
+			!IsEmpty(Skin.String(HomeMenu.9.Playlist)) + Skin.String(HomeMenu.9.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.9) |
+			!IsEmpty(Skin.String(HomeMenu.10.Playlist)) + Skin.String(HomeMenu.10.Type,Playlists) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeMenu.10)
 		</visible>
 	</include>
 </includes>

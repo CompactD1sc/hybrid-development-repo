@@ -1456,7 +1456,7 @@
 					<height>286</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 					<visible>Container.Content(Movies)</visible>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -1468,7 +1468,7 @@
 					<height>325</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 					<visible>Container.Content(TVShows)</visible>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -1804,7 +1804,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1868,7 +1868,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1917,7 +1917,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1966,7 +1966,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>

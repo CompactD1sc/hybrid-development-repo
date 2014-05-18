@@ -76,14 +76,14 @@
 						<top>0</top>
 						<width>675</width>
 						<height>380</height>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true">$INFO[ListItem.Art(Fanart)]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>
-						<visible>!IsEmpty(Listitem.Art(fanart))</visible>
+						<visible>!IsEmpty(Listitem.Art(Fanart))</visible>
 					</control>
 					<control type="group">
-						<visible>IsEmpty(Listitem.Art(fanart))</visible>
+						<visible>IsEmpty(Listitem.Art(Fanart))</visible>
 						<control type="image">
 							<description>No Fanart Back</description>
 							<left>0</left>

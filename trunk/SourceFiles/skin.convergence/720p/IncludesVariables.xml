@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<variable name="HomeMenuItemBackground" type="text">
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather) + Weather.IsFetched">special://skin/extras/Weather/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(1) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListOne.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(2) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListTwo.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(3) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListThree.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(4) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListFour.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(5) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListFive.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(6) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListSix.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(7) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListSeven.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(8) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListEight.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(9) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListNine.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(10) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(home).Property(HomePlayListTen.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Videos) + !IsEmpty(Window(home).Property(RandomMovie.1.Art(fanart)))">$INFO[Window(home).Property(RandomMovie.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) + !IsEmpty(Window(home).Property(RandomMovie.1.Art(fanart)))">$INFO[Window(home).Property(RandomMovie.1.Art(fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) + !IsEmpty(Window(home).Property(RandomEpisode.1.Art(tvshow.fanart)))">$INFO[Window(home).Property(RandomEpisode.1.Art(tvshow.fanart))]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) + !IsEmpty(Window(home).Property(RandomAlbum.1.fanart))">$INFO[Window(home).Property(RandomAlbum.1.fanart)]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),SubSetFive) + !IsEmpty(Window(home).Property(RandomMusicVideo.1.fanart))">$INFO[Window(home).Property(RandomMusicVideo.1.fanart)]</value>
-		<value condition="!Skin.HasSetting(HideHomeScreenFanArt) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Streaming) + !IsEmpty(Window(home).Property(RandomAlbum.1.fanart))">$INFO[Window(home).Property(RandomAlbum.1.fanart)]</value>
-		<value condition="Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))">$INFO[Skin.String(CustomBackgroundPath)]</value>
+		<value condition="Container(9000).Hasfocus(1) + !IsEmpty(Skin.String(HomeMenu.1.Fanart))">$INFO[Skin.String(HomeMenu.1.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(2) + !IsEmpty(Skin.String(HomeMenu.2.Fanart))">$INFO[Skin.String(HomeMenu.2.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(3) + !IsEmpty(Skin.String(HomeMenu.3.Fanart))">$INFO[Skin.String(HomeMenu.3.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(4) + !IsEmpty(Skin.String(HomeMenu.4.Fanart))">$INFO[Skin.String(HomeMenu.4.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(5) + !IsEmpty(Skin.String(HomeMenu.5.Fanart))">$INFO[Skin.String(HomeMenu.5.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(6) + !IsEmpty(Skin.String(HomeMenu.6.Fanart))">$INFO[Skin.String(HomeMenu.6.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(7) + !IsEmpty(Skin.String(HomeMenu.7.Fanart))">$INFO[Skin.String(HomeMenu.7.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(8) + !IsEmpty(Skin.String(HomeMenu.8.Fanart))">$INFO[Skin.String(HomeMenu.8.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(9) + !IsEmpty(Skin.String(HomeMenu.9.Fanart))">$INFO[Skin.String(HomeMenu.9.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(10) + !IsEmpty(Skin.String(HomeMenu.10.Fanart))">$INFO[Skin.String(HomeMenu.10.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(12) + !IsEmpty(Skin.String(HomeMenu.12.Fanart))">$INFO[Skin.String(HomeMenu.12.Fanart)]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather) + Weather.IsFetched">special://skin/extras/Weather/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(1) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListOne.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(2) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListTwo.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(3) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListThree.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(4) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListFour.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(5) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListFive.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(6) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListSix.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(7) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListSeven.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(8) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListEight.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(9) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListNine.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Playlists) + Container(9000).Hasfocus(10) + !Skin.HasSetting(DisableScriptPlayList)">$INFO[Window(Home).Property(HomePlayListTen.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Videos) + !IsEmpty(Window(Home).Property(RandomMovie.1.Art(Fanart)))">$INFO[Window(Home).Property(RandomMovie.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) + !IsEmpty(Window(Home).Property(RandomMovie.1.Art(Fanart)))">$INFO[Window(Home).Property(RandomMovie.1.Art(Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) + !IsEmpty(Window(Home).Property(RandomEpisode.1.Art(tvshow.Fanart)))">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.Fanart))]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) + !IsEmpty(Window(Home).Property(RandomAlbum.1.Fanart))">$INFO[Window(Home).Property(RandomAlbum.1.Fanart)]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),SubSetFive) + !IsEmpty(Window(Home).Property(RandomMusicVideo.1.Fanart))">$INFO[Window(Home).Property(RandomMusicVideo.1.Fanart)]</value>
+		<value condition="!Skin.HasSetting(HideHomeScreenFanart) + Window.IsVisible(Home) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Streaming) + !IsEmpty(Window(Home).Property(RandomAlbum.1.Fanart))">$INFO[Window(Home).Property(RandomAlbum.1.Fanart)]</value>
+		<value condition="!IsEmpty(Window(Home).Property(SelectedMenuBackground))">$INFO[Window(Home).Property(SelectedMenuBackground)]</value>
+		<value>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</value>
+	</variable>
+	<variable name="MenuItemBackground" type="text">
+		<value condition="Container(9000).Hasfocus(1) + !IsEmpty(Skin.String(HomeMenu.1.Fanart))">$INFO[Skin.String(HomeMenu.1.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(2) + !IsEmpty(Skin.String(HomeMenu.2.Fanart))">$INFO[Skin.String(HomeMenu.2.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(3) + !IsEmpty(Skin.String(HomeMenu.3.Fanart))">$INFO[Skin.String(HomeMenu.3.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(4) + !IsEmpty(Skin.String(HomeMenu.4.Fanart))">$INFO[Skin.String(HomeMenu.4.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(5) + !IsEmpty(Skin.String(HomeMenu.5.Fanart))">$INFO[Skin.String(HomeMenu.5.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(6) + !IsEmpty(Skin.String(HomeMenu.6.Fanart))">$INFO[Skin.String(HomeMenu.6.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(7) + !IsEmpty(Skin.String(HomeMenu.7.Fanart))">$INFO[Skin.String(HomeMenu.7.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(8) + !IsEmpty(Skin.String(HomeMenu.8.Fanart))">$INFO[Skin.String(HomeMenu.8.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(9) + !IsEmpty(Skin.String(HomeMenu.9.Fanart))">$INFO[Skin.String(HomeMenu.9.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(10) + !IsEmpty(Skin.String(HomeMenu.10.Fanart))">$INFO[Skin.String(HomeMenu.10.Fanart)]</value>
+		<value condition="Container(9000).Hasfocus(12) + !IsEmpty(Skin.String(HomeMenu.12.Fanart))">$INFO[Skin.String(HomeMenu.12.Fanart)]</value>
 		<value>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</value>
 	</variable>
 	<variable name="WeatherBackground" type="text">
-		<value condition="Control.HasFocus(50)">$INFO[Container(50).ListItem.Property(FanArt),special://skin/extras/Weather/]</value>
-		<value condition="Control.HasFocus(51)">$INFO[Container(51).ListItem.Property(FanArt),special://skin/extras/Weather/]</value>
-		<value condition="Control.HasFocus(52)">$INFO[Container(52).ListItem.Property(FanArt),special://skin/extras/Weather/]</value>
+		<value condition="Control.HasFocus(50)">$INFO[Container(50).ListItem.Property(Fanart),special://skin/extras/Weather/]</value>
+		<value condition="Control.HasFocus(51)">$INFO[Container(51).ListItem.Property(Fanart),special://skin/extras/Weather/]</value>
+		<value condition="Control.HasFocus(52)">$INFO[Container(52).ListItem.Property(Fanart),special://skin/extras/Weather/]</value>
 		<value>special://skin/extras/Weather/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 	</variable>
 	<variable name="MusicHeaderLabel">
@@ -477,7 +502,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemThreeWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.3.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.3.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.3.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.3.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -496,7 +521,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemFourWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.4.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.4.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.4.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.4.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -515,7 +540,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemFiveWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.5.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.5.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.5.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.5.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -534,7 +559,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemSixWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.6.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.6.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.6.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.6.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -553,7 +578,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemSevenWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.7.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.7.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.7.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.7.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -572,7 +597,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemEightWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.8.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.8.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.8.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.8.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -591,7 +616,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemNineWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.9.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.9.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.9.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.9.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -610,7 +635,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefItemTenWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.10.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.10.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.10.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.10.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
@@ -629,7 +654,7 @@
 		<value>$LOCALIZE[31254]</value>
 	</variable>
 	<variable name="UsrDefSettingsWidgetLabel" type="text">
-	<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),AddOnSetOne)">$LOCALIZE[31997]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),RecentMovies)">$LOCALIZE[31198]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),RandomMovies)">$LOCALIZE[31196]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),SuggestedMovies)">$LOCALIZE[31197]</value>
