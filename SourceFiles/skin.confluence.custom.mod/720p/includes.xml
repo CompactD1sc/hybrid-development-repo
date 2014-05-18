@@ -2321,7 +2321,4 @@
 			<visible>Skin.HasSetting(AllowTransparentFanart) + !IsEmpty(Visualisation.Name) + !stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum)</visible>
 		</control>
 	</include>
-	<include name="Holiday Theme">
-		<!--snow-->
-	</include>
 </includes>

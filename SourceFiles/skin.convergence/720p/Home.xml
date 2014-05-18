@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<onload condition="!IsEmpty(Window(Home).Property(SelectedMenuBackground))">ClearProperty(SelectedMenuBackground,Home)</onload>
 	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=10,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.1.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistOne)</onload>
@@ -22,7 +23,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>368r</top>
-			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(HomepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
@@ -114,7 +115,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>368r</top>
-			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(HomepageVideoinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
@@ -657,121 +658,131 @@
 					<item id="1">
 						<description>Home Menu Item One</description>
 						<label>$INFO[Skin.String(HomeMenu.1.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.1.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.1.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.1.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.1.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListOne.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListOne.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.1.Path),Hidden)</visible>
 					</item>
 					<item id="2">
 						<description>Home Menu Item Two</description>
 						<label>$INFO[Skin.String(HomeMenu.2.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.2.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.2.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.2.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.2.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListTwo.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListTwo.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.2.Path),Hidden)</visible>
 					</item>
 					<item id="3">
 						<description>Home Menu Item Three</description>
 						<label>$INFO[Skin.String(HomeMenu.3.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.3.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.3.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.3.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.3.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListThree.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListThree.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.3.Path),Hidden)</visible>
 					</item>
 					<item id="4">
 						<description>Home Menu Item Four</description>
 						<label>$INFO[Skin.String(HomeMenu.4.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.4.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.4.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.4.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.4.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListFour.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListFour.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.4.Path),Hidden)</visible>
 					</item>
 					<item id="5">
 						<description>Home Menu Item Five</description>
 						<label>$INFO[Skin.String(HomeMenu.5.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.5.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.5.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.5.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.5.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListFive.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListFive.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.5.Path),Hidden)</visible>
 					</item>
 					<item id="6">
 						<description>Home Menu Item Six</description>
 						<label>$INFO[Skin.String(HomeMenu.6.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.6.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.6.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.6.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.6.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListSix.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListSix.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.6.Path),Hidden)</visible>
 					</item>
 					<item id="7">
 						<description>Home Menu Item Seven</description>
 						<label>$INFO[Skin.String(HomeMenu.7.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.7.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.7.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.7.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.7.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListSeven.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListSeven.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.7.Path),Hidden)</visible>
 					</item>
 					<item id="8">
 						<description>Home Menu Item Eight</description>
 						<label>$INFO[Skin.String(HomeMenu.8.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.8.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.8.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.8.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.8.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListEight.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListEight.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.8.Path),Hidden)</visible>
 					</item>
 					<item id="9">
 						<description>Home Menu Item Nine</description>
 						<label>$INFO[Skin.String(HomeMenu.9.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.9.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.9.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.9.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.9.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListNine.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListNine.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.9.Path),Hidden)</visible>
 					</item>
 					<item id="10">
 						<description>Home Menu Item Ten</description>
 						<label>$INFO[Skin.String(HomeMenu.10.Label)]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$INFO[Skin.String(HomeMenu.10.Path)]</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.10.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.10.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.10.Widget)]</property>
-						<property name="PlayListType">$INFO[Window(home).Property(HomePlayListTen.Type)]</property>
+						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListTen.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.10.Path),Hidden)</visible>
 					</item>
 					<item id="11">
@@ -788,6 +799,7 @@
 					<item id="12">
 						<description>Home Menu Settings</description>
 						<label>$LOCALIZE[13000]</label>
+						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>ActivateWindow(Settings)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>

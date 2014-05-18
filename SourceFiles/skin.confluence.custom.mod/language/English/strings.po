@@ -864,7 +864,19 @@ msgctxt "#31221"
 msgid "Enter XBMC Command"
 msgstr ""
 
-#empty strings from id 31221 to 31299
+msgctxt "#31222"
+msgid "Window"
+msgstr ""
+
+msgctxt "#31223"
+msgid "Installed Add-Ons"
+msgstr ""
+
+msgctxt "#31224"
+msgid "User Favourites"
+msgstr ""
+
+#empty strings from id 31225 to 31299
 #Extra labels
 
 msgctxt "#31300"

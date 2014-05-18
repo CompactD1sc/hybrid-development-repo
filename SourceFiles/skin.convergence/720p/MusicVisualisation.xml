@@ -3,7 +3,7 @@
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>ArtistExtraFanArt</include>
+		<include>ArtistExtraFanart</include>
 		<include>AlbumArtMusicVizWall</include>
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
@@ -13,8 +13,8 @@
 		<control type="multiimage">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<include condition="!Skin.HasSetting(noanimatevizfanart)">KBurnsAnimateFanart</include>
-			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
+			<imagepath background="true">$INFO[Player.FolderPath,,../extraFanart/]</imagepath>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
@@ -24,8 +24,8 @@
 		<control type="multiimage">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<include condition="!Skin.HasSetting(noanimatevizfanart)">KBurnsAnimateFanart</include>
-			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
+			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
@@ -34,10 +34,10 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<include condition="!Skin.HasSetting(noanimatevizfanart)">KBurnsAnimateFanart</include>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
+			<texture background="true">$INFO[Player.Art(Fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>!IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))</visible>
+			<visible>!IsEmpty(Player.Art(Fanart)) + !Skin.HasSetting(HideVisualizationFanart) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))</visible>
 			<fadetime>600</fadetime>
 		</control>
 		<control type="visualisation" id="2">

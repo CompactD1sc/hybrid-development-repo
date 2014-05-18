@@ -449,7 +449,7 @@
 				<height>45</height>
 				<label>31003</label>
 				<font>-</font>
-				<onclick>ActivateWindow(home)</onclick>
+				<onclick>ActivateWindow(Home)</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
@@ -464,7 +464,7 @@
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
+				<texture>icon_Home.png</texture>
 			</control>
 		</control>
 		<!--include>Clock</include-->
