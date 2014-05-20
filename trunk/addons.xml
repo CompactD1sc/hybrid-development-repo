@@ -43,7 +43,7 @@
 </addon>
 <addon
   id="skin.hybrid.dev"
-  version="2.2.2"
+  version="2.2.3"
   name="Hybrid Development"
   provider-name="Mudislander">
   <requires>

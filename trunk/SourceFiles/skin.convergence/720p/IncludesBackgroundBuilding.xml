@@ -12,7 +12,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(Fanart)]</texture>
+			<texture background="true">$INFO[ListItem.Art(fanart) ]</texture>
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>Window_OpenClose_Animation</include>

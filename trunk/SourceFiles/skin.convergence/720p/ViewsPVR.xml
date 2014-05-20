@@ -678,7 +678,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>730</left>
@@ -754,7 +754,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>730</left>

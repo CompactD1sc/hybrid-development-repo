@@ -13,7 +13,7 @@
 		<control type="multiimage">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
+			<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extraFanart/]</imagepath>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<timeperimage>8000</timeperimage>
@@ -24,8 +24,8 @@
 		<control type="multiimage">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
-			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
+			<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
+			<imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
@@ -34,7 +34,7 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<include condition="!Skin.HasSetting(noanimatevizFanart)">KBurnsAnimateFanart</include>
+			<include condition="!Skin.HasSetting(NoAnimateVizFanart)">KBurnsAnimateFanart</include>
 			<texture background="true">$INFO[Player.Art(Fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<visible>!IsEmpty(Player.Art(Fanart)) + !Skin.HasSetting(HideVisualizationFanart) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))</visible>

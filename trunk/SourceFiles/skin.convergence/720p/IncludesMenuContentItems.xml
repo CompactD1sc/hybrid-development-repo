@@ -196,7 +196,7 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>!Skin.HasSetting(disableglobalsearch)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>

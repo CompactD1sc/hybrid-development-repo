@@ -41,15 +41,15 @@
 		<value>$LOCALIZE[31115]</value>
 	</variable>
 	<variable name="PopupInfoType">
-		<value condition="Skin.String(mediapopupcontrol,Hidden)">$LOCALIZE[31120]</value>
-		<value condition="Skin.String(mediapopupcontrol,Instant)">$LOCALIZE[31121]</value>
-		<value condition="Skin.String(mediapopupcontrol,Delayed)">$LOCALIZE[31122]</value>
+		<value condition="Skin.String(MediaPopUpControl,Hidden)">$LOCALIZE[31120]</value>
+		<value condition="Skin.String(MediaPopUpControl,Instant)">$LOCALIZE[31121]</value>
+		<value condition="Skin.String(MediaPopUpControl,Delayed)">$LOCALIZE[31122]</value>
 		<value>$LOCALIZE[31390]</value>
 	</variable>
 	<include name="MediaInfoPopup">
-		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(mediapopupcontrol))">Visible</animation>
-		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(mediapopupcontrol,Instant)">Visible</animation>
-		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(mediapopupcontrol,Delayed)">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(MediaPopUpControl))">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopUpControl,Instant)">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(MediaPopUpControl,Delayed)">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 	</include>
 	<include name="BehindDialogFadeOut">
@@ -253,7 +253,7 @@
 				<onup>800</onup>
 				<ondown>800</ondown>
 				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-				<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
+				<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(DisableGlobalSearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
 			</control>
 			<control type="button" id="801">
 				<description>Trailer Button</description>
@@ -270,7 +270,7 @@
 				<ondown>800</ondown>
 				<visible>!Player.HasMedia + !IsEmpty(ListItem.Trailer)</visible>
 				<visible>![Control.IsVisible(500) | Control.IsVisible(732)]</visible>
-				<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
+				<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(DisableGlobalSearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
 			</control>
 			<control type="button" id="802">
 				<description>Search Button</description>
@@ -286,7 +286,7 @@
 				<ondown>800</ondown>
 				<onclick>Control.Setfocus(9000,0)</onclick>
 				<onclick>SendClick(198)</onclick>
-				<visible>!Skin.HasSetting(disableglobalsearch)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 				<visible>Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)</visible>
 			</control>
 			<control type="button" id="802">
@@ -302,7 +302,7 @@
 				<onup>800</onup>
 				<ondown>800</ondown>
 				<onclick>RunScript(script.globalsearch)</onclick>
-				<visible>!Skin.HasSetting(disableglobalsearch)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 				<visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
 				<visible>Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)</visible>
 			</control>
@@ -405,7 +405,7 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
+			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(DisableGlobalSearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
 			<control type="label">
 				<left>0</left>
 				<top>2</top>
@@ -1569,7 +1569,7 @@
 		</control>
 		<control type="multiimage" id="5044">
 			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Skin.String(physicalmusicfolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
+			<imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
 			<visible>Player.HasAudio + IsEmpty(Control.GetLabel(5043))</visible>
 		</control>
 	</include>

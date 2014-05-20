@@ -26,6 +26,7 @@
 	<include file="ViewsThumbnailList.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsMusicLibrary.xml" />
+	<include file="ViewsLogoWall.xml" />
 	<include file="ViewsAddonBrowser.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<include file="ViewsPVR.xml" />
@@ -508,7 +509,7 @@
 				<onup>800</onup>
 				<ondown>800</ondown>
 				<visible>!Player.HasMedia + !IsEmpty(ListItem.Trailer)</visible>
-				<visible>![Control.IsVisible(500) | Control.IsVisible(732)]</visible>
+				<visible>![Control.IsVisible(500) | Control.IsVisible(594) | Control.IsVisible(732)]</visible>
 				<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
 			</control>
 			<control type="button" id="802">
@@ -933,9 +934,11 @@
 		<left>26</left>
 		<top>6</top>
 		<width>149</width>
-		<fadetime>600</fadetime>
+		
 		<height>223</height>
-		<fadetime>600</fadetime>
+		<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
 		<align>center</align>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
@@ -945,6 +948,9 @@
 			<top>0</top>
 			<width>184</width>
 			<height>240</height>
+			<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
 			<texture background="true">ClearCase/ClearCase.png</texture>
 		</control>
 	</include>
@@ -953,13 +959,19 @@
 		<top>11</top>
 		<width>201</width>
 		<height>201</height>
-		<fadetime>600</fadetime>
+		
 		<aspectratio scalediffuse="false">scale</aspectratio>
+		<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
 	</include>
 	<include name="CDBoxGlass">
 		<control type="image">
 			<width>250</width>
 			<height>228</height>
+			<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
 			<bordertexture>CDCase/cdshadow.png</bordertexture>
 			<texture background="true">CDCase/cdglass.png</texture>
 		</control>
@@ -1405,7 +1417,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(movieinformation)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Window.IsVisible(loginscreen) + !Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
-			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!IsEmpty(ListItem.Trailer) + ![Control.IsVisible(500) | Control.IsVisible(732)]">conditional</animation>
+			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!IsEmpty(ListItem.Trailer) + ![Control.IsVisible(500) | Control.IsVisible(594) | Control.IsVisible(732)]">conditional</animation>
 			<visible>!Player.HasMedia | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 		</control>
 		<control type="label" id="1">
@@ -1423,7 +1435,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(movieinformation)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!Window.IsVisible(loginscreen) + !Skin.HasSetting(disableglobalsearch) + [Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)] | [Window.IsVisible(script-globalsearch-main.xml) + Control.IsVisible(198)] ">conditional</animation>
-			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!IsEmpty(ListItem.Trailer) + ![Control.IsVisible(500) | Control.IsVisible(732)]">conditional</animation>
+			<animation effect="slide" start="0,0" end="-45,00" time="0" condition="!IsEmpty(ListItem.Trailer) + ![Control.IsVisible(500) | Control.IsVisible(594) | Control.IsVisible(732)]">conditional</animation>
 			<visible>!Player.HasMedia | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 		</control>
 	</include>
