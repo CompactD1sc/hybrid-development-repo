@@ -73,7 +73,7 @@
 						<top>0</top>
 						<width>675</width>
 						<height>380</height>
-						<texture background="true">$INFO[ListItem.Art(Fanart)]</texture>
+						<texture background="true">$INFO[ListItem.Art(fanart) ]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>

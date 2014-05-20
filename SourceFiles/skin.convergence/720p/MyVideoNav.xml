@@ -148,10 +148,10 @@
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
-					<onclick condition="IsEmpty(Skin.String(mediapopupcontrol))">Skin.SetString(mediapopupcontrol,Delayed)</onclick>
-					<onclick condition="Skin.String(mediapopupcontrol,Delayed)">Skin.SetString(mediapopupcontrol,Hidden)</onclick>
-					<onclick condition="Skin.String(mediapopupcontrol,Hidden)">Skin.SetString(mediapopupcontrol,Instant)</onclick>
-					<onclick condition="Skin.String(mediapopupcontrol,Instant)">Skin.Reset(mediapopupcontrol)</onclick>
+					<onclick condition="IsEmpty(Skin.String(MediaPopUpControl))">Skin.SetString(MediaPopUpControl,Delayed)</onclick>
+					<onclick condition="Skin.String(MediaPopUpControl,Delayed)">Skin.SetString(MediaPopUpControl,Hidden)</onclick>
+					<onclick condition="Skin.String(MediaPopUpControl,Hidden)">Skin.SetString(MediaPopUpControl,Instant)</onclick>
+					<onclick condition="Skin.String(MediaPopUpControl,Instant)">Skin.Reset(MediaPopUpControl)</onclick>
 					<visible>Control.IsVisible(508)</visible>
 				</control>
 				<control type="label" id="201">
@@ -173,8 +173,8 @@
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31133]</label>
 					<textwidth>170</textwidth>
-					<onclick>Skin.ToggleSetting(disablewatchedcheck)</onclick>
-					<selected>Skin.HasSetting(disablewatchedcheck)</selected>
+					<onclick>Skin.ToggleSetting(DisableWatchedCheck)</onclick>
+					<selected>Skin.HasSetting(DisableWatchedCheck)</selected>
 					<visible>!system.setting(hidewatched)</visible>
 				</control>
 				<control type="button" id="8">

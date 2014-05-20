@@ -98,7 +98,7 @@
 							<texture>OverlayWatching.png</texture>
 							<visible>ListItem.IsResumable</visible>
 						</control>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + Window.IsVisible(Videos)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + Window.IsVisible(Videos)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="580">
@@ -202,7 +202,7 @@
 							<texture>OverlayWatching.png</texture>
 							<visible>ListItem.IsResumable</visible>
 						</control>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + Window.IsVisible(Videos)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + Window.IsVisible(Videos)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -307,7 +307,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="186" width="216">
@@ -351,7 +351,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="216">
@@ -383,7 +383,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="276" width="216">
@@ -415,7 +415,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -472,7 +472,7 @@
 						<height>35</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="110" width="540">
@@ -492,7 +492,7 @@
 						<height>35</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -609,7 +609,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>1050</left>
@@ -618,7 +618,7 @@
 						<height>16</height>
 						<texture>OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
-						<!--visible>!Skin.HasSetting(disablewatchedcheck)</visible-->
+						<!--visible>!Skin.HasSetting(DisableWatchedCheck)</visible-->
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="1080">
@@ -719,7 +719,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>1050</left>
@@ -728,7 +728,7 @@
 						<height>16</height>
 						<texture>OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
-						<!--visible>!Skin.HasSetting(disablewatchedcheck)</visible-->
+						<!--visible>!Skin.HasSetting(DisableWatchedCheck)</visible-->
 					</control>
 				</focusedlayout>
 			</control>

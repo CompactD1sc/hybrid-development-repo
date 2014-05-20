@@ -231,7 +231,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>350</top>
-			<visible>Control.IsVisible(509) + Skin.HasSetting(View509HideInfo)</visible>
+			<visible>Control.IsVisible(509) + Skin.String(MediaPopUpControl,Hidden)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>0</left>
@@ -340,7 +340,7 @@
 							<effect type="fade" start="100" end="0" time="200" />
 							<effect type="slide" end="0,0" start="40,40" time="200" />
 						</animation>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -364,7 +364,9 @@
 		<control type="group">
 			<left>180</left>
 			<top>40</top>
-			<visible>Control.IsVisible(509) + !Skin.HasSetting(View509HideInfo)</visible>
+			<include>MediaInfoPopup</include>
+			<visible>Control.IsVisible(509) + !Skin.String(MediaPopUpControl,Hidden)</visible>
+			<visible>!Skin.String(MediaPopUpControl,Hidden) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>0</left>
@@ -536,7 +538,7 @@
 						<width>20</width>
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="760">
@@ -596,7 +598,7 @@
 						<width>20</width>
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 				</focusedlayout>
 			</control>

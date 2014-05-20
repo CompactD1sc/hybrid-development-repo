@@ -46,7 +46,7 @@
 						<height>105</height>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="310" width="218">
@@ -71,7 +71,7 @@
 						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
 						<animation reversible="false" effect="zoom" start="107,44,105,105" end="126,9,120,120" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="107,44,105,105" start="126,9,110,110" time="200">unfocus</animation>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
 						<left>6</left>
@@ -98,7 +98,7 @@
 							<effect type="fade" start="100" end="0" time="200"/>
 							<effect type="slide" end="0,0" start="40,40" time="200"/>
 						</animation>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control-->
 				</focusedlayout>
 			</control>
@@ -301,7 +301,7 @@
 			<left>0</left>
 			<top>350</top>
 			<!--visible>Control.IsVisible(508) + [[ListItem.IsFolder + Container.Content(Movies)] | Container.Content(Sets)]</visible-->
-			<visible>Control.IsVisible(508) + Skin.String(mediapopupcontrol,Hidden)</visible>
+			<visible>Control.IsVisible(508) + Skin.String(MediaPopUpControl,Hidden)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<left>0</left>
@@ -367,7 +367,7 @@
 						<height>70</height>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
 						<left>6</left>
@@ -413,7 +413,7 @@
 						<texture>$VAR[StatusBanner,StatusBanner/,.png]</texture>
 						<animation reversible="false" effect="zoom" start="48,24,70,70" end="47,-2,80,80" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="48,24,70,70" start="47,-2,80,80" time="200">unfocus</animation>
-						<visible>!Skin.HasSetting(disablewatchedcheck) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
 						<left>2</left>
@@ -465,7 +465,7 @@
 			<left>180</left>
 			<top>40</top>
 			<include>MediaInfoPopup</include>
-			<visible>!Skin.String(mediapopupcontrol,Hidden) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
+			<visible>!Skin.String(MediaPopUpControl,Hidden) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
 			<visible>Control.IsVisible(508) + ![ListItem.IsFolder + Container.Content(Movies)] + !Container.Content(Sets)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
@@ -876,7 +876,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>555</left>
@@ -965,7 +965,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>555</left>
@@ -1328,7 +1328,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>555</left>
@@ -1417,7 +1417,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>555</left>
@@ -1456,7 +1456,7 @@
 					<height>286</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 					<visible>Container.Content(Movies)</visible>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -1468,7 +1468,7 @@
 					<height>325</height>
 					<aspectratio>scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 					<visible>Container.Content(TVShows)</visible>
 					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -1716,7 +1716,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>320</left>
@@ -1765,7 +1765,7 @@
 						<height>16</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>!ListItem.IsResumable</visible>
-						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
+						<visible>!Skin.HasSetting(DisableWatchedCheck)</visible>
 					</control>
 					<control type="image">
 						<left>320</left>
@@ -1804,7 +1804,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1868,7 +1868,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1917,7 +1917,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -1966,7 +1966,7 @@
 					<height>420</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(Fanart)]</texture>
+					<texture diffuse="Fanart_Diffuse.png" background="true" fallback="SmallFanartFallback.jpg">$INFO[ListItem.Art(fanart) ]</texture>
 				</control>
 				<control type="label">
 					<left>10</left>

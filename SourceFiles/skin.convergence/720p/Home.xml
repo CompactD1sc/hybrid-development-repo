@@ -23,7 +23,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>368r</top>
-			<visible>Player.HasAudio + !Skin.HasSetting(HomepageMusicinfo)</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(HomePageMusicInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
@@ -115,7 +115,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>368r</top>
-			<visible>Player.HasVideo + !Skin.HasSetting(HomepageVideoinfo)</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(HomePageVideoInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>

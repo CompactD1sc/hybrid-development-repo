@@ -3031,8 +3031,8 @@
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>20176</label>
-						<onclick>Skin.ToggleSetting(HomepageVideoinfo)</onclick>
-						<selected>!Skin.HasSetting(HomepageVideoinfo)</selected>
+						<onclick>Skin.ToggleSetting(HomePageVideoInfo)</onclick>
+						<selected>!Skin.HasSetting(HomePageVideoInfo)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -3044,8 +3044,8 @@
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>20083</label>
-						<onclick>Skin.ToggleSetting(HomepageMusicinfo)</onclick>
-						<selected>!Skin.HasSetting(HomepageMusicinfo)</selected>
+						<onclick>Skin.ToggleSetting(HomePageMusicInfo)</onclick>
+						<selected>!Skin.HasSetting(HomePageMusicInfo)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
@@ -3182,8 +3182,8 @@
 						<label>$LOCALIZE[31338]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(noanimatevizFanart)</onclick>
-						<selected>!Skin.HasSetting(noanimatevizFanart)</selected>
+						<onclick>Skin.ToggleSetting(NoAnimateVizFanart)</onclick>
+						<selected>!Skin.HasSetting(NoAnimateVizFanart)</selected>
 						<enable>!Skin.HasSetting(HideVisualizationFanart)</enable>
 					</control>
 					<control type="radiobutton" id="415">
@@ -3639,8 +3639,8 @@
 						<label>$LOCALIZE[31338]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(noanimatevizFanart)</onclick>
-						<selected>!Skin.HasSetting(noanimatevizFanart)</selected>
+						<onclick>Skin.ToggleSetting(NoAnimateVizFanart)</onclick>
+						<selected>!Skin.HasSetting(NoAnimateVizFanart)</selected>
 						<enable>!Skin.HasSetting(HideVisualizationFanart)</enable>
 					</control>
 					<control type="radiobutton" id="504">
@@ -3749,9 +3749,9 @@
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<label>31304</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(physicalmusicfolder)][/COLOR]</label2>
-						<onclick>Skin.Reset(physicalmusicfolder)</onclick>
-						<onclick>Skin.SetPath(physicalmusicfolder)</onclick>
+						<label2>[COLOR=selected]$INFO[Skin.String(PhysicalMusicFolder)][/COLOR]</label2>
+						<onclick>Skin.Reset(PhysicalMusicFolder)</onclick>
+						<onclick>Skin.SetPath(PhysicalMusicFolder)</onclick>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
