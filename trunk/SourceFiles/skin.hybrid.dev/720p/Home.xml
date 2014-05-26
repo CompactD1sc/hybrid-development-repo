@@ -851,6 +851,22 @@
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 			<visible>!StringCompare(System.ProfileName,Master user)</visible>
 		</control>
+		<control type="button" id="20">
+			<description>Shutdown Button</description>
+			<left>55r</left>
+			<top>55r</top>
+			<width>45</width>
+			<height>45</height>
+			<onclick>ActivateWindow(ShutdownMenu)</onclick>
+			<texturefocus border="5">FloorButtons/FloorPowerFO.png</texturefocus>
+			<texturenofocus border="5">FloorButtons/FloorPowerNF.png</texturenofocus>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown condition="IntegerGreaterThan(Window(home).Property(favourite.count),0) + !Skin.HasSetting(disablescriptfavourites)">ActivateWindow(Favourites)</ondown>
+			<ondown condition="!IntegerGreaterThan(Window(home).Property(favourite.count),0) | Skin.HasSetting(disablescriptfavourites)">9000</ondown>
+			<visible>Skin.HasSetting(enablehomepowerbtn)</visible>
+		</control>
 		<control type="label">
 			<description>time label</description>
 			<left>355r</left>
@@ -864,6 +880,7 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(enablehomepowerbtn)">conditional</animation>
 		</control>
 		<control type="label">
 			<description>Date label</description>
@@ -878,6 +895,7 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(enablehomepowerbtn)">conditional</animation>
 		</control>
 	</controls>
 </window>

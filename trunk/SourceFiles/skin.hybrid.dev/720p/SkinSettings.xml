@@ -263,6 +263,19 @@
 						<enable>Skin.HasSetting(autovisablesubmenu) | Skin.HasSetting(enablecleanHome)</enable>
 					</control>
 					<control type="radiobutton" id="106">
+						<description>enable home power button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>  $LOCALIZE[31019]</label>
+						<onclick>Skin.ToggleSetting(enablehomepowerbtn)</onclick>
+						<selected>Skin.HasSetting(enablehomepowerbtn)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="107">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -405,6 +418,18 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>  $LOCALIZE[31012]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(usedisctypecase)</onclick>
+						<selected>Skin.HasSetting(usedisctypecase)</selected>
+					</control>
+					<control type="radiobutton" id="126">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
 						<label>  $LOCALIZE[31020]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -413,7 +438,7 @@
 						<onclick>Skin.ToggleSetting(enablefullmpaa)</onclick>
 						<selected>Skin.HasSetting(enablefullmpaa)</selected>
 					</control>
-					<control type="button" id="126">
+					<control type="button" id="127">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -437,31 +462,6 @@
 						<onclick condition="Skin.String(mpaacertificate,NL)">Skin.SetString(mpaacertificate,USA)</onclick>
 						<enable>!Skin.HasSetting(enablefullmpaa)</enable>
 					</control>
-					<!--control type="radiobutton" id="127">
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <label>  $LOCALIZE[31036]</label>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus>MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick>Skin.ToggleSetting(disablewatchedcheck)</onclick>
-                        <selected>!Skin.HasSetting(disablewatchedcheck)</selected>
-                    </control-->
-					<!--control type="radiobutton" id="128">
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <label>  $LOCALIZE[31035]</label>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus>MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick>Skin.ToggleSetting(hidenewmediastat)</onclick>
-                        <selected>!Skin.HasSetting(hidenewmediastat)</selected>
-                        <enable>!Skin.HasSetting(disablewatchedcheck)</enable>
-                    </control-->
 					<control type="radiobutton" id="129">
 						<width>750</width>
 						<height>40</height>
@@ -474,21 +474,6 @@
 						<onclick>Skin.ToggleSetting(hideyearintitle)</onclick>
 						<selected>!Skin.HasSetting(hideyearintitle)</selected>
 					</control>
-					<!--control type="button" id="130">
-                        <width>750</width>
-                        <height>40</height>
-                        <font>font13</font>
-                        <label>$LOCALIZE[31399]</label>
-                        <label2>[COLOR=selected]$VAR[PopupInfoType][/COLOR]</label2>
-                        <textcolor>grey2</textcolor>
-                        <focusedcolor>white</focusedcolor>
-                        <texturefocus>MenuItemFO.png</texturefocus>
-                        <texturenofocus>MenuItemNF.png</texturenofocus>
-                        <onclick condition="IsEmpty(Skin.String(mediapopupcontrol))">Skin.SetString(mediapopupcontrol,Delayed)</onclick>
-                        <onclick condition="Skin.String(mediapopupcontrol,Delayed)">Skin.SetString(mediapopupcontrol,Hidden)</onclick>
-                        <onclick condition="Skin.String(mediapopupcontrol,Hidden)">Skin.SetString(mediapopupcontrol,Instant)</onclick>
-                        <onclick condition="Skin.String(mediapopupcontrol,Instant)">Skin.Reset(mediapopupcontrol)</onclick>
-                    </control-->
 					<control type="radiobutton" id="131">
 						<width>750</width>
 						<height>40</height>
