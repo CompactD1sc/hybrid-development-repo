@@ -2040,4 +2040,8 @@
 		<value condition="System.HasAddon(script.raspbmc.settings)">$LOCALIZE[31948]</value>
 		<value>$LOCALIZE[31123]</value>
 	</variable>
+	<variable name="HomePowerBtnCommand">
+		<value condition="!IsEmpty(Skin.String(PowerBtnCommand))">$INFO[Skin.String(PowerBtnCommand)]</value>
+		<value>ActivateWindow(ShutdownMenu)</value>
+	</variable>
 </includes>

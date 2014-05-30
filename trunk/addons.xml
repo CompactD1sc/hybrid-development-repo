@@ -133,7 +133,7 @@
 </addon>
 <addon
   id="skin.confluence.custom.mod"
-  version="2.0.3"
+  version="2.0.4"
   name="Confluence Customizable Mod"
   provider-name="Mudislander">
   <requires>
