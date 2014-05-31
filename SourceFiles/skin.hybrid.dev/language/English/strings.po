@@ -278,7 +278,35 @@ msgctxt "#31123"
 msgid "Popup:"
 msgstr ""
 
-#empty strings from id 31124 to 31133
+msgctxt "#31124"
+msgid "Floor Buttons"
+msgstr ""
+
+msgctxt "#31125"
+msgid "Power Button Settings"
+msgstr ""
+
+msgctxt "#31126"
+msgid "Power Button Activates Shutdown Menu"
+msgstr ""
+
+msgctxt "#31127"
+msgid "XBMC System Shutdown Setting"
+msgstr ""
+
+msgctxt "#31128"
+msgid "General Floor Button Settings"
+msgstr ""
+
+msgctxt "#31129"
+msgid "Enable Home DVD Tray Eject Button"
+msgstr ""
+
+msgctxt "#31130"
+msgid "Enable Media Trailer Floor Button"
+msgstr ""
+
+#empty strings from id 3113 to 31133
 
 msgctxt "#31133"
 msgid "Hide checkmarks"
