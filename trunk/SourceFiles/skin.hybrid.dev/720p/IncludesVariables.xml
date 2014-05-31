@@ -1027,6 +1027,10 @@
 		<value condition="!IsEmpty(Skin.String(subsystem.6.label))">$INFO[Skin.String(subsystem.6.label)]</value>
 		<value>$LOCALIZE[13005]</value>
 	</variable>
+	<variable name="HomePowerBtnCommand">
+		<value condition="!IsEmpty(Skin.String(powerbtncommand))">$INFO[Skin.String(powerbtncommand)]</value>
+		<value>ActivateWindow(ShutdownMenu)</value>
+	</variable>
 	<variable name="NextFiveSongScroller" type="text">
 		<value condition="!IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">[COLOR=white][B]$LOCALIZE[31258][/B][/COLOR][COLOR=blue][B]   1$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR=blue][B]2$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]    [COLOR=blue][B]3$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]    [COLOR=blue][B]4$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(4).Artist] - $INFO[MusicPlayer.offset(4).Title]    [COLOR=blue][B]5$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(5).Artist] - $INFO[MusicPlayer.offset(5).Title]</value>
 		<value condition="!IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">[COLOR=white][B]$LOCALIZE[31258][/B][/COLOR][COLOR=blue][B]   1$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR=blue][B]2$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]    [COLOR=blue][B]3$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]    [COLOR=blue][B]4$LOCALIZE[31000][/B][/COLOR]  $INFO[MusicPlayer.offset(4).Artist] - $INFO[MusicPlayer.offset(4).Title]</value>
@@ -2823,7 +2827,7 @@
 		<value condition="Control.HasFocus(102)">$LOCALIZE[31906]</value>
 		<value condition="Control.HasFocus(104)">$LOCALIZE[31908]</value>
 		<value condition="Control.HasFocus(105)">$LOCALIZE[31909]</value>
-		<value condition="Control.HasFocus(106)">$LOCALIZE[31907]</value>
+		<!--value condition="Control.HasFocus(106)">$LOCALIZE[31907]</value-->
 		<value condition="Control.HasFocus(109)">$LOCALIZE[31913]</value>
 		<value condition="Control.HasFocus(110)">$LOCALIZE[31914]</value>
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31912]</value>
@@ -2852,6 +2856,10 @@
 		<!--value>$LOCALIZE[36102]</value-->
 	</variable>
 	<variable name="AddOnSelectInfo">
+		<value condition="Control.HasFocus(9000)">$LOCALIZE[20077] - $INFO[Container(9000).ListItem.label] $INFO[Container(9000).ListItem.label2]</value>
+		<!--value>$LOCALIZE[36102]</value-->
+	</variable>
+	<variable name="FloorBtnInfo">
 		<value condition="Control.HasFocus(9000)">$LOCALIZE[20077] - $INFO[Container(9000).ListItem.label] $INFO[Container(9000).ListItem.label2]</value>
 		<!--value>$LOCALIZE[36102]</value-->
 	</variable>
