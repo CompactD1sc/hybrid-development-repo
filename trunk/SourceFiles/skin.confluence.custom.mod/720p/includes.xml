@@ -45,29 +45,31 @@
 		<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 	</include>
 	<include name="DefaultInitialSetup">
-		<onload condition="System.Platform.Android">Skin.Setbool(EnableMinSpec)</onload>
-		<onload condition="System.HasAddon(script.raspbmc.settings)">Skin.Setbool(EnableMinSpec)</onload>
-		<onload condition="!System.HasAddon(script.globalsearch)">Skin.Setbool(HideHomeSearch)</onload>
-		<onload condition="!System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlayList)</onload>
-		<onload>Skin.SetString(WeatherFanartDir,special://skin/backgrounds/weather/)</onload>
-		<onload>Skin.SetString(UsrGenreFanartDir,special://skin/backgrounds/moviegenre/)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(GlobalBackground)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideBusyAnimation)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(MediaShortDescription)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideBackGroundFanart)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(ShowBackgroundVis)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideHomeStats)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideVisualizationCDart)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideVisualizationFanart)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideNextSongsInfo)</onload>
-		<onload condition="Skin.HasSetting(EnableMinSpec)">Skin.Setbool(HideXBMCIntro)</onload>
-		<onload condition="System.Date(11-24,1-6)">Skin.Setbool(HolidayEffects)</onload>
-		<onload>Skin.SetBool(ShowWeatherFanart)</onload>
-		<onload>Skin.SetBool(ShowMovieDBFanart)</onload>
-		<onload>Skin.SetBool(ShowTVShowDBFanart)</onload>
-		<onload>Skin.SetBool(ShowMusicDBFanart)</onload>
-		<onload>Skin.SetBool(ShowConcertDBFanart)</onload>
-		<onload>Skin.SetString(MPAACountryCert,$LOCALIZE[31701])</onload>
+		<onload condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onload>
+		<onload condition="System.Platform.Android + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(EnableMinSpec)</onload>
+		<onload condition="System.HasAddon(script.raspbmc.settings) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(EnableMinSpec)</onload>
+		<onload condition="!System.HasAddon(script.globalsearch) | Skin.HasSetting(UPnP_Mode)">Skin.Setbool(HideHomeSearch)</onload>
+		<onload condition="!System.HasAddon(script.randomandlastitems) | Skin.HasSetting(UPnP_Mode)">Skin.Setbool(DisableScriptPlayList)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetString(WeatherFanartDir,special://skin/backgrounds/weather/)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetString(UsrGenreFanartDir,special://skin/backgrounds/moviegenre/)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(GlobalBackground)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideBusyAnimation)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(MediaShortDescription)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideBackGroundFanart)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(ShowBackgroundVis)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) | Skin.HasSetting(UPnP_Mode)">Skin.Setbool(HideHomeStats)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideVisualizationCDart)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideVisualizationFanart)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideNextSongsInfo)</onload>
+		<onload condition="Skin.HasSetting(EnableMinSpec) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HideXBMCIntro)</onload>
+		<onload condition="System.Date(11-24,1-6) + !Skin.HasSetting(InitialSetUpRun)">Skin.Setbool(HolidayEffects)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(ShowWeatherFanart)</onload>
+		<!-- Maybe ??? -->
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(ShowMovieDBFanart)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(ShowTVShowDBFanart)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(ShowMusicDBFanart)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(ShowConcertDBFanart)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetString(MPAACountryCert,$LOCALIZE[31701])</onload>
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Label,$LOCALIZE[8])</onload>
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Path,ActivateWindow(Weather))</onload>
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Sub,None)</onload>
@@ -75,6 +77,7 @@
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Widget,Weather)</onload>
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Type,Weather)</onload>
 		<onload condition="!IsEmpty(Weather.Plugin)">Skin.SetString(HomeItem.1.Fanart,special://skin/backgrounds/homescreen/weather.jpg)</onload>
+		<!-- Check if can get Pictures -->
 		<onload>Skin.SetString(HomeItem.2.Label,$LOCALIZE[1])</onload>
 		<onload>Skin.SetString(HomeItem.2.Path,ActivateWindow(Pictures))</onload>
 		<onload>Skin.SetString(HomeItem.2.Sub,Pictures)</onload>
@@ -90,37 +93,46 @@
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Type,LiveTV)</onload>
 		<onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(HomeItem.3.Fanart,special://skin/backgrounds/homescreen/tv.jpg)</onload>
 		<onload>Skin.SetString(HomeItem.4.Label,$LOCALIZE[3])</onload>
-		<onload>Skin.SetString(HomeItem.4.Path,ActivateWindow(Videos,Files,return))</onload>
+		<onload>Skin.SetString(HomeItem.4.Path,$VAR[VideoFilesCmd])</onload>
 		<onload>Skin.SetString(HomeItem.4.Sub,Videos)</onload>
 		<onload>Skin.SetString(HomeItem.4.Addon,None)</onload>
-		<onload>Skin.SetString(HomeItem.4.Widget,UnWatched)</onload>
+		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.4.Widget,UnWatched)</onload>
 		<onload>Skin.SetString(HomeItem.4.Type,Videos)</onload>
 		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.4.Live,LiveContent)</onload>
 		<onload>Skin.SetString(HomeItem.4.Fanart,special://skin/backgrounds/homescreen/videos.jpg)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Label,$LOCALIZE[20342])</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Sub,Movies)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Addon,None)</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Label,$LOCALIZE[20342])</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Path,$VAR[MoviesTitleCmd])</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Sub,Movies)</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Addon,None)</onload>
 		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Widget,SuggestedMovies)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Type,Movies)</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Type,Movies)</onload>
 		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Live,LiveContent)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeItem.5.Fanart,special://skin/backgrounds/homescreen/videos.jpg)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Label,$LOCALIZE[20343])</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Sub,TVShows)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Addon,None)</onload>
+		<onload condition="Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.5.Fanart,special://skin/backgrounds/homescreen/videos.jpg)</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Label,$LOCALIZE[20343])</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Path,$VAR[TVShowTitleCmd])</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Sub,TVShows)</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Addon,None)</onload>
 		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Widget,SuggestedEpisodes)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Type,TVShows)</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Type,TVShows)</onload>
 		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Live,LiveContent)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeItem.6.Fanart,special://skin/backgrounds/homescreen/videos.jpg)</onload>
-		<onload>Skin.SetString(HomeItem.7.Label,$LOCALIZE[31332])</onload>
-		<onload>Skin.SetString(HomeItem.7.Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/GenreFamily.xsp",return))</onload>
-		<onload>Skin.SetString(HomeItem.7.PlayList,special://skin/extras/Playlists/GenreFamily.xsp)</onload>
-		<onload>Skin.SetString(HomeItem.7.Sub,Movies)</onload>
-		<onload>Skin.SetString(HomeItem.7.Addon,None)</onload>
-		<onload>Skin.SetString(HomeItem.7.Widget,PlayListVideo)</onload>
-		<onload>Skin.SetString(HomeItem.7.Type,PlayListVideo)</onload>
-		<onload>Skin.SetString(HomeItem.7.Fanart,special://skin/backgrounds/homescreen/playlist.jpg)</onload>
+		<onload condition="Library.HasContent(TVShows) | Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.6.Fanart,special://skin/backgrounds/homescreen/videos.jpg)</onload>
+		<!-- Need to ReSet if UPnP -->
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Label,$LOCALIZE[31332])</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/GenreFamily.xsp",return))</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.PlayList,special://skin/extras/Playlists/GenreFamily.xsp)</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Sub,Movies)</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Addon,None)</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Widget,PlayListVideo)</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Type,PlayListVideo)</onload>
+		<onload condition="!Skin.HasSetting(UPnP_Mode)">Skin.SetString(HomeItem.7.Fanart,special://skin/backgrounds/homescreen/playlist.jpg)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Label)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Path)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.PlayList)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Sub)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Addon)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Widget)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Type)</onload>
+		<onload condition="Skin.HasSetting(UPnP_Mode)">Skin.Reset(HomeItem.7.Fanart)</onload>
 		<onload>Skin.SetString(HomeItem.8.Label,Virgin)</onload>
 		<onload>Skin.SetString(HomeItem.8.Path,PlayMedia("special://skin/extras/Streaming/Virgin.strm"))</onload>
 		<onload>Skin.SetString(HomeItem.8.Sub,None)</onload>
@@ -128,11 +140,12 @@
 		<onload>Skin.SetString(HomeItem.8.Widget,None)</onload>
 		<onload>Skin.SetString(HomeItem.8.Type,Streaming)</onload>
 		<onload>Skin.SetString(HomeItem.8.Fanart,special://skin/backgrounds/homescreen/musicvideos.jpg)</onload>
+		<!-- Need to set VAR -->
 		<onload>Skin.SetString(HomeItem.9.Label,$LOCALIZE[2])</onload>
-		<onload>Skin.SetString(HomeItem.9.Path,ActivateWindow(Music))</onload>
+		<onload>Skin.SetString(HomeItem.9.Path,$VAR[MusicLibraryCmd])</onload>
 		<onload>Skin.SetString(HomeItem.9.Sub,Music)</onload>
 		<onload>Skin.SetString(HomeItem.9.Addon,None)</onload>
-		<onload>Skin.SetString(HomeItem.9.Widget,SuggestedAlbums)</onload>
+		<onload condition="Library.HasContent(Music)">Skin.SetString(HomeItem.9.Widget,SuggestedAlbums)</onload>
 		<onload>Skin.SetString(HomeItem.9.Type,Music)</onload>
 		<onload condition="Library.HasContent(Music)">Skin.SetString(HomeItem.9.Live,LiveContent)</onload>
 		<onload>Skin.SetString(HomeItem.9.Fanart,special://skin/backgrounds/homescreen/music.jpg)</onload>
@@ -152,6 +165,7 @@
 		<onload>Skin.SetString(PowerBtnBackground,special://skin/backgrounds/homescreen/shutdown.jpg)</onload>
 		<onload>Skin.SetString(FavBtnBackground,special://skin/backgrounds/homescreen/favourite.jpg)</onload>
 		<onload>Skin.SetString(HolidayThemePath,special://skin/extras/Holiday/xmastree.jpg)</onload>
+		<onload>Skin.Reset(ToggleUPnPMode)</onload>
 		<onload>Skin.SetBool(InitialSetUpRun)</onload>
 	</include>
 	<include name="WrapHomeMainMenu">
