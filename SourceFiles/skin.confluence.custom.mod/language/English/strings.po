@@ -56,7 +56,11 @@ msgctxt "#31010"
 msgid "Found"
 msgstr ""
 
-#empty strings from id 31011 to 31015
+msgctxt "#31011"
+msgid "XBMC"
+msgstr ""
+
+#empty strings from id 31012 to 31015
 
 msgctxt "#31016"
 msgid "Shows"
@@ -892,7 +896,19 @@ msgctxt "#31228"
 msgid "Power Button Activates Shutdown Menu"
 msgstr ""
 
-#empty strings from id 31229 to 31299
+msgctxt "#31229"
+msgid "Home Screen Buttons"
+msgstr ""
+
+msgctxt "#31230"
+msgid "Hide Favourites Button"
+msgstr ""
+
+msgctxt "#31231"
+msgid "User Button"
+msgstr ""
+
+#empty strings from id 31232 to 31299
 #Extra labels
 
 msgctxt "#31300"
@@ -1031,7 +1047,39 @@ msgctxt "#31333"
 msgid "Startup"
 msgstr ""
 
-#empty strings from id 31334 to 31350
+msgctxt "#31334"
+msgid "Enable Large Widget Layout"
+msgstr ""
+
+msgctxt "#31335"
+msgid "Setup UPnP Library"
+msgstr ""
+
+msgctxt "#31336"
+msgid "Enable UPnP Library Mode"
+msgstr ""
+
+msgctxt "#31337"
+msgid "UPnP Error"
+msgstr ""
+
+msgctxt "#31338"
+msgid "Please Set Path to UPnP Server"
+msgstr ""
+
+msgctxt "#31339"
+msgid "[COLOR=selected][B]Warning[/B][/COLOR] - Changing UPnp Settings will Reset Main Menu"
+msgstr ""
+
+msgctxt "#31341"
+msgid "UPnp Mode"
+msgstr ""
+
+msgctxt "#31342"
+msgid "UPnp Server Type"
+msgstr ""
+
+#empty strings from id 31340 to 31350
 #Video and Music OSD Labels
 
 msgctxt "#31351"
@@ -1499,7 +1547,11 @@ msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr ""
 
-#empty strings from id 31911 to 31944
+#empty strings from id 31911 to 31943
+
+msgctxt "#31944"
+msgid "Menu Label"
+msgstr ""
 
 msgctxt "#31945"
 msgid "Use Live Backgrounds"
