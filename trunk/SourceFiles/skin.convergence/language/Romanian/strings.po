@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/xbmc-main/language/ro/)\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/xbmc-skins/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,10 +35,6 @@ msgstr "Ascunde detalii"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "Opțiuni vizualizare"
-
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "Ecran complet"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -148,6 +144,30 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Selectat curent"
 
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "Mai sus un nivel"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Pauză"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Stop"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Derulează înainte"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Derulează înapoi"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "de a"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Opțiuni ecran principal"
@@ -200,6 +220,10 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "Ascunde fundal (Fanart)"
 
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "Ascuns"
+
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
 msgstr "Arată video „Acum în redare” pe fundal"
@@ -251,6 +275,26 @@ msgstr "Găsește Mai Multe Articole"
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "Episoade Viitoare"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "Etichete"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "Comedie"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Niciuna"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Adăugate recent"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "Redare"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -419,6 +463,14 @@ msgstr "[B]CONFIGURAREA SETĂRILOR SERVICIULUI[/B][CR][CR]Stabilirea controului 
 msgctxt "#31411"
 msgid "First run help...."
 msgstr "Ajutor la prima execuție...."
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Există subtitrare locală"
+
+msgctxt "#31420"
+msgid "Login"
+msgstr "Login"
 
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"

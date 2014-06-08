@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Serbian (Cyrillic) (http://www.transifex.com/projects/p/xbmc-main/language/sr_RS/)\n"
+"Language-Team: Serbian (Cyrillic) (http://www.transifex.com/projects/p/xbmc-skins/language/sr_RS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -128,6 +128,26 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Тренутно изабрано"
 
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Пауза"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Заустави"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Премотај унапред"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Премотај уназад"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "од"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Опције почетног екрана"
@@ -187,6 +207,18 @@ msgstr "Изаберите вашу песму"
 msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr "Извор текстова песама"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Ништа"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Недавно додато"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "Репродукција"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -331,6 +363,10 @@ msgstr "[B]КОНФИГУРИСАЊЕ ПОСТАВКИ СИСТЕМА[/B][CR][CR
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]КОНФИГУРИСАЊЕ ДОДАТНИХ ПРОГРАМА[/B][CR][CR]Управљајте вашим инсталираним додатним програмима · Потражите и инсталирајте додатне прог. са xbmc.org[CR]Прилагодите подешавање додатног програма"
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Локални превод доступан"
 
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"

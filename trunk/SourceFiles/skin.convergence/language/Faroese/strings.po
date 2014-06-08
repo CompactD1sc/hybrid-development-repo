@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Faroese (http://www.transifex.com/projects/p/xbmc-main/language/fo/)\n"
+"Language-Team: Faroese (http://www.transifex.com/projects/p/xbmc-skins/language/fo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,10 +35,6 @@ msgstr "Goym upplýsing"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "Vísimøguleikar"
-
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "Fullan skerm"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -136,6 +132,22 @@ msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
 msgstr "Henda fíl er bólka, vel eitt stað tú ynskir at spæla frá."
 
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Steðga"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Gevst"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Skjótt framm"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Aftur"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Stillingar til høvuðskerm"
@@ -156,33 +168,21 @@ msgctxt "#31108"
 msgid "Hide Main Menu Buttons"
 msgstr "Goym snarvegir á høvuðsmynd"
 
-msgctxt "#31109"
-msgid "Enable Custom Background"
-msgstr "Tendra serliga bakgrund"
-
 msgctxt "#31110"
 msgid "Background path:"
 msgstr "Stíggi til bakgrund:"
-
-msgctxt "#31111"
-msgid "Hide"
-msgstr "Goym"
 
 msgctxt "#31112"
 msgid "Options"
 msgstr "Stillingar"
 
-msgctxt "#31116"
-msgid "Show Recently added Albums"
-msgstr "Vís nýggjar tónleikaútgávur"
-
-msgctxt "#31117"
-msgid "Show Recently added Videos"
-msgstr "Vís nýggjar video"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "Goym bakgrund av fjepparatilfari"
+
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "Goymt"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -227,6 +227,22 @@ msgstr "Finn fleiri lutir"
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "Komandi brot"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "Frámerki"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Onki"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Nýggjar útgávur"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "Spæli"
 
 msgctxt "#31300"
 msgid "Current Temp"

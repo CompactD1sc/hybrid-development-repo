@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Chinese (Simple) (http://www.transifex.com/projects/p/xbmc-main/language/zh/)\n"
+"Language-Team: Chinese (Simple) (http://www.transifex.com/projects/p/xbmc-skins/language/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change Your"
 msgstr "修改您的"
+
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
+
+msgctxt "#31002"
+msgid "Raspberry OS"
+msgstr "树莓派系统"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -35,6 +43,10 @@ msgstr "隐藏信息"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "视图选项"
+
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "稍后观看"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -66,7 +78,7 @@ msgstr "其他选项"
 
 msgctxt "#31027"
 msgid "Location"
-msgstr "所在地"
+msgstr "位置"
 
 msgctxt "#31028"
 msgid "Poster Wrap"
@@ -90,7 +102,7 @@ msgstr "信息"
 
 msgctxt "#31039"
 msgid "Actions"
-msgstr "操作"
+msgstr "动作"
 
 msgctxt "#31040"
 msgid "Now Playing"
@@ -118,7 +130,7 @@ msgstr "搜索中"
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "可视化效果预设"
+msgstr "视觉效果预设"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -126,11 +138,11 @@ msgstr "结束时间"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "顺序：升序"
+msgstr "排序: 升序"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "顺序：降序"
+msgstr "排序: 降序"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -160,6 +172,114 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "当前选择"
 
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "上一级"
+
+msgctxt "#31063"
+msgid "Submenu Set"
+msgstr "子菜单集"
+
+msgctxt "#31064"
+msgid "SubMenu Item"
+msgstr "子菜单项"
+
+msgctxt "#31065"
+msgid "Selected"
+msgstr "已选择"
+
+msgctxt "#31066"
+msgid "Installed Add-ons"
+msgstr "已安装扩展"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "暂停"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "停止"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "快进"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "快退"
+
+msgctxt "#31078"
+msgid "Show Fullscreen Media Item"
+msgstr "显示全屏媒体项"
+
+msgctxt "#31079"
+msgid "Show System Power Button"
+msgstr "显示系统电源按钮"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "菜单项"
+
+msgctxt "#31081"
+msgid "Submenu Set"
+msgstr "子菜单集"
+
+msgctxt "#31082"
+msgid "Widget Set"
+msgstr "桌面小插件集"
+
+msgctxt "#31083"
+msgid "Move Menu Item"
+msgstr "移动菜单项"
+
+msgctxt "#31084"
+msgid "Show System Menu Item"
+msgstr "显示系统菜单项"
+
+msgctxt "#31085"
+msgid "Additional Menu Options"
+msgstr "附加菜单选项"
+
+msgctxt "#31086"
+msgid "Show DVD Disc Button"
+msgstr "显示DVD碟片按钮"
+
+msgctxt "#31087"
+msgid "Select Item to Swap"
+msgstr "选择交换项目"
+
+msgctxt "#31088"
+msgid "Select Widget Set"
+msgstr "选择桌面小部件集"
+
+msgctxt "#31089"
+msgid "Select SubMenu Set"
+msgstr "选择子菜单集"
+
+msgctxt "#31090"
+msgid "Select Menu Item"
+msgstr "选择菜单项"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "-"
+
+msgctxt "#31092"
+msgid "Shuffle On"
+msgstr "单次随机 开"
+
+msgctxt "#31093"
+msgid "Repeat All On"
+msgstr "重复全部启用"
+
+msgctxt "#31094"
+msgid "Repeat One On"
+msgstr "重复单曲启用"
+
+msgctxt "#31100"
+msgid "Home Menu"
+msgstr "首页菜单"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "主界面选项"
@@ -174,7 +294,11 @@ msgstr "图片幻灯片播放时显示“暂停”状态"
 
 msgctxt "#31104"
 msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "窗口播放预告片[COLOR=grey3]（仅在视频信息显示画面）[/COLOR]"
+msgstr "在窗口中播放预告片 [COLOR=grey3](只限视频信息对话框)[/COLOR]"
+
+msgctxt "#31105"
+msgid "Show background fanart"
+msgstr "显示背景同人画"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -204,6 +328,18 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "选项"
 
+msgctxt "#31113"
+msgid "Menu Transparency Level"
+msgstr "菜单透明等级"
+
+msgctxt "#31114"
+msgid "% Transparency"
+msgstr "% 透明度"
+
+msgctxt "#31115"
+msgid "Skin Default"
+msgstr "皮肤默认"
+
 msgctxt "#31116"
 msgid "Show Recently added Albums"
 msgstr "显示最新加入专辑"
@@ -220,17 +356,33 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "隐藏同人画背景"
 
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "隐藏"
+
+msgctxt "#31121"
+msgid "Instant"
+msgstr "即时"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "延时"
+
+msgctxt "#31123"
+msgid "Popup:"
+msgstr "弹出："
+
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
 msgstr "在背景显示“正在播放”视频"
 
 msgctxt "#31125"
 msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "在背景显示“正在播放”可视化效果"
+msgstr "在正在播放视觉效果中显示背景"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
-msgstr "视频资料库模式播放电视主题曲（TvTunes 插件）"
+msgstr "播放视频资料库中的电视主题曲（TvTunes插件）"
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -242,11 +394,15 @@ msgstr "歌词"
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
-msgstr "全屏可视化效果隐藏同人画"
+msgstr "全屏视觉效果时隐藏同人画"
 
 msgctxt "#31132"
 msgid "Lyrics Add-on"
-msgstr "歌词插件"
+msgstr "歌词扩展功能"
+
+msgctxt "#31133"
+msgid "Hide checkmarks"
+msgstr "隐藏记号"
 
 msgctxt "#31134"
 msgid "Home Page Videos Sub-menu"
@@ -262,15 +418,127 @@ msgstr "主界面图片子菜单"
 
 msgctxt "#31140"
 msgid "Music OSD"
-msgstr "音乐 OSD"
+msgstr "音乐OSD"
 
 msgctxt "#31141"
 msgid "Video OSD"
-msgstr "视频 OSD"
+msgstr "视频OSD"
 
 msgctxt "#31142"
 msgid "Settings level"
-msgstr "设置级别"
+msgstr "设置等级"
+
+msgctxt "#31172"
+msgid "User Selection One"
+msgstr "用户选项一"
+
+msgctxt "#31173"
+msgid "User Selection Two"
+msgstr "用户选项二"
+
+msgctxt "#31174"
+msgid "User Selection Three"
+msgstr "用户选项三"
+
+msgctxt "#31175"
+msgid "User Selection Four"
+msgstr "用户选项四"
+
+msgctxt "#31176"
+msgid "User Selection Five"
+msgstr "用户选项五"
+
+msgctxt "#31177"
+msgid "User Selection Six"
+msgstr "用户选项六"
+
+msgctxt "#31178"
+msgid "User Selection Seven"
+msgstr "用户选项七"
+
+msgctxt "#31179"
+msgid "User Selection Eight"
+msgstr "用户选项八"
+
+msgctxt "#31180"
+msgid "User Selection Nine"
+msgstr "用户选项九"
+
+msgctxt "#31181"
+msgid "User Selection Ten"
+msgstr "用户选项十"
+
+msgctxt "#31182"
+msgid "User Friendly Name"
+msgstr "用户友好的名称"
+
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "音乐会"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "剧集"
+
+msgctxt "#31185"
+msgid "Random Songs"
+msgstr "随机曲目"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "随机艺人"
+
+msgctxt "#31187"
+msgid "Recent Tracks"
+msgstr "最近曲目"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "随机音乐会"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "最近音乐会"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "随机专辑"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "推荐的专辑"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "最近专辑"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "随机剧集"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "推荐的剧集"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "最近剧集"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "随机电影"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "推荐的电影"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "最近电影"
+
+msgctxt "#31199"
+msgid "Suggested Concerts"
+msgstr "推荐音乐会"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -296,6 +564,158 @@ msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "即将播出的分集"
 
+msgctxt "#31209"
+msgid "Global Search"
+msgstr "全局搜索"
+
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "节点"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "标签"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "流媒体"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "影院"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31215"
+msgid "Log-in"
+msgstr "登录"
+
+msgctxt "#31216"
+msgid "Shutdown Menu"
+msgstr "关机菜单"
+
+msgctxt "#31229"
+msgid "XBMC Command"
+msgstr "XBMC命令"
+
+msgctxt "#31230"
+msgid "User Selection One"
+msgstr "用户选项一"
+
+msgctxt "#31231"
+msgid "User Selection Two"
+msgstr "用户选项二"
+
+msgctxt "#31232"
+msgid "User Selection Three"
+msgstr "用户选项三"
+
+msgctxt "#31233"
+msgid "User Selection Four"
+msgstr "用户选项四"
+
+msgctxt "#31234"
+msgid "User Selection Five"
+msgstr "用户选项五"
+
+msgctxt "#31235"
+msgid "User Selection Six"
+msgstr "用户选项六"
+
+msgctxt "#31236"
+msgid "User Selection Seven"
+msgstr "用户选项七"
+
+msgctxt "#31237"
+msgid "User Selection Eight"
+msgstr "用户选项八"
+
+msgctxt "#31238"
+msgid "User Selection Nine"
+msgstr "用户选项九"
+
+msgctxt "#31239"
+msgid "User Selection Ten"
+msgstr "用户选项十"
+
+msgctxt "#31240"
+msgid "User Friendly Name"
+msgstr "用户友好的名称"
+
+msgctxt "#31244"
+msgid "Skin Preset"
+msgstr "皮肤预设"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "105电台"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "蒙特卡洛"
+
+msgctxt "#31247"
+msgid "Virgin Rock"
+msgstr "维珍摇滚"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "动态"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "儿童"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "喜剧"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "家庭"
+
+msgctxt "#31252"
+msgid "HD-Movies"
+msgstr "高清电影"
+
+msgctxt "#31253"
+msgid "3D-Movies"
+msgstr "3D电影"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "无"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "已推荐"
+
+msgctxt "#31256"
+msgid "No Suggested Media"
+msgstr "无推荐的媒体"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "最新增加"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "最近播放"
+
+msgctxt "#31259"
+msgid "Clean Library"
+msgstr "清理资料库"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "播放"
+
+msgctxt "#31284"
+msgid "Scripts and Paths"
+msgstr "脚本和路径"
+
 msgctxt "#31300"
 msgid "Current Temp"
 msgstr "当前温度"
@@ -308,6 +728,14 @@ msgctxt "#31303"
 msgid "Data provider"
 msgstr "数据来源"
 
+msgctxt "#31304"
+msgid "Music Path"
+msgstr "音乐路径"
+
+msgctxt "#31305"
+msgid "Music Physical Folder"
+msgstr "音乐物理路径"
+
 msgctxt "#31307"
 msgid "Hide Fanart"
 msgstr "隐藏同人画"
@@ -318,7 +746,7 @@ msgstr "电影详细资料"
 
 msgctxt "#31309"
 msgid "Memory Used:"
-msgstr "己用内存："
+msgstr "内存使用:"
 
 msgctxt "#31310"
 msgid "Track Number"
@@ -340,9 +768,17 @@ msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr "内容扫描选项"
 
+msgctxt "#31315"
+msgid "Hide Item"
+msgstr "隐藏项目"
+
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "设置同人画目录"
+
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "清除菜单选项"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -354,7 +790,7 @@ msgstr "最近登录"
 
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
-msgstr "卡拉OK歌曲选择器"
+msgstr "卡拉OK歌曲选择"
 
 msgctxt "#31322"
 msgid "Aired"
@@ -374,7 +810,7 @@ msgstr "分辨率"
 
 msgctxt "#31328"
 msgid "Recently Added"
-msgstr "最新加入"
+msgstr "最新增加"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -387,6 +823,26 @@ msgstr "点此按钮播放预告片"
 msgctxt "#31331"
 msgid "Album Details"
 msgstr "专辑详情"
+
+msgctxt "#31332"
+msgid "ReSet"
+msgstr "重置"
+
+msgctxt "#31333"
+msgid "User Data"
+msgstr "用户数据"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]警告!![/B][/COLOR] - 重置皮肤参数至初始默认状态"
+
+msgctxt "#31338"
+msgid "Animated fanart in full screen visualisation"
+msgstr "全屏视觉效果时动画显示同人画"
+
+msgctxt "#31339"
+msgid "Automatic Fullscreen Music Playback"
+msgstr "自动全屏音乐播放"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -402,7 +858,7 @@ msgstr "快进"
 
 msgctxt "#31354"
 msgid "Rewind"
-msgstr "回退"
+msgstr "快退"
 
 msgctxt "#31355"
 msgid "Movie menu"
@@ -414,7 +870,7 @@ msgstr "下载字幕"
 
 msgctxt "#31360"
 msgid "Watch as 2D"
-msgstr "按2D模式观看"
+msgstr "以2D方式观看"
 
 msgctxt "#31361"
 msgid "Change mode"
@@ -430,27 +886,27 @@ msgstr "皮肤默认"
 
 msgctxt "#31391"
 msgid "Skin default with no Caps"
-msgstr "皮肤默认无Caps"
+msgstr "皮肤默认（无Caps字体）"
 
 msgctxt "#31392"
 msgid "Arial based"
-msgstr "基于 Arial 字体"
+msgstr "基于Arial字体"
 
 msgctxt "#31400"
 msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
-msgstr "[B]设置用户界面[/B][CR][CR]变换皮肤 · 设置语言和区域 · 修改文件列表选项 · 设置屏幕保护"
+msgstr "[B]设置用户界面[/B][CR][CR]变换皮肤 · 设置语言和区域 · 修改文件列表参数 · 设置屏幕保护"
 
 msgctxt "#31401"
 msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr "[B]设置视频选项[/B][CR][CR]管理视频资料库 · 设置视频播放选项 · 修改视频列表选项 · 设置字幕字体"
+msgstr "[B]设置视频参数[/B][CR][CR]管理视频资料库 · 设置视频播放参数 · 修改视频列表参数 · 设置字幕字体"
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]设置音乐选项[/B][CR][CR]管理音乐资料库 · 设置音乐播放选项 · 修改音乐列表选项 · 设置歌曲提交 · 设置卡拉OK选项"
+msgstr "[B]设置音乐参数[/B][CR][CR]管理音乐资料库 · 设置音乐播放参数 · 修改音乐列表参数 · 设置音乐提交 · 设置卡拉OK选项"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshows"
-msgstr "[B]设置图片选项[/B][CR][CR]设置图片列表选项 · 设置幻灯片播放"
+msgstr "[B]设置图片参数[/B][CR][CR]设置图片列表参数 · 设置幻灯片播放"
 
 msgctxt "#31404"
 msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
@@ -458,19 +914,19 @@ msgstr "[B]设置天气预报[/B][CR][CR]设置三个获取天气信息的城市
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
-msgstr "[B]设置系统选项[/B][CR][CR]设置和校正显示器 · 设置音频输出 · 设置摇控器 · 设置节电选项 · 启用调试 · 设置主机锁定"
+msgstr "[B]设置系统参数[/B][CR][CR]设置和校正显示器 · 设置音频输出 · 设置摇控器 · 设置节电参数 · 启用调试 · 设置管理员和锁定"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B]设置插件功能[/B][CR][CR]管理你安装的插件 · 在 xbmc.org 浏览并安装插件 · 修改插件设置"
+msgstr "[B]设置扩展功能[/B][CR][CR]管理你安装的扩展功能 · 在xbmc.org浏览并安装扩展功能 · 修改扩展功能设置"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]设置直播电视[/B][CR][CR]更改全屏信息 · 管理电子节目单数据设置"
+msgstr "[B]配置电视设置[/B][CR][CR]更改全屏信息 · 管理电子界面菜单数据设置"
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]设置网络服务[/B][CR][CR]设置通过 UPnP 和 HTTP 控制 XBMC · 配置文件共享[CR]启用 Zeroconf · 设置 AirPlay"
+msgstr "[B]设置网络服务[/B][CR][CR]设置通过UPnP和HTTP控制XBMC · 配置文件共享[CR]启用Zeroconf · 设置AirPlay"
 
 msgctxt "#31411"
 msgid "First run help...."
@@ -494,11 +950,11 @@ msgstr "选择您的用户配置文件[CR]登录并继续"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
-msgstr "启动时显示或隐藏登录界面。"
+msgstr "启动时显示或隐藏登录屏。"
 
 msgctxt "#31423"
 msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "选择禁用登录界面时使用的用户配置文件。"
+msgstr "选择禁用启动登录屏时使用的用户配置。"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -602,8 +1058,20 @@ msgstr "程序"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
-msgstr "播放光盘"
+msgstr "播放碟片"
 
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "系统"
+
+msgctxt "#31997"
+msgid "Add-Ons Set One"
+msgstr "扩展功能集合一"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "扩展功能"
+
+msgctxt "#31999"
+msgid "Home Panel Addons"
+msgstr "主面板小部件"

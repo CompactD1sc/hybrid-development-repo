@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-main/language/ko/)\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-skins/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,13 +20,17 @@ msgctxt "#31000"
 msgid "Change Your"
 msgstr "변경"
 
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
+
 msgctxt "#31003"
 msgid "Power Options"
 msgstr "전원 옵션"
 
 msgctxt "#31004"
 msgid "Working..."
-msgstr "동작중..."
+msgstr "작업중..."
 
 msgctxt "#31005"
 msgid "Hide Information"
@@ -36,9 +40,13 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr "보기 옵션"
 
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "다음에 보기"
+
 msgctxt "#31008"
 msgid "Full screen"
-msgstr "전체 화면"
+msgstr "전체화면"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -106,11 +114,11 @@ msgstr "일시정지"
 
 msgctxt "#31044"
 msgid "FAST FORWARD"
-msgstr "빨리감기"
+msgstr "빠르게"
 
 msgctxt "#31045"
 msgid "REWIND"
-msgstr "되감기"
+msgstr "뒤로"
 
 msgctxt "#31046"
 msgid "SEEKING"
@@ -118,11 +126,11 @@ msgstr "찾는 중"
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "시각화 사전설정"
+msgstr "시각화 프리셋"
 
 msgctxt "#31049"
 msgid "End Time"
-msgstr "종료 시각"
+msgstr "종료 시간"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
@@ -154,11 +162,47 @@ msgstr "현재 재생목록"
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "이 파일은 연결되었습니다, 재생하고 싶은 부분을 선택하세요."
+msgstr "이 파일은 연결되었습니다, 재생할 부분을 선택하세요."
 
 msgctxt "#31061"
 msgid "Current Selected"
 msgstr "현재 선택됨"
+
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "한 단계 위로"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "일시정지"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "정지"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "빨리감기"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "되감기"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "메뉴 항목"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "-"
+
+msgctxt "#31092"
+msgid "Shuffle On"
+msgstr "셔플 켜기"
+
+msgctxt "#31100"
+msgid "Home Menu"
+msgstr "홈 메뉴"
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -171,10 +215,6 @@ msgstr "배경"
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
 msgstr "사진 슬라이드쇼에 \"일시정지됨\" 보기"
-
-msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "윈도우에 예고편 재생 [COLOR=grey3](비디오 정보 대화창만)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -212,13 +252,17 @@ msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "최근 추가한 비디오 보기"
 
-msgctxt "#31118"
-msgid "Home Page Programs Sub-menu"
-msgstr "홈 페이지 프로그램 하위메뉴"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "배경 팬아트 숨기기"
+
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "숨겨진"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "지연"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -248,18 +292,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "가사 애드온"
 
-msgctxt "#31134"
-msgid "Home Page Videos Sub-menu"
-msgstr "홈 페이지 비디오 하위메뉴"
-
-msgctxt "#31135"
-msgid "Home Page Music Sub-menu"
-msgstr "홈 페이지 음악 하위메뉴"
-
-msgctxt "#31136"
-msgid "Home Page Pictures Sub-menu"
-msgstr "홈 페이지 사진 하위메뉴"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "음악 OSD"
@@ -271,6 +303,62 @@ msgstr "비디오 OSD"
 msgctxt "#31142"
 msgid "Settings level"
 msgstr "설정 수준"
+
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "콘서트"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "TV 쇼"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "무작위 아티스트"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "무작위 콘서트"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "최근 콘서트"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "무작위 앨범"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "추천 앨범"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "최근 앨범"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "무작위 에피소드"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "추천 에피소드"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "최근 에피소드"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "무작위 영화"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "추천 영화"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "최근 영화"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -295,6 +383,78 @@ msgstr "더 찾아보기"
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "방송 예정 에피소드"
+
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "노드"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "태그"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "스트리밍 미디어"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "Cinema"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31229"
+msgid "XBMC Command"
+msgstr "XBMC 명령"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "Radio 105"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "애니메이션"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "어린이"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "코미디"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "가족"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "없음"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "추천"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "최근 추가"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "최근 재생"
+
+msgctxt "#31259"
+msgid "Clean Library"
+msgstr "라이브러리 정리"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "재생중"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -334,7 +494,7 @@ msgstr "현재 자료수집기"
 
 msgctxt "#31313"
 msgid "Choose a Scraper"
-msgstr "자료수집기를 선택하세요"
+msgstr "자료수집기 선택"
 
 msgctxt "#31314"
 msgid "Content Scanning Options"
@@ -343,6 +503,10 @@ msgstr "컨텐츠 검색 옵션"
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "팬아트 경로 설정"
+
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "메뉴 옵션 지우기"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -358,7 +522,7 @@ msgstr "노래방 노래 선택기"
 
 msgctxt "#31322"
 msgid "Aired"
-msgstr "방영"
+msgstr "방송"
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -388,6 +552,14 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr "앨범 정보"
 
+msgctxt "#31333"
+msgid "User Data"
+msgstr "사용자 설정"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]경고!![/B][/COLOR] - 스킨 설정을 기본값으로 되돌림"
+
 msgctxt "#31351"
 msgid "Pause"
 msgstr "일시정지"
@@ -414,7 +586,7 @@ msgstr "자막 다운로드"
 
 msgctxt "#31360"
 msgid "Watch as 2D"
-msgstr "2D로 감상"
+msgstr "2D로 시청"
 
 msgctxt "#31361"
 msgid "Change mode"
@@ -462,7 +634,7 @@ msgstr "[B]시스템 설정[/B][CR][CR]화면 설정 및 조정 · 오디오 출
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B] 애드온 설정[/B][CR][CR]설치한 애드온 관리 · xbmc.org에서 애드온 찾기 및 설치[CR] 애드온 설정 변경"
+msgstr "[B]애드온 설정[/B][CR][CR]설치한 애드온 관리 · xbmc.org에서 애드온 찾기 및 설치[CR]애드온 설정 변경"
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
@@ -474,11 +646,7 @@ msgstr "[B]서비스 설정[/B][CR][CR]UPnP 및 HTTP를 통한 XBMC 제어 설�
 
 msgctxt "#31411"
 msgid "First run help...."
-msgstr "처음 실행 도움말...."
-
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr "이 탭은 현재 섹션의 추가 옵션메뉴가 화면 가장자리에 숨어 있다는 것을 의미합니다.  메뉴에 접근하려면 리모컨 또는 키보드로 왼쪽으로 이동하거나 탭 위로 마우스를 가져가세요. [CR] [CR]\"확인\"을 누르면 대화상자가 닫히고 다시 표시되지 않습니다."
+msgstr "처음 사용 도움말...."
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -492,17 +660,9 @@ msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
 msgstr "로그인할 XBMC 사용자 프로파일을[CR]선택하고 계속하세요"
 
-msgctxt "#31422"
-msgid "Show or hide the login screen at startup."
-msgstr "시작시 로그인 화면을 보이거나 숨깁니다."
-
-msgctxt "#31423"
-msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "시작시 로그인 화면을 표시하지 않을 때 사용할 프로파일을 선택합니다."
-
 msgctxt "#31501"
 msgid "Scheduled Time"
-msgstr "예약 시간"
+msgstr "예약 시각"
 
 msgctxt "#31502"
 msgid "Live TV"
@@ -514,7 +674,7 @@ msgstr "그룹 추가"
 
 msgctxt "#31504"
 msgid "Rename Group"
-msgstr "그룹명 변경"
+msgstr "그룹 이름 변경"
 
 msgctxt "#31505"
 msgid "Delete Group"
@@ -522,7 +682,7 @@ msgstr "그룹 삭제"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
-msgstr "사용가능한[CR]그룹"
+msgstr "사용 가능한[CR]그룹"
 
 msgctxt "#31509"
 msgid "Channel Group"
@@ -530,7 +690,7 @@ msgstr "채널 그룹"
 
 msgctxt "#31510"
 msgid "Timer Set"
-msgstr "예약 설정"
+msgstr "타이머 설정"
 
 msgctxt "#31511"
 msgid "Channel Options"
@@ -538,11 +698,11 @@ msgstr "채널 옵션"
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
-msgstr "36 시간 예보"
+msgstr "36시간 예보"
 
 msgctxt "#31902"
 msgid "Hourly Forecast"
-msgstr "시간대별 예보"
+msgstr "시간별 예보"
 
 msgctxt "#31903"
 msgid "Weekend Forecast"
@@ -550,7 +710,7 @@ msgstr "주말 예보"
 
 msgctxt "#31904"
 msgid "10 Day Forecast"
-msgstr "10 일 예보"
+msgstr "10일 예보"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -596,10 +756,6 @@ msgctxt "#31956"
 msgid "MUSIC"
 msgstr "음악"
 
-msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "프로그램"
-
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "디스크 재생"
@@ -607,3 +763,11 @@ msgstr "디스크 재생"
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "시스템"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "애드온"
+
+msgctxt "#31999"
+msgid "Home Panel Addons"
+msgstr "홈 패널 애드온"

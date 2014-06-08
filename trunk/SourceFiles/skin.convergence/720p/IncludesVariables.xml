@@ -52,12 +52,358 @@
 		<value condition="Control.HasFocus(52)">$INFO[Container(52).ListItem.Property(Fanart),special://skin/extras/Weather/]</value>
 		<value>special://skin/extras/Weather/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 	</variable>
-	<variable name="MusicHeaderLabel">
-		<value condition="MusicPartyMode.Enabled">[B]($LOCALIZE[589])[/B]</value>
-		<value condition="Playlist.IsRandom">[B]($LOCALIZE[31092])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
-		<value condition="Playlist.IsRepeat">[B]($LOCALIZE[31093])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
-		<value condition="Playlist.IsRepeatOne">[B]($LOCALIZE[31094])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
-		<value>$INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
+	
+	<variable name="HomeMenuOnePath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.1.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="!IsEmpty(Weather.Plugin) + IsEmpty(Skin.String(HomeMenu.1.Path))">ActivateWindow(Weather)</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.1.Path))">$INFO[Skin.String(HomeMenu.1.Path)]</value>
+	</variable>
+	<variable name="HomeMenuTwoPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.2.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="IsEmpty(Skin.String(HomeMenu.2.Path))">ActivateWindow(Pictures)</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.2.Path))">$INFO[Skin.String(HomeMenu.2.Path)]</value>
+	</variable>
+	<variable name="HomeMenuThreePath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.3.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="System.GetBool(pvrmanager.enabled) + IsEmpty(Skin.String(HomeMenu.3.Path))">ActivateWindow(PVR)</value>
+		<value condition="!System.GetBool(pvrmanager.enabled) + IsEmpty(Skin.String(HomeMenu.3.Path))">PlayMedia("special://skin/extras/Streaming/Virgin.strm")</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.3.Path))">$INFO[Skin.String(HomeMenu.3.Path)]</value>
+	</variable>
+	<variable name="HomeMenuFourPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.4.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="IsEmpty(Skin.String(HomeMenu.4.Path))">$VAR[VideoFilesCmd]</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.4.Path))">$INFO[Skin.String(HomeMenu.4.Path)]</value>
+	</variable>
+	<variable name="HomeMenuFivePath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.5.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="IsEmpty(Skin.String(HomeMenu.5.Path))">$VAR[MoviesTitleCmd]</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.5.Path))">$INFO[Skin.String(HomeMenu.5.Path)]</value>
+	</variable>
+	<variable name="HomeMenuSixPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.6.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="IsEmpty(Skin.String(HomeMenu.6.Path))">$VAR[TVShowTitleCmd]</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.6.Path))">$INFO[Skin.String(HomeMenu.6.Path)]</value>
+	</variable>
+	<variable name="HomeMenuSevenPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.7.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="Library.HasContent(Movies) + IsEmpty(Skin.String(HomeMenu.7.Path))">ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/3DMovies.xsp",return)</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.7.Path))">$INFO[Skin.String(HomeMenu.7.Path)]</value>
+	</variable>
+	<variable name="HomeMenuEightPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.8.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="System.HasAddon(script.simpleplaylists) + IsEmpty(Skin.String(HomeMenu.8.Path))">RunAddon(script.simpleplaylists)</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.8.Path))">$INFO[Skin.String(HomeMenu.8.Path)]</value>
+	</variable>
+	<variable name="HomeMenuNinePath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.9.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="IsEmpty(Skin.String(HomeMenu.9.Path))">$VAR[MusicLibraryCmd]</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.9.Path))">$INFO[Skin.String(HomeMenu.9.Path)]</value>
+	</variable>
+	<variable name="HomeMenuTenPath" type="text">
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicLibraryCmd)">$VAR[MusicLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicArtistsCmd)">$VAR[MusicArtistsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicAlbumsCmd)">$VAR[MusicAlbumsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicCompilationsCmd)">$VAR[MusicCompilationsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicGenreCmd)">$VAR[MusicGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicRecentAddCmd)">$VAR[MusicRecentAddCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicRecentPlayCmd)">$VAR[MusicRecentPlayCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicTop100SongsCmd)">$VAR[MusicTop100SongsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),VideoFilesCmd)">$VAR[VideoFilesCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesTitleCmd)">$VAR[MoviesTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesRecentCmd)">$VAR[MoviesRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesSetsCmd)">$VAR[MoviesSetsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesGenreCmd)">$VAR[MoviesGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesTagsCmd)">$VAR[MoviesTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesYearsCmd)">$VAR[MoviesYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesActorsCmd)">$VAR[MoviesActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowTitleCmd)">$VAR[TVShowTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowInProgressCmd)">$VAR[TVShowInProgressCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowRecentCmd)">$VAR[TVShowRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowGenreCmd)">$VAR[TVShowGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowTagsCmd)">$VAR[TVShowTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowYearsCmd)">$VAR[TVShowYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),TVShowActorsCmd)">$VAR[TVShowActorsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsLibraryCmd)">$VAR[ConcertsLibraryCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsTitleCmd)">$VAR[ConcertsTitleCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsRecentCmd)">$VAR[ConcertsRecentCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsGenreCmd)">$VAR[ConcertsGenreCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsTagsCmd)">$VAR[ConcertsTagsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),ConcertsYearsCmd)">$VAR[ConcertsYearsCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MoviesPlayListCmd)">$VAR[MoviesPlayListCmd]</value>
+		<value condition="stringcompare(Skin.String(HomeMenu.10.Path),MusicPlaylistCmd)">$VAR[MusicPlaylistCmd]</value>
+		<value condition="!System.Platform.Android + IsEmpty(Skin.String(HomeMenu.9.Path))">ActivateWindow(Programs,Addons,return)</value>
+		<value condition="System.Platform.Android + IsEmpty(Skin.String(HomeMenu.9.Path))">ActivateWindow(Programs)</value>
+		<value condition="!IsEmpty(Skin.String(HomeMenu.10.Path))">$INFO[Skin.String(HomeMenu.10.Path)]</value>
 	</variable>
 	<variable name="SubMenuPlayBtn">
 		<value condition="!Player.Paused">$LOCALIZE[31351]</value>
@@ -671,5 +1017,235 @@
 		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),Playlists)">$LOCALIZE[136]</value>
 		<value condition="stringcompare(Skin.String(HomeMenu.12.Widget),Weather)">$LOCALIZE[8]</value>
 		<value>$LOCALIZE[31254]</value>
+	</variable>
+	<variable name="MusicHeaderLabel">
+		<value condition="MusicPartyMode.Enabled">[B]($LOCALIZE[589])[/B]</value>
+		<value condition="Playlist.IsRandom">[B]($LOCALIZE[31092])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
+		<value condition="Playlist.IsRepeat">[B]($LOCALIZE[31093])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
+		<value condition="Playlist.IsRepeatOne">[B]($LOCALIZE[31094])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
+		<value>$INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
+	</variable>
+	<variable name="UPnPServerType" type="text">
+		<value>$LOCALIZE[31011]</value>
+	</variable>
+	<variable name="VideoFilesCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,Files,return)</value>
+	</variable>
+	<variable name="MoviesPlayListCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fplaylists.xml%2f/",return)</value>
+		<value>ActivateWindow(Videos,Playlists,return)</value>
+	</variable>
+	<variable name="MoviesLibraryCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,Movies,return)</value>
+	</variable>
+	<variable name="MoviesTitleCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftitles.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieTitles,return)</value>
+	</variable>
+	<variable name="MoviesActorsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2factors.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieActors,return)</value>
+	</variable>
+	<variable name="MoviesCountriesCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fcountry.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieCountries,return)</value>
+	</variable>
+	<variable name="MoviesDirectorsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fdirectors.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieDirectors,return)</value>
+	</variable>
+	<variable name="MoviesSetsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fsets.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieSets,return)</value>
+	</variable>
+	<variable name="MoviesGenreCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fgenres.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieGenres,return)</value>
+	</variable>
+	<variable name="MoviesStudiosCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fstudios.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieStudios,return)</value>
+	</variable>
+	<variable name="MoviesTagsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftags.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieTags,return)</value>
+	</variable>
+	<variable name="MoviesYearsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fyears.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MovieYears,return)</value>
+	</variable>
+	<variable name="MoviesRecentCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</value>
+	</variable>
+	<variable name="TVShowLibraryCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShows,return)</value>
+	</variable>
+	<variable name="TVShowInProgressCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2finprogressshows.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,library://video/inprogressshows.xml/,return))</value>
+	</variable>
+	<variable name="TVShowRecentCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedepisodes.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</value>
+	</variable>
+	<variable name="TVShowTitleCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftitles.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowTitles,return)</value>
+	</variable>
+	<variable name="TVShowActorsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2factors.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowActors,return)</value>
+	</variable>
+	<variable name="TVShowGenreCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fgenres.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowGenres,return)</value>
+	</variable>
+	<variable name="TVShowStudiosCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fstudios.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowStudios,return)</value>
+	</variable>
+	<variable name="TVShowTagsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftags.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowTags,return)</value>
+	</variable>
+	<variable name="TVShowYearsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fyears.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,TvShowYears,return)</value>
+	</variable>
+	<variable name="MusicLibraryCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,return)</value>
+	</variable>
+	<variable name="MusicAlbumsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2falbums%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Albums,return)</value>
+	</variable>
+	<variable name="MusicArtistsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Artists,return)</value>
+	</variable>
+	<variable name="MusicCompilationsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fcompilations%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Compilations,return)</value>
+	</variable>
+	<variable name="MusicGenreCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fgenres%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Genres,return)</value>
+	</variable>
+	<variable name="MusicPlaylistCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]special%3a%2f%2fmusicplaylists%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,playlists,return)</value>
+	</variable>
+	<variable name="MusicRecentAddCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2frecentlyaddedalbums%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</value>
+	</variable>
+	<variable name="MusicRecentPlayCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2frecentlyplayedalbums%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,return)</value>
+	</variable>
+	<variable name="MusicSongsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fsongs%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Songs,return)</value>
+	</variable>
+	<variable name="MusicTop100AlbumsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2falbums%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Top100Albums,return)</value>
+	</variable>
+	<variable name="MusicTop100SongsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2fsongs%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Top100Songs,return)</value>
+	</variable>
+	<variable name="MusicYearsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2fsongs%2f/",return)</value>
+		<value>ActivateWindow(MusicLibrary,Years,return)</value>
+	</variable>
+	<variable name="ConcertsLibraryCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideos,return)</value>
+	</variable>
+	<variable name="ConcertsYearsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fyears.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosYears,return)</value>
+	</variable>
+	<variable name="ConcertsTitleCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosTitles,return)</value>
+	</variable>
+	<variable name="ConcertsTagsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftags.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosTags,return)</value>
+	</variable>
+	<variable name="ConcertsStudiosCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fstudios.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosStudios,return)</value>
+	</variable>
+	<variable name="ConcertsGenreCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fgenres.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosGenres,return)</value>
+	</variable>
+	<variable name="ConcertsDirectorsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fdirectors.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosDirectors,return)</value>
+	</variable>
+	<variable name="ConcertsArtistsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fartists.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosArtists,return)</value>
+	</variable>
+	<variable name="ConcertsAlbumsCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2falbums.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,MusicVideosAlbums,return)</value>
+	</variable>
+	<variable name="ConcertsRecentCmd" type="text">
+		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmusicvideos.xml%2f/",return)</value>
+		<value>ActivateWindow(VideoLibrary,RecentlyAddedMusicVideos,return)</value>
 	</variable>
 </includes>
