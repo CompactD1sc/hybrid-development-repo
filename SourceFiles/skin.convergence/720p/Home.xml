@@ -659,9 +659,6 @@
 						<description>Home Menu Item One</description>
 						<label>$INFO[Skin.String(HomeMenu.1.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.1.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuOnePath]</onclick>
 						
 						<icon>-</icon>
@@ -678,8 +675,6 @@
 						<description>Home Menu Item Two</description>
 						<label>$INFO[Skin.String(HomeMenu.2.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.2.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuTwoPath]</onclick>
 						
 						<icon>-</icon>
@@ -694,8 +689,6 @@
 						<description>Home Menu Item Three</description>
 						<label>$INFO[Skin.String(HomeMenu.3.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.3.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuThreePath]</onclick>
 						
 						<icon>-</icon>
@@ -710,8 +703,6 @@
 						<description>Home Menu Item Four</description>
 						<label>$INFO[Skin.String(HomeMenu.4.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-												
-						<!--onclick>$INFO[Skin.String(HomeMenu.4.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuFourPath]</onclick>
 						
 						<icon>-</icon>
@@ -726,8 +717,6 @@
 						<description>Home Menu Item Five</description>
 						<label>$INFO[Skin.String(HomeMenu.5.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.5.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuFivePath]</onclick>
 						
 						<icon>-</icon>
@@ -742,8 +731,6 @@
 						<description>Home Menu Item Six</description>
 						<label>$INFO[Skin.String(HomeMenu.6.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.6.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuSixPath]</onclick>
 						
 						<icon>-</icon>
@@ -758,8 +745,6 @@
 						<description>Home Menu Item Seven</description>
 						<label>$INFO[Skin.String(HomeMenu.7.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.7.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuSevenPath]</onclick>
 						
 						<icon>-</icon>
@@ -774,8 +759,6 @@
 						<description>Home Menu Item Eight</description>
 						<label>$INFO[Skin.String(HomeMenu.8.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.8.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuEightPath]</onclick>
 						
 						<icon>-</icon>
@@ -790,8 +773,6 @@
 						<description>Home Menu Item Nine</description>
 						<label>$INFO[Skin.String(HomeMenu.9.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.9.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuNinePath]</onclick>
 						
 						<icon>-</icon>
@@ -806,8 +787,6 @@
 						<description>Home Menu Item Ten</description>
 						<label>$INFO[Skin.String(HomeMenu.10.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						
-						<!--onclick>$INFO[Skin.String(HomeMenu.10.Path)]</onclick-->
 						<onclick>$VAR[HomeMenuTenPath]</onclick>
 						
 						
@@ -881,6 +860,8 @@
 				<include>Window_OpenClose_Animation</include>
 				<control type="button" id="20">
 					<description>push button</description>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
 					<left>110</left>
 					<top>0</top>
 					<width>45</width>
@@ -899,6 +880,8 @@
 				</control>
 				<control type="image">
 					<description>DVD Icon</description>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
 					<left>115</left>
 					<top>5</top>
 					<width>35</width>
@@ -909,13 +892,14 @@
 				</control>
 				<control type="button" id="21">
 					<description>Power push button</description>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
 					<left>55</left>
 					<top>0</top>
 					<width>45</width>
 					<height>45</height>
 					<label>31003</label>
 					<font>-</font>
-					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<onclick>$VAR[HomePowerBtnCommand]</onclick>
 					<texturefocus border="5">floor_buttonFO.png</texturefocus>
 					<texturenofocus border="5">floor_button.png</texturenofocus>
 					<onleft>22</onleft>
@@ -926,6 +910,7 @@
 				</control>
 				<control type="image">
 					<description>Power Icon</description>
+					<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
 					<left>60</left>
 					<top>5</top>
 					<width>35</width>
@@ -949,6 +934,7 @@
 					<onright>21</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
+					<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
 				</control>
 				<control type="image">
 					<description>Favourites Icon</description>
@@ -958,6 +944,7 @@
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
 					<texture>icon_favourites.png</texture>
+					<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
 				</control>
 			</control>
 		</control>

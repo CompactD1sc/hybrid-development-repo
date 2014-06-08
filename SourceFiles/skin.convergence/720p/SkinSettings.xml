@@ -218,6 +218,11 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="5">
+						<label>31143</label>
+						<label2>5</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
 						<label>31284</label>
 						<label2>5</label2>
 						<onclick>noop</onclick>
@@ -1090,32 +1095,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="180">
-						<description>DVD Button</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31086]</label>
-						<onclick>Skin.ToggleSetting(HideDvdMenuItem)</onclick>
-						<selected>!Skin.HasSetting(HideDvdMenuItem)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="181">
-						<description>Power Button</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31079]</label>
-						<onclick>Skin.ToggleSetting(HidePowerMenuItem)</onclick>
-						<selected>!Skin.HasSetting(HidePowerMenuItem)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
+					
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1060</left>
@@ -3719,8 +3699,230 @@
 					<orientation>vertical</orientation>
 					<visible>Container(9000).Hasfocus(4)</visible>
 				</control-->
-				<control type="grouplist" id="9005">
+				<control type="grouplist" id="9006">
 					<visible>Container(9000).Hasfocus(5)</visible>
+					<left>290</left>
+					<top>60</top>
+					<width>750</width>
+					<height>530</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<control type="label" id="700">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31144</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="701">
+						<description>DVD Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31086]</label>
+						<onclick>Skin.ToggleSetting(HideDvdMenuItem)</onclick>
+						<selected>!Skin.HasSetting(HideDvdMenuItem)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="702">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31148]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideFavouritesBtn)</onclick>
+						<selected>!Skin.HasSetting(HideFavouritesBtn)</selected>
+					</control>
+					
+					
+					
+					<control type="label" id="710">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>31145</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="711">
+						<description>Power Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31079]</label>
+						<onclick>Skin.ToggleSetting(HidePowerMenuItem)</onclick>
+						<selected>!Skin.HasSetting(HidePowerMenuItem)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+				
+				
+					<control type="radiobutton" id="712">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31146]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.Reset(PowerBtnCommand)</onclick>
+						<selected>IsEmpty(Skin.String(PowerBtnCommand))</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+					</control>
+					<control type="radiobutton" id="713">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31147]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,ShutDown)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),ShutDown)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+					</control>
+					<control type="radiobutton" id="714">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13005]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Powerdown)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Powerdown)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.CanPowerDown</visible>
+					</control>
+					<control type="radiobutton" id="715">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13010]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Hibernate)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Hibernate)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.CanHibernate</visible>
+					</control>
+					<control type="radiobutton" id="716">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13011]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Suspend)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Suspend)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.CanSuspend</visible>
+					</control>
+					<control type="radiobutton" id="717">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13009]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Quit)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Quit)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.Platform.Windows</visible>
+					</control>
+					<control type="radiobutton" id="718">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[13014]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Minimize)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Minimize)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+					</control>
+					<control type="radiobutton" id="719">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[20126]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,System.LogOff)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),System.LogOff)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+					</control>
+					<control type="radiobutton" id="720">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[10035]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetString(PowerBtnCommand,Reset)</onclick>
+						<selected>stringcompare(Skin.String(PowerBtnCommand),Reset)</selected>
+						<enable>!Skin.HasSetting(HidePowerMenuItem)</enable>
+						<visible>System.CanReboot</visible>
+					</control>
+				
+				
+				
+				
+				
+				
+				
+					</control>
+				<control type="scrollbar" id="60">
+					<left>1060</left>
+					<top>60</top>
+					<width>25</width>
+					<height>530</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>9006</onleft>
+					<onright>800</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Container(9000).Hasfocus(5)</visible>
+				</control>
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(6)</visible>
 					<left>290</left>
 					<top>60</top>
 					<width>750</width>
@@ -3780,10 +3982,12 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
+						<onclick condition="Skin.String(UPnPServer,XBMC)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
 						<!--
 						<onclick condition="Skin.String(UPnPServer,XBMC)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
 						<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,XBMC)</onclick>
 						-->
+						<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,XBMC)</onclick>
 						<enable>Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
 					
@@ -4048,7 +4252,7 @@
 					<onright>800</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>Container(9000).Hasfocus(5)</visible>
+					<visible>Container(9000).Hasfocus(6)</visible>
 				</control>
 			</control>
 		</control>
