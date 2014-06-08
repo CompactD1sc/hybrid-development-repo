@@ -58,13 +58,19 @@ msgctxt "#31009"
 msgid "Total Duration"
 msgstr ""
 
-#empty strings from id 31010 to 31010
+msgctxt "#31010"
+msgid "UPnP Catagory Not Found"
+msgstr ""
 
 msgctxt "#31011"
 msgid "XBMC"
 msgstr ""
 
-#empty strings from id 31012 to 31021
+msgctxt "#31012"
+msgid "Windows Home Server"
+msgstr ""
+
+#empty strings from id 31013 to 31021
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -473,7 +479,31 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
-#empty strings from id 31143 to 31171
+msgctxt "#31143"
+msgid "Floor Buttons"
+msgstr ""
+
+msgctxt "#31144"
+msgid "General Floor Button Settings"
+msgstr ""
+
+msgctxt "#31145"
+msgid "Power Button Settings"
+msgstr ""
+
+msgctxt "#31146"
+msgid "Power Button Activates Shutdown Menu"
+msgstr ""
+
+msgctxt "#31147"
+msgid "XBMC System Shutdown Setting"
+msgstr ""
+
+msgctxt "#31148"
+msgid "Show Favourites Button"
+msgstr ""
+
+#empty strings from id 31149 to 31171
 
 msgctxt "#31172"
 msgid "User Selection One"
@@ -915,7 +945,7 @@ msgid "Setup UPnP Library"
 msgstr ""
 
 msgctxt "#31336"
-msgid "Enable UPnP Library Mode"
+msgid "Enable UPnP Client Mode"
 msgstr ""
 
 msgctxt "#31337"

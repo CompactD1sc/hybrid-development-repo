@@ -405,6 +405,10 @@
 		<value condition="System.Platform.Android + IsEmpty(Skin.String(HomeMenu.9.Path))">ActivateWindow(Programs)</value>
 		<value condition="!IsEmpty(Skin.String(HomeMenu.10.Path))">$INFO[Skin.String(HomeMenu.10.Path)]</value>
 	</variable>
+	<variable name="HomePowerBtnCommand">
+		<value condition="!IsEmpty(Skin.String(PowerBtnCommand))">$INFO[Skin.String(PowerBtnCommand)]</value>
+		<value>ActivateWindow(ShutdownMenu)</value>
+	</variable>
 	<variable name="SubMenuPlayBtn">
 		<value condition="!Player.Paused">$LOCALIZE[31351]</value>
 		<value condition="Player.Paused">$LOCALIZE[14098]</value>
@@ -1025,227 +1029,350 @@
 		<value condition="Playlist.IsRepeatOne">[B]($LOCALIZE[31094])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
 		<value>$INFO[musicplayer.Playlistposition,$LOCALIZE[31267] $LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, $LOCALIZE[31091] ]</value>
 	</variable>
+		<variable name="BannerThumb">
+		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PosterThumb">
+		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PlayList">
+		<value condition="Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
+		<value condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
+	</variable>
+	<variable name="SelectBack">
+		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
+		<value condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">DialogBack2.png</value>
+	</variable>
+	<variable name="TransparentValue">
+		<value condition="!IsEmpty(Skin.String(MediaPanelTrans))">$LOCALIZE[31114]</value>
+		<value>$LOCALIZE[31115]</value>
+	</variable>
+	<variable name="PopupInfoType">
+		<value condition="Skin.String(MediaPopUpControl,Hidden)">$LOCALIZE[31120]</value>
+		<value condition="Skin.String(MediaPopUpControl,Instant)">$LOCALIZE[31121]</value>
+		<value condition="Skin.String(MediaPopUpControl,Delayed)">$LOCALIZE[31122]</value>
+		<value>$LOCALIZE[31390]</value>
+	</variable>
 	<variable name="UPnPServerType" type="text">
+		<value condition="Skin.String(UPnPServer,WinHomeServer">$LOCALIZE[31012]</value>
 		<value>$LOCALIZE[31011]</value>
 	</variable>
 	<variable name="VideoFilesCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
-		<value condition="Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,Files,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]2/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,Files,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesPlayListCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fplaylists.xml%2f/",return)</value>
-		<value>ActivateWindow(Videos,Playlists,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]10/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(Videos,Playlists,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,Movies,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]8/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,Movies,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesTitleCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftitles.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieTitles,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]8/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieTitles,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesActorsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2factors.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieActors,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]A/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieActors,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesCountriesCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fcountry.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieCountries,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieCountries,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesDirectorsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fdirectors.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieDirectors,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieDirectors,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesSetsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fsets.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieSets,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieSets,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesGenreCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fgenres.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieGenres,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]9/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieGenres,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesStudiosCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fstudios.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieStudios,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieStudios,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesTagsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftags.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieTags,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieTags,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesYearsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2fyears.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MovieYears,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MovieYears,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MoviesRecentCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShows,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]E/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShows,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowInProgressCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2finprogressshows.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,library://video/inprogressshows.xml/,return))</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,library://video/inprogressshows.xml/,return))</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowRecentCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedepisodes.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowTitleCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftitles.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowTitles,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]E/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowTitles,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowActorsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2factors.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowActors,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowActors,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowGenreCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fgenres.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowGenres,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowGenres,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowStudiosCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fstudios.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowStudios,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowStudios,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowTagsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftags.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowTags,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowTags,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="TVShowYearsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2fyears.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,TvShowYears,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,TvShowYears,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]1/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicAlbumsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2falbums%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Albums,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]7/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Albums,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicArtistsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Artists,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]6/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Artists,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicCompilationsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fcompilations%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Compilations,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Compilations,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicGenreCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fgenres%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Genres,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]5/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Genres,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicPlaylistCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]special%3a%2f%2fmusicplaylists%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,playlists,return)</value>
+		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]F/",return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,playlists,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicRecentAddCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2frecentlyaddedalbums%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicRecentPlayCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2frecentlyplayedalbums%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicSongsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fsongs%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Songs,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Songs,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicTop100AlbumsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2falbums%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Top100Albums,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Top100Albums,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicTop100SongsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2fsongs%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Top100Songs,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Top100Songs,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="MusicYearsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2ftop100%2fsongs%2f/",return)</value>
-		<value>ActivateWindow(MusicLibrary,Years,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(MusicLibrary,Years,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsLibraryCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideos,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideos,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsYearsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fyears.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosYears,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosYears,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsTitleCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosTitles,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosTitles,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsTagsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftags.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosTags,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosTags,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsStudiosCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fstudios.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosStudios,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosStudios,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsGenreCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fgenres.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosGenres,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosGenres,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsDirectorsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fdirectors.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosDirectors,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosDirectors,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsArtistsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2fartists.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosArtists,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosArtists,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsAlbumsCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2falbums.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,MusicVideosAlbums,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,MusicVideosAlbums,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
 	<variable name="ConcertsRecentCmd" type="text">
 		<value condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">ActivateWindow(2127)</value>
 		<value condition="Skin.HasSetting(UPnP_Mode) + stringcompare(Skin.String(UPnPServer),XBMC)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmusicvideos.xml%2f/",return)</value>
-		<value>ActivateWindow(VideoLibrary,RecentlyAddedMusicVideos,return)</value>
+		<value condition="!Skin.HasSetting(UPnP_Mode)">ActivateWindow(VideoLibrary,RecentlyAddedMusicVideos,return)</value>
+		<value>ActivateWindow(2129)</value>
 	</variable>
+	
+	<!--
+	Win Home Server
+	Videos upnp://1cd4b496-65ab-42c4-94f6-80a56a756168/2/
+	
+	All Videos upnp://1cd4b496-65ab-42c4-94f6-80a56a756168/8/
+	Folders 15
+	
+	Rating 200
+	5 star 205 4 star 204 etc
+	
+	Recorded TV 18
+	All Recorded TV 19
+	Folders 1E
+	Rating 400
+	5star 404  4 star 404 etc
+	
+	Recorded TV Actors 1B
+				Genre  1A
+				Playlists 1D
+				Series 1C
+				
+	Series /E
+	Actors /A
+	Genre /9
+	Playlists /10
+	
+	
+	Playlists /12
+		All Playlists /13
+		Folders /17
+		
+Win 7 
+
+		Videos /2
+		All /8
+		Folders /15
+	
+	-->
 </includes>
