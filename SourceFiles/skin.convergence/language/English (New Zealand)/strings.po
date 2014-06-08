@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: English (New Zealand) (http://www.transifex.com/projects/p/xbmc-main/language/en_NZ/)\n"
+"Language-Team: English (New Zealand) (http://www.transifex.com/projects/p/xbmc-skins/language/en_NZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change Your"
 msgstr "Change Your"
+
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
+
+msgctxt "#31002"
+msgid "Raspberry OS"
+msgstr "Raspberry OS"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -35,6 +43,10 @@ msgstr "Hide Information"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "View Options"
+
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "Watch it Later"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -160,6 +172,98 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Current Selected"
 
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "Up One Level"
+
+msgctxt "#31063"
+msgid "Submenu Set"
+msgstr "Submenu Set"
+
+msgctxt "#31064"
+msgid "SubMenu Item"
+msgstr "SubMenu Item"
+
+msgctxt "#31065"
+msgid "Selected"
+msgstr "Selected"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Pause"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Stop"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Fast Forward"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Rewind"
+
+msgctxt "#31079"
+msgid "Show System Power Button"
+msgstr "Show System Power Button"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "Menu Item"
+
+msgctxt "#31081"
+msgid "Submenu Set"
+msgstr "Submenu Set"
+
+msgctxt "#31082"
+msgid "Widget Set"
+msgstr "Widget Set"
+
+msgctxt "#31083"
+msgid "Move Menu Item"
+msgstr "Move Menu Item"
+
+msgctxt "#31085"
+msgid "Additional Menu Options"
+msgstr "Additional Menu Options"
+
+msgctxt "#31087"
+msgid "Select Item to Swap"
+msgstr "Select Item to Swap"
+
+msgctxt "#31088"
+msgid "Select Widget Set"
+msgstr "Select Widget Set"
+
+msgctxt "#31089"
+msgid "Select SubMenu Set"
+msgstr "Select SubMenu Set"
+
+msgctxt "#31090"
+msgid "Select Menu Item"
+msgstr "Select Menu Item"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "of"
+
+msgctxt "#31092"
+msgid "Shuffle On"
+msgstr "Shuffle On"
+
+msgctxt "#31093"
+msgid "Repeat All On"
+msgstr "Repeat All On"
+
+msgctxt "#31094"
+msgid "Repeat One On"
+msgstr "Repeat One On"
+
+msgctxt "#31100"
+msgid "Home Menu"
+msgstr "Home Menu"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Home screen options"
@@ -171,10 +275,6 @@ msgstr "Background"
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
 msgstr "Show \"Paused\" in picture slide show"
-
-msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -204,6 +304,14 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Options"
 
+msgctxt "#31114"
+msgid "% Transparency"
+msgstr "% Transparency"
+
+msgctxt "#31115"
+msgid "Skin Default"
+msgstr "Skin Default"
+
 msgctxt "#31116"
 msgid "Show Recently added Albums"
 msgstr "Show Recently added Albums"
@@ -212,13 +320,21 @@ msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "Show Recently added Videos"
 
-msgctxt "#31118"
-msgid "Home Page Programs Sub-menu"
-msgstr "Home Page Programs Sub-menu"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "Hide Background Fanart"
+
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "Hidden"
+
+msgctxt "#31121"
+msgid "Instant"
+msgstr "Instant"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "Delayed"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -248,18 +364,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "Lyrics Add-on"
 
-msgctxt "#31134"
-msgid "Home Page Videos Sub-menu"
-msgstr "Home Page Videos Sub-menu"
-
-msgctxt "#31135"
-msgid "Home Page Music Sub-menu"
-msgstr "Home Page Music Sub-menu"
-
-msgctxt "#31136"
-msgid "Home Page Pictures Sub-menu"
-msgstr "Home Page Pictures Sub-menu"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Music OSD"
@@ -271,6 +375,118 @@ msgstr "Video OSD"
 msgctxt "#31142"
 msgid "Settings level"
 msgstr "Settings level"
+
+msgctxt "#31172"
+msgid "User Selection One"
+msgstr "User Selection One"
+
+msgctxt "#31173"
+msgid "User Selection Two"
+msgstr "User Selection Two"
+
+msgctxt "#31174"
+msgid "User Selection Three"
+msgstr "User Selection Three"
+
+msgctxt "#31175"
+msgid "User Selection Four"
+msgstr "User Selection Four"
+
+msgctxt "#31176"
+msgid "User Selection Five"
+msgstr "User Selection Five"
+
+msgctxt "#31177"
+msgid "User Selection Six"
+msgstr "User Selection Six"
+
+msgctxt "#31178"
+msgid "User Selection Seven"
+msgstr "User Selection Seven"
+
+msgctxt "#31179"
+msgid "User Selection Eight"
+msgstr "User Selection Eight"
+
+msgctxt "#31180"
+msgid "User Selection Nine"
+msgstr "User Selection Nine"
+
+msgctxt "#31181"
+msgid "User Selection Ten"
+msgstr "User Selection Ten"
+
+msgctxt "#31182"
+msgid "User Friendly Name"
+msgstr "User Friendly Name"
+
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "Concerts"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "TV Shows"
+
+msgctxt "#31185"
+msgid "Random Songs"
+msgstr "Random Songs"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "Random Artists"
+
+msgctxt "#31187"
+msgid "Recent Tracks"
+msgstr "Recent Tracks"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "Random Concerts"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "Recent Concerts"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Random Albums"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "Suggested Albums"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Recent Albums"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "Random Episodes"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "Suggested Episodes"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Recent Episodes"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "Random Movies"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "Suggested Movies"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Recent Movies"
+
+msgctxt "#31199"
+msgid "Suggested Concerts"
+msgstr "Suggested Concerts"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -296,6 +512,150 @@ msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "Upcoming Episodes"
 
+msgctxt "#31209"
+msgid "Global Search"
+msgstr "Global Search"
+
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "Nodes"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "Tags"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "Streaming Media"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "Cinema"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31215"
+msgid "Log-in"
+msgstr "Log-in"
+
+msgctxt "#31216"
+msgid "Shutdown Menu"
+msgstr "Shutdown Menu"
+
+msgctxt "#31229"
+msgid "XBMC Command"
+msgstr "XBMC Command"
+
+msgctxt "#31230"
+msgid "User Selection One"
+msgstr "User Selection One"
+
+msgctxt "#31231"
+msgid "User Selection Two"
+msgstr "User Selection Two"
+
+msgctxt "#31232"
+msgid "User Selection Three"
+msgstr "User Selection Three"
+
+msgctxt "#31233"
+msgid "User Selection Four"
+msgstr "User Selection Four"
+
+msgctxt "#31234"
+msgid "User Selection Five"
+msgstr "User Selection Five"
+
+msgctxt "#31235"
+msgid "User Selection Six"
+msgstr "User Selection Six"
+
+msgctxt "#31236"
+msgid "User Selection Seven"
+msgstr "User Selection Seven"
+
+msgctxt "#31237"
+msgid "User Selection Eight"
+msgstr "User Selection Eight"
+
+msgctxt "#31238"
+msgid "User Selection Nine"
+msgstr "User Selection Nine"
+
+msgctxt "#31239"
+msgid "User Selection Ten"
+msgstr "User Selection Ten"
+
+msgctxt "#31240"
+msgid "User Friendly Name"
+msgstr "User Friendly Name"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "Radio 105"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+msgctxt "#31247"
+msgid "Virgin Rock"
+msgstr "Virgin Rock"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "Animated"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "Children"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "Comedy"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "Family"
+
+msgctxt "#31252"
+msgid "HD-Movies"
+msgstr "HD-Movies"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "None"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "Suggested"
+
+msgctxt "#31256"
+msgid "No Suggested Media"
+msgstr "No Suggested Media"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Recently Added"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "Recently Played"
+
+msgctxt "#31259"
+msgid "Clean Library"
+msgstr "Clean Library"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "Playing"
+
+msgctxt "#31284"
+msgid "Scripts and Paths"
+msgstr "Scripts and Paths"
+
 msgctxt "#31300"
 msgid "Current Temp"
 msgstr "Current Temp"
@@ -307,6 +667,14 @@ msgstr "Last Updated"
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "Data provider"
+
+msgctxt "#31304"
+msgid "Music Path"
+msgstr "Music Path"
+
+msgctxt "#31305"
+msgid "Music Physical Folder"
+msgstr "Music Physical Folder"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -340,9 +708,17 @@ msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr "Content Scanning Options"
 
+msgctxt "#31315"
+msgid "Hide Item"
+msgstr "Hide Item"
+
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "Set Fanart Path"
+
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "Clear Menu Option"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -387,6 +763,18 @@ msgstr "Click button to play[CR][CR]Movie trailer"
 msgctxt "#31331"
 msgid "Album Details"
 msgstr "Album Details"
+
+msgctxt "#31332"
+msgid "ReSet"
+msgstr "ReSet"
+
+msgctxt "#31333"
+msgid "User Data"
+msgstr "User Data"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -475,10 +863,6 @@ msgstr "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP 
 msgctxt "#31411"
 msgid "First run help...."
 msgstr "First run help...."
-
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -607,3 +991,7 @@ msgstr "PLAY DISC"
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "SYSTEM"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "Add-Ons"

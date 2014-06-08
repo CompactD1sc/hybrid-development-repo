@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/xbmc-main/language/gl/)\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/xbmc-skins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,13 +20,17 @@ msgctxt "#31000"
 msgid "Change Your"
 msgstr "Troca o teu"
 
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "SO OpenELEC"
+
 msgctxt "#31003"
 msgid "Power Options"
 msgstr "Opcións de enerxía"
 
 msgctxt "#31004"
 msgid "Working..."
-msgstr "A traballar..."
+msgstr "Traballando..."
 
 msgctxt "#31005"
 msgid "Hide Information"
@@ -35,6 +39,10 @@ msgstr "Ocultar información"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "Ver opcións"
+
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "Ver máis tarde"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -46,7 +54,7 @@ msgstr "Duración total"
 
 msgctxt "#31022"
 msgid "Music - Files"
-msgstr "Música - Ficheiros"
+msgstr "Música - Arquivos"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -74,7 +82,7 @@ msgstr "Envoltorio de cartel"
 
 msgctxt "#31029"
 msgid "Fanart"
-msgstr "Cartel"
+msgstr "Fanart"
 
 msgctxt "#31031"
 msgid "Pic Thumbs"
@@ -94,7 +102,7 @@ msgstr "Accións"
 
 msgctxt "#31040"
 msgid "Now Playing"
-msgstr "Reproducindo"
+msgstr "Agora reproducindo"
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -106,19 +114,15 @@ msgstr "PAUSADO"
 
 msgctxt "#31044"
 msgid "FAST FORWARD"
-msgstr "AXIÑA ADIANTE"
+msgstr "ADIANTE"
 
 msgctxt "#31045"
 msgid "REWIND"
-msgstr "REBOBINAR"
-
-msgctxt "#31046"
-msgid "SEEKING"
-msgstr "BUSCANDO"
+msgstr "ATRÁS"
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "Preconfiguracións de visualizacións"
+msgstr "Preconfiguracións de Visualización"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -126,39 +130,107 @@ msgstr "Tempo final"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "Ordenar: Ascendente"
+msgstr "Ordear: Ascendentemente"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "Ordenar: Descendente"
+msgstr "Ordear: Descendentemente"
 
 msgctxt "#31055"
 msgid "Open playlist"
-msgstr "Abrir lista de reproducción"
+msgstr "Abrir lista de reprodución"
 
 msgctxt "#31056"
 msgid "Save playlist"
-msgstr "Gardar lista de reproducción"
+msgstr "Gardar lista de reprodución"
 
 msgctxt "#31057"
 msgid "Close playlist"
-msgstr "Pechar lista de reproducción"
+msgstr "Pechar lista de reprodución"
 
 msgctxt "#31058"
 msgid "System music files"
-msgstr "Ficheiros de música do sistema"
+msgstr "Arquivos de música do sistema"
 
 msgctxt "#31059"
 msgid "Current playlist"
-msgstr "Lista de reproducción actual"
+msgstr "Lista de reprodución actual"
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "Este ficheiro esta amontoado, selecione a parte que quere reproducir."
+msgstr "Este arquivo esta amontoado, selecione a parte que desexa reproducir."
 
 msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Seleccionado actualmente"
+
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "Subir un nivel"
+
+msgctxt "#31063"
+msgid "Submenu Set"
+msgstr "Conxunto de Submenús"
+
+msgctxt "#31064"
+msgid "SubMenu Item"
+msgstr "Elemento do Submenú"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Pausa"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Parar"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Axiña Adiante"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Atrás"
+
+msgctxt "#31079"
+msgid "Show System Power Button"
+msgstr "Amosar Botón de Acendido"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "Elemento do Menú"
+
+msgctxt "#31081"
+msgid "Submenu Set"
+msgstr "Conxunto de Submenús"
+
+msgctxt "#31082"
+msgid "Widget Set"
+msgstr "Conxunto de Widgets"
+
+msgctxt "#31088"
+msgid "Select Widget Set"
+msgstr "Escoller Conxunto de Widgets"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "de"
+
+msgctxt "#31092"
+msgid "Shuffle On"
+msgstr "Activar Ó Chou"
+
+msgctxt "#31093"
+msgid "Repeat All On"
+msgstr "Activar Repetir Todo"
+
+msgctxt "#31094"
+msgid "Repeat One On"
+msgstr "Activar Repetir Un"
+
+msgctxt "#31100"
+msgid "Home Menu"
+msgstr "Menú Principal"
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -172,17 +244,13 @@ msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
 msgstr "Mostrar \"Pausado\" nunha diapositiva"
 
-msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "Reproducir avances nunha xanela [COLOR=grey3](Só diálogo de información de vídeo)[/COLOR]"
-
 msgctxt "#31106"
 msgid "Miscellaneous options"
 msgstr "Outras opcións"
 
 msgctxt "#31107"
 msgid "Hide Flagging read from video filenames [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
-msgstr "Agochar a lectura da marcaxe dende os nomes dos videos [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
+msgstr "Agochar a lectura da marcaxe dende os nomes dos vídeos [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide Main Menu Buttons"
@@ -204,29 +272,33 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Opcións"
 
+msgctxt "#31115"
+msgid "Skin Default"
+msgstr "Tema Predefinido"
+
 msgctxt "#31116"
 msgid "Show Recently added Albums"
-msgstr "Mostrar albumes engadidos recentemente"
+msgstr "Mostrar álbums engadidos recentemente"
 
 msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "Mostrar vídeos engadidos recentemente"
 
-msgctxt "#31118"
-msgid "Home Page Programs Sub-menu"
-msgstr "Submenú de Aplicacións da Páxina de Inicio"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "Agochar o fondo do cartel"
 
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "Agochado"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "Retardo"
+
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
 msgstr "Amosar o video reproducíndose actualmente no fondo"
-
-msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "Amosar a visualización 'En Reprodución' no fondo"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
@@ -240,25 +312,9 @@ msgctxt "#31128"
 msgid "Lyrics"
 msgstr "Letras"
 
-msgctxt "#31129"
-msgid "Hide Fanart in full screen visualisation"
-msgstr "Ocultar Fanart na visualización de pantalla completa"
-
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "Complemento de letras"
-
-msgctxt "#31134"
-msgid "Home Page Videos Sub-menu"
-msgstr "Submenú de Vídeos da Páxina de Inicio"
-
-msgctxt "#31135"
-msgid "Home Page Music Sub-menu"
-msgstr "Submenú de Música da Páxina de Inicio"
-
-msgctxt "#31136"
-msgid "Home Page Pictures Sub-menu"
-msgstr "Submenú de Imaxes da Páxina de Inicio"
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -268,9 +324,105 @@ msgctxt "#31141"
 msgid "Video OSD"
 msgstr "OSD de Video"
 
-msgctxt "#31142"
-msgid "Settings level"
-msgstr "Nivel de configuración"
+msgctxt "#31172"
+msgid "User Selection One"
+msgstr "Escolla do Usuario Un"
+
+msgctxt "#31173"
+msgid "User Selection Two"
+msgstr "Escolla do Usuario Dous"
+
+msgctxt "#31174"
+msgid "User Selection Three"
+msgstr "Escolla do Usuario Tres"
+
+msgctxt "#31175"
+msgid "User Selection Four"
+msgstr "Escolla do Usuario Catro"
+
+msgctxt "#31176"
+msgid "User Selection Five"
+msgstr "Escolla do Usuario Cinco"
+
+msgctxt "#31177"
+msgid "User Selection Six"
+msgstr "Escolla do Usuario Seis"
+
+msgctxt "#31178"
+msgid "User Selection Seven"
+msgstr "Escolla do Usuario Sete"
+
+msgctxt "#31179"
+msgid "User Selection Eight"
+msgstr "Escolla do Usuario Oito"
+
+msgctxt "#31180"
+msgid "User Selection Nine"
+msgstr "Escolla do Usuario Nove"
+
+msgctxt "#31181"
+msgid "User Selection Ten"
+msgstr "Escolla do Usuario Dez"
+
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "Concertos"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "Series de TV"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "Artistas Ó Chou"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "Concertos Ao Chou"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "Concertos Recentes"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Álbums Ó Chou"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "Álbums Suxeridos"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Álbums Recentes"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "Episodios Ó Chou"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "Episodios Suxeridos"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Episodios recentes"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "Filmes aleatorios"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "Filmes Suxeridos"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Filmes recentes"
+
+msgctxt "#31199"
+msgid "Suggested Concerts"
+msgstr "Concertos Suxeridos"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -296,6 +448,134 @@ msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "Vindeiros episodios"
 
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "Nodos"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "Transmisión de Medios"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "Cine"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31215"
+msgid "Log-in"
+msgstr "Iniciar Sesión"
+
+msgctxt "#31229"
+msgid "XBMC Command"
+msgstr "Comando do XBMC"
+
+msgctxt "#31230"
+msgid "User Selection One"
+msgstr "Escolla do Usuario Un"
+
+msgctxt "#31231"
+msgid "User Selection Two"
+msgstr "Escolla do Usuario Dous"
+
+msgctxt "#31232"
+msgid "User Selection Three"
+msgstr "Escolla do Usuario Tres"
+
+msgctxt "#31233"
+msgid "User Selection Four"
+msgstr "Escolla do Usuario Catro"
+
+msgctxt "#31234"
+msgid "User Selection Five"
+msgstr "Escolla do Usuario Cinco"
+
+msgctxt "#31235"
+msgid "User Selection Six"
+msgstr "Escolla do Usuario Seis"
+
+msgctxt "#31236"
+msgid "User Selection Seven"
+msgstr "Escolla do Usuario Sete"
+
+msgctxt "#31237"
+msgid "User Selection Eight"
+msgstr "Escolla do Usuario Oito"
+
+msgctxt "#31238"
+msgid "User Selection Nine"
+msgstr "Escolla do Usuario Nove"
+
+msgctxt "#31239"
+msgid "User Selection Ten"
+msgstr "Escolla do Usuario Dez"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "Radio 105"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+msgctxt "#31247"
+msgid "Virgin Rock"
+msgstr "Virgin Rock"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "Animado"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "Infantil"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "Comedia"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "Familia"
+
+msgctxt "#31252"
+msgid "HD-Movies"
+msgstr "Filmes en HD"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Ningún"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "Suxerido"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Engadido recentemente"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "Reproducidos Recentemente"
+
+msgctxt "#31259"
+msgid "Clean Library"
+msgstr "Limpar Biblioteca"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "A reproducir"
+
+msgctxt "#31284"
+msgid "Scripts and Paths"
+msgstr "Scripts e Rutas"
+
 msgctxt "#31300"
 msgid "Current Temp"
 msgstr "Temperatura actual"
@@ -306,7 +586,15 @@ msgstr "Última actualización"
 
 msgctxt "#31303"
 msgid "Data provider"
-msgstr "Provedor de datos"
+msgstr "Proveedor de datos"
+
+msgctxt "#31304"
+msgid "Music Path"
+msgstr "Camiño da Música"
+
+msgctxt "#31305"
+msgid "Music Physical Folder"
+msgstr "Cartafol da Música"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -334,15 +622,23 @@ msgstr "Scraper actual"
 
 msgctxt "#31313"
 msgid "Choose a Scraper"
-msgstr "Escoller scraper"
+msgstr "Escolla un scraper"
 
 msgctxt "#31314"
 msgid "Content Scanning Options"
-msgstr "Opcións de escaneado de contidos"
+msgstr "Opcións de escaneo de contido"
+
+msgctxt "#31315"
+msgid "Hide Item"
+msgstr "Agochar Elemento"
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "Estabrecer ruta de Carteis"
+
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "Limpar a Opción de Menú"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -354,7 +650,7 @@ msgstr "Último ingreso"
 
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
-msgstr "Selecionador de cancións do Karaoke"
+msgstr "Seletor de cancións do Karaoke"
 
 msgctxt "#31322"
 msgid "Aired"
@@ -388,6 +684,18 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr "Detalles do Álbum"
 
+msgctxt "#31332"
+msgid "ReSet"
+msgstr "Reiniciar"
+
+msgctxt "#31333"
+msgid "User Data"
+msgstr "Datos do Usuario"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]Atención![/B][/COLOR] - Restabelecer os valores do Tema aos valores predefinidos da instalación"
+
 msgctxt "#31351"
 msgid "Pause"
 msgstr "Pausa"
@@ -410,7 +718,7 @@ msgstr "Menú do filme"
 
 msgctxt "#31356"
 msgid "Download Subtitles"
-msgstr "Descargar Subtítulos"
+msgstr "Descargar subtítulos"
 
 msgctxt "#31360"
 msgid "Watch as 2D"
@@ -418,7 +726,7 @@ msgstr "Ver como 2D"
 
 msgctxt "#31361"
 msgid "Change mode"
-msgstr "Trocar o modo"
+msgstr "Trocar modo"
 
 msgctxt "#31362"
 msgid "Enabled"
@@ -438,7 +746,7 @@ msgstr "Baseado en Arial"
 
 msgctxt "#31400"
 msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
-msgstr "[B]CONFIGURAR PARÁMETROS DE APARIENCIA[/B][CR][CR]Trocar a pel · Estabelecer a lingua e a rexión · Trocar as opcións de listado de ficheiros[CR]Estabelecer o protector de pantalla"
+msgstr "[B]CONFIGURAR PARÁMETROS DE APARIENCIA[/B][CR][CR]Trocar a pel · Estabrecer lingua e rexión · Trocar as opcións de listado de arquivos[CR]Estabrecer gardapantallas"
 
 msgctxt "#31401"
 msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
@@ -464,41 +772,25 @@ msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]CONFIGURAR ENGADIDOS[/B][CR][CR]Xestionar engadidos instalados · Buscar e instalar Engadidos de xbmc.org[CR]Modificar a configuración dos Engadidos"
 
-msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]CONFIGURAR OS AXUSTES DE TV[/B][CR][CR]Trocar info. da pantalla completa · Xestionar a configuración dos datos da Guía"
-
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]CONFIGURAR PARÁMETROS DO SERVIZO[/B][CR][CR]Configurar o control de XBMC vía UPnP e HTTP · Configurar compartición de ficheiros[CR]Activar Zeroconf · Configurar AirPlay"
+msgstr "[B]CONFIGURAR PARÁMETROS DO SERVIZO[/B][CR][CR]Configurar o control de XBMC vía UPnP e HTTP · Configurar compartición de arquivos[CR]Activar Zeroconf · Configurar AirPlay"
 
 msgctxt "#31411"
 msgid "First run help...."
 msgstr "Axuda da primeira execución..."
 
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr "Esta lapela significa que existe un menú deshabilitado nesta xanela que contén máis opcións para esta sección. Para acceder ó menú, ir a esquerda co control remoto o teclado ou move o punteiro do rato até a lapela. [CR][CR]Preme en \"Feito\" para pechar a caixa de diálogo. Non aparecera máis."
-
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "Subtítulo local dispoñíbel"
+msgstr "subtítulos locais dispoñíbeis"
 
 msgctxt "#31420"
 msgid "Login"
-msgstr "Inicio de sesión"
+msgstr "Inicio de Sesión"
 
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
 msgstr "Selecione o seu perfíl de usuario de XBMC[CR]para ingresar e continuar"
-
-msgctxt "#31422"
-msgid "Show or hide the login screen at startup."
-msgstr "Amosar ou agochar a pantalla de inicio de sesión ao iniciar."
-
-msgctxt "#31423"
-msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "Usar o perfil a usar no inicio cando a pantalla de inicio de sesión estea desabilitada."
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -506,7 +798,7 @@ msgstr "Hora programada"
 
 msgctxt "#31502"
 msgid "Live TV"
-msgstr "TV en directo"
+msgstr "TV en Directo"
 
 msgctxt "#31503"
 msgid "Add Group"
@@ -607,3 +899,11 @@ msgstr "REPRODUCIR DISCO"
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "SISTEMA"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "Complementos"
+
+msgctxt "#31999"
+msgid "Home Panel Addons"
+msgstr "Complementos do Panel de Inicio"

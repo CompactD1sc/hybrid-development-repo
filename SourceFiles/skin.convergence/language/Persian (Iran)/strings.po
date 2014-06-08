@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Persian (Iran) (http://www.transifex.com/projects/p/xbmc-main/language/fa_IR/)\n"
+"Language-Team: Persian (Iran) (http://www.transifex.com/projects/p/xbmc-skins/language/fa_IR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,10 +19,6 @@ msgstr ""
 msgctxt "#31004"
 msgid "Working..."
 msgstr "در حال کار..."
-
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "تمام صفحه"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -88,6 +84,14 @@ msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
 msgstr "این فایل چند بخشی است, قسمت مورد نظر را برای پخش انتخاب کنید."
 
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "یک مرحله به بالا"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "از"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "تنظیمات صفحه ی خانگی"
@@ -111,6 +115,10 @@ msgstr "مخفی کردن"
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "میانبرها"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "هیچ"
 
 msgctxt "#31309"
 msgid "Memory Used:"
@@ -143,3 +151,7 @@ msgstr "حذف گروه"
 msgctxt "#31506"
 msgid "Available[CR]Groups"
 msgstr "گروه های [CR]موجود"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "پسوندها"

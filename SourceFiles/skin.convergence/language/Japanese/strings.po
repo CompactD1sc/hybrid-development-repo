@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/xbmc-main/language/ja/)\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/xbmc-skins/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,10 +35,6 @@ msgstr "情報を隠す"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "表示オプション"
-
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "フルスクリーン"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -88,10 +84,6 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "情報"
 
-msgctxt "#31039"
-msgid "Actions"
-msgstr "アクション"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "現在再生中"
@@ -111,14 +103,6 @@ msgstr "早送り"
 msgctxt "#31045"
 msgid "REWIND"
 msgstr "巻戻し"
-
-msgctxt "#31046"
-msgid "SEEKING"
-msgstr "スキャン中"
-
-msgctxt "#31048"
-msgid "Visualisation Presets"
-msgstr "視覚化プリセット"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -160,6 +144,26 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "現在選択中"
 
+msgctxt "#31074"
+msgid "Pause"
+msgstr "一時停止"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "停止"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "早送り"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "巻き戻し"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "of"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "ホーム画面オプション"
@@ -171,10 +175,6 @@ msgstr "背景"
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
 msgstr "ピクチャスライドショーで「静止中」と表示"
-
-msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "ウィンドウ内で予告を再生 [COLOR=grey3](ビデオ情報ダイアログのみ)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -212,21 +212,17 @@ msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "最近追加されたビデオを表示"
 
-msgctxt "#31118"
-msgid "Home Page Programs Sub-menu"
-msgstr "ホーム画面「プログラム」のサブメニュー"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "背景のファンアートを隠す"
 
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "隠された"
+
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
 msgstr "背景に「現在再生中」ビデオを表示"
-
-msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "背景に「現在再生中」の視覚化を表示"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
@@ -240,25 +236,9 @@ msgctxt "#31128"
 msgid "Lyrics"
 msgstr "歌詞"
 
-msgctxt "#31129"
-msgid "Hide Fanart in full screen visualisation"
-msgstr "フルスクリーン視覚化ではファンアートを非表示に"
-
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "歌詞アドオン"
-
-msgctxt "#31134"
-msgid "Home Page Videos Sub-menu"
-msgstr "ホーム画面「ビデオ』のサブメニュー"
-
-msgctxt "#31135"
-msgid "Home Page Music Sub-menu"
-msgstr "ホーム画面「ミュージック』のサブメニュー"
-
-msgctxt "#31136"
-msgid "Home Page Pictures Sub-menu"
-msgstr "ホーム画面「ピクチャ』のサブメニュー"
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -267,10 +247,6 @@ msgstr "ミュージック OSD"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "ビデオ OSD"
-
-msgctxt "#31142"
-msgid "Settings level"
-msgstr "設定レベル"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -295,6 +271,30 @@ msgstr "もっと見つける"
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "今後のエピソード"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "タグ"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "コメディー・お笑い"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "なし"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "最近追加"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "最近再生したメディア"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "再生中"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -412,14 +412,6 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "字幕をダウンロード"
 
-msgctxt "#31360"
-msgid "Watch as 2D"
-msgstr "2D で観る"
-
-msgctxt "#31361"
-msgid "Change mode"
-msgstr "モードを変更"
-
 msgctxt "#31362"
 msgid "Enabled"
 msgstr "LCD有効"
@@ -464,10 +456,6 @@ msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]アドオン設定[/B][CR][CR]インストール済みアドオン管理 - xbmc.orgからアドオンを検索・インストール[CR]アドオン設定変更"
 
-msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]TV設定[/B][CR][CR]フルスクリーン情報の変更 · EPGデータ設定"
-
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr "[B]サービス設定[/B][CR][CR]UPnP や HTTP 経由による XBMC 操作設定 · ファイル共有設定[CR]Zeroconf を有効に · AirPlay 設定"
@@ -476,13 +464,9 @@ msgctxt "#31411"
 msgid "First run help...."
 msgstr "初回起動時のヘルプ..."
 
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr "このタブは、このウィンドウの端にこのセクションの追加オプションが含まれているメニューがある事を示しています。このメニューにアクセスするには、リモコンやキーボードで左端に移動するか、またはマウスポインターをタブの上にのせます。[CR][CR]このダイアログを閉じるのには、「OK」をクリックしてください。このメッセージは再び表示されません。"
-
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "ローカルの字幕を利用できます"
+msgstr "ローカルの字幕が利用可能"
 
 msgctxt "#31420"
 msgid "Login"
@@ -491,14 +475,6 @@ msgstr "ログイン"
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
 msgstr "XBMC ユーザープロファイルを選択して[CR]ログインしてください"
-
-msgctxt "#31422"
-msgid "Show or hide the login screen at startup."
-msgstr "起動時にログイン画面を表示または非表示する"
-
-msgctxt "#31423"
-msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "ログイン画面が無効になっている状態の時、起動時に使用されるプロファイルを選択してください。"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -567,43 +543,3 @@ msgstr "天気予報データ取得中..."
 msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr "マップ＆アラート"
-
-msgctxt "#31950"
-msgid "WEATHER"
-msgstr "天気"
-
-msgctxt "#31951"
-msgid "PICTURES"
-msgstr "画像"
-
-msgctxt "#31952"
-msgid "LIVE TV"
-msgstr "LIVE TV"
-
-msgctxt "#31953"
-msgid "VIDEOS"
-msgstr "動画"
-
-msgctxt "#31954"
-msgid "MOVIES"
-msgstr "映画"
-
-msgctxt "#31955"
-msgid "TV SHOWS"
-msgstr "テレビ番組"
-
-msgctxt "#31956"
-msgid "MUSIC"
-msgstr "音楽"
-
-msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "プログラム"
-
-msgctxt "#31958"
-msgid "PLAY DISC"
-msgstr "ディスク再生"
-
-msgctxt "#31959"
-msgid "SYSTEM"
-msgstr "システム"

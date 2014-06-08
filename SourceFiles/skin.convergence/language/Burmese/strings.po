@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Burmese (http://www.transifex.com/projects/p/xbmc-main/language/my/)\n"
+"Language-Team: Burmese (http://www.transifex.com/projects/p/xbmc-skins/language/my/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,10 +23,6 @@ msgstr "အလုပ်လုပ်နေသည်"
 msgctxt "#31005"
 msgid "Hide Information"
 msgstr "အချက်အလက်များကိုဖျောက်ထားမည်"
-
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "မျက်နှာပြင်အပြည့် "
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -104,6 +100,26 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "ယခုရွေးထားသော"
 
+msgctxt "#31074"
+msgid "Pause"
+msgstr "ခဏရပ်မည်"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "လုံး၀ရပ်မည်"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "အရှေ့သို့အနည်းငယ်ရစ်မည်"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "နောက်သို့အနည်းငယ်ရစ်မည်"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "၏"
+
 msgctxt "#31102"
 msgid "Background"
 msgstr "နောက်ခံ"
@@ -119,6 +135,10 @@ msgstr "မကြာသေးခင်ကထည့်ခဲ့သော အယ�
 msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "မကြာသေးခင်ကထည့်ခဲ့သော ဗွီဒီယိုများ ကိုပြမည်"
+
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "ဖျောက်ထားသော"
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -155,6 +175,22 @@ msgstr "နောက်ထပ်အမျိုးအစားများကိ
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "နောက်လာမည့်အပိုင်းများ"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "ဟာ"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "ဘာမှမဟုတ်"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "မကြာသေးခင်ကပေါင်းထည့်ခဲ့သော"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "ဖွင့်နေပါသည်။"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -251,6 +287,14 @@ msgstr "[B]ADD-ONS ပြုပြင်ခြင်း[/B][CR][CR] သွင်
 msgctxt "#31411"
 msgid "First run help...."
 msgstr "အကူအညီကိုကြိုတင်ဖွင့်ပါ"
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Local စာတန်းထိုး များရနိုင်ပါသည်။"
+
+msgctxt "#31420"
+msgid "Login"
+msgstr "ဝင်ရန်"
 
 msgctxt "#31502"
 msgid "Live TV"

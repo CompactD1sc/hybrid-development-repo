@@ -3735,13 +3735,75 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
+						<label>31335</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="radiobutton" id="601">
+						<description>Set UPnP Library Mode</description>
+						<width>750</width>
+						<height>40</height>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>31336</label>
+						<onclick>Skin.Reset(UPnP_Path)</onclick>
+						<onclick>Skin.SetString(UPnPServer,XBMC)</onclick>
+						<onclick>Skin.ToggleSetting(UPnP_Mode)</onclick>
+						<selected>Skin.HasSetting(UPnP_Mode)</selected>
+					</control>
+					<control type="button" id="604">
+						<description>UPnP Library Path</description>
+						<label>15311</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(UPnP_Path)][/COLOR]</label2>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetPath(UPnP_Path)</onclick>
+						<enable>Skin.HasSetting(UPnP_Mode)</enable>
+					</control>
+					<control type="button" id="605">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31342]</label>
+						<label2>[COLOR=selected]$VAR[UPnPServerType][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="IsEmpty(Skin.String(UPnPServer))">Skin.SetString(UPnPServer,XBMC)</onclick>
+						<!--
+						<onclick condition="Skin.String(UPnPServer,XBMC)">Skin.SetString(UPnPServer,WinHomeServer)</onclick>
+						<onclick condition="Skin.String(UPnPServer,WinHomeServer)">Skin.SetString(UPnPServer,XBMC)</onclick>
+						-->
+						<enable>Skin.HasSetting(UPnP_Mode)</enable>
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					<control type="label" id="610">
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
 						<label>31305</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="602">
+					<control type="button" id="612">
 						<description>Physical Music Folder</description>
 						<width>750</width>
 						<height>40</height>
@@ -3755,7 +3817,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="label" id="603">
+					<control type="label" id="613">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -3765,7 +3827,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="604">
+					<control type="button" id="614">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3777,7 +3839,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 					</control>
-					<control type="button" id="605">
+					<control type="button" id="615">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3789,7 +3851,7 @@
 						<enable>!IsEmpty(Skin.String(LyricScript_Path))</enable>
 						<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 					</control>
-					<control type="label" id="606">
+					<control type="label" id="616">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -3799,7 +3861,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="607">
+					<control type="button" id="617">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3813,7 +3875,7 @@
 						<onclick>Skin.SetString(AddonSetOne.1.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.1.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.1.Label))">Skin.SetString(AddonSetOne.1.Label)</onclick>
 					</control>
-					<control type="button" id="608">
+					<control type="button" id="618">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3827,7 +3889,7 @@
 						<onclick>Skin.SetString(AddonSetOne.2.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.2.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.2.Label))">Skin.SetString(AddonSetOne.2.Label)</onclick>
 					</control>
-					<control type="button" id="609">
+					<control type="button" id="619">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3841,7 +3903,7 @@
 						<onclick>Skin.SetString(AddonSetOne.3.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.3.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.3.Label))">Skin.SetString(AddonSetOne.3.Label)</onclick>
 					</control>
-					<control type="button" id="610">
+					<control type="button" id="620">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3855,7 +3917,7 @@
 						<onclick>Skin.SetString(AddonSetOne.4.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.4.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.4.Label))">Skin.SetString(AddonSetOne.4.Label)</onclick>
 					</control>
-					<control type="button" id="611">
+					<control type="button" id="621">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3869,7 +3931,7 @@
 						<onclick>Skin.SetString(AddonSetOne.5.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.5.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.5.Label))">Skin.SetString(AddonSetOne.5.Label)</onclick>
 					</control>
-					<control type="button" id="612">
+					<control type="button" id="622">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3883,7 +3945,7 @@
 						<onclick>Skin.SetString(AddonSetOne.6.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.6.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.6.Label))">Skin.SetString(AddonSetOne.6.Label)</onclick>
 					</control>
-					<control type="button" id="613">
+					<control type="button" id="623">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3897,7 +3959,7 @@
 						<onclick>Skin.SetString(AddonSetOne.7.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.7.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.7.Label))">Skin.SetString(AddonSetOne.7.Label)</onclick>
 					</control>
-					<control type="button" id="614">
+					<control type="button" id="624">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3911,7 +3973,7 @@
 						<onclick>Skin.SetString(AddonSetOne.8.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.8.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.8.Label))">Skin.SetString(AddonSetOne.8.Label)</onclick>
 					</control>
-					<control type="button" id="615">
+					<control type="button" id="625">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3925,7 +3987,7 @@
 						<onclick>Skin.SetString(AddonSetOne.9.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.9.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.9.Label))">Skin.SetString(AddonSetOne.9.Label)</onclick>
 					</control>
-					<control type="button" id="616">
+					<control type="button" id="626">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -3939,7 +4001,7 @@
 						<onclick>Skin.SetString(AddonSetOne.10.Label,$INFO[system.addontitle(Skin.String(AddonSetOne.10.Path))])</onclick>
 						<onclick condition="!IsEmpty(Skin.String(AddonSetOne.10.Label))">Skin.SetString(AddonSetOne.10.Label)</onclick>
 					</control>
-					<control type="label" id="617">
+					<control type="label" id="627">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -3949,13 +4011,13 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="image" id="618">
+					<control type="image" id="628">
 						<width>750</width>
 						<height>120</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>warning.png</texture>
 					</control>
-					<control type="button" id="619">
+					<control type="button" id="629">
 						<description>Reset Skin Values</description>
 						<width>750</width>
 						<height>45</height>

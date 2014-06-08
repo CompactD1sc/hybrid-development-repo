@@ -659,20 +659,29 @@
 						<description>Home Menu Item One</description>
 						<label>$INFO[Skin.String(HomeMenu.1.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.1.Path)]</onclick>
+						
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.1.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuOnePath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
+						
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.1.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.1.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.1.Widget)]</property>
 						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListOne.Type)]</property>
+						
 						<visible>!stringcompare(Skin.String(HomeMenu.1.Path),Hidden)</visible>
 					</item>
 					<item id="2">
 						<description>Home Menu Item Two</description>
 						<label>$INFO[Skin.String(HomeMenu.2.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.2.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.2.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuTwoPath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.2.Sub)]</property>
@@ -685,7 +694,10 @@
 						<description>Home Menu Item Three</description>
 						<label>$INFO[Skin.String(HomeMenu.3.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.3.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.3.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuThreePath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.3.Sub)]</property>
@@ -698,7 +710,10 @@
 						<description>Home Menu Item Four</description>
 						<label>$INFO[Skin.String(HomeMenu.4.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.4.Path)]</onclick>
+												
+						<!--onclick>$INFO[Skin.String(HomeMenu.4.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuFourPath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.4.Sub)]</property>
@@ -711,7 +726,10 @@
 						<description>Home Menu Item Five</description>
 						<label>$INFO[Skin.String(HomeMenu.5.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.5.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.5.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuFivePath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.5.Sub)]</property>
@@ -724,7 +742,10 @@
 						<description>Home Menu Item Six</description>
 						<label>$INFO[Skin.String(HomeMenu.6.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.6.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.6.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuSixPath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.6.Sub)]</property>
@@ -737,7 +758,10 @@
 						<description>Home Menu Item Seven</description>
 						<label>$INFO[Skin.String(HomeMenu.7.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.7.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.7.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuSevenPath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.7.Sub)]</property>
@@ -750,7 +774,10 @@
 						<description>Home Menu Item Eight</description>
 						<label>$INFO[Skin.String(HomeMenu.8.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.8.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.8.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuEightPath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.8.Sub)]</property>
@@ -763,7 +790,10 @@
 						<description>Home Menu Item Nine</description>
 						<label>$INFO[Skin.String(HomeMenu.9.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.9.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.9.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuNinePath]</onclick>
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.9.Sub)]</property>
@@ -776,7 +806,12 @@
 						<description>Home Menu Item Ten</description>
 						<label>$INFO[Skin.String(HomeMenu.10.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-						<onclick>$INFO[Skin.String(HomeMenu.10.Path)]</onclick>
+						
+						<!--onclick>$INFO[Skin.String(HomeMenu.10.Path)]</onclick-->
+						<onclick>$VAR[HomeMenuTenPath]</onclick>
+						
+						
+						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.10.Sub)]</property>
@@ -785,6 +820,8 @@
 						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListTen.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.10.Path),Hidden)</visible>
 					</item>
+					
+					
 					<item id="11">
 						<description>Home Menu Fullscreen</description>
 						<label>$LOCALIZE[31008]</label>

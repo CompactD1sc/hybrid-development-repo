@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Chinese (Traditional) (http://www.transifex.com/projects/p/xbmc-main/language/zh_TW/)\n"
+"Language-Team: Chinese (Traditional) (http://www.transifex.com/projects/p/xbmc-skins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change Your"
 msgstr "修改你的"
+
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "OpenELEC OS"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -36,9 +40,9 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr "檢視選項"
 
-msgctxt "#31008"
-msgid "Full screen"
-msgstr "全螢幕"
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "稍後觀看"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -58,7 +62,7 @@ msgstr "頁"
 
 msgctxt "#31025"
 msgid "Items"
-msgstr "個項目"
+msgstr "項"
 
 msgctxt "#31026"
 msgid "Misc Options"
@@ -88,21 +92,17 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "資訊"
 
-msgctxt "#31039"
-msgid "Actions"
-msgstr "動作"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "正在播放"
 
 msgctxt "#31042"
 msgid "PLAYING"
-msgstr "正在播放"
+msgstr "播放中"
 
 msgctxt "#31043"
 msgid "PAUSED"
-msgstr "已暫停"
+msgstr "暫停"
 
 msgctxt "#31044"
 msgid "FAST FORWARD"
@@ -111,14 +111,6 @@ msgstr "快轉"
 msgctxt "#31045"
 msgid "REWIND"
 msgstr "倒轉"
-
-msgctxt "#31046"
-msgid "SEEKING"
-msgstr "查找"
-
-msgctxt "#31048"
-msgid "Visualisation Presets"
-msgstr "視覺效果預設值"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -160,6 +152,34 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "目前的選擇"
 
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "向上一層"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "暫停"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "停止"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "快轉"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "倒轉"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "選單項目"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "的"
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "首頁介面選項"
@@ -171,10 +191,6 @@ msgstr "背景"
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
 msgstr "在圖片幻燈片秀中顯示\"已暫停\"狀態"
-
-msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "在視窗中播放預告片[COLOR=grey3](只在影片資訊對話框中)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -212,21 +228,21 @@ msgctxt "#31117"
 msgid "Show Recently added Videos"
 msgstr "顯示最近加入的影片"
 
-msgctxt "#31118"
-msgid "Home Page Programs Sub-menu"
-msgstr "首頁程式子選單"
-
 msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr "隱藏背景 Fanart"
 
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "隱藏"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "延遲"
+
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
 msgstr "在背景顯示正在播放的影片"
-
-msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "在背景顯示正在播放的視覺效果"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
@@ -240,25 +256,9 @@ msgctxt "#31128"
 msgid "Lyrics"
 msgstr "歌詞"
 
-msgctxt "#31129"
-msgid "Hide Fanart in full screen visualisation"
-msgstr "在全螢幕視覺效果中隱藏 Fanart"
-
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "歌詞附加元件"
-
-msgctxt "#31134"
-msgid "Home Page Videos Sub-menu"
-msgstr "首頁影片子選單"
-
-msgctxt "#31135"
-msgid "Home Page Music Sub-menu"
-msgstr "首頁音樂子選單"
-
-msgctxt "#31136"
-msgid "Home Page Pictures Sub-menu"
-msgstr "首頁圖片子選單"
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -268,9 +268,57 @@ msgctxt "#31141"
 msgid "Video OSD"
 msgstr "影片播放工具列"
 
-msgctxt "#31142"
-msgid "Settings level"
-msgstr "設定值"
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "音樂會"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "電視劇"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "隨機音樂會"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "最近的音樂會"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "隨機專輯"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "建議專輯"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "最近專輯"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "隨機劇集"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "推薦劇集"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "最近劇集"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "隨機電影"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "推薦電影"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "最近電影"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -295,6 +343,66 @@ msgstr "尋找更多項目"
 msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "劇集預告"
+
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "節點"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "標籤"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "串流媒體"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "電影院"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "Radio 105"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "動畫的"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "兒童"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "喜劇"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "家庭"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "關閉"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "推薦的"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "最近新增"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "正在播放"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -344,6 +452,10 @@ msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "設定 Fanart 路徑"
 
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "清除選單選項"
+
 msgctxt "#31319"
 msgid "Selected Profile"
 msgstr "選擇的設定檔"
@@ -388,6 +500,14 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr "專輯詳細資訊"
 
+msgctxt "#31333"
+msgid "User Data"
+msgstr "用戶資料"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+
 msgctxt "#31351"
 msgid "Pause"
 msgstr "暫停"
@@ -411,14 +531,6 @@ msgstr "電影選單"
 msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "下載字幕"
-
-msgctxt "#31360"
-msgid "Watch as 2D"
-msgstr "以 2D 模式觀賞"
-
-msgctxt "#31361"
-msgid "Change mode"
-msgstr "更改設定"
 
 msgctxt "#31362"
 msgid "Enabled"
@@ -464,10 +576,6 @@ msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]配置附加元件[/B][CR][CR]管理已安裝的附加元件 · 從 xbmc.org 瀏覽並安裝附加元件[CR]修改附加元件設定"
 
-msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]電視設定[/B][CR][CR]修改全螢幕資訊 · 管理電子節目表資料設定"
-
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr "[B]配置服務設定[/B][CR][CR]設定透過 UPnP 和 HTTP 控製 XBMC · 配置檔案分享[CR]啟用 Zeroconf · 配置 AirPlay"
@@ -476,13 +584,9 @@ msgctxt "#31411"
 msgid "First run help...."
 msgstr "第一次使用說明..."
 
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr "這個標籤表示這個部分在視窗的側邊有提供額外選項的選單。你可以使用遙控器或鍵盤的左鍵或者是將滑鼠指標移動到這個標籤的範圍來存取這個選單。[CR][CR]按一下\"Ok\" 可以關閉這個對話框。它不會再出現。"
-
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "有本地語言的字幕可選用"
+msgstr "找到本杝端的字幕"
 
 msgctxt "#31420"
 msgid "Login"
@@ -491,14 +595,6 @@ msgstr "登入"
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
 msgstr "選擇您的 XBMC 使用者設定檔[CR]登入並繼續"
-
-msgctxt "#31422"
-msgid "Show or hide the login screen at startup."
-msgstr "啟動時顯示或隱藏登入畫面"
-
-msgctxt "#31423"
-msgid "Select the profile that will be used at startup when the login screen is disabled."
-msgstr "選擇登入畫面停用是要使用的設定檔。"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -568,42 +664,10 @@ msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr "地圖 & 警報"
 
-msgctxt "#31950"
-msgid "WEATHER"
-msgstr "天氣"
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "附加元件"
 
-msgctxt "#31951"
-msgid "PICTURES"
-msgstr "圖片"
-
-msgctxt "#31952"
-msgid "LIVE TV"
-msgstr "直播電視"
-
-msgctxt "#31953"
-msgid "VIDEOS"
-msgstr "影片"
-
-msgctxt "#31954"
-msgid "MOVIES"
-msgstr "電影"
-
-msgctxt "#31955"
-msgid "TV SHOWS"
-msgstr "電視劇"
-
-msgctxt "#31956"
-msgid "MUSIC"
-msgstr "音樂"
-
-msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "程式"
-
-msgctxt "#31958"
-msgid "PLAY DISC"
-msgstr "播放光碟"
-
-msgctxt "#31959"
-msgid "SYSTEM"
-msgstr "系統"
+msgctxt "#31999"
+msgid "Home Panel Addons"
+msgstr "主面板附加元件"

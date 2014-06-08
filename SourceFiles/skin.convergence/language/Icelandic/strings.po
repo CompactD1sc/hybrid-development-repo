@@ -1,15 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.convergence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main\n"
-"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Icelandic (http://www.transifex.com/projects/p/xbmc-main/language/is/)\n"
+"Language-Team: Icelandic (http://www.transifex.com/projects/p/xbmc-skins/language/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +18,15 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change Your"
-msgstr "Breyta -"
+msgstr "Breyta þínu"
+
+msgctxt "#31001"
+msgid "OpenELEC OS"
+msgstr "OpenELEC Stýrikerfi"
+
+msgctxt "#31002"
+msgid "Raspberry OS"
+msgstr "Raspberry Stýrikerfi"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -26,7 +34,7 @@ msgstr "Orkukostir"
 
 msgctxt "#31004"
 msgid "Working..."
-msgstr "Vinnsla..."
+msgstr "Vinnur..."
 
 msgctxt "#31005"
 msgid "Hide Information"
@@ -35,6 +43,10 @@ msgstr "Fela upplýsingar"
 msgctxt "#31006"
 msgid "View Options"
 msgstr "Stillingar sjónarhorns"
+
+msgctxt "#31007"
+msgid "Watch it Later"
+msgstr "Horfa á seinna"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -46,7 +58,7 @@ msgstr "Alls tímalengd"
 
 msgctxt "#31022"
 msgid "Music - Files"
-msgstr "Tónlist - Skrár"
+msgstr "Tónlist - skrár"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -74,7 +86,7 @@ msgstr "Veggspjaldafletting"
 
 msgctxt "#31029"
 msgid "Fanart"
-msgstr "Aðdáendamyndir"
+msgstr "Fanart"
 
 msgctxt "#31031"
 msgid "Pic Thumbs"
@@ -114,11 +126,11 @@ msgstr "TIL BAKA"
 
 msgctxt "#31046"
 msgid "SEEKING"
-msgstr "LEITA"
+msgstr "Leitar"
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "Forstillingar myndskreytinga"
+msgstr "Forstillingar sjónrænnar upplifunnar"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -134,15 +146,15 @@ msgstr "Raða: Lækkandi"
 
 msgctxt "#31055"
 msgid "Open playlist"
-msgstr "Opna lagalista"
+msgstr "Opna spilunarlista"
 
 msgctxt "#31056"
 msgid "Save playlist"
-msgstr "Vista lagalista"
+msgstr "Vista spilunarlista"
 
 msgctxt "#31057"
 msgid "Close playlist"
-msgstr "Loka lagalista"
+msgstr "Loka spilunarlista"
 
 msgctxt "#31058"
 msgid "System music files"
@@ -150,15 +162,123 @@ msgstr "Tónlistarskrár kerfis"
 
 msgctxt "#31059"
 msgid "Current playlist"
-msgstr "Núgildandi lagalisti"
+msgstr "Núverandi spilunarlisti"
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "Þessi skrá er stöfluð, veldu þann part sem þú vilt byrja að spila frá."
+msgstr "Þessi skrá er hluti af stafla, veldu þann hluta sem þú vilt spila"
 
 msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Núverandi val"
+
+msgctxt "#31062"
+msgid "Up One Level"
+msgstr "Upp eitt þrep"
+
+msgctxt "#31063"
+msgid "Submenu Set"
+msgstr "Undirvalblaða-sett"
+
+msgctxt "#31064"
+msgid "SubMenu Item"
+msgstr "Hlutir undirvalblaðs"
+
+msgctxt "#31065"
+msgid "Selected"
+msgstr "Valið"
+
+msgctxt "#31066"
+msgid "Installed Add-ons"
+msgstr "Innsettar viðbætur"
+
+msgctxt "#31074"
+msgid "Pause"
+msgstr "Bið"
+
+msgctxt "#31075"
+msgid "Stop"
+msgstr "Stöðva"
+
+msgctxt "#31076"
+msgid "Fast Forward"
+msgstr "Hratt áfram"
+
+msgctxt "#31077"
+msgid "Rewind"
+msgstr "Til baka"
+
+msgctxt "#31078"
+msgid "Show Fullscreen Media Item"
+msgstr "Sýna miðilsskrá yfir allan skjá"
+
+msgctxt "#31079"
+msgid "Show System Power Button"
+msgstr "Sýna Á/AF hnapp kerfis"
+
+msgctxt "#31080"
+msgid "Menu Item"
+msgstr "Hlutur valblaðs"
+
+msgctxt "#31081"
+msgid "Submenu Set"
+msgstr "Setja undirvalmynd"
+
+msgctxt "#31082"
+msgid "Widget Set"
+msgstr "Setja álf"
+
+msgctxt "#31083"
+msgid "Move Menu Item"
+msgstr "Færa hlut valblaðs"
+
+msgctxt "#31084"
+msgid "Show System Menu Item"
+msgstr "Sýna hluti kerfisvalblaðs"
+
+msgctxt "#31085"
+msgid "Additional Menu Options"
+msgstr "Viðbótarkostir valblaðs"
+
+msgctxt "#31086"
+msgid "Show DVD Disc Button"
+msgstr "Sýna hnapp fyrir DVD disk"
+
+msgctxt "#31087"
+msgid "Select Item to Swap"
+msgstr "Veldu hluti sem á að víxla"
+
+msgctxt "#31088"
+msgid "Select Widget Set"
+msgstr "Veldu Álfa-sett"
+
+msgctxt "#31089"
+msgid "Select SubMenu Set"
+msgstr "Veldu undirvalblaða-sett"
+
+msgctxt "#31090"
+msgid "Select Menu Item"
+msgstr "Veldu hlut valblaðs"
+
+msgctxt "#31091"
+msgid "of"
+msgstr "af"
+
+msgctxt "#31092"
+msgid "Shuffle On"
+msgstr "Stokkun virk"
+
+msgctxt "#31093"
+msgid "Repeat All On"
+msgstr "Endurtaka Allt virkt"
+
+msgctxt "#31094"
+msgid "Repeat One On"
+msgstr "Endurtaka Eitt virkt"
+
+msgctxt "#31100"
+msgid "Home Menu"
+msgstr "Heimavalblað"
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -170,11 +290,15 @@ msgstr "Bakgrunnur"
 
 msgctxt "#31103"
 msgid "Show \"Paused\" in picture slide show"
-msgstr "Sýna \"Í bið\" í myndasýningu"
+msgstr "Sýna \"Í bið\" í skyggnusýningu"
 
 msgctxt "#31104"
 msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
-msgstr "Spila kvikmyndasýnishorn í glugga [COLOR=grey3](Aðeins myndbandaupplýsingarglugga)[/COLOR]"
+msgstr "Spila kynningar myndband í glugga [COLOR=grey3](Aðeins í upplýsingaglugga myndar)[/COLOR]"
+
+msgctxt "#31105"
+msgid "Show background fanart"
+msgstr "Sýna bakgrunns fanart"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -182,19 +306,19 @@ msgstr "Ýmsir valkostir"
 
 msgctxt "#31107"
 msgid "Hide Flagging read from video filenames [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
-msgstr "Fela flagg lesið frá skráarnöfnum [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
+msgstr "Fela flögg lesin frá skráarnöfnum [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 
 msgctxt "#31108"
 msgid "Hide Main Menu Buttons"
-msgstr "Fela hnapp í aðalvalmynd"
+msgstr "Fela hnappa á aðalvalmynd"
 
 msgctxt "#31109"
 msgid "Enable Custom Background"
-msgstr "Virkja sérsniðinn bakgrunn"
+msgstr "Virkja sérsniðin bakgrunn"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Bakgrunnsslóð"
+msgstr "Slóð bakgrunnar:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -204,9 +328,21 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Valkostir"
 
+msgctxt "#31113"
+msgid "Menu Transparency Level"
+msgstr "Hlutfall gagnsæis valblaðs"
+
+msgctxt "#31114"
+msgid "% Transparency"
+msgstr "% gegnsæi"
+
+msgctxt "#31115"
+msgid "Skin Default"
+msgstr "Sjálfgefið viðmót"
+
 msgctxt "#31116"
 msgid "Show Recently added Albums"
-msgstr "Sýna hljómplötur sem hefur nýlega verið bætt við"
+msgstr "Sýna hljómplötur sem var nýlega bætt við"
 
 msgctxt "#31117"
 msgid "Show Recently added Videos"
@@ -214,11 +350,27 @@ msgstr "Sýna myndbönd sem var nýlega bætt við"
 
 msgctxt "#31118"
 msgid "Home Page Programs Sub-menu"
-msgstr "Undirvalmynd heimasíðu"
+msgstr "Undirvalblöð forrita á heimasíðu"
 
 msgctxt "#31119"
 msgid "Hide Background Fanart"
-msgstr "Fela aðdáendamyndir í bakgrunni"
+msgstr "Fela bakgrunns Fanart"
+
+msgctxt "#31120"
+msgid "Hidden"
+msgstr "Falið"
+
+msgctxt "#31121"
+msgid "Instant"
+msgstr "Skyndi"
+
+msgctxt "#31122"
+msgid "Delayed"
+msgstr "Seinkað"
+
+msgctxt "#31123"
+msgid "Popup:"
+msgstr "Sprettigluggi:"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -226,7 +378,7 @@ msgstr "Sýna \"Í spilun\" myndband í bakgrunni"
 
 msgctxt "#31125"
 msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "Sýna \"Í spilun\" myndskreytingu í bakgrunni"
+msgstr "Sýna \"Í spilun\" sjônræna upplifun í bakgrunni"
 
 msgctxt "#31126"
 msgid "Play TV theme songs in video library (TvTunes add-on)"
@@ -240,21 +392,29 @@ msgctxt "#31128"
 msgid "Lyrics"
 msgstr "Lagatextar"
 
+msgctxt "#31129"
+msgid "Hide Fanart in full screen visualisation"
+msgstr "Fela aðdáendamynd þegar myndskreyting fyllir skjá"
+
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "Viðbót fyrir lagatexta"
 
+msgctxt "#31133"
+msgid "Hide checkmarks"
+msgstr "Fela hök við hluti"
+
 msgctxt "#31134"
 msgid "Home Page Videos Sub-menu"
-msgstr "Undirvalmynd myndbandasíðu"
+msgstr "Myndbands undirvalblöð heimasíðu"
 
 msgctxt "#31135"
 msgid "Home Page Music Sub-menu"
-msgstr "Undirvalmynd tónlistarsíðu"
+msgstr "Tónlistar undirvalblöð heimasíðu"
 
 msgctxt "#31136"
 msgid "Home Page Pictures Sub-menu"
-msgstr "Undirvalmynd ljósmyndaasíðu"
+msgstr "Ljósmynda undirvalblöð heimasíðu"
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -263,6 +423,122 @@ msgstr "Tónlistarskjár"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "Myndbandaskjár"
+
+msgctxt "#31142"
+msgid "Settings level"
+msgstr "Stig stillinga"
+
+msgctxt "#31172"
+msgid "User Selection One"
+msgstr "Notandaval eitt"
+
+msgctxt "#31173"
+msgid "User Selection Two"
+msgstr "Notandaval tvö"
+
+msgctxt "#31174"
+msgid "User Selection Three"
+msgstr "Notandaval þrjú"
+
+msgctxt "#31175"
+msgid "User Selection Four"
+msgstr "Notandaval fjögur"
+
+msgctxt "#31176"
+msgid "User Selection Five"
+msgstr "Notandaval fimm"
+
+msgctxt "#31177"
+msgid "User Selection Six"
+msgstr "Notandaval sex"
+
+msgctxt "#31178"
+msgid "User Selection Seven"
+msgstr "Notandaval sjö"
+
+msgctxt "#31179"
+msgid "User Selection Eight"
+msgstr "Notandaval átta"
+
+msgctxt "#31180"
+msgid "User Selection Nine"
+msgstr "Notandaval níu"
+
+msgctxt "#31181"
+msgid "User Selection Ten"
+msgstr "Notandaval tíu"
+
+msgctxt "#31182"
+msgid "User Friendly Name"
+msgstr "Notandavænt nafn"
+
+msgctxt "#31183"
+msgid "Concerts"
+msgstr "Tónleikar"
+
+msgctxt "#31184"
+msgid "TV Shows"
+msgstr "SJónvarpsþættir"
+
+msgctxt "#31185"
+msgid "Random Songs"
+msgstr "Lög af handahófi"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "Listamenn af handahófi"
+
+msgctxt "#31187"
+msgid "Recent Tracks"
+msgstr "Nýleg lög"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "Tónleikar af handahófi"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "Nýlegir tónleikar"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Plötur af handahófi"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "Ráðlagðar plötur"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Nýlegar plötur"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "Þáttaraðir af handahófi"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "Ráðlagðar þáttaraðir"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Nýlegar þáttaraðir"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "Kvikmyndir af handahófi"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "Ráðlagðar kvikmyndir"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Nýlegar kvikmyndir"
+
+msgctxt "#31199"
+msgid "Suggested Concerts"
+msgstr "Ráðlagðir tónleikar"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -288,9 +564,161 @@ msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr "Næstu þættir"
 
+msgctxt "#31209"
+msgid "Global Search"
+msgstr "Víð leit"
+
+msgctxt "#31210"
+msgid "Nodes"
+msgstr "Skilgreind sýn"
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr "Merkimiðar"
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr "Streymdur miðill"
+
+msgctxt "#31213"
+msgid "Cinema"
+msgstr "Bíó"
+
+msgctxt "#31214"
+msgid "PseudoTV"
+msgstr "PseudoTV"
+
+msgctxt "#31215"
+msgid "Log-in"
+msgstr "Innskráning"
+
+msgctxt "#31216"
+msgid "Shutdown Menu"
+msgstr "Niðurkeyrslu-valblað"
+
+msgctxt "#31229"
+msgid "XBMC Command"
+msgstr "XBMC Skipun"
+
+msgctxt "#31230"
+msgid "User Selection One"
+msgstr "Notandaval eitt"
+
+msgctxt "#31231"
+msgid "User Selection Two"
+msgstr "Notandaval tvö"
+
+msgctxt "#31232"
+msgid "User Selection Three"
+msgstr "Notandaval þrjú"
+
+msgctxt "#31233"
+msgid "User Selection Four"
+msgstr "Notandaval fjögur"
+
+msgctxt "#31234"
+msgid "User Selection Five"
+msgstr "Notandaval fimm"
+
+msgctxt "#31235"
+msgid "User Selection Six"
+msgstr "Notandaval sex"
+
+msgctxt "#31236"
+msgid "User Selection Seven"
+msgstr "Notandaval sjö"
+
+msgctxt "#31237"
+msgid "User Selection Eight"
+msgstr "Notandaval átta"
+
+msgctxt "#31238"
+msgid "User Selection Nine"
+msgstr "Notandaval níu"
+
+msgctxt "#31239"
+msgid "User Selection Ten"
+msgstr "Notandaval tíu"
+
+msgctxt "#31240"
+msgid "User Friendly Name"
+msgstr "Notandavænt nafn"
+
+msgctxt "#31244"
+msgid "Skin Preset"
+msgstr "Forstillingar viðmóts"
+
+msgctxt "#31245"
+msgid "Radio 105"
+msgstr "Útvarp 105"
+
+msgctxt "#31246"
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+msgctxt "#31247"
+msgid "Virgin Rock"
+msgstr "Virgin Rock"
+
+msgctxt "#31248"
+msgid "Animated"
+msgstr "Hreyfimynd"
+
+msgctxt "#31249"
+msgid "Children"
+msgstr "Barnamyndir"
+
+msgctxt "#31250"
+msgid "Comedy"
+msgstr "Grínmyndir"
+
+msgctxt "#31251"
+msgid "Family"
+msgstr "Fjölskyldumyndir"
+
+msgctxt "#31252"
+msgid "HD-Movies"
+msgstr "HD-Kvikmyndir"
+
+msgctxt "#31253"
+msgid "3D-Movies"
+msgstr "3D-Kvikmyndir"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Ekkert"
+
+msgctxt "#31255"
+msgid "Suggested"
+msgstr "Mælt með"
+
+msgctxt "#31256"
+msgid "No Suggested Media"
+msgstr "Ekki mælt með neinum miðli"
+
+msgctxt "#31257"
+msgid "Recently Added"
+msgstr "Nýlega bætt við"
+
+msgctxt "#31258"
+msgid "Recently Played"
+msgstr "Nýlega spilað"
+
+msgctxt "#31259"
+msgid "Clean Library"
+msgstr "Tiltekt í safni"
+
+msgctxt "#31267"
+msgid "Playing"
+msgstr "Spila"
+
+msgctxt "#31284"
+msgid "Scripts and Paths"
+msgstr "Skriftur og slóðir"
+
 msgctxt "#31300"
 msgid "Current Temp"
-msgstr "Núverandi hiti"
+msgstr "Hitastig"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -298,7 +726,15 @@ msgstr "Síðast uppfært"
 
 msgctxt "#31303"
 msgid "Data provider"
-msgstr "Gagnaveita"
+msgstr "Uppruni gagna"
+
+msgctxt "#31304"
+msgid "Music Path"
+msgstr "Slóð tónlistar"
+
+msgctxt "#31305"
+msgid "Music Physical Folder"
+msgstr "Raunveruleg mappa tónlistar"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -310,7 +746,7 @@ msgstr "Kvikmyndaupplýsingar"
 
 msgctxt "#31309"
 msgid "Memory Used:"
-msgstr "Minni notað:"
+msgstr "Minni í notkun:"
 
 msgctxt "#31310"
 msgid "Track Number"
@@ -322,19 +758,27 @@ msgstr "Aðdáendamynd[CR][CR]Ekki fáanleg[CR][CR] Smelltu til að breyta"
 
 msgctxt "#31312"
 msgid "Current Scraper"
-msgstr "Núverandi skafa"
+msgstr "Núverandi skrapari"
 
 msgctxt "#31313"
 msgid "Choose a Scraper"
-msgstr "Veldu sköfu"
+msgstr "Veldu skrapara"
 
 msgctxt "#31314"
 msgid "Content Scanning Options"
-msgstr "Stillingar fyrir skönnun innihalds"
+msgstr "Valmöguleikar tengir innhaldsleit"
+
+msgctxt "#31315"
+msgid "Hide Item"
+msgstr "Fela hlut"
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr "Breyta slóð fyrir aðdáendamyndir"
+
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr "Valkostir tiltektarvalblaðs"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -342,11 +786,11 @@ msgstr "Veldu notanda"
 
 msgctxt "#31320"
 msgid "Last Logged In"
-msgstr "Seinast skráður inn"
+msgstr "Síðasta innskráning"
 
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
-msgstr "Karaoke lagaveljari"
+msgstr "Karaoke lagaval"
 
 msgctxt "#31322"
 msgid "Aired"
@@ -354,7 +798,7 @@ msgstr "Sýnt"
 
 msgctxt "#31325"
 msgid "Playlist Options"
-msgstr "Valkostir lagalista"
+msgstr "Spilunarlista valmöguleikar"
 
 msgctxt "#31326"
 msgid "Created"
@@ -379,6 +823,26 @@ msgstr "Smelltu á takka til að spila[CR][CR]Kvikmyndasýnishorn"
 msgctxt "#31331"
 msgid "Album Details"
 msgstr "Hljómplötuupplýsingar"
+
+msgctxt "#31332"
+msgid "ReSet"
+msgstr "Endursetja"
+
+msgctxt "#31333"
+msgid "User Data"
+msgstr "Notandagögn"
+
+msgctxt "#31334"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr "[COLOR=selected][B]Aðvörun!![/B][/COLOR] - Endursetja stillingar viðmóts í upphafsstillingar eins og þegar kerfið var innsett"
+
+msgctxt "#31338"
+msgid "Animated fanart in full screen visualisation"
+msgstr "Hreyfimynda-fanart í sjónrænni upplifun með fylltan skjá"
+
+msgctxt "#31339"
+msgid "Automatic Fullscreen Music Playback"
+msgstr "Fylla sjálfvirkt skjá þegar tónlist er spiluð"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -406,7 +870,7 @@ msgstr "Niðurhala þýðingartextum"
 
 msgctxt "#31360"
 msgid "Watch as 2D"
-msgstr "Horfa á í 2D"
+msgstr "Horfa á sem 2D"
 
 msgctxt "#31361"
 msgid "Change mode"
@@ -456,6 +920,10 @@ msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]BREYTA VIÐBÓTUM[/B][CR][CR]Breyttu uppsettum viðbótum · Leitaðu að og settu upp viðbætur frá xbmc.org[CR]Breyta stillingum viðbóta"
 
+msgctxt "#31409"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
+msgstr "[B]SJÓNVARPS STILLINGAR [/B][CR][CR]Breyta uppl. í fullum skjá  · Stjórna EPG gagna stillingum"
+
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Uppsetning á stjórnun  XBMC með UPnP og HTTP · Setja upp skráardeilingu[CR]Virkja  Zeroconf · Stilla AirPlay"
@@ -464,9 +932,33 @@ msgctxt "#31411"
 msgid "First run help...."
 msgstr "Keyrið hjálp fyrst..."
 
+msgctxt "#31412"
+msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
+msgstr "Þessi flipi þýðir að það er valblað til hliðar við þennan glugga sem er með aukastillingar fyrir þennan hluta. Til að komast í valblaðið, farðu þá til vinstri með fjarstýringunni þinni eða lyklaborði eða settu músabendilinn yfir flipann. [CR][CR]Smelltu á \"Í lagi\" til að loka þessum glugga. Hann mun ekki birtast aftur."
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Texti í boði á tölvu"
+
+msgctxt "#31420"
+msgid "Login"
+msgstr "Innskrá"
+
 msgctxt "#31421"
 msgid "Select your XBMC user Profile[CR]to login and continue"
-msgstr "Veldu XBMC notanda[CR]til að skrá þig inn og halda áfram"
+msgstr "Veldu XBMC notanda[CR]til að skrá inn og hala áfram"
+
+msgctxt "#31422"
+msgid "Show or hide the login screen at startup."
+msgstr "Sýna eða fela innskráningarglugga við ræsingu."
+
+msgctxt "#31423"
+msgid "Select the profile that will be used at startup when the login screen is disabled."
+msgstr "Velja notandastillingar sem verða notaðar í ræsingu þegar innskráningargluggi er óvirkur."
+
+msgctxt "#31501"
+msgid "Scheduled Time"
+msgstr "Uppsettur tími"
 
 msgctxt "#31502"
 msgid "Live TV"
@@ -484,9 +976,13 @@ msgctxt "#31505"
 msgid "Delete Group"
 msgstr "Eyða hóp"
 
+msgctxt "#31506"
+msgid "Available[CR]Groups"
+msgstr "Í boði[CR]Hópar"
+
 msgctxt "#31509"
 msgid "Channel Group"
-msgstr "Rásarhópur"
+msgstr "Rásahópar"
 
 msgctxt "#31510"
 msgid "Timer Set"
@@ -494,7 +990,7 @@ msgstr "Stilling teljara"
 
 msgctxt "#31511"
 msgid "Channel Options"
-msgstr "Valkostir rásar"
+msgstr "Rásir Valmöguleikar"
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
@@ -526,7 +1022,7 @@ msgstr "Næ í veðurspá..."
 
 msgctxt "#31910"
 msgid "Map & Alerts"
-msgstr "Kort og viðvaranir"
+msgstr "Kort & Viðvaranir"
 
 msgctxt "#31950"
 msgid "WEATHER"
@@ -534,11 +1030,15 @@ msgstr "VEÐUR"
 
 msgctxt "#31951"
 msgid "PICTURES"
-msgstr "MYNDIR"
+msgstr "LJÓSMYNDIR"
+
+msgctxt "#31952"
+msgid "LIVE TV"
+msgstr "BEIN ÚTSENDING"
 
 msgctxt "#31953"
 msgid "VIDEOS"
-msgstr "VÍDEÓ"
+msgstr "MYNDEFNI"
 
 msgctxt "#31954"
 msgid "MOVIES"
@@ -563,3 +1063,15 @@ msgstr "SPILA DISK"
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "KERFI"
+
+msgctxt "#31997"
+msgid "Add-Ons Set One"
+msgstr "Viðbótasett Eitt"
+
+msgctxt "#31998"
+msgid "Add-Ons"
+msgstr "VIÐBÆTUR"
+
+msgctxt "#31999"
+msgid "Home Panel Addons"
+msgstr "Viðbót fyrir heimaflipa"
