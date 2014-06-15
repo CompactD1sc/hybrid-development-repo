@@ -4,6 +4,10 @@
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<onload condition="!IsEmpty(Window(Home).Property(SelectedMenuBackground))">ClearProperty(SelectedMenuBackground,Home)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + Skin.HasSetting(UPnP_Mode)">Skin.SetBool(DisableScriptPlayList)</onload>
+	<onload condition="Skin.HasSetting(DisableScriptPlayList) + !Skin.HasSetting(UPnP_Mode)">Skin.Reset(DisableScriptPlayList)</onload>
+	<onload condition="!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(UPnP_Mode)">Skin.SetBool(DisableGlobalSearch)</onload>
+	<onload condition="Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(UPnP_Mode)">Skin.Reset(DisableGlobalSearch)</onload>
 	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=10,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.1.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistOne)</onload>
@@ -16,8 +20,27 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.8.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistEight)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.9.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistNine)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.10.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTen)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8050,4)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8051,3)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8052,2)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8052,1)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
 	<controls>
+	<control type="group">
+	<control type="list" id="8050">
+    <content target="video">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftitles.xml%2f/</content>
+	</control> 
+	<control type="list" id="8051">
+    <content target="video">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftitles.xml%2f/</content>
+	</control> 
+	<control type="list" id="8052">
+    <content target="music">$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/</content>
+	</control> 
+	<control type="list" id="8053">
+    <content target="video">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/</content>
+	</control> 
+	<visible>Skin.HasSetting(UPnP_Mode)</visible>
+	</control> 
 		<include>CommonBackground</include>
 		<!-- Music Info -->
 		<control type="group">
@@ -623,7 +646,7 @@
 				<focusposition>3</focusposition>
 				<movement>2</movement>
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-				<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(9002)">conditional</animation>
+				<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(9002)">conditional</animation>
 				<itemlayout height="102" width="380">
 					<control type="label">
 						<left>380</left>
@@ -636,7 +659,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="zoom" start="75" end="75" center="380,51" time="0" condition="true">Conditional</animation>
-						<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(9002)">conditional</animation>
+						<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(9002)">conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="102" width="380">
@@ -660,15 +683,12 @@
 						<label>$INFO[Skin.String(HomeMenu.1.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuOnePath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
-						
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.1.Sub)]</property>
 						<property name="HiLiteItem">$INFO[Skin.String(HomeMenu.1.Type)]</property>
 						<property name="PanelType">$INFO[Skin.String(HomeMenu.1.Widget)]</property>
 						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListOne.Type)]</property>
-						
 						<visible>!stringcompare(Skin.String(HomeMenu.1.Path),Hidden)</visible>
 					</item>
 					<item id="2">
@@ -676,7 +696,6 @@
 						<label>$INFO[Skin.String(HomeMenu.2.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuTwoPath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.2.Sub)]</property>
@@ -690,7 +709,6 @@
 						<label>$INFO[Skin.String(HomeMenu.3.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuThreePath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.3.Sub)]</property>
@@ -704,7 +722,6 @@
 						<label>$INFO[Skin.String(HomeMenu.4.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuFourPath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.4.Sub)]</property>
@@ -718,7 +735,6 @@
 						<label>$INFO[Skin.String(HomeMenu.5.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuFivePath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.5.Sub)]</property>
@@ -732,7 +748,6 @@
 						<label>$INFO[Skin.String(HomeMenu.6.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuSixPath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.6.Sub)]</property>
@@ -746,7 +761,6 @@
 						<label>$INFO[Skin.String(HomeMenu.7.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuSevenPath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.7.Sub)]</property>
@@ -760,7 +774,6 @@
 						<label>$INFO[Skin.String(HomeMenu.8.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuEightPath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.8.Sub)]</property>
@@ -774,7 +787,6 @@
 						<label>$INFO[Skin.String(HomeMenu.9.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuNinePath]</onclick>
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.9.Sub)]</property>
@@ -788,9 +800,6 @@
 						<label>$INFO[Skin.String(HomeMenu.10.Label)]</label>
 						<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 						<onclick>$VAR[HomeMenuTenPath]</onclick>
-						
-						
-						
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<property name="SubMenu">$INFO[Skin.String(HomeMenu.10.Sub)]</property>
@@ -799,8 +808,6 @@
 						<property name="PlayListType">$INFO[Window(Home).Property(HomePlayListTen.Type)]</property>
 						<visible>!stringcompare(Skin.String(HomeMenu.10.Path),Hidden)</visible>
 					</item>
-					
-					
 					<item id="11">
 						<description>Home Menu Fullscreen</description>
 						<label>$LOCALIZE[31008]</label>
@@ -1003,7 +1010,8 @@
 			<textcolor>C0FFFFFF</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
-			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 		</control>
 		<control type="label">
 			<description>Date label</description>
@@ -1018,7 +1026,8 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
 		</control>
 	</controls>
 </window>

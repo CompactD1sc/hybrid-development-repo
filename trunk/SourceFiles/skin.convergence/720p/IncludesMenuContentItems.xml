@@ -196,7 +196,7 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>!Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(UPnP_Mode)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
@@ -297,11 +297,6 @@
 				<visible>System.HasAddon(script.simpleplaylists)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
-			
-			
-			
-			
-			
 			<item>
 				<description>Playlist Music</description>
 				<label>$LOCALIZE[2] - $LOCALIZE[559]</label>
@@ -331,9 +326,6 @@
 				<visible>Library.HasContent(Music) | Skin.HasSetting(UPnP_Mode)</visible>
 				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
-			
-			
-			
 			<item>
 				<description>Playlist Video</description>
 				<label>$LOCALIZE[3] - $LOCALIZE[559]</label>
@@ -349,9 +341,6 @@
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
-			
-			
-			
 			<item>
 				<description>Video Playlist Window</description>
 				<label>$LOCALIZE[3] $LOCALIZE[559] - $LOCALIZE[513]</label>
@@ -496,7 +485,6 @@
 				<description>Music</description>
 				<label>$LOCALIZE[2]</label>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,MusicLibraryCmd)</onclick>
-				
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[2])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Stats,Music)</onclick>

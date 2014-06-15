@@ -38,9 +38,7 @@
 			<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
 			<onclick condition="IsEmpty(Skin.String(SubSetOne.5.Path))">$VAR[VideoFilesCmd]</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubSetOne.5.Path))">$INFO[Skin.String(SubSetOne.5.Path)]</onclick>
-			
 			<visible>!IsEmpty(Skin.String(SubSetOne.5.Path)) | Library.HasContent(Video) | Skin.HasSetting(UPnP_Mode)</visible>
-			
 			<visible>!stringcompare(Skin.String(SubSetOne.5.Path),Hidden)</visible>
 		</item>
 		<item>
@@ -83,9 +81,9 @@
 		<item>
 			<label>$VAR[SubSetTwoItemOne]</label>
 			<onclick>SetProperty(SelectedMenuBackground,$VAR[MenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubSetTwo.1.Path))">ActivateWindow(2125,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubSetTwo.1.Path))">$VAR[MoviesRecentCmd]</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubSetTwo.1.Path))">$INFO[Skin.String(SubSetTwo.1.Path)]</onclick>
-			<visible>!Skin.HasSetting(UPnP_Mode) | !IsEmpty(Skin.String(SubSetTwo.1.Path))</visible>
+			<visible>!IsEmpty(Skin.String(SubSetTwo.1.Path)) | Library.HasContent(Movies) | Skin.HasSetting(UPnP_Mode)</visible>
 			<visible>!stringcompare(Skin.String(SubSetTwo.1.Path),Hidden)</visible>
 		</item>
 		<item>

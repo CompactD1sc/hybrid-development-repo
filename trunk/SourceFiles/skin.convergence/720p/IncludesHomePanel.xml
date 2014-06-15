@@ -3,6 +3,9 @@
 	<include name="RecentMoviePanel">
 		<control type="group">
 			<visible>StringCompare(Container(9000).ListItem.Property(PanelType),RecentMovies) + !IsEmpty(Window(Home).Property(RecentMovie.1.Title))</visible>
+			
+			<!--visible>StringCompare(Container(9000).ListItem.Property(PanelType),RecentMovies)</visible-->
+			
 			<animation effect="fade" start="100" end="30" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
 			<include>HomePanelBackground</include>
@@ -46,9 +49,127 @@
 				<pagecontrol>-</pagecontrol>
 				<include>MoviePosterLayout</include>
 				<include>HomeRecentMovies</include>
+				
+				
+				
+				<!--
+				<include>UPnPMovieLayout</include>
+				
+				
+				  <content target="video">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f</content>
+				  -->
+					<!--include>UPnPRecentMovies</include-->
 			</control>
 		</control>
 	</include>
+	
+	
+	<include name="UPnPRecentMovies">
+	<content>
+			<item id="1">
+				<label>$INFO[Container(8050).ListItem(0).Title]</label>
+				<label2>$INFO[Container(8050).ListItem(0).Year]</label2>
+				<onclick>PlayList.Clear</onclick>
+				
+				<onclick>PlayMedia($ESCINFO[Container(8050).ListItem(0).File])</onclick>
+				
+				
+				
+				<icon>$INFO[Container(8050).ListItem(0).Art(thumb)]</icon>
+				<thumb>$INFO[Container(8050).ListItem(0).Art(fanart)]</thumb>
+				<!--visible>!IsEmpty(Container(8050).ListItem(0).Title)</visible-->
+				
+			<!--	
+			$INFO[ListItem.Art(fanart)] 
+			<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
+			
+			PlayMedia(&quot;upnp://9aab24a3-d6e4-0171-e007-e5361f92448d/videodb%3a%2f%2fmovies%2ftitles%2f1009%3fxsp%3d%257b%2522order%2522%253a%257b%2522direction%2522%253a%2522ascending%2522%252c%2522ignorefolders%2522%253a0%252c%2522method%2522%253a%2522sorttitle%2522%257d%252c%2522type%2522%253a%2522movies%2522%257d/&quot;)
+			
+			PlayMedia(media[,isdir][,1],[playoffset=xx]) 
+			-->
+				
+			</item>
+	</content>
+	</include>
+	<include name="UPnPMovieLayout">
+		<itemlayout height="190" width="140">
+			<control type="image">
+				<left>-2</left>
+				<top>3</top>
+				<width>120</width>
+				<height>175</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseBorder.png</texture>
+				<visible>!IsEmpty(ListItem.Label)</visible>
+			</control>
+			<control type="image">
+				<left>3</left>
+				<top>7</top>
+				<width>110</width>
+				<height>164</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				
+				
+				
+				<texture fallback="DefaultVideoCover.png" background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[ListItem.Thumb]</texture>
+				<animation effect="fade" start="75" end="75" time="0" condition="true">conditional</animation>
+				<visible>!IsEmpty(ListItem.Label)</visible>
+			</control>
+			<control type="image">
+				<left>-2</left>
+				<top>3</top>
+				<width>120</width>
+				<height>175</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseOverlay.png</texture>
+				<visible>!IsEmpty(ListItem.Label)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="190" width="140">
+			<control type="group">
+				<animation effect="zoom" center="58,89" start="100" end="120" time="400" easing="out" tween="back" reversible="false">Focus</animation>
+				<control type="image">
+					<left>-2</left>
+					<top>3</top>
+					<width>120</width>
+					<height>175</height>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">ClearCase/EmptyCaseBorder.png</texture>
+					<visible>!IsEmpty(ListItem.Label)</visible>
+				</control>
+				<control type="image">
+					<left>3</left>
+					<top>7</top>
+					<width>110</width>
+					<height>164</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="DefaultVideoCover.png" background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[ListItem.Thumb]</texture>
+					<visible>!IsEmpty(ListItem.Label)</visible>
+				</control>
+				<control type="image">
+					<left>-2</left>
+					<top>3</top>
+					<width>120</width>
+					<height>175</height>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">ClearCase/EmptyCaseOverlay.png</texture>
+					<visible>!IsEmpty(ListItem.Label)</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	
+
+	
+	
+	
+	
 	<include name="RecentTVShowPanel">
 		<control type="group">
 			<visible>StringCompare(Container(9000).ListItem.Property(PanelType),RecentEpisodes) + !IsEmpty(Window(Home).Property(RecentEpisode.1.TVshowTitle))</visible>
@@ -1374,4 +1495,11 @@
 			</control>
 		</focusedlayout>
 	</include>
+	
+	
+	
+	
+	
+	
+	
 </includes>

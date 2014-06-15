@@ -2,6 +2,7 @@
 <includes>
 	<include file="defaults.xml" />
 	<include file="IncludesVariables.xml" />
+	<include file="IncludesListItemCount.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
@@ -20,7 +21,6 @@
 	<include file="IncludesMenuContentItems.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
-
 	<include name="MediaInfoPopup">
 		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(MediaPopUpControl))">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopUpControl,Instant)">Visible</animation>
@@ -570,7 +570,7 @@
 			</control>
 		</control>
 	</include-->
-	<include name="CommonPageCount">
+	<!--include name="CommonPageCount">
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<control type="label">
@@ -602,7 +602,7 @@
 				<include>Window_OpenClose_Animation</include>
 			</control>
 		</control>
-	</include>
+	</include-->
 	<include name="SmallMusicInfo">
 		<control type="image">
 			<description>gradient</description>
@@ -1141,7 +1141,7 @@
 			<visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
 		</control>
 	</include>
-	<include name="ScrollOffsetLabel">
+	<!--include name="ScrollOffsetLabel">
 		<control type="group">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
@@ -1167,7 +1167,7 @@
 				<font>font30_title</font>
 			</control>
 		</control>
-	</include>
+	</include-->
 	<include name="Clock">
 		<control type="label">
 			<description>time label</description>
@@ -1510,7 +1510,7 @@
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="250">WindowClose</animation>
 	</include>
-	<include name="dialogeffect">
+	<include name="DialogEffect">
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="250">WindowClose</animation>
 	</include>
@@ -1546,6 +1546,16 @@
 			<include>InvisibleButton</include>
 			<imagepath background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/extraFanart/]</imagepath>
 			<visible>Player.HasAudio + IsEmpty(Control.GetLabel(5043))</visible>
+		</control>
+	</include>
+	<include name="VideoPlayerArt">
+		<control type="multiimage" id="5045">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$VAR[MovieArt]</imagepath>
+		</control>
+		<control type="multiimage" id="5046">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$VAR[PlayerArt]</imagepath>
 		</control>
 	</include>
 	<include name="InvisibleButton">
@@ -1606,19 +1616,23 @@
 		<onload>Skin.SetString(HomeMenu.4.Sub,SubSetOne)</onload>
 		<onload>Skin.SetString(HomeMenu.4.Widget,UnWatched)</onload>
 		<onload>Skin.SetString(HomeMenu.4.Type,Videos)</onload>
+		
 		<!--onload condition="!Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Path,Hidden)</onload-->
 		<!--onload condition="Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Path,ActivateWindow(Videos,MovieTitles,return))</onload-->
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Label,$LOCALIZE[20342])</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Sub,SubSetTwo)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Widget,SuggestedMovies)</onload>
-		<onload condition="Library.HasContent(Movies)">Skin.SetString(HomeMenu.5.Type,Movies)</onload>
+		<onload>Skin.SetString(HomeMenu.5.Label,$LOCALIZE[20342])</onload>
+		<onload>Skin.SetString(HomeMenu.5.Sub,SubSetTwo)</onload>
+		<onload>Skin.SetString(HomeMenu.5.Widget,SuggestedMovies)</onload>
+		<onload>Skin.SetString(HomeMenu.5.Type,Movies)</onload>
+		
 		<!--onload condition="!Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Path,Hidden)</onload-->
 		<!--onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Path,ActivateWindow(Videos,TVShowTitles,return))</onload-->
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Label,$LOCALIZE[20343])</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Sub,SubSetThree)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Widget,SuggestedEpisodes)</onload>
-		<onload condition="Library.HasContent(TVShows)">Skin.SetString(HomeMenu.6.Type,TVShows)</onload>
+		<onload>Skin.SetString(HomeMenu.6.Label,$LOCALIZE[20343])</onload>
+		<onload>Skin.SetString(HomeMenu.6.Sub,SubSetThree)</onload>
+		<onload>Skin.SetString(HomeMenu.6.Widget,SuggestedEpisodes)</onload>
+		<onload>Skin.SetString(HomeMenu.6.Type,TVShows)</onload>
 		<!--onload>Skin.SetString(HomeMenu.7.Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/3DMovies.xsp",return))</onload-->
+		
+		
 		<onload>Skin.SetString(HomeMenu.7.Label,$LOCALIZE[31253])</onload>
 		<onload>Skin.SetString(HomeMenu.7.Playlist,special://skin/extras/Playlists/3DMovies.xsp)</onload>
 		<onload>Skin.SetString(HomeMenu.7.Sub,None)</onload>
@@ -1631,8 +1645,6 @@
 		<onload condition="System.HasAddon(script.simpleplaylists)">Skin.SetString(HomeMenu.8.Sub,None)</onload>
 		<onload condition="System.HasAddon(script.simpleplaylists)">Skin.SetString(HomeMenu.8.Widget,None)</onload>
 		<onload condition="System.HasAddon(script.simpleplaylists)">Skin.SetString(HomeMenu.8.Type,Videos)</onload>
-		
-		
 		<!--onload>Skin.SetString(HomeMenu.9.Path,ActivateWindow(Music))</onload-->
 		<onload>Skin.SetString(HomeMenu.9.Label,$LOCALIZE[2])</onload>
 		<onload>Skin.SetString(HomeMenu.9.Sub,SubSetFour)</onload>

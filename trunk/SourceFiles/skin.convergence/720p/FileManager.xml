@@ -13,31 +13,7 @@
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-		<!--control type="image">
-			<description>Section header image</description>
-			<left>20</left>
-			<top>3</top>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_system.png</texture>
-		</control-->
-		<control type="grouplist">
-			<!--left>65</left-->
-			<left>5</left>
-			<top>5</top>
-			<!--width>1000</width-->
-			<width>1270</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<!--align>left</align-->
-			<align>center</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[7]</label>
-			</control>
-		</control>
+		
 		<control type="group">
 			<left>30</left>
 			<top>40</top>
@@ -109,7 +85,7 @@
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
-				<onleft>31</onleft>
+				<onleft>803</onleft>
 				<onright>20</onright>
 				<ondown>20</ondown>
 				<onup>20</onup>
@@ -284,7 +260,7 @@
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<onleft>21</onleft>
-				<onright>30</onright>
+				<onright>804</onright>
 				<ondown>21</ondown>
 				<onup>21</onup>
 				<showonepage>false</showonepage>
@@ -410,63 +386,40 @@
 			<shadowcolor>black</shadowcolor>
 			<label>([COLOR=blue]$INFO[Container(21).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages][/COLOR])</label>
 		</control>
-		<control type="group" id="10">
+		<control type="group">
 			<left>595</left>
 			<top>55r</top>
 			<include>Window_OpenClose_Animation</include>
-			<visible>system.getbool(input.enablemouse)</visible>
 			<include>Window_OpenClose_Animation</include>
-			<control type="button">
+		<control type="button" id="803">
 				<description>Back push button</description>
 				<left>0</left>
 				<top>0</top>
 				<width>45</width>
 				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
 				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
+				<texturefocus border="5">FloorButtons/FloorBackFO.png</texturefocus>
+				<texturenofocus border="5">FloorButtons/FloorBackNF.png</texturenofocus>
+				<onleft>20</onleft>
+				<onright>804</onright>
+				<onup>20</onup>
+				<ondown>20</ondown>
 			</control>
-			<control type="image">
-				<description>Back Icon</description>
-				<left>5</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_back.png</texture>
-			</control>
-			<control type="button">
+			<control type="button" id="804">
 				<description>Home push button</description>
 				<left>55</left>
 				<top>0</top>
 				<width>45</width>
 				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
+				<onclick>Dialog.Close(all,true)</onclick>
 				<onclick>ActivateWindow(Home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Home Icon</description>
-				<left>60</left>
-				<top>5</top>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_Home.png</texture>
+				<texturefocus border="5">FloorButtons/FloorHomeFO.png</texturefocus>
+				<texturenofocus border="5">FloorButtons/FloorHomeNF.png</texturenofocus>
+				<onleft>803</onleft>
+				<onright>21</onright>
+				<onup>21</onup>
+				<ondown>21</ondown>
 			</control>
 		</control>
-		<!--include>Clock</include-->
 	</controls>
 </window>

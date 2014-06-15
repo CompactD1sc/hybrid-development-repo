@@ -129,7 +129,7 @@
 		</control>
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
-		<include>ScrollOffsetLabel</include>
+		<include>CommonPageCount</include>
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
