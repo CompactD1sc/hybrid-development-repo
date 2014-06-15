@@ -12,7 +12,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(fanart) ]</texture>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>Window_OpenClose_Animation</include>
@@ -32,8 +32,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">$INFO[Player.Art(Fanart)]</texture>
-			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>Player.HasAudio + !IsEmpty(Player.Art(Fanart)) + !Skin.HasSetting(ShowBackgroundVis) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
+			<visible>Player.HasAudio + !IsEmpty(Player.Art(Fanart)) + [!Skin.HasSetting(ShowBackgroundVis) | Container(9000).Hasfocus(11)] + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
 			<fadetime>600</fadetime>
 		</control>
 		<control type="videowindow">

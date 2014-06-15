@@ -2,6 +2,508 @@
 <includes>
 	<include name="AlbumArtMusicVizWall">
 		<control type="group">
+			<visible>!IsEmpty(Skin.String(UsrAlbumThumbsDir))</visible>
+			<visible>[IsEmpty(Player.Art(Fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))] | Skin.HasSetting(HideVisualizationFanart)</visible>
+			<left>-35</left>
+			<top>-15</top>
+			<control type="multiimage">
+				<left>0</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>150</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>300</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>450</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>600</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>750</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>900</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1050</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1200</left>
+				<top>0</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>0</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>150</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>300</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>450</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>600</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>750</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>900</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1050</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1200</left>
+				<top>150</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>0</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>8100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>150</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>300</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>450</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>600</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7000</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>750</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>900</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>8300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1050</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7500</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1200</left>
+				<top>300</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>0</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>150</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>300</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>450</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>600</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>750</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4800</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>900</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1050</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1200</left>
+				<top>450</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>0</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>150</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4300</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>300</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>5900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>450</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6100</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>600</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>8200</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>750</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>6700</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>900</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>4600</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1050</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7900</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+			<control type="multiimage">
+				<left>1200</left>
+				<top>600</top>
+				<width>150</width>
+				<height>150</height>
+				<aspectratio>stretch</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(UsrAlbumThumbsDir)]</imagepath>
+				<timeperimage>7400</timeperimage>
+				<fadetime>500</fadetime>
+				<randomize>true</randomize>
+			</control>
+		</control>
+		<control type="group">
+			<visible>IsEmpty(Skin.String(UsrAlbumThumbsDir))</visible>
 			<visible>[IsEmpty(Player.Art(Fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))] | Skin.HasSetting(HideVisualizationFanart)</visible>
 			<left>-35</left>
 			<top>-15</top>

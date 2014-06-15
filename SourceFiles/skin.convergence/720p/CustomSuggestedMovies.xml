@@ -133,6 +133,7 @@
 						<label>$INFO[ListItem.label]</label>
 					</control>
 				</focusedlayout>
+
 				<content>
 					<item id="1">
 						<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>

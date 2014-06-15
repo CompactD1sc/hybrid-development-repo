@@ -13,6 +13,14 @@
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
+		<control type="button" id="800">
+			<include>InvisibleButton</include>
+			<onleft>801</onleft>
+			<onright>804</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<visible>false</visible>
+		</control>
 		<control type="group">
 			<left>90</left>
 			<top>30</top>
@@ -38,23 +46,7 @@
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
 			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<left>980</left>
-				<top>11</top>
-				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>1</onleft>
-				<onright>1</onright>
-				<onup>1</onup>
-				<ondown>1</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
-			</control>
+			
 			<control type="image">
 				<description>LOGO</description>
 				<left>30</left>
@@ -70,7 +62,7 @@
 				<width>260</width>
 				<height>541</height>
 				<onleft>9000</onleft>
-				<onright>9001</onright>
+				<onright>800</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
@@ -101,7 +93,16 @@
 						<top>0</top>
 						<width>260</width>
 						<height>55</height>
+						<texture border="5">MenuItemNF.png</texture>
+						<visible>!Control.HasFocus(9000)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>260</width>
+						<height>55</height>
 						<texture border="5">MenuItemFO.png</texture>
+						<visible>Control.HasFocus(9000)</visible>
 					</control>
 					<control type="label">
 						<left>250</left>
@@ -170,6 +171,12 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>-</icon>
 					</item>
+					<item id="10">
+						<label>166</label>
+						<label2>31405</label2>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
+						<icon>-</icon>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -179,26 +186,7 @@
 				<height>50</height>
 				<texture border="5">black-back2.png</texture>
 			</control>
-			<control type="image">
-				<left>268</left>
-				<top>10</top>
-				<width>804</width>
-				<height>54</height>
-				<texture>dialogheader.png</texture>
-			</control>
-			<control type="label">
-				<description>header label</description>
-				<left>300</left>
-				<top>20</top>
-				<width>740</width>
-				<height>30</height>
-				<font>font16</font>
-				<label>$LOCALIZE[31000] $LOCALIZE[5]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
+			
 			<control type="image">
 				<left>270</left>
 				<top>60</top>
@@ -247,31 +235,6 @@
 		<include>CommonNowPlaying</include>
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
-		<!--control type="image">
-			<description>Section header image</description>
-			<left>20</left>
-			<top>3</top>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_system.png</texture>
-		</control-->
-		<control type="grouplist">
-			<!--left>65</left-->
-			<left>5</left>
-			<top>5</top>
-			<!--width>1000</width-->
-			<width>1270</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<!--align>left</align-->
-			<align>center</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[5]</label>
-			</control>
-		</control>
-		<!--include>Clock</include-->
+		
 	</controls>
 </window>

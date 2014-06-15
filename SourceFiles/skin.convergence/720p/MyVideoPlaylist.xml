@@ -25,7 +25,7 @@
 		<include>CommonNowPlaying</include>
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
-		<include>ScrollOffsetLabel</include>
+		<include>CommonPageCount</include>
 		<!--control type="image">
 			<description>Section header image</description>
 			<left>20</left>

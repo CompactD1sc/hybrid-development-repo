@@ -2732,7 +2732,8 @@
 			</item>
 		</content>
 	</include>
-	<include name="HomeRecentMovies">
+	
+		<include name="HomeRecentMovies">
 		<content>
 			<item id="1">
 				<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
