@@ -68,7 +68,6 @@
 			<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9002</onup>
 			<ondown condition="!Skin.HasSetting(HideHomeSearch) + Player.HasMedia">611</ondown>
 			<ondown condition="!Skin.HasSetting(HideHomeSearch) + !Skin.HasSetting(UPnP_Mode) + !Player.HasMedia">612</ondown>
-			<!--ondown condition="Skin.HasSetting(HideHomeSearch)">611</ondown-->
 			<ondown condition="Skin.HasSetting(HideHomeSearch) | [Skin.HasSetting(UPnP_Mode) + !Player.HasMedia]">9000</ondown>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
