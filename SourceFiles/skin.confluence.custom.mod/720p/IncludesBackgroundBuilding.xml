@@ -149,6 +149,16 @@
 				<visible>Control.HasFocus(8020)</visible>
 			</control>
 			<control type="image">
+				<description>Recently Added Concerts Background Image</description>
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[Container(8034).ListItem.Thumb]</texture>
+				<include>BackgroundFade</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>Window_OpenClose_Animation</include>
+				<visible>Control.HasFocus(8034)</visible>
+			</control>
+			<control type="image">
 				<description>Random Movies Background Image</description>
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>

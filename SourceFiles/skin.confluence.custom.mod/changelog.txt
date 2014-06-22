@@ -1,3 +1,10 @@
+[B]2.0.6[/B]  [I]June 2014[/I]
+- Update Lang Files
+- Added Support Script.video.extras
+- Added Wide Layout Recent Concerts Widget
+- Added 3D Movies Playlist
+- Added New System Submenu
+
 [B]2.0.5[/B]  [I]June 2014[/I]
 - Added UPnp Client Mode
 - Added Large Style Widgets

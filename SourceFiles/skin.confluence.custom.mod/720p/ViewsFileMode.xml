@@ -63,6 +63,16 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
+						<visible>![System.HasAddon(script.videoextras) + Container.Content(Movies)]</visible>
+					</control>
+					<control type="image">
+						<posx>601</posx>
+						<posy>8</posy>
+						<width>26</width>
+						<height>26</height>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture fallback="blank.png">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+						<visible>System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
 					</control>
 					<control type="image">
 						<posx>631</posx>
@@ -191,8 +201,18 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>Window.IsVisible(Videos)</visible>
+						<visible>![System.HasAddon(script.videoextras) + Container.Content(Movies)]</visible>
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
+					</control>
+					<control type="image">
+						<posx>601</posx>
+						<posy>8</posy>
+						<width>26</width>
+						<height>26</height>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture fallback="blank.png">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+						<visible>System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
 					</control>
 					<control type="image">
 						<posx>625</posx>
@@ -658,6 +678,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>Window.IsVisible(Videos)</visible>
+						<visible>![System.HasAddon(script.videoextras) + Container.Content(Movies)]</visible>
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
 					</control>
@@ -670,6 +691,15 @@
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!Skin.HasSetting(ViewSubTitleFlag)</visible>
+					</control>
+					<control type="image">
+						<posx>986</posx>
+						<posy>8</posy>
+						<width>26</width>
+						<height>26</height>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture fallback="blank.png">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+						<visible>System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
 					</control>
 					<control type="image">
 						<posx>1016</posx>
@@ -790,6 +820,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>Window.IsVisible(Videos)</visible>
+						<visible>![System.HasAddon(script.videoextras) + Container.Content(Movies)]</visible>
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
 					</control>
@@ -802,6 +833,15 @@
 						<animation effect="slide" start="0,0" end="18,0" delay="0" time="0" condition="stringcompare(Skin.String(WatchStatusType),Hidden)">conditional</animation>
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!Skin.HasSetting(ViewSubTitleFlag)</visible>
+					</control>
+					<control type="image">
+						<posx>986</posx>
+						<posy>8</posy>
+						<width>26</width>
+						<height>26</height>
+						<fadetime>IconCrossfadeTime</fadetime>
+						<texture fallback="blank.png">$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+						<visible>System.HasAddon(script.videoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
 					</control>
 					<control type="image">
 						<posx>1016</posx>

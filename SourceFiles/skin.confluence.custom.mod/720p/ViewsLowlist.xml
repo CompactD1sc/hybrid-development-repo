@@ -17,7 +17,6 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
-				<!--visible>[Window.IsVisible(Videos) + !Container.Content(Episodes)] | SubString(Container.FolderPath,program.advanced.launcher)</visible-->
 				<visible>!Container.Content(LiveTV)</visible>
 				<itemlayout height="40" width="480">
 					<control type="image">

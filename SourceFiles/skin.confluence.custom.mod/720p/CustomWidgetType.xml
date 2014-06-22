@@ -221,6 +221,13 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
+						<description>Wide Recent Concerts</description>
+						<label>$LOCALIZE[31232]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Widget,RecentWideConcerts)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
 						<description>Random Concerts</description>
 						<label>$LOCALIZE[31185]</label>
 						<onclick>Dialog.Close(2118)</onclick>
