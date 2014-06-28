@@ -1,3 +1,8 @@
+[B]2.3.2[/B] [I]June 2014[/I]
+- Various Bugfixes
+- Added Weather Info to Home Screen
+- Adjusted Music viz for ArtistSlideShow transparent value
+
 [B]2.3.1[/B] [I]May 2014[/I]
 - Added settings for Floor Buttons
 
