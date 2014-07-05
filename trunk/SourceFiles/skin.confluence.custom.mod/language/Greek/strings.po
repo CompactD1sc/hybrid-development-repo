@@ -52,6 +52,10 @@ msgctxt "#31010"
 msgid "Found"
 msgstr "Βρέθηκαν"
 
+msgctxt "#31011"
+msgid "XBMC"
+msgstr "XBMC"
+
 msgctxt "#31016"
 msgid "Shows"
 msgstr "Εκπομπές"
@@ -1365,7 +1369,7 @@ msgid "United States"
 msgstr "ΗΠΑ"
 
 msgctxt "#31701"
-msgid "Great Britian"
+msgid "Great Britain"
 msgstr "Μεγ. Βρετανία"
 
 msgctxt "#31702"

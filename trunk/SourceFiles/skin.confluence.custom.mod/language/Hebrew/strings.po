@@ -777,7 +777,7 @@ msgid "United States"
 msgstr "ארה״ב"
 
 msgctxt "#31701"
-msgid "Great Britian"
+msgid "Great Britain"
 msgstr "בריטניה"
 
 msgctxt "#31702"

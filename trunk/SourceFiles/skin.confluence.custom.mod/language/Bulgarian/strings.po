@@ -388,6 +388,10 @@ msgctxt "#31223"
 msgid "Installed Add-Ons"
 msgstr "Инсталирани добавки"
 
+msgctxt "#31230"
+msgid "Hide Favourites Button"
+msgstr "Без бутона \"Любими\""
+
 msgctxt "#31300"
 msgid "Current Temp"
 msgstr "Текуща температура"
@@ -659,6 +663,10 @@ msgstr "Категоризирай според стандарта в"
 msgctxt "#31700"
 msgid "United States"
 msgstr "Съединени американски щати"
+
+msgctxt "#31701"
+msgid "Great Britain"
+msgstr "Великобритания"
 
 msgctxt "#31702"
 msgid "Germany"
