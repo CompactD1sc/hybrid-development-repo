@@ -52,6 +52,10 @@ msgctxt "#31010"
 msgid "Found"
 msgstr "Pronađeno"
 
+msgctxt "#31011"
+msgid "XBMC"
+msgstr "XBMC"
+
 msgctxt "#31016"
 msgid "Shows"
 msgstr "Emisije"
@@ -1197,7 +1201,7 @@ msgid "United States"
 msgstr "USA"
 
 msgctxt "#31701"
-msgid "Great Britian"
+msgid "Great Britain"
 msgstr "Velika Britanija"
 
 msgctxt "#31702"

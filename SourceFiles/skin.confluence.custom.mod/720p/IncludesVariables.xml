@@ -528,7 +528,7 @@
 		<value>$LOCALIZE[19023]</value>
 	</variable>
 	<variable name="SubMenuLiveTVTwo" type="text">
-		<value condition="!IsEmpty(Skin.String(SubLiveTV.21.Label))">$INFO[Skin.String(SubLiveTV.2.Label)]</value>
+		<value condition="!IsEmpty(Skin.String(SubLiveTV.2.Label))">$INFO[Skin.String(SubLiveTV.2.Label)]</value>
 		<value>$LOCALIZE[19024]</value>
 	</variable>
 	<variable name="SubMenuLiveTVThree" type="text">

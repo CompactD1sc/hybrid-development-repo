@@ -52,6 +52,10 @@ msgctxt "#31010"
 msgid "Found"
 msgstr "Funnet"
 
+msgctxt "#31011"
+msgid "XBMC"
+msgstr "XBMC"
+
 msgctxt "#31016"
 msgid "Shows"
 msgstr "Serie"
@@ -757,7 +761,7 @@ msgid "United States"
 msgstr "USA"
 
 msgctxt "#31701"
-msgid "Great Britian"
+msgid "Great Britain"
 msgstr "Storbritannia"
 
 msgctxt "#31702"
@@ -819,3 +823,7 @@ msgstr "Henter værvarsel..."
 msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr "Kart og varsler"
+
+msgctxt "#31951"
+msgid "XBMC Command"
+msgstr "XBMC Kommando"

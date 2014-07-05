@@ -52,6 +52,10 @@ msgctxt "#31010"
 msgid "Found"
 msgstr "찾음"
 
+msgctxt "#31011"
+msgid "XBMC"
+msgstr "XBMC"
+
 msgctxt "#31017"
 msgid "HD Movies"
 msgstr "HD 영화"
@@ -865,7 +869,7 @@ msgid "United States"
 msgstr "미국"
 
 msgctxt "#31701"
-msgid "Great Britian"
+msgid "Great Britain"
 msgstr "영국"
 
 msgctxt "#31702"
