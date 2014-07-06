@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="skin.hybrid"
-  version="2.3.2"
-  name="Hybrid"
+  id="skin.hybrid.dev"
+  version="2.3.3"
+  name="Hybrid Development"
   provider-name="Mudislander">
   <requires>
     <import addon="xbmc.gui" version="5.0.0"/>
