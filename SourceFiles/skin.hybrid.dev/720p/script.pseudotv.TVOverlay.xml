@@ -77,13 +77,6 @@
 		</control>
 		<control type="group" id="102">
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<!--control type="image">
-				<left>-100</left>
-				<top>-60</top>
-				<width>1480</width>
-				<height>160</height>
-				<texture flipy="true">Home/NowPlayingBack.png</texture>
-			</control-->
 			<control type="image" id="1">
 				<description>LOGO</description>
 				<left>0</left>

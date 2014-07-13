@@ -34,6 +34,7 @@
 					</control>
 					<control type="label">
 						<left>30</left>
+						<left>46</left>
 						<top>0</top>
 						<width>610</width>
 						<height>40</height>

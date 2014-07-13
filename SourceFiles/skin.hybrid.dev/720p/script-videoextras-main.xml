@@ -91,31 +91,12 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.label]</label>
 					</control>
-					<control type="group">
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture diffuse="poster-diffuse.png">MediaStatus/OverlayBase.png</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,MediaStatus/,.png]</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture>$INFO[ListItem.Overlay,MediaStatus/]</texture>
-							<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
-						</control>
+					<control type="image">
+						<left>1050</left>
+						<top>8</top>
+						<width>24</width>
+						<height>24</height>
+						<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,MediaStatus/,.png]</texture>
 						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
 					</control>
 				</itemlayout>
@@ -157,31 +138,12 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.label]</label>
 					</control>
-					<control type="group">
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture diffuse="poster-diffuse.png">MediaStatus/OverlayBase.png</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,MediaStatus/,.png]</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>1050</left>
-							<top>8</top>
-							<width>24</width>
-							<height>24</height>
-							<texture>$INFO[ListItem.Overlay,MediaStatus/]</texture>
-							<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
-						</control>
+					<control type="image">
+						<left>1050</left>
+						<top>8</top>
+						<width>24</width>
+						<height>24</height>
+						<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,MediaStatus/,.png]</texture>
 						<visible>!Skin.HasSetting(disablewatchedcheck)</visible>
 					</control>
 				</focusedlayout>

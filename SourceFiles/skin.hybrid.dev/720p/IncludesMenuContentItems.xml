@@ -28,7 +28,6 @@
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 				<visible>substring(Window(home).Property(UsrSelectBtn),UserSub,Left) | substring(Window(home).Property(UsrSelectBtn),subprog) | Window.IsVisible(2114)</visible>
-				<!--visible>StringCompare(Window(home).Property(UsrSelectPath),InUse)</visible-->
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
@@ -41,7 +40,6 @@
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 				<visible>!substring(Window(home).Property(UsrSelectBtn),UserSub,Left) + !substring(Window(home).Property(UsrSelectBtn),subprog) + Window.IsVisible(2115)</visible>
-				<!--visible>StringCompare(Window(home).Property(UsrSelectPath),InUse)</visible-->
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
@@ -248,7 +246,6 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].type,AddOns)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].fanart,special://home/addons/$INFO[Skin.String(UsrSelectAddon)]/fanart.jpg)</onclick>
-				<!--onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].fanart,special://skin/backgrounds/homescreen/addons.jpg)</onclick-->
 				<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>

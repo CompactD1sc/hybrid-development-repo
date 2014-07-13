@@ -113,16 +113,6 @@
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 				<visible>Player.HasAudio + !Skin.HasSetting(disableslideshowart) + !Control.HasFocus(510)</visible>
 			</control>
-			<!--control type="image">
-				<left>12</left>
-				<top>120</top>
-				<width>110</width>
-				<height>60</height>
-				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<texture background="true">$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
-				<fadetime>FanartCrossFadeTime</fadetime>
-				<visible>Player.HasAudio + !Player.IsInternetStream + !Control.HasFocus(510)</visible>
-			</control-->
 			<control type="videowindow" id="8">
 				<left>6</left>
 				<top>116</top>
@@ -817,7 +807,6 @@
 			<texture>xbmc-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>StringCompare(System.ProfileName,Master user) + !Skin.HasSetting(homepageweatherinfo)</visible>
 		</control>
 		<control type="label">
@@ -833,7 +822,6 @@
 			<shadowcolor>black</shadowcolor>
 			<info>System.ProfileName</info>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>!StringCompare(System.ProfileName,Master user) + !Skin.HasSetting(homepageweatherinfo)</visible>
 		</control>
 		<control type="label">
@@ -848,7 +836,6 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$LOCALIZE[31370]</label>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>!StringCompare(System.ProfileName,Master user) + !Skin.HasSetting(homepageweatherinfo)</visible>
 		</control>
 		<control type="group">

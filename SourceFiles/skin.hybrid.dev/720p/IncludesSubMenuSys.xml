@@ -648,13 +648,9 @@
 	</include>
 	<include name="SubMenuAnimation">
 		<animation effect="slide" start="0,-40" end="0,0" delay="200" time="200" tween="quadratic" easing="out">Visible</animation>
-		<!--
-		<animation effect="slide" start="0,0" end="0,-40" time="200" tween="quadratic" easing="out">Hidden</animation>
-		-->
 		<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus + Skin.HasSetting(autovisablesubmenu)">conditional</animation>
 		<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(autovisablesubmenu)">conditional</animation>
 		<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus + Skin.HasSetting(autovisablesubmenu)">WindowClose</animation>
-		<!--animation effect="fade" start="100" end="65" time="200" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation-->
 	</include>
 	<include name="SubMenuCommonLayout">
 		<itemlayout height="35" width="193">

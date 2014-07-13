@@ -452,4 +452,21 @@
 			<visible>!IsEmpty(ListItem.Studio)</visible>
 		</control>
 	</include>
+	<include name="VideoExtrasIcon">
+		<control type="image" id="5048">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/movies/,.png]</texture>
+			<visible>!Skin.HasSetting(disablevideoextras) + Window.IsVisible(Videos) + Container.Content(Movies)</visible>
+		</control>
+		<control type="image" id="5049">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/tvshows/,.png]</texture>
+			<visible>!Skin.HasSetting(disablevideoextras) + Window.IsVisible(Videos) + Container.Content(TVShows)</visible>
+		</control>
+		<control type="image" id="5050">
+			<include>InvisibleButton</include>
+			<texture>$INFO[ListItem.DBID,special://profile/addon_data/script.videoextras/musicvideos/,.png]</texture>
+			<visible>!Skin.HasSetting(disablevideoextras) + Window.IsVisible(Videos) + Container.Content(MusicVideos)</visible>
+		</control>
+	</include>
 </includes>
