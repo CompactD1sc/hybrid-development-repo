@@ -212,7 +212,6 @@
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),TVShows)">HomeSubMenuTVShows</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Music)">HomeSubMenuMusic</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Settings)">HomeSubMenuSystem</include>
-					<!--include condition="StringCompare(Window(home).Property(MenuItemSub),PlayDisc)">HomeSubMenuPlayDisc</include-->
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Pictures)">HomeSubMenuPictures</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),LiveTV)">HomeSubMenuLiveTV</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Concerts)">HomeSubMenuConcerts</include>
@@ -222,7 +221,6 @@
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Programs)">HomeSubMenuProg</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),UserThree)">HomeSubMenuUserThree</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemSub),Shutdown)">HomeSubMenuExit</include>
-					<!--include condition="StringCompare(Window(home).Property(MenuItemSub),FullScreen)">HomeSubMenuFullscreen</include-->
 					<include condition="StringCompare(Window(home).Property(MenuItemAddon),addonsetone)">HomeAddonSetOne</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemAddon),addonsettwo)">HomeAddonSetTwo</include>
 					<include condition="StringCompare(Window(home).Property(MenuItemAddon),addonsetthree)">HomeAddonSetThree</include>
@@ -274,7 +272,6 @@
 			<texture>xbmc-logo.png</texture>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 		</control>
 		<control type="label">
@@ -290,7 +287,6 @@
 			<shadowcolor>black</shadowcolor>
 			<info>System.ProfileName</info>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>!StringCompare(System.ProfileName,Master user)</visible>
 		</control>
 		<control type="label">
@@ -305,7 +301,6 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$LOCALIZE[31370]</label>
 			<include>Window_OpenClose_Animation</include>
-			<!--animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation-->
 			<visible>!StringCompare(System.ProfileName,Master user)</visible>
 		</control>
 	</controls>

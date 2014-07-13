@@ -12,12 +12,11 @@
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="image">
-					<description>Subtitle image</description>
+					<description>Extra Info Flag</description>
 					<width>61</width>
 					<height>46</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture>$INFO[ListItem.subtitleLanguage,flagging/country/,.png]</texture>
-					<visible>!IsEmpty(ListItem.subtitleLanguage)</visible>
+					<texture>$VAR[ExtraInfoFlag]</texture>
 				</control>
 				<control type="image">
 					<description>Video rez Image</description>
@@ -123,14 +122,13 @@
 			<visible>!IsEmpty(ListItem.Mpaa)</visible>
 		</control>
 	</include>
-	<include name="VideoSubTitleFlagging">
+	<include name="VideoExtraInfoFlagging">
 		<control type="image">
-			<description>Subtitle image</description>
+			<description>Extra Info Flag</description>
 			<width>48</width>
 			<height>35</height>
 			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.subtitleLanguage,flagging/country/,.png]</texture>
-			<visible>!IsEmpty(ListItem.subtitleLanguage)</visible>
+			<texture>$VAR[ExtraInfoFlag]</texture>
 		</control>
 	</include>
 	<include name="VideoCodecFlaggingConditions">

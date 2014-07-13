@@ -126,7 +126,7 @@
 				<align>left</align>
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
-				<include>VideoSubTitleFlagging</include>
+				<include>VideoExtraInfoFlagging</include>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>

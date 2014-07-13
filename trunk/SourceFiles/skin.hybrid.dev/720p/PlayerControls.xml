@@ -12,7 +12,6 @@
 		<control type="image">
 			<left>-15</left>
 			<top>156</top>
-			<!--width>483</width-->
 			<width>523</width>
 			<height>53</height>
 			<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>

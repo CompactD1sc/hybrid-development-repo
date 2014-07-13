@@ -398,7 +398,6 @@
 			<height>40</height>
 		</control>
 		<!--HEADER-->
-		<!--include>Clock</include-->
 		<!--FOOTER-->
 		<control type="grouplist">
 			<left>410</left>
