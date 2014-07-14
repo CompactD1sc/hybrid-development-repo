@@ -1,5 +1,8 @@
+B]2.3.6[/B] [I]July 2014[/I]
+- Bugfix + Tweak Music Viz Backgrounds
+
 [B]2.3.5[/B] [I]July 2014[/I]
--Added support for ArtistSlideshow new property ArtworkReady
+- Added support for ArtistSlideshow new property ArtworkReady
 
 [B]2.3.4[/B] [I]July 2014[/I]
 - Translated More Banners

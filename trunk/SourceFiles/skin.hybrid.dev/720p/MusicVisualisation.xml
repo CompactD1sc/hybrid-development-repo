@@ -4,9 +4,13 @@
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include condition="!Skin.HasSetting(hideartistartosd)">ArtistExtraFanArt</include>
+		<!--include condition="!Skin.HasSetting(hideartistartosd)">ArtistExtraFanArt</include-->
 		<control type="group">
-			<visible>Skin.HasSetting(nodiffusevizfanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>!Skin.HasSetting(hideartistartosd)</visible>
+			<include>ArtistExtraFanArt</include>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(nodiffusevizfanart) | IsEmpty(Visualisation.Name) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<include>AlbumArtMusicVizWall</include>
 		</control>
 		<include>MusicArtUnderVisualisation</include>
@@ -15,7 +19,7 @@
 			<include>Dimensions_Fullscreen</include>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(nodiffusevizfanart) + !stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>!Skin.HasSetting(nodiffusevizfanart) + !IsEmpty(Visualisation.Name) + !stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<include>AlbumArtMusicVizWall</include>
 		</control>
 		<include>MusicArtOverVisualisation</include>
