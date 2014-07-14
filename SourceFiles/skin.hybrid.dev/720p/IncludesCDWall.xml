@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="AlbumArtMusicVizWall">
+		<!--include condition="!Skin.HasSetting(hideartistartosd)">ArtistExtraFanArt</include-->
 		<control type="group">
-			<visible>!IsEmpty(Skin.String(usralbumthumbsdir)) + !Window.IsVisible(Home) + Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
-			<visible>Skin.HasSetting(nodiffusevizfanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>!Skin.HasSetting(hideartistartosd)</visible>
+			<include>ArtistExtraFanArt</include>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(Skin.String(usralbumthumbsdir)) + !Window.IsVisible(Home)</visible>
+			<visible>Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
+			<visible>Skin.HasSetting(nodiffusevizfanart) | IsEmpty(Visualisation.Name) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<left>-35</left>
 			<top>-15</top>
 			<control type="multiimage">
@@ -503,8 +509,9 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>!IsEmpty(Skin.String(usralbumthumbsdir)) + !Window.IsVisible(Home) + Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
-			<visible>!stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>!IsEmpty(Skin.String(usralbumthumbsdir)) + !Window.IsVisible(Home)</visible>
+			<visible>Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
+			<visible>!IsEmpty(Visualisation.Name) + !stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<left>-35</left>
 			<top>-15</top>
 			<control type="image">
@@ -1408,9 +1415,11 @@
 				<visible>IsEmpty(Window(home).Property(RandomAlbum.16.Thumb ))</visible>
 			</control>
 		</control>
+		
 		<control type="group">
-			<visible>[IsEmpty(Skin.String(usralbumthumbsdir)) | Window.IsVisible(Home)] + Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
-			<visible>Skin.HasSetting(nodiffusevizfanart) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>IsEmpty(Skin.String(usralbumthumbsdir)) | Window.IsVisible(Home)</visible>
+			<visible>Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
+			<visible>Skin.HasSetting(nodiffusevizfanart) | IsEmpty(Visualisation.Name) | stringcompare(Visualisation.Name,Waveform) | stringcompare(Visualisation.Name,DirectX Spectrum) | stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<left>-35</left>
 			<top>-15</top>
 			<control type="image">
@@ -2224,9 +2233,11 @@
 				<visible>IsEmpty(Window(home).Property(RandomAlbum.16.Thumb ))</visible>
 			</control>
 		</control>
+		
 		<control type="group">
-			<visible>[IsEmpty(Skin.String(usralbumthumbsdir)) | Window.IsVisible(Home)] + Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
-			<visible>!stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
+			<visible>IsEmpty(Skin.String(usralbumthumbsdir)) | Window.IsVisible(Home)</visible>
+			<visible>Skin.HasSetting(hideartistartosd) | [IsEmpty(Player.Art(fanart)) + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044))]</visible>
+			<visible>!IsEmpty(Visualisation.Name) + !stringcompare(Visualisation.Name,Waveform) + !stringcompare(Visualisation.Name,DirectX Spectrum) + !stringcompare(Visualisation.Name,OpenGL Spectrum)</visible>
 			<left>-35</left>
 			<top>-15</top>
 			<control type="image">
