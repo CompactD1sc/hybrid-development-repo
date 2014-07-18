@@ -1,3 +1,6 @@
+B]2.3.7[/B] [I]July 2014[/I]
+- Misc small tweaks
+
 B]2.3.6[/B] [I]July 2014[/I]
 - Bugfix + Tweak Music Viz Backgrounds
 
