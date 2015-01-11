@@ -3,8 +3,8 @@
 
  Echo .svn>exclude.txt
  Echo .git>>exclude.txt
- Echo D:\Repository\trunk\SourceFiles\%1\media>>exclude.txt
- Echo D:\Repository\trunk\SourceFiles\%1\themes>>exclude.txt
+ Echo C:\Repository\SourceFiles\%1\media>>exclude.txt
+ Echo C:\Repository\SourceFiles\%1\themes>>exclude.txt
 
  md BUILD\%1\media\
 
@@ -12,14 +12,14 @@
  Echo Building main skin XBT
  ECHO ----------------------------------------
 
- START /B /WAIT D:\Repository\trunk\SkinBuilder\TexturePacker -dupecheck -input D:\Repository\trunk\SourceFiles\%1\media -output BUILD\%1\media\Textures.xbt
+ START /B /WAIT C:\Repository\SkinBuilder\TexturePacker -dupecheck -input C:\Repository\SourceFiles\%1\media -output BUILD\%1\media\Textures.xbt
 
  ECHO ----------------------------------------
  Echo Finished building main skin XBT
- if exist D:\Repository\trunk\SourceFiles\%1\themes (
+ if exist C:\Repository\SourceFiles\%1\themes (
      Echo Building theme skin XBT Files
      ECHO ----------------------------------------
-    for /f "tokens=*" %%f in ('dir /b/ad D:\Repository\trunk\SourceFiles\%1\themes') do START /B /WAIT D:\Repository\trunk\SkinBuilder\TexturePacker -dupecheck -input D:\Repository\trunk\SourceFiles\%1\themes\%%f -output BUILD\%1\media\%%f.xbt
+    for /f "tokens=*" %%f in ('dir /b/ad C:\Repository\SourceFiles\%1\themes') do START /B /WAIT C:\Repository\SkinBuilder\TexturePacker -dupecheck -input C:\Repository\SourceFiles\%1\themes\%%f -output BUILD\%1\media\%%f.xbt
      Echo Finished Building theme skin XBT Files
  )
 
@@ -27,8 +27,8 @@
  Echo Copying other files
  ECHO ----------------------------------------
 
- for /f "tokens=*" %%c in ('dir /b/ad D:\Repository\trunk\SourceFiles\%1') do xcopy "D:\Repository\trunk\SourceFiles\%1\%%c" "BUILD\%1\%%c" /Q /S /I /Y /EXCLUDE:exclude.txt
- for /f "tokens=*" %%c in ('dir /b/a-d D:\Repository\trunk\SourceFiles\%1') do copy D:\Repository\trunk\SourceFiles\%1\%%c "BUILD\%1\%%c"
+ for /f "tokens=*" %%c in ('dir /b/ad C:\Repository\SourceFiles\%1') do xcopy "C:\Repository\SourceFiles\%1\%%c" "BUILD\%1\%%c" /Q /S /I /Y /EXCLUDE:exclude.txt
+ for /f "tokens=*" %%c in ('dir /b/a-d C:\Repository\SourceFiles\%1') do copy C:\Repository\SourceFiles\%1\%%c "BUILD\%1\%%c"
 
  del exclude.txt
 
@@ -39,19 +39,19 @@ FOR /F "skip=2 Tokens=2 Delims== " %%V IN ('FIND "  version=" "BUILD\%1\addon.xm
  ECHO ----------------------------------------
 
  cd BUILD
- D:\Repository\trunk\SkinBuilder\zip.exe -r -q %1-%Version%.zip %1
+ C:\Repository\SkinBuilder\zip.exe -r -q %1-%Version%.zip %1
 
   ECHO ----------------------------------------
   ECHO Moving files to repository
   ECHO ----------------------------------------
 
-  REM if exist "D:\Repository\trunk\xbmc.repo.mudisle\%1\" rmdir "D:\Repository\trunk\xbmc.repo.mudisle\%1\" /S /Q
-  REM md "D:\Repository\trunk\xbmc.repo.mudisle\%1\"
-  copy "%1-%Version%.zip" "D:\Repository\trunk\%1\"
-  copy "%1\fanart.jpg" "D:\Repository\trunk\%1\fanart.jpg"
-  copy "%1\icon.png" "D:\Repository\trunk\%1\icon.png"
-  copy "%1\addon.xml" "D:\Repository\trunk\%1\addon.xml"
-  copy "%1\changelog.txt" "D:\Repository\trunk\%1\changelog-%Version%.txt"
+  REM if exist "C:\Repository\xbmc.repo.mudisle\%1\" rmdir "C:\Repository\xbmc.repo.mudisle\%1\" /S /Q
+  REM md "C:\Repository\xbmc.repo.mudisle\%1\"
+  copy "%1-%Version%.zip" "C:\Repository\%1\"
+  copy "%1\fanart.jpg" "C:\Repository\%1\fanart.jpg"
+  copy "%1\icon.png" "C:\Repository\%1\icon.png"
+  copy "%1\addon.xml" "C:\Repository\%1\addon.xml"
+  copy "%1\changelog.txt" "C:\Repository\%1\changelog-%Version%.txt"
 
   ECHO ----------------------------------------
   ECHO Removing BUILD folder
@@ -65,7 +65,7 @@ FOR /F "skip=2 Tokens=2 Delims== " %%V IN ('FIND "  version=" "BUILD\%1\addon.xm
   ECHO Generating addons.xml and addons.xml.md5
   ECHO ----------------------------------------
 
-  REM cd D:\Repository\trunk\xbmc.repo.mudisle\
+  REM cd C:\Repository\xbmc.repo.mudisle\
   REM python addons_xml_generator.py
 
   pause
