@@ -9,6 +9,7 @@
 	<include file="IncludesBackgroundEffect.xml" />
 	<include file="IncludesHomeAddOnSystem.xml" />
 	<include file="IncludesCDWall.xml" />
+	<include file="IncludesOnScreenDisplay.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
@@ -254,7 +255,7 @@
 				<top>53r</top>
 				<width>700</width>
 				<height>20</height>
-				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
+				<label>$INFO[Player.Title] - ([COLOR=$VAR[MainColorOne]]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -318,7 +319,7 @@
 				<top>30r</top>
 				<width>700</width>
 				<height>20</height>
-				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
+				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=grey3],[/COLOR])]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -439,7 +440,7 @@
 			<top>120</top>
 			<height>30</height>
 			<width>325</width>
-			<label>[COLOR=blue]$LOCALIZE[19031] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
+			<label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[19031] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
 			<align>right</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -586,7 +587,7 @@
 			<height>35</height>
 			<font>font12</font>
 			<label>31023</label>
-			<textcolor>blue</textcolor>
+			<textcolor>$VAR[MainColorOne]</textcolor>
 			<align>center</align>
 			<aligny>center</aligny>
 			<visible>Player.HasMedia</visible>
@@ -939,10 +940,11 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Window.IsVisible(MusicOSD)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</include>
-	<!--include name="CDArtSpinner">
+	<include name="CDArtSpinner">
 		<animation effect="slide" start="0,0" end="70,0" time="1200" delay="500" condition="Player.Playing | Player.Forwarding | Player.Rewinding">Conditional</animation>
 		<animation effect="rotate" end="-360" center="auto" time="2400" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
 		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
@@ -955,13 +957,13 @@
 		<animation effect="rotate" end="720" center="auto" time="1200" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
 		<animation effect="rotate" end="720" center="auto" time="800" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
 		<animation effect="rotate" end="720" center="auto" time="400" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
-	</include-->
-	<!--include name="MediaInfoPopup">
-		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(mediapopupcontrol))">Visible</animation>
-		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(mediapopupcontrol,Instant)">Visible</animation>
-		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(mediapopupcontrol,Delayed)">Visible</animation>
+	</include>
+	<include name="MediaInfoPopup">
+		<animation effect="fade" start="0" end="100" time="1600" delay="2000" condition="IsEmpty(Skin.String(MediaPopupControl))">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopupControl,Instant)">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(MediaPopupControl,Delayed)">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-	</include-->
+	</include>
 	<include name="VideoBoxDimensions">
 		<left>26</left>
 		<top>6</top>
@@ -1453,6 +1455,14 @@
 		<aligny>center</aligny>
 		<font>font13</font>
 		<focusedcolor>black</focusedcolor>
+	</include>
+	<include name="TransparentEffect">
+		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(MediaPanelTrans),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="0" condition="SubString(skin.string(MediaPanelTrans),70)">Conditional</animation>
+		<animation effect="fade" start="100" end="60" time="0" condition="SubString(skin.string(MediaPanelTrans),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="70" time="0" condition="SubString(skin.string(MediaPanelTrans),40)">Conditional</animation>
+		<animation effect="fade" start="100" end="80" time="0" condition="SubString(skin.string(MediaPanelTrans),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(MediaPanelTrans),10)">Conditional</animation>
 	</include>
 	<include name="KBurnsAnimateFanart">
 		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanart)">Conditional</animation>

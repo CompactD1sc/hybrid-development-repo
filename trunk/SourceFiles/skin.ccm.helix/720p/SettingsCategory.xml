@@ -2,6 +2,8 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<onload>SetProperty(MenuItemActive,Settings,Home)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
@@ -288,7 +290,7 @@
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>[COLOR=blue] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
+				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
 			</control>
 		</control>
 		<include>Clock</include>
