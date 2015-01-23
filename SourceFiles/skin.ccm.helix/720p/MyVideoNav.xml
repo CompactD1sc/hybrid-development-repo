@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>50,51,500,550,551,560,501,508,504,503,515,505,511</views>
-	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<onload condition="!Skin.HasSetting(DisableTVTunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
 		<include>CommonBackground</include>
@@ -65,7 +64,7 @@
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>[COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
+				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$INFO[Container.FolderName]</label>
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
@@ -89,7 +88,7 @@
 					<height>35</height>
 					<font>font12</font>
 					<label>31006</label>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
@@ -129,7 +128,7 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<control type="radiobutton" id="99">
+				<!--control type="radiobutton" id="99">
 					<description>Show Info Toggle</description>
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
@@ -137,13 +136,30 @@
 					<onclick>Skin.ToggleSetting(View508HideInfo)</onclick>
 					<selected>Skin.HasSetting(View508HideInfo)</selected>
 					<visible>Control.IsVisible(508)</visible>
+				</control-->
+				<control type="button" id="99">
+					<width>250</width>
+					<height>40</height>
+					<font>font13</font>
+					<label>$LOCALIZE[31123] $VAR[PopupInfoType]</label>
+					<textcolor>white</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick condition="IsEmpty(Skin.String(MediaPopupControl))">Skin.SetString(MediaPopupControl,Delayed)</onclick>
+					<onclick condition="Skin.String(MediaPopupControl,Delayed)">Skin.SetString(MediaPopupControl,Hidden)</onclick>
+					<onclick condition="Skin.String(MediaPopupControl,Hidden)">Skin.SetString(MediaPopupControl,Instant)</onclick>
+					<onclick condition="Skin.String(MediaPopupControl,Instant)">Skin.Reset(MediaPopupControl)</onclick>
+					<!--visible>Control.IsVisible(508) | Control.IsVisible(515) | Control.IsVisible(730)</visible-->
+					<visible>Control.IsVisible(508)</visible>
 				</control>
 				<control type="label" id="201">
 					<width>250</width>
 					<height>35</height>
 					<font>font12</font>
 					<label>31026</label>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
@@ -178,7 +194,7 @@
 					<height>35</height>
 					<font>font12</font>
 					<label>31039</label>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>

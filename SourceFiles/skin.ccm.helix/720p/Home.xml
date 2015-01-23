@@ -25,22 +25,7 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.11.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.12.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
-	<!--onload>SetProperty(MainMenuItemOne,$VAR[VisibleMenuItemOne],Home)</onload>
-	<onload>SetProperty(MainMenuItemTwo,$VAR[VisibleMenuItemTwo],Home)</onload>
-	<onload>SetProperty(MainMenuItemThree,$VAR[VisibleMenuItemThree],Home)</onload>
-	<onload>SetProperty(MainMenuItemFour,$VAR[VisibleMenuItemFour],Home)</onload>
-	<onload>SetProperty(MainMenuItemFive,$VAR[VisibleMenuItemFive],Home)</onload>
-	<onload>SetProperty(MainMenuItemSix,$VAR[VisibleMenuItemSix],Home)</onload>
-	<onload>SetProperty(MainMenuItemSeven,$VAR[VisibleMenuItemSeven],Home)</onload>
-	<onload>SetProperty(MainMenuItemEight,$VAR[VisibleMenuItemEight],Home)</onload>
-	<onload>SetProperty(MainMenuItemNine,$VAR[VisibleMenuItemNine],Home)</onload>
-	<onload>SetProperty(MainMenuItemTen,$VAR[VisibleMenuItemTen],Home)</onload>
-	<onload>SetProperty(MainMenuItemEleven,$VAR[VisibleMenuItemEleven],Home)</onload>
-	<onload>SetProperty(MainMenuItemTwelve,$VAR[VisibleMenuItemTwelve],Home)</onload-->
-	<!-- Temp Setting - script.randomandlastitems has problems -->
-	<onload condition="!Skin.HasSetting(EnableRandomPlaylist)">Skin.SetBool(EnableRandomPlaylist)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
-	
 	<controls>
 		<include>CommonBackground</include>
 		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
@@ -52,7 +37,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Player.HasMedia | system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="image">
 			<description>LOGO</description>
@@ -132,7 +117,7 @@
 				<top>310</top>
 				<height>30</height>
 				<width>300</width>
-				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+				<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -145,6 +130,7 @@
 			<left>490r</left>
 			<top>70</top>
 			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+			<visible>!Skin.HasSetting(HideTVRecordingInfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
@@ -186,7 +172,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
@@ -208,7 +194,7 @@
 					<top>50</top>
 					<height>25</height>
 					<width>800</width>
-					<label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
+					<label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -253,7 +239,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>$VAR[MainColorOne]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
@@ -275,7 +261,7 @@
 					<top>50</top>
 					<height>30</height>
 					<width>800</width>
-					<label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=blue]([/COLOR],[COLOR=blue])[/COLOR]][/COLOR]</label>
+					<label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>
@@ -324,7 +310,7 @@
 					<top>310</top>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -377,7 +363,7 @@
 					<top>310</top>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -430,7 +416,7 @@
 					<top>310</top>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -483,7 +469,7 @@
 					<top>310</top>
 					<height>30</height>
 					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -861,7 +847,8 @@
 		<control type="group">
 			<left>0</left>
 			<top>33r</top>
-			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
+			<animation effect="slide" start="0,0" end="0,35" time="150" condition="Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding">Conditional</animation>
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
 				<description>RSS feed</description>
@@ -871,10 +858,10 @@
 				<width>1145</width>
 				<font>font12</font>
 				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
+				<textcolor>$VAR[MainColorOne]</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+				<visible>!Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
 			<control type="rss">
 				<description>RSS feed</description>
@@ -884,10 +871,42 @@
 				<width>1190</width>
 				<font>font12</font>
 				<urlset>1</urlset>
-				<textcolor>blue</textcolor>
+				<textcolor>$VAR[MainColorOne]</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>Skin.HasSetting(HideHomePowerBtn)</visible>
+				<visible>Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Next Five Songs</description>
+				<left>100</left>
+				<top>0</top>
+				<height>30</height>
+				<width>1145</width>
+				<scroll>true</scroll>
+				<scrollout>true</scrollout>
+				<pauseatend>200</pauseatend>
+				<label>$VAR[NextFiveSongScroller]</label>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<textoffsetx>20</textoffsetx>
+				<visible>!Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+			</control>
+			<control type="fadelabel" id="1">
+				<description>Next Five Songs</description>
+				<left>55</left>
+				<top>0</top>
+				<height>30</height>
+				<width>1190</width>
+				<scroll>true</scroll>
+				<scrollout>true</scrollout>
+				<pauseatend>200</pauseatend>
+				<label>$VAR[NextFiveSongScroller]</label>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<textoffsetx>20</textoffsetx>
+				<visible>Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
 			</control>
 			<control type="image">
 				<description>RSS background</description>
