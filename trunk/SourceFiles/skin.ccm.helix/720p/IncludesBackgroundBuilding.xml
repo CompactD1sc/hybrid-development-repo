@@ -5,11 +5,11 @@
 			<visible>[Skin.HasSetting(SingleGlobalBackground) | StringCompare(Window(Home).Property(Background),Theme) | StringCompare(Container(9000).ListItem.Property(Background),Theme)] + !Skin.HasSetting(HolidayEffects)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<imagepath background="true">$INFO[Skin.String(GlobalBackgroundPath)]</imagepath>
+				<imagepath background="true">$INFO[Skin.String(GlobalBackGroundPath)]</imagepath>
 				<timeperimage>8000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>FanartCrossfadeTime</fadetime>
-				<visible>!IsEmpty(Skin.String(GlobalBackgroundPath))</visible>
+				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
 			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -18,7 +18,7 @@
 				<include>BackgroundFade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<include>Window_OpenClose_Animation</include>
-				<visible>IsEmpty(Skin.String(GlobalBackgroundPath))</visible>
+				<visible>IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -96,6 +96,23 @@
 		</control>
 		<control type="group">
 			<visible>!Window.IsVisible(Home) + !Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart)</visible>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>!StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
+			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather) + Player.HasAudio</visible>
+			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>

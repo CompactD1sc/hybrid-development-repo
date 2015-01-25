@@ -1015,7 +1015,14 @@
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
-				<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.String(globalbackgroundpath)]</texture>
+				<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.String(GlobalBackGroundPath)]</texture>
+				<visible>!IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<texture fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+				<visible>IsEmpty(Skin.String(GlobalBackGroundPath))</visible>
 			</control>
 			<control type="group">
 				<left>-133</left>
