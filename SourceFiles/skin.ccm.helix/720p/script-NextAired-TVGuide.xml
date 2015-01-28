@@ -7,6 +7,7 @@
 	<onload>ClearProperty(TVGuide.FridayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SundayList,Home)</onload>
+	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
@@ -491,18 +492,21 @@
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
-			<left>-250</left>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			<left>-251</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onleft>9000</onleft>
-				<onright>200</onright>
+				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onleft>ClearProperty(SideBladeOpen)</onleft>
+				<onright>ClearProperty(SideBladeOpen)</onright>
+				<!--onright>200</onright-->
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<onback>200</onback>
+				<onback>ClearProperty(SideBladeOpen)</onback>
 				<itemgap>0</itemgap>
 				<control type="image" id="2">
 					<description>LOGO</description>
@@ -525,7 +529,9 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>5</label>
+					<onleft>ClearProperty(SideBladeOpen)</onleft>
 					<onright>200</onright>
+					<!--onclick>ClearProperty(SideBladeOpen)</onclick-->
 				</control>
 				<!-- include>CommonNowPlaying_Controls</include -->
 			</control>
