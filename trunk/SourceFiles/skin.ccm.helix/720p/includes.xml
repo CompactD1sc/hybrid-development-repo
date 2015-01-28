@@ -110,25 +110,27 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="Skin.HasSetting(ManualMenuSlide) + !IsEmpty(Window.Property(SideBladeOpen))">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="Skin.HasSetting(ManualMenuSlide) + !IsEmpty(Window.Property(SideBladeOpen))">WindowClose</animation>
-		<animation effect="slide" start="0,0" end="-50,0" time="300" tween="quadratic" easing="out" condition="Skin.HasSetting(ManualMenuSlide) + IsEmpty(Window.Property(SideBladeOpen))">WindowClose</animation>
-		<!--animation effect="slide" start="-50,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation-->
-		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="!Skin.HasSetting(ManualMenuSlide) + [ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)]">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="!Skin.HasSetting(ManualMenuSlide) + [ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
-		<animation effect="slide" start="0,0" end="-50,0" time="300" tween="quadratic" easing="out" condition="!Skin.HasSetting(ManualMenuSlide) + ![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-50,0" time="300" tween="quadratic" easing="out" condition="IsEmpty(Window.Property(SideBladeOpen)) | !ControlGroup(9000).HasFocus">WindowClose</animation>
 		<animation effect="slide" start="-50,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 		<control type="button" id="8999">
 			<description>Fake button for mouse control</description>
 			<left>0</left>
 			<top>0</top>
-			<width>250</width>
+			<width>1280</width>
 			<height>720</height>
 			<label>-</label>
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>true</visible>
+			<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>50</onleft>
+			<onright>ClearProperty(SideBladeOpen)</onright>
+			<onback>ClearProperty(SideBladeOpen)</onback>
+			<visible>!IsEmpty(Window.Property(SideBladeOpen))</visible>
 		</control>
 		<control type="button" id="9001">
 			<left>250</left>
@@ -136,12 +138,12 @@
 			<width>42</width>
 			<height>128</height>
 			<font>-</font>
-			<texturefocus>HasSub.png</texturefocus>
+			<texturefocus>HasSubFocus.png</texturefocus>
 			<texturenofocus>HasSub.png</texturenofocus>
-			<onright>50</onright>
-			<onclick condition="Skin.HasSetting(ManualMenuSlide) + IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
+			<onright>ClearProperty(SideBladeOpen)</onright>
+			<onleft>50</onleft>
+			<onclick condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onclick>
 			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">ClearProperty(SideBladeOpen)</onclick>
-			<onclick condition="!IsEmpty(Window.Property(SideBladeOpen))">50</onclick>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -1033,7 +1035,7 @@
 					<animation effect="rotate" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentOne]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentOne]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1044,7 +1046,7 @@
 					<animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentTwo]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentTwo]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1055,7 +1057,7 @@
 					<animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentThree]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentThree]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1066,7 +1068,7 @@
 					<animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentFour]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentFour]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1077,7 +1079,7 @@
 					<animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentFive]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentFive]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1088,7 +1090,7 @@
 					<animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentSix]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentSix]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1099,7 +1101,7 @@
 					<animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentSeven]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentSeven]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1110,7 +1112,7 @@
 					<animation effect="rotate" center="auto" start="-15" end="-15" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentEight]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentEight]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1121,7 +1123,7 @@
 					<animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
 					<control type="image">
 						<include>CDBoxDimensions</include>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentNine]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentNine]</texture>
 					</control>
 					<include>CDBoxGlass</include>
 				</control>
@@ -1135,7 +1137,7 @@
 						<top>11</top>
 						<width>201</width>
 						<height>201</height>
-						<texture background="true" diffuse="CDCase/cdmask.png" fallback="DefaultAlbumCover.png">$VAR[LiveContentTen]</texture>
+						<texture background="true" diffuse="CDCase/cdmask.png" fallback="CDCase/DefaultCDCover.png">$VAR[LiveContentTen]</texture>
 						<fadetime>600</fadetime>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
