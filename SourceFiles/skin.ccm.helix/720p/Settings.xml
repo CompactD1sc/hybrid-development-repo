@@ -13,6 +13,7 @@
 			<texture>floor.png</texture>
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -58,12 +59,12 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>30</left>
-				<top>15</top>
-				<width>220</width>
-				<height>80</height>
+				<left>65</left>
+				<top>18</top>
+				<width>150</width>
+				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Confluence_Logo.png</texture>
+				<texture>ccm_logo.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<left>10</left>
@@ -256,6 +257,7 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 		</control>
 		<control type="grouplist">
 			<left>65</left>

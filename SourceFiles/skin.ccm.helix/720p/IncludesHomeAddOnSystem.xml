@@ -4,10 +4,9 @@
 		<control type="group" id="9002">
 			<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 			<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 			<control type="list" id="700">
 				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(700).NumItems,6)">conditional</animation>
 				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(700).NumItems,5)">conditional</animation>
@@ -21,8 +20,7 @@
 				<onright>700</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -43,8 +41,7 @@
 				<onright>700</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -65,8 +62,7 @@
 				<onright>701</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -87,8 +83,7 @@
 				<onright>701</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -109,8 +104,7 @@
 				<onright>702</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -131,8 +125,7 @@
 				<onright>702</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -153,8 +146,7 @@
 				<onright>704</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -175,8 +167,7 @@
 				<onright>704</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -197,8 +188,7 @@
 				<onright>705</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -206,7 +196,7 @@
 					<include>HomeAddonSetFive</include>
 				</content>
 			</control>
-			<!--control type="list" id="705">
+			<control type="list" id="705">
 				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(705).NumItems,6)">conditional</animation>
 				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(705).NumItems,5)">conditional</animation>
 				<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(705).NumItems,4)">conditional</animation>
@@ -219,15 +209,14 @@
 				<onright>705</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
 				<content>
 					<include>HomeAddonSetFive</include>
 				</content>
-			</control-->
+			</control>
 			<control type="list" id="706">
 				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(706).NumItems,6)">conditional</animation>
 				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(706).NumItems,5)">conditional</animation>
@@ -241,8 +230,7 @@
 				<onright>706</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -263,8 +251,7 @@
 				<onright>706</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -285,8 +272,7 @@
 				<onright>707</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -307,8 +293,7 @@
 				<onright>707</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -329,8 +314,7 @@
 				<onright>708</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -351,8 +335,7 @@
 				<onright>708</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -373,8 +356,7 @@
 				<onright>709</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -395,8 +377,7 @@
 				<onright>709</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -417,8 +398,7 @@
 				<onright>710</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -439,8 +419,7 @@
 				<onright>710</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -461,8 +440,7 @@
 				<onright>711</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>HomeAddonsCommonLayout</include>
@@ -483,8 +461,7 @@
 				<onright>711</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -493,7 +470,7 @@
 				</content>
 			</control>
 			<control type="list" id="712"># Twelve
-				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(712).NumItems,6)">conditional</animation><animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(712).NumItems,5)">conditional</animation><animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(712).NumItems,4)">conditional</animation><animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(712).NumItems,3)">conditional</animation><animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(712).NumItems,2)">conditional</animation><animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(712).NumItems,1)">conditional</animation><visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible><visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible><onleft>712</onleft><onright>712</onright><onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup><onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup><ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown><ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown><ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown><ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown><include>HomeAddonsCommonLayout</include><content><include>HomeAddonSetTwelve</include></content></control>
+				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(712).NumItems,6)">conditional</animation><animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(712).NumItems,5)">conditional</animation><animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(712).NumItems,4)">conditional</animation><animation effect="slide" start="0,0" end="328,0" time="0" condition="StringCompare(Container(712).NumItems,3)">conditional</animation><animation effect="slide" start="0,0" end="410,0" time="0" condition="StringCompare(Container(712).NumItems,2)">conditional</animation><animation effect="slide" start="0,0" end="492,0" time="0" condition="StringCompare(Container(712).NumItems,1)">conditional</animation><visible>StringCompare(Container(9000).ListItem.Property(AddOnSet),AddonSetTwelve)</visible><visible>!Skin.HasSetting(LowerMainMenuBar) | !Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)</visible><onleft>712</onleft><onright>712</onright><onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup><onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup><ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown><ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown><ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown><include>HomeAddonsCommonLayout</include><content><include>HomeAddonSetTwelve</include></content></control>
 			<control type="list" id="712">
 				<animation effect="slide" start="0,0" end="82,0" time="0" condition="StringCompare(Container(712).NumItems,6)">conditional</animation>
 				<animation effect="slide" start="0,0" end="164,0" time="0" condition="StringCompare(Container(712).NumItems,5)">conditional</animation>
@@ -507,8 +484,7 @@
 				<onright>712</onright>
 				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9003</onup>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideHomePowerBtn)">20</ondown>
-				<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(HideHomePowerBtn)">21</ondown>
+				<ondown condition="!Skin.HasSetting(LowerMainMenuBar)">21</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 				<ondown condition="Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 				<include>AddonsMediaPlayingLayout</include>
@@ -734,6 +710,7 @@
 	<include name="HomeAddonSetOne">
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -741,6 +718,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -748,6 +726,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -755,6 +734,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -762,6 +742,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -769,6 +750,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -776,6 +758,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetOne.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetOne.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetOne.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -785,6 +768,7 @@
 	<include name="HomeAddonSetTwo">
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -792,6 +776,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -799,6 +784,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -806,6 +792,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -813,6 +800,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -820,6 +808,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -827,6 +816,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwo.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwo.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwo.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -836,6 +826,7 @@
 	<include name="HomeAddonSetThree">
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -843,6 +834,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -850,6 +842,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -857,6 +850,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -864,6 +858,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -871,6 +866,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -878,6 +874,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetThree.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetThree.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetThree.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -887,6 +884,7 @@
 	<include name="HomeAddonSetFour">
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -894,6 +892,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -901,6 +900,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -908,6 +908,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -915,6 +916,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -922,6 +924,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -929,6 +932,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFour.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFour.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFour.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -938,6 +942,7 @@
 	<include name="HomeAddonSetFive">
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -945,6 +950,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -952,6 +958,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -959,6 +966,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -966,6 +974,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -973,6 +982,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -980,6 +990,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetFive.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetFive.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetFive.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -989,6 +1000,7 @@
 	<include name="HomeAddonSetSix">
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -996,6 +1008,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1003,6 +1016,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1010,6 +1024,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1017,6 +1032,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1024,6 +1040,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1031,6 +1048,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSix.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSix.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSix.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1040,6 +1058,7 @@
 	<include name="HomeAddonSetSeven">
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1047,6 +1066,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1054,6 +1074,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1061,6 +1082,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1068,6 +1090,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1075,6 +1098,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1082,6 +1106,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetSeven.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetSeven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetSeven.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1091,6 +1116,7 @@
 	<include name="HomeAddonSetEight">
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1098,6 +1124,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1105,6 +1132,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1112,6 +1140,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1119,6 +1148,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1126,6 +1156,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1133,6 +1164,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEight.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEight.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEight.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1142,6 +1174,7 @@
 	<include name="HomeAddonSetNine">
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1149,6 +1182,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1156,6 +1190,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1163,6 +1198,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1170,6 +1206,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1177,6 +1214,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1184,6 +1222,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetNine.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetNine.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetNine.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1193,6 +1232,7 @@
 	<include name="HomeAddonSetTen">
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1200,6 +1240,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1207,6 +1248,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1214,6 +1256,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1221,6 +1264,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1228,6 +1272,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1235,6 +1280,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTen.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTen.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTen.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1244,6 +1290,7 @@
 	<include name="HomeAddonSetEleven">
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1251,6 +1298,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1258,6 +1306,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1265,6 +1314,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1272,6 +1322,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1279,6 +1330,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1286,6 +1338,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetEleven.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetEleven.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetEleven.7.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1295,6 +1348,7 @@
 	<include name="HomeAddonSetTwelve">
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.1.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.1.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1302,6 +1356,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.2.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.2.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1309,6 +1364,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.3.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.3.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1316,6 +1372,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.4.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.4.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1323,6 +1380,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.5.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.5.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1330,6 +1388,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.6.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.6.Icon)]</icon>
 			<thumb>-</thumb>
@@ -1337,6 +1396,7 @@
 		</item>
 		<item>
 			<label>$INFO[Skin.String(AddonSetTwelve.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>$INFO[Skin.String(AddonSetTwelve.7.Path)]</onclick>
 			<icon>$INFO[Skin.String(AddonSetTwelve.7.Icon)]</icon>
 			<thumb>-</thumb>

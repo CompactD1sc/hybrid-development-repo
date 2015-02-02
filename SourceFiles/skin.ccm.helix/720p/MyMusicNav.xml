@@ -43,6 +43,7 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_music.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -72,9 +73,9 @@
 				<width>250</width>
 				<height>650</height>
 				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
-				<onleft>9000</onleft>
-				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onleft>50</onleft>
+				<onright>ClearProperty(SideBladeOpen)</onright>
+				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>ClearProperty(SideBladeOpen)</onback>

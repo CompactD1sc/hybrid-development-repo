@@ -19,6 +19,7 @@
 				<texture>floor.png</texture>
 				<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+				<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 			</control>
 			<control type="image">
 				<description>LOGO</description>
@@ -29,6 +30,7 @@
 				<aspectratio aligny="top" align="left">keep</aspectratio>
 				<texture>kodi-logo.png</texture>
 				<include>Window_OpenClose_Animation</include>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>265</left>
@@ -163,12 +165,12 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>265</left>
-				<top>580</top>
-				<width>220</width>
-				<height>80</height>
+				<left>290</left>
+				<top>590</top>
+				<width>150</width>
+				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Confluence_Logo.png</texture>
+				<texture>ccm_logo.png</texture>
 			</control>
 			<control type="group">
 				<left>940</left>
@@ -227,6 +229,7 @@
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="200" condition="Window.IsVisible(busydialog)">conditional</animation>
 		</control>
 	</controls>
 </window>
