@@ -26,8 +26,6 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.12.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
-	<!-- Temp turn off unused toggle -->
-	<onload condition="Skin.HasSetting(ManualMenuSlide)">Skin.Reset(ManualMenuSlide)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
@@ -52,6 +50,7 @@
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 		</control>
 		<control type="label">
 			<description>profile label</description>
@@ -66,6 +65,7 @@
 			<shadowcolor>black</shadowcolor>
 			<info>System.ProfileName</info>
 			<include>Window_OpenClose_Animation</include>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 			<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
 		</control>
 		<!-- Music Info -->
@@ -289,7 +289,7 @@
 					<width>150</width>
 					<height>300</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+					<texture fallback="DefaultVideoCover.png">$VAR[StreamingVideoIcon]</texture>
 					<bordertexture border="8">ThumbBorder.png</bordertexture>
 					<bordersize>5</bordersize>
 				</control>
@@ -299,7 +299,7 @@
 					<top>285</top>
 					<height>30</height>
 					<width>1000</width>
-					<label>$INFO[Player.Title]</label>
+					<label>$VAR[VideoNowPlaying]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13_title</font>
@@ -493,8 +493,7 @@
 			<texturenofocus>-</texturenofocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
-			<onup condition="!Skin.HasSetting(HideHomePowerBtn)">20</onup>
-			<onup condition="Skin.HasSetting(HideHomePowerBtn)">21</onup>
+			<onup>21</onup>
 			<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
 			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
 			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
@@ -789,8 +788,8 @@
 				<enable>Player.HasMedia</enable>
 			</control>
 			<control type="label">
-				<posx>190</posx>
-				<posy>7</posy>
+				<left>190</left>
+				<top>7</top>
 				<height>20</height>
 				<width>450</width>
 				<label>$VAR[InfoBarStats]</label>
@@ -861,7 +860,7 @@
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>$VAR[MainColorOne]</textcolor>
-				<titlecolor>blue</titlecolor>
+				<titlecolor>$VAR[MainColorOne]</titlecolor>
 				<headlinecolor>white</headlinecolor>
 				<visible>!Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
@@ -874,7 +873,7 @@
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>$VAR[MainColorOne]</textcolor>
-				<titlecolor>blue</titlecolor>
+				<titlecolor>$VAR[MainColorOne]</titlecolor>
 				<headlinecolor>white</headlinecolor>
 				<visible>Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
@@ -1064,6 +1063,7 @@
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="200" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<visible>!Skin.HasSetting(HideSystemTime)</visible>
 		</control>
 	</controls>

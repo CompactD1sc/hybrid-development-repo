@@ -107,6 +107,7 @@
 			<aspectratio>stretch</aspectratio>
 			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="image">
 			<description>Section header image</description>
@@ -116,6 +117,7 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 		</control>
 		<control type="grouplist">
 			<left>65</left>

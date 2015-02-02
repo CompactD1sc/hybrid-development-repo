@@ -14,6 +14,7 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="image">
 			<description>Section header image</description>
@@ -23,6 +24,7 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -86,12 +88,12 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>30</left>
-				<top>15</top>
-				<width>220</width>
-				<height>80</height>
+				<left>65</left>
+				<top>24</top>
+				<width>150</width>
+				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Confluence_Logo.png</texture>
+				<texture>ccm_logo.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<left>10</left>
@@ -386,6 +388,31 @@
 						<selected>!Skin.HasSetting(HideEpisodeThumb)</selected>
 					</control>
 					<control type="radiobutton" id="112">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>31122</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideBusyAnimation)</onclick>
+						<selected>!Skin.HasSetting(HideBusyAnimation)</selected>
+					</control>
+					<control type="radiobutton" id="113">
+						<description>hide home floor</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<label>$LOCALIZE[31069]</label>
+						<onclick>Skin.ToggleSetting(HideHomeFloor)</onclick>
+						<selected>!Skin.HasSetting(HideHomeFloor)</selected>
+					</control>
+					<control type="radiobutton" id="114">
 						<description>Orig Popup Seektime Window</description>
 						<width>750</width>
 						<height>40</height>
@@ -583,19 +610,6 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="132">
-						<description>hide home floor</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<label>$LOCALIZE[31069]</label>
-						<onclick>Skin.ToggleSetting(HideHomeFloor)</onclick>
-						<selected>!Skin.HasSetting(HideHomeFloor)</selected>
-					</control>
 					<control type="radiobutton" id="133">
 						<description>enable raindrop effect</description>
 						<width>750</width>
@@ -623,6 +637,30 @@
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
+						<label>31152</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(KioskMode)</onclick>
+						<selected>Skin.HasSetting(KioskMode)</selected>
+					</control>
+					<control type="radiobutton" id="142">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>31952</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(WrapMediaViews)</onclick>
+						<selected>Skin.HasSetting(WrapMediaViews)</selected>
+					</control>
+					<control type="radiobutton" id="143">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
 						<label>31070</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -631,7 +669,31 @@
 						<onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
 						<selected>!Skin.HasSetting(HideBackGroundFanart)</selected>
 					</control>
-					<control type="radiobutton" id="142">
+					<control type="radiobutton" id="144">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>31950</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(AdditionalMediaFanart)</onclick>
+						<selected>Skin.HasSetting(AdditionalMediaFanart)</selected>
+					</control>
+					<control type="radiobutton" id="145">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31951]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(EnableDVDCases)</onclick>
+						<selected>Skin.HasSetting(EnableDVDCases)</selected>
+					</control>
+					<control type="radiobutton" id="146">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -643,7 +705,20 @@
 						<onclick>Skin.ToggleSetting(UseDiscTypeCase)</onclick>
 						<selected>Skin.HasSetting(UseDiscTypeCase)</selected>
 					</control>
-					<control type="button" id="143">
+					<control type="radiobutton" id="147">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31953]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideNewMediaStat)</onclick>
+						<selected>!Skin.HasSetting(HideNewMediaStat)</selected>
+						<enable>!stringcompare(Skin.String(WatchStatusType),Hidden)</enable>
+					</control>
+					<control type="button" id="148">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -661,7 +736,45 @@
 						<onclick condition="Skin.String(MediaPanelTrans,70)">Skin.SetString(MediaPanelTrans,85)</onclick>
 						<onclick condition="Skin.String(MediaPanelTrans,85)">Skin.Reset(MediaPanelTrans)</onclick>
 					</control>
-					<control type="radiobutton" id="144">
+					<control type="radiobutton" id="149">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>31954</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(MediaShortDescription)</onclick>
+						<selected>Skin.HasSetting(MediaShortDescription)</selected>
+					</control>
+					<control type="button" id="150">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[31250]</label>
+						<label2>[COLOR=selected]$VAR[UserParentDirName][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick condition="IsEmpty(Skin.String(UserParentDir))">Skin.SetString(UserParentDir,$LOCALIZE[31318])</onclick>
+						<onclick>Skin.SetString(UserParentDir)</onclick>
+					</control>
+					<control type="radiobutton" id="151">
+						<description>Add Year Onto Movie Title</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31246]</label>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideYearTitle)</onclick>
+						<selected>!Skin.HasSetting(HideYearTitle)</selected>
+					</control>
+					<control type="radiobutton" id="152">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -673,7 +786,7 @@
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
 					</control>
-					<control type="radiobutton" id="145">
+					<control type="radiobutton" id="153">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -685,7 +798,7 @@
 						<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
 						<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
 					</control>
-					<control type="radiobutton" id="146">
+					<control type="radiobutton" id="154">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -697,7 +810,7 @@
 						<onclick>Skin.ToggleSetting(WindowedTrailer)</onclick>
 						<selected>Skin.HasSetting(WindowedTrailer)</selected>
 					</control>
-					<control type="radiobutton" id="147">
+					<control type="radiobutton" id="155">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -709,7 +822,7 @@
 						<onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
 						<selected>Skin.HasSetting(HideFilenameFlagging)</selected>
 					</control>
-					<control type="label" id="150">
+					<control type="label" id="156">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -719,7 +832,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="151">
+					<control type="radiobutton" id="157">
 						<description>Auto Music Viz</description>
 						<width>750</width>
 						<height>40</height>
@@ -732,7 +845,7 @@
 						<onclick>Skin.ToggleSetting(HideAutoMusicViz)</onclick>
 						<selected>!Skin.HasSetting(HideAutoMusicViz)</selected>
 					</control>
-					<control type="button" id="153">
+					<control type="button" id="158">
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -746,7 +859,7 @@
 						<onclick condition="Skin.String(MusicOSDInfo,permanent)">Skin.SetString(MusicOSDInfo,never)</onclick>
 						<onclick condition="Skin.String(MusicOSDInfo,never)">Skin.Reset(MusicOSDInfo)</onclick>
 					</control>
-					<control type="radiobutton" id="154">
+					<control type="radiobutton" id="159">
 						<description>Enable CD Art</description>
 						<width>750</width>
 						<height>40</height>
@@ -760,7 +873,7 @@
 						<selected>Skin.HasSetting(EnableCDArtWork)</selected>
 						<enable>!Skin.String(MusicOSDInfo,never)</enable>
 					</control>
-					<control type="radiobutton" id="155">
+					<control type="radiobutton" id="160">
 						<description>Diffuse Visualisation</description>
 						<width>750</width>
 						<height>40</height>
@@ -773,8 +886,7 @@
 						<onclick>Skin.ToggleSetting(NoDiffuseVizFanart)</onclick>
 						<selected>!Skin.HasSetting(NoDiffuseVizFanart)</selected>
 					</control>
-					<!--
-					<control type="label" id="160">
+					<control type="label" id="161">
 						<width>750</width>
 						<height>45</height>
 						<font>font13_title</font>
@@ -784,59 +896,58 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="161">
+					<control type="radiobutton" id="162">
 						<description>OSD Start Media Intro</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31372] ***Not Yet Done ***</label>
+						<label>$LOCALIZE[31372]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(HideInfoStartOSD)</onclick>
 						<selected>!Skin.HasSetting(HideInfoStartOSD)</selected>
 					</control>
-					<control type="radiobutton" id="162">
+					<control type="radiobutton" id="163">
 						<description>OSD Plot on Media Pause</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31373] ***Not Yet Done ***</label>
+						<label>$LOCALIZE[31373]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(EnablePauseInfo)</onclick>
 						<selected>!Skin.HasSetting(EnablePauseInfo)</selected>
 					</control>
-					<control type="radiobutton" id="163">
+					<control type="radiobutton" id="164">
 						<description>OSD Info on Seek bar</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31374] ***Not Yet Done ***</label>
+						<label>$LOCALIZE[31374]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(HideSeekBarOSD)</onclick>
 						<selected>!Skin.HasSetting(HideSeekBarOSD)</selected>
 					</control>
-					<control type="radiobutton" id="164">
+					<control type="radiobutton" id="165">
 						<description>Hide OSD Thumbnail</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31383] ***Not Yet Done ***</label>
+						<label>$LOCALIZE[31383]</label>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(HideArtWorkOSD)</onclick>
 						<selected>!Skin.HasSetting(HideArtWorkOSD)</selected>
 					</control>
-					-->
 					<control type="label" id="170">
 						<width>750</width>
 						<height>45</height>
@@ -7203,7 +7314,7 @@
 					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-					<onleft>9002</onleft>
+					<onleft>9006</onleft>
 					<onright>9000</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>

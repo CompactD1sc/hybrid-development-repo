@@ -40,7 +40,7 @@
 			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mkv)</visible>
+			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mkv)</visible>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 		</control>
 		<!-- !LiveTV -->
@@ -49,7 +49,7 @@
 			<top>60r</top>
 			<defaultcontrol always="true">202</defaultcontrol>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mkv)</visible>
+			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mkv)</visible>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="200">
@@ -294,7 +294,7 @@
 			<top>60r</top>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<animation effect="slide" end="-225,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
-			<visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mkv)</visible>
+			<visible>!StringCompare(VideoPlayer.Title,KODI-Intro-Video.mkv)</visible>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="255">
@@ -495,6 +495,7 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<animation effect="slide" start="0,0" end="0,80" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
+			<animation effect="slide" end="-225,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
 			<right>145</right>
 			<bottom>45</bottom>
 			<width>256</width>
@@ -581,7 +582,7 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>449</label>
-				<radioposx>200</radioposx>
+				<radioleft>200</radioleft>
 				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ShowSubtitles</onclick>
@@ -612,6 +613,7 @@
 		<control type="grouplist" id="500">
 			<visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="slide" end="-225,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
 			<right>200</right>
 			<bottom>45</bottom>
 			<width>256</width>
@@ -655,7 +657,7 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31362</label>
-				<radioposx>200</radioposx>
+				<radioleft>200</radioleft>
 				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ToggleStereoMode</onclick>
@@ -681,7 +683,7 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31360</label>
-				<radioposx>200</radioposx>
+				<radioleft>200</radioleft>
 				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>StereoModeToMono</onclick>
@@ -754,7 +756,7 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31362</label>
-				<radioposx>200</radioposx>
+				<radioleft>200</radioleft>
 				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>ToggleStereoMode</onclick>
@@ -780,7 +782,7 @@
 				<aligny>center</aligny>
 				<font>font13</font>
 				<label>31360</label>
-				<radioposx>200</radioposx>
+				<radioleft>200</radioleft>
 				<texturefocus border="25,5,25,5">SubMenuBack-MiddleFO.png</texturefocus>
 				<texturenofocus border="25,5,25,5">SubMenuBack-MiddleNF.png</texturenofocus>
 				<onclick>StereoModeToMono</onclick>

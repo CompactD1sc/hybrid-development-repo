@@ -46,7 +46,9 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr ""
 
-#empty string with id 31007
+msgctxt "#31007"
+msgid ".."
+msgstr ""
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -126,7 +128,9 @@ msgctxt "#31029"
 msgid "Fanart"
 msgstr ""
 
-#empty string with id 31030
+msgctxt "#31030"
+msgid "Full Wall"
+msgstr ""
 
 msgctxt "#31031"
 msgid "Pic Thumbs"
@@ -339,7 +343,11 @@ msgctxt "#31089"
 msgid "Enable PVR Recording Info"
 msgstr ""
 
-#empty strings from id 31090 to 31099
+msgctxt "#31090"
+msgid "Use Wide Banners"
+msgstr ""
+
+#empty strings from id 31091 to 31099
 #Skin Settings labels
 
 msgctxt "#31100"
@@ -416,7 +424,11 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr ""
 
-#empty strings from id 31120 to 31122
+#empty strings from id 31120 to 31121
+
+msgctxt "#31122"
+msgid "Enable Busy Animation"
+msgstr ""
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -490,8 +502,13 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
-#empty strings from id 31143 to 31184
+#empty strings from id 31143 to 31151
 
+msgctxt "#31152"
+msgid "Enable Kiosk Mode"
+msgstr ""
+
+#empty strings from id 31153 to 31184
 #Widget Names 31185
 
 msgctxt "#31185"
@@ -746,7 +763,9 @@ msgctxt "#31245"
 msgid "Next Aired Episodes"
 msgstr ""
 
-#empty strings from id 31244 to 31246
+msgctxt "#31246"
+msgid "Add Year to Movie Title in Media List Titles"
+msgstr ""
 
 msgctxt "#31247"
 msgid "Move Menu Item"
@@ -760,7 +779,9 @@ msgctxt "#31249"
 msgid "Background Transparency"
 msgstr ""
 
-#empty strings from id 31250 to 31250
+msgctxt "#31250"
+msgid "Replace Symbol \"..\" In Media List Titles With"
+msgstr ""
 
 msgctxt "#31251"
 msgid "Suggested"
@@ -954,18 +975,6 @@ msgid "No Background"
 msgstr ""
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr ""
@@ -1002,7 +1011,13 @@ msgctxt "#31322"
 msgid "Aired"
 msgstr ""
 
-#empty strings from id 31323 to 31324
+msgctxt "#31323"
+msgid "Watched Banners"
+msgstr ""
+
+msgctxt "#31324"
+msgid "Hide Logo"
+msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -1232,7 +1247,10 @@ msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
 msgstr ""
 
-#empty strings from id 31399 to 31399
+msgctxt "#31399"
+msgid "Roboto"
+msgstr ""
+
 #Description Labels
 
 msgctxt "#31400"
@@ -1287,7 +1305,11 @@ msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr ""
 
-#empty strings from id 31414 to 31419
+msgctxt "#31414"
+msgid "Enable Clock and Profile on Media OSD"
+msgstr ""
+
+#empty strings from id 31415 to 31419
 
 msgctxt "#31420"
 msgid "Login"
@@ -1401,7 +1423,11 @@ msgctxt "#31647"
 msgid "Coverflow"
 msgstr ""
 
-#empty strings from id 31648 to 31900
+msgctxt "#31648"
+msgid "Low List"
+msgstr ""
+
+#empty strings from id 31649 to 31900
 
 
 #Weather plugin
@@ -1552,8 +1578,32 @@ msgstr ""
 #msgid "Set Fanart Path"
 #msgstr ""
 
+msgctxt "#31950"
+msgid "Enable Additional Media Art"
+msgstr ""
+
+msgctxt "#31951"
+msgid "Enable DVD Cases"
+msgstr ""
+
+msgctxt "#31952"
+msgid "Wrap Around Media Lists"
+msgstr ""
+
+msgctxt "#31953"
+msgid "Enable New Media Banners"
+msgstr ""
+
+msgctxt "#31954"
+msgid "Enable Shorter Plot Outline"
+msgstr ""
+
 msgctxt "#31958"
 msgid "DVD Drive"
+msgstr ""
+
+msgctxt "#31959"
+msgid "All Seasons"
 msgstr ""
 
 msgctxt "#31961"
