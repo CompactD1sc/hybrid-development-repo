@@ -1,14 +1,14 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.Convergence
-# Addon Provider: Jezz_X, Team XBMC
+# Addon id: skin.confluence
+# Addon Provider: Mudislander
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: English (http://www.transifex.com/projects/p/xbmc-main/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,13 +22,7 @@ msgctxt "#31000"
 msgid "Change Your"
 msgstr ""
 
-msgctxt "#31001"
-msgid "OpenELEC OS"
-msgstr ""
-
-msgctxt "#31002"
-msgid "Raspberry OS"
-msgstr ""
+#empty strings from id 31001 to 31002
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -46,12 +40,10 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr ""
 
-msgctxt "#31007"
-msgid "Watch it Later"
-msgstr ""
+#empty string with id 31007
 
 msgctxt "#31008"
-msgid "Full screen"
+msgid "Full Screen"
 msgstr ""
 
 msgctxt "#31009"
@@ -59,18 +51,14 @@ msgid "Total Duration"
 msgstr ""
 
 msgctxt "#31010"
-msgid "UPnP Catagory Not Found"
+msgid "OpenELEC OS"
 msgstr ""
 
 msgctxt "#31011"
-msgid "XBMC"
+msgid "Raspberry OS"
 msgstr ""
 
-msgctxt "#31012"
-msgid "Windows Home Server"
-msgstr ""
-
-#empty strings from id 31013 to 31021
+#empty strings from id 31012 to 31021
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -203,119 +191,8 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr ""
 
-msgctxt "#31062"
-msgid "Up One Level"
-msgstr ""
-
-msgctxt "#31063"
-msgid "Submenu Set"
-msgstr ""
-
-msgctxt "#31064"
-msgid "SubMenu Item"
-msgstr ""
-
-msgctxt "#31065"
-msgid "Selected"
-msgstr ""
-
-msgctxt "#31066"
-msgid "Installed Add-ons"
-msgstr ""
-
-#empty strings from id 31067 to 31077
-
-msgctxt "#31074"
-msgid "Pause"
-msgstr ""
-
-msgctxt "#31075"
-msgid "Stop"
-msgstr ""
-
-msgctxt "#31076"
-msgid "Fast Forward"
-msgstr ""
-
-msgctxt "#31077"
-msgid "Rewind"
-msgstr ""
-
-msgctxt "#31078"
-msgid "Show Fullscreen Media Item"
-msgstr ""
-
-msgctxt "#31079"
-msgid "Show System Power Button"
-msgstr ""
-
-msgctxt "#31080"
-msgid "Menu Item"
-msgstr ""
-
-msgctxt "#31081"
-msgid "Submenu Set"
-msgstr ""
-
-msgctxt "#31082"
-msgid "Widget Set"
-msgstr ""
-
-msgctxt "#31083"
-msgid "Move Menu Item"
-msgstr ""
-
-msgctxt "#31084"
-msgid "Show System Menu Item"
-msgstr ""
-
-msgctxt "#31085"
-msgid "Additional Menu Options"
-msgstr ""
-
-msgctxt "#31086"
-msgid "Show DVD Disc Button"
-msgstr ""
-
-msgctxt "#31087"
-msgid "Select Item to Swap"
-msgstr ""
-
-msgctxt "#31088"
-msgid "Select Widget Set"
-msgstr ""
-
-msgctxt "#31089"
-msgid "Select SubMenu Set"
-msgstr ""
-
-msgctxt "#31090"
-msgid "Select Menu Item"
-msgstr ""
-
-msgctxt "#31091"
-msgid "of"
-msgstr ""
-
-msgctxt "#31092"
-msgid "Shuffle On"
-msgstr ""
-
-msgctxt "#31093"
-msgid "Repeat All On"
-msgstr ""
-
-msgctxt "#31094"
-msgid "Repeat One On"
-msgstr ""
-
-
-#empty strings from id 31091 to 31099
+#empty strings from id 31062 to 31100
 #Skin Settings labels
-
-msgctxt "#31100"
-msgid "Home Menu"
-msgstr ""
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -333,9 +210,7 @@ msgctxt "#31104"
 msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
 msgstr ""
 
-msgctxt "#31105"
-msgid "Show background fanart"
-msgstr ""
+#empty string with id 31105
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -365,17 +240,7 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-msgctxt "#31113"
-msgid "Menu Transparency Level"
-msgstr ""
-
-msgctxt "#31114"
-msgid "% Transparency"
-msgstr ""
-
-msgctxt "#31115"
-msgid "Skin Default"
-msgstr ""
+#empty strings from id 31113 to 31115
 
 msgctxt "#31116"
 msgid "Show Recently added Albums"
@@ -393,21 +258,7 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr ""
 
-msgctxt "#31120"
-msgid "Hidden"
-msgstr ""
-
-msgctxt "#31121"
-msgid "Instant"
-msgstr ""
-
-msgctxt "#31122"
-msgid "Delayed"
-msgstr ""
-
-msgctxt "#31123"
-msgid "Popup:"
-msgstr ""
+#empty strings from id 31120 to 31123
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -433,21 +284,13 @@ msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
 msgstr ""
 
-msgctxt "#31130"
-msgid "Single Image"
-msgstr ""
-
-msgctxt "#31131"
-msgid "Multi Image"
-msgstr ""
+#empty strings from id 31130 to 31131
 
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr ""
 
-msgctxt "#31133"
-msgid "Hide checkmarks"
-msgstr ""
+#empty string with id 31133
 
 msgctxt "#31134"
 msgid "Home Page Videos Sub-menu"
@@ -461,11 +304,7 @@ msgctxt "#31136"
 msgid "Home Page Pictures Sub-menu"
 msgstr ""
 
-msgctxt "#31137"
-msgid "Background Options"
-msgstr ""
-
-#empty strings from id 31138 to 31139
+#empty strings from id 31137 to 31139
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -479,85 +318,7 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
-msgctxt "#31143"
-msgid "Floor Buttons"
-msgstr ""
-
-msgctxt "#31144"
-msgid "General Floor Button Settings"
-msgstr ""
-
-msgctxt "#31145"
-msgid "Power Button Settings"
-msgstr ""
-
-msgctxt "#31146"
-msgid "Power Button Activates Shutdown Menu"
-msgstr ""
-
-msgctxt "#31147"
-msgid "XBMC System Shutdown Setting"
-msgstr ""
-
-msgctxt "#31148"
-msgid "Show Favourites Button"
-msgstr ""
-
-#empty strings from id 31149 to 31171
-
-msgctxt "#31172"
-msgid "User Selection One"
-msgstr ""
-
-msgctxt "#31173"
-msgid "User Selection Two"
-msgstr ""
-
-msgctxt "#31174"
-msgid "User Selection Three"
-msgstr ""
-
-msgctxt "#31175"
-msgid "User Selection Four"
-msgstr ""
-
-msgctxt "#31176"
-msgid "User Selection Five"
-msgstr ""
-
-msgctxt "#31177"
-msgid "User Selection Six"
-msgstr ""
-
-msgctxt "#31178"
-msgid "User Selection Seven"
-msgstr ""
-
-msgctxt "#31179"
-msgid "User Selection Eight"
-msgstr ""
-
-msgctxt "#31180"
-msgid "User Selection Nine"
-msgstr ""
-
-msgctxt "#31181"
-msgid "User Selection Ten"
-msgstr ""
-
-msgctxt "#31182"
-msgid "User Friendly Name"
-msgstr ""
-
-msgctxt "#31183"
-msgid "Concerts"
-msgstr ""
-
-msgctxt "#31184"
-msgid "TV Shows"
-msgstr ""
-
-#Widget Names 31185
+#empty strings from id 31143 to 31184
 
 msgctxt "#31185"
 msgid "Random Songs"
@@ -653,39 +414,7 @@ msgctxt "#31209"
 msgid "Global Search"
 msgstr ""
 
-msgctxt "#31210"
-msgid "Nodes"
-msgstr ""
-
-msgctxt "#31211"
-msgid "Tags"
-msgstr ""
-
-msgctxt "#31212"
-msgid "Streaming Media"
-msgstr ""
-
-msgctxt "#31213"
-msgid "Cinema"
-msgstr ""
-
-msgctxt "#31214"
-msgid "PseudoTV"
-msgstr ""
-
-msgctxt "#31215"
-msgid "Log-in"
-msgstr ""
-
-msgctxt "#31216"
-msgid "Shutdown Menu"
-msgstr ""
-
-#empty strings from id 31217 to 31228
-
-msgctxt "#31229"
-msgid "XBMC Command"
-msgstr ""
+#empty strings from id 31210 to 31229
 
 msgctxt "#31230"
 msgid "User Selection One"
@@ -731,85 +460,31 @@ msgctxt "#31240"
 msgid "User Friendly Name"
 msgstr ""
 
-#empty strings from id 31209 to 31243
-
-msgctxt "#31244"
-msgid "Skin Preset"
+msgctxt "#31241"
+msgid "User Selection Eleven"
 msgstr ""
 
-msgctxt "#31245"
-msgid "Radio 105"
+msgctxt "#31242"
+msgid "User Selection Twelve"
 msgstr ""
 
-msgctxt "#31246"
-msgid "Monte Carlo"
-msgstr ""
-
-msgctxt "#31247"
-msgid "Virgin Rock"
-msgstr ""
+#empty strings from id 31243 to 31247
 
 msgctxt "#31248"
-msgid "Animated"
+msgid "% Transparency"
 msgstr ""
 
-msgctxt "#31249"
-msgid "Children"
-msgstr ""
-
-msgctxt "#31250"
-msgid "Comedy"
-msgstr ""
+#empty strings from id 31249 to 31250
 
 msgctxt "#31251"
-msgid "Family"
-msgstr ""
-
-msgctxt "#31252"
-msgid "HD-Movies"
-msgstr ""
-
-msgctxt "#31253"
-msgid "3D-Movies"
-msgstr ""
-
-msgctxt "#31254"
-msgid "None"
-msgstr ""
-
-msgctxt "#31255"
 msgid "Suggested"
 msgstr ""
 
-msgctxt "#31256"
+msgctxt "#31252"
 msgid "No Suggested Media"
 msgstr ""
 
-msgctxt "#31257"
-msgid "Recently Added"
-msgstr ""
-
-msgctxt "#31258"
-msgid "Recently Played"
-msgstr ""
-
-msgctxt "#31259"
-msgid "Clean Library"
-msgstr ""
-
-#empty strings from id 31260 to 31266
-
-msgctxt "#31267"
-msgid "Playing"
-msgstr ""
-
-#empty strings from id 31268 to 31283
-
-msgctxt "#31284"
-msgid "Scripts and Paths"
-msgstr ""
-
-#empty strings from id 31285 to 31299
+#empty strings from id 31253 to 31299
 #Extra labels
 
 msgctxt "#31300"
@@ -820,23 +495,13 @@ msgctxt "#31301"
 msgid "Last Updated"
 msgstr ""
 
-#empty string id 31302
+#empty string with id 31302
 
 msgctxt "#31303"
 msgid "Data provider"
 msgstr ""
 
-msgctxt "#31304"
-msgid "Music Path"
-msgstr ""
-
-msgctxt "#31305"
-msgid "Music Physical Folder"
-msgstr ""
-
-msgctxt "#31306"
-msgid "Album Thumbnails"
-msgstr ""
+#empty strings from id 31304 to 31306
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -870,19 +535,13 @@ msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr ""
 
-msgctxt "#31315"
-msgid "Hide Item"
-msgstr ""
-
-#empty strings from id 31316 to 31316
+#empty strings from id 31315 to 31316
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr ""
 
-msgctxt "#31318"
-msgid "Clear Menu Option"
-msgstr ""
+#empty string with id 31318
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -930,51 +589,17 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr ""
 
-msgctxt "#31332"
-msgid "ReSet"
+#empty strings from id 31332 to 31345
+
+msgctxt "#31346"
+msgid "Up One Level"
 msgstr ""
 
-msgctxt "#31333"
-msgid "User Data"
+msgctxt "#31347"
+msgid "All Seasons"
 msgstr ""
 
-msgctxt "#31334"
-msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
-msgstr ""
-
-msgctxt "#31335"
-msgid "Setup UPnP Library"
-msgstr ""
-
-msgctxt "#31336"
-msgid "Enable UPnP Client Mode"
-msgstr ""
-
-msgctxt "#31337"
-msgid "UPnP Error"
-msgstr ""
-
-msgctxt "#31338"
-msgid "Animated fanart in full screen visualisation"
-msgstr ""
-
-msgctxt "#31339"
-msgid "Automatic Fullscreen Music Playback"
-msgstr ""
-
-msgctxt "#31340"
-msgid "Please Set Path to UPnP Server"
-msgstr ""
-
-msgctxt "#31341"
-msgid "UPnp Mode"
-msgstr ""
-
-msgctxt "#31342"
-msgid "UPnp Server Type"
-msgstr ""
-
-#empty strings from id 31343 to 31350
+#empty strings from id 31348 to 31350
 #Video and Music OSD Labels
 
 msgctxt "#31351"
@@ -1053,9 +678,7 @@ msgctxt "#31404"
 msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr ""
 
-msgctxt "#31405"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Change specific skin settings."
-msgstr ""
+#empty string with id 31405
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
@@ -1064,7 +687,7 @@ msgstr ""
 #empty string with id 31407
 
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
 msgstr ""
 
 msgctxt "#31409"
@@ -1072,16 +695,12 @@ msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG
 msgstr ""
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr ""
 
-msgctxt "#31411"
-msgid "First run help...."
-msgstr ""
+# Empty string with ID #31411
 
-msgctxt "#31412"
-msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialogue. It will not appear again."
-msgstr ""
+# Empty string with ID #31412
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1094,7 +713,7 @@ msgid "Login"
 msgstr ""
 
 msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
+msgid "Select your Kodi user Profile[CR]to login and continue"
 msgstr ""
 
 msgctxt "#31422"
@@ -1145,7 +764,11 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr ""
 
-#empty strings from id 31512 to 31900
+msgctxt "#31512"
+msgid "Next Recording"
+msgstr ""
+
+#empty strings from id 31513 to 31900
 #Weather plugin
 
 msgctxt "#31901"
@@ -1161,7 +784,7 @@ msgid "Weekend Forecast"
 msgstr ""
 
 msgctxt "#31904"
-msgid "10 Day Forecast"
+msgid "Daily Forecast"
 msgstr ""
 
 msgctxt "#31905"
@@ -1179,61 +802,37 @@ msgid "Fetching forecast info..."
 msgstr ""
 
 msgctxt "#31910"
-msgid "Map & Alerts"
+msgid "Maps"
 msgstr ""
 
-#empty strings from id 31911 to 31949
-
-msgctxt "#31950"
-msgid "WEATHER"
-msgstr ""
-
-msgctxt "#31951"
-msgid "PICTURES"
-msgstr ""
-
-msgctxt "#31952"
-msgid "LIVE TV"
-msgstr ""
-
-msgctxt "#31953"
-msgid "VIDEOS"
-msgstr ""
-
-msgctxt "#31954"
-msgid "MOVIES"
-msgstr ""
-
-msgctxt "#31955"
-msgid "TV SHOWS"
-msgstr ""
-
-msgctxt "#31956"
-msgid "MUSIC"
-msgstr ""
+#empty strings from id 31911 to 31957
 
 msgctxt "#31957"
-msgid "PROGRAMS"
+msgid "Concerts"
 msgstr ""
 
 msgctxt "#31958"
-msgid "PLAY DISC"
+msgid "Play Disc"
 msgstr ""
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "Radio 105"
 msgstr ""
 
-#empty strings from id 31960 to 31996
+msgctxt "#31960"
+msgid "TV Shows"
+msgstr ""
+
+#empty strings from id 31961 to 31996
 
 msgctxt "#31997"
-msgid "Add-Ons Set One"
+msgid "Addon Scripts"
 msgstr ""
 
 msgctxt "#31998"
-msgid "Add-Ons"
+msgid "Recently Added"
 msgstr ""
 
 msgctxt "#31999"
-msgid "Home Panel Addons"
+msgid ":"
 msgstr ""

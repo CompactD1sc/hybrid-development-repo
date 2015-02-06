@@ -1,147 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<variable name="typehackflagging">
-		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
-		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
-		<value condition="substring(ListItem.FilenameAndPath,dvd)">dvd</value>
-		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
-		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
-	</variable>
-	<variable name="rating">
-		<value condition="substring(listitem.mpaa,Rated G)">mpaa_general</value>
-		<value condition="substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)">mpaa_pg</value>
-		<value condition="substring(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
-		<value condition="substring(Listitem.mpaa,Rated R)">mpaa_restricted</value>
-		<value condition="substring(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
-	</variable>
-	<variable name="videocodec">
-		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
-		<value>$INFO[ListItem.VideoCodec]</value>
-	</variable>
-	<variable name="StatusBanner">
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,English)">English</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Afrikaans)">Afrikaans</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Albanian)">Albanian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Amharic)">Amharic</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Arabic)">Arabic</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Basque)">Basque</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Bosnian)">Bosnian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Bulgarian)">Bulgarian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Catalan)">Catalan</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Chinese (Simple))">Chinese (Simple)</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Croatian)">Croatian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Czech)">Czech</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Danish)">Danish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Dutch)">Dutch</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Estonian)">Estonian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Faroese)">Faroese</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Finnish)">Finnish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,French)">French</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Galician)">Galician</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,German)">German</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Greek)">Greek</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Hebrew)">Hebrew</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Hungarian)">Hungarian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Icelandic)">Icelandic</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Indonesian)">Indonesian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Italian)">Italian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Japanese)">Japanese</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Korean)">Korean</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Lithuanian)">Lithuanian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Macedonian)">Macedonian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Maltese)">Maltese</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Norwegian)">Norwegian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable +  SubString(System.Language,Iran)">Iran</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Polish)">Polish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Portuguese)">Portuguese</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Romanian)">Romanian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Russian)">Russian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Serbian)">Serbian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Serbian) + SubString(System.Language,Cyrillic)">SerbCyrillic</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Slovak)">Slovak</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Slovenian)">Slovenian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Spanish) + SubString(System.Language,Mexico)">Mexico</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Spanish)">Spanish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Swedish)">Swedish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Tajik)">Tajik</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + SubString(System.Language,Tamil)">Tamil</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Thai)">Thai</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Turkish)">Turkish</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Ukrainian)">Ukrainian</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Vietnamese)">Vietnamese</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable + StringCompare(System.Language,Welsh)">Welsh</value>
-		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable">English</value>
-	</variable>
-	<include name="VideoCodecFlaggingConditions">
-		<control type="image">
-			<description>Video rez Image</description>
-			<width>55</width>
-			<height>35</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
-		</control>
-		<control type="image">
-			<description>Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<aspectratio align="left">keep</aspectratio>
-			<texture>$VAR[videocodec,flagging/video/,.png]</texture>
-		</control>
-	</include>
-	<include name="VideoStereoscopicsFlaggingConditions">
-		<control type="image">
-			<description>Video stereoscopics flagging image</description>
-			<width>55</width>
-			<height>35</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>flagging/video/3D.png</texture>
-			<visible>ListItem.IsStereoscopic</visible>
-		</control>
-	</include>
-	<include name="VideoTypeHackFlaggingConditions">
-		<control type="image">
-			<description>Video Type Image</description>
-			<width>80</width>
-			<height>35</height>
-			<aspectratio align="left">keep</aspectratio>
-			<texture>$VAR[typehackflagging,flagging/video/,.png]</texture>
-			<visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-	</include>
-	<include name="VideoMPAAFlaggingConditions">
-		<control type="image">
-			<description>Rating image</description>
-			<width>80</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$VAR[rating,flagging/ratings/,.png]</texture>
-		</control>
-	</include>
-	<include name="AudioCodecFlaggingConditions">
-		<control type="image">
-			<description>Audio Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
-		</control>
-	</include>
-	<include name="AudioChannelsFlaggingConditions">
-		<control type="image">
-			<description>Audio Codec Image</description>
-			<width>55</width>
-			<height>35</height>
-			<aspectratio align="left">keep</aspectratio>
-			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
-		</control>
-	</include>
-	<include name="AspectCodecFlaggingConditions">
-		<control type="image">
-			<description>Aspectratio Image</description>
-			<width>55</width>
-			<height>35</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
-		</control>
-	</include>
+    <include name="VideoCodecFlaggingConditions">
+        <control type="image">
+            <description>Video rez Image</description>
+            <width>55</width>
+            <height>35</height>
+            <aspectratio align="right">keep</aspectratio>
+            <texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+        </control>
+        <control type="image">
+            <description>Codec Image</description>
+            <width>80</width>
+            <height>35</height>
+            <aspectratio align="left">keep</aspectratio>
+            <texture>$VAR[videocodec,flagging/video/,.png]</texture>
+        </control>
+    </include>
+    <include name="VideoStereoscopicsFlaggingConditions">
+        <control type="image">
+            <description>Video stereoscopics flagging image</description>
+            <width>55</width>
+            <height>35</height>
+            <aspectratio align="right">keep</aspectratio>
+            <texture>flagging/video/3D.png</texture>
+            <visible>ListItem.IsStereoscopic</visible>
+        </control>
+    </include>
+    <include name="VideoTypeHackFlaggingConditions">
+        <control type="image">
+            <description>Video Type Image</description>
+            <width>80</width>
+            <height>35</height>
+            <aspectratio align="left">keep</aspectratio>
+            <texture>$VAR[typehackflagging,flagging/video/,.png]</texture>
+            <visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
+        </control>
+    </include>
+    <include name="VideoMPAAFlaggingConditions">
+        <control type="image">
+            <description>Rating image</description>
+            <width>80</width>
+            <height>35</height>
+            <aspectratio>keep</aspectratio>
+            <texture>$VAR[rating,flagging/ratings/,.png]</texture>
+        </control>
+    </include>
+    <include name="AudioCodecFlaggingConditions">
+        <control type="image">
+            <description>Audio Codec Image</description>
+            <width>80</width>
+            <height>35</height>
+            <aspectratio align="right">keep</aspectratio>
+            <texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
+        </control>
+    </include>
+    <include name="AudioChannelsFlaggingConditions">
+        <control type="image">
+            <description>Audio Codec Image</description>
+            <width>55</width>
+            <height>35</height>
+            <aspectratio align="left">keep</aspectratio>
+            <texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+        </control>
+    </include>
+    <include name="AspectCodecFlaggingConditions">
+        <control type="image">
+            <description>Aspectratio Image</description>
+            <width>55</width>
+            <height>35</height>
+            <aspectratio align="right">keep</aspectratio>
+            <texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+        </control>
+    </include>
 </includes>
