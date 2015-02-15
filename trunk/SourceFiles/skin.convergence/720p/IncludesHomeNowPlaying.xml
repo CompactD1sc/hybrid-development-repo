@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="OnHomePlayingInfo">
+		<!-- Music Info -->
+		<control type="group">
+			<left>0</left>
+			<top>368r</top>
+			<visible>Player.HasAudio + !Skin.HasSetting(HideHomeMusicInfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="0,30" time="0" condition="!Skin.HasSetting(HorizontalHomeScreen) + !system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-130" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<top>150</top>
+				<width>1280</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<left>200r</left>
+				<top>60</top>
+				<width>180</width>
+				<height>280</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>NowPlaying label</description>
+				<right>210</right>
+				<top>210</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$LOCALIZE[31040]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="label">
+				<description>Artist label</description>
+				<right>210</right>
+				<top>235</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Album Label</description>
+				<right>210</right>
+				<top>260</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<right>210</right>
+				<top>285</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<right>210</right>
+				<top>310</top>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<!-- Video Info -->
+		<control type="group">
+			<left>0</left>
+			<top>338r</top>
+			<visible>Player.HasVideo + !Skin.HasSetting(HideHomeVideoInfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,-160" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<top>150</top>
+				<width>1280</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="group">
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>200r</left>
+					<top>160</top>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<right>210</right>
+					<top>260</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<right>210</right>
+					<top>285</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<right>210</right>
+					<top>310</top>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>200r</left>
+					<top>0</top>
+					<width>180</width>
+					<height>340</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<right>210</right>
+					<top>210</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+				</control>
+				<control type="label">
+					<description>Studio label</description>
+					<right>210</right>
+					<top>235</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Studio]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Genre Label</description>
+					<right>210</right>
+					<top>260</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<right>210</right>
+					<top>285</top>
+					<height>30</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<right>210</right>
+					<top>310</top>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>250r</left>
+					<top>0</top>
+					<width>230</width>
+					<height>340</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>NowPlaying label</description>
+					<right>260</right>
+					<top>210</top>
+					<height>30</height>
+					<width>610</width>
+					<label>$LOCALIZE[31040]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+				</control>
+				<control type="label">
+					<description>TV Show label</description>
+					<right>260</right>
+					<top>235</top>
+					<height>30</height>
+					<width>610</width>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Season Ep Label</description>
+					<right>260</right>
+					<top>260</top>
+					<height>30</height>
+					<width>610</width>
+					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<right>260</right>
+					<top>285</top>
+					<height>30</height>
+					<width>610</width>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<right>260</right>
+					<top>310</top>
+					<height>30</height>
+					<width>325</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<!-- Suggested Movie -->
+		<control type="group">
+			<left>0</left>
+			<top>368r</top>
+			<visible>!Player.HasMedia + !IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+			<visible>!IntegerGreaterThan(Window(Home).Property(RecommendedMovie.1.PercentPlayed),95)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="0,30" time="0" condition="!Skin.HasSetting(HorizontalHomeScreen) + !system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-130" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<top>150</top>
+				<width>1280</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<left>160r</left>
+				<top>112</top>
+				<width>160</width>
+				<height>234</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseBorder.png</texture>
+			</control>
+			<control type="image">
+				<left>155r</left>
+				<top>116</top>
+				<width>150</width>
+				<height>223</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture fallback="DefaultVideoCover.png" background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</texture>
+				<animation effect="fade" start="75" end="75" time="0" condition="true">conditional</animation>
+			</control>
+			<control type="image">
+				<left>160r</left>
+				<top>112</top>
+				<width>160</width>
+				<height>234</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseOverlay.png</texture>
+			</control>
+			<control type="label">
+				<description>NowPlaying label</description>
+				<right>170</right>
+				<top>210</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$LOCALIZE[31251] $LOCALIZE[20338]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="0,25" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			</control>
+			<control type="label">
+				<description>Studio label</description>
+				<right>170</right>
+				<top>235</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Studio)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="label">
+				<description>Genre Label</description>
+				<right>170</right>
+				<top>260</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Tagline)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<right>170</right>
+				<top>285</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]$INFO[Window(Home).Property(RecommendedMovie.1.Year),[COLOR=grey] (,)[/COLOR]]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<right>170</right>
+				<top>310</top>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed),$LOCALIZE[31246] ]$INFO[Window(Home).Property(RecommendedMovie.1.Runtime), $LOCALIZE[1443] , $LOCALIZE[12391]]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<!-- Suggested Episode -->
+		<control type="group">
+			<left>0</left>
+			<top>368r</top>
+			<visible>!Player.HasMedia + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + !Skin.HasSetting(HideSuggestedMedia)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" end="0,30" time="0" condition="!Skin.HasSetting(HorizontalHomeScreen) + !system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-130" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<top>150</top>
+				<width>1280</width>
+				<height>250</height>
+				<texture>HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<left>160r</left>
+				<top>112</top>
+				<width>160</width>
+				<height>234</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseBorder.png</texture>
+			</control>
+			<control type="image">
+				<left>155r</left>
+				<top>116</top>
+				<width>150</width>
+				<height>223</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture fallback="DefaultVideoCover.png" background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</texture>
+				<animation effect="fade" start="75" end="75" time="0" condition="true">conditional</animation>
+			</control>
+			<control type="image">
+				<left>160r</left>
+				<top>112</top>
+				<width>160</width>
+				<height>234</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">ClearCase/EmptyCaseOverlay.png</texture>
+			</control>
+			<control type="label">
+				<description>NowPlaying label</description>
+				<right>170</right>
+				<top>210</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$LOCALIZE[31251] $LOCALIZE[20359]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="0,25" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			</control>
+			<control type="label">
+				<description>Studio label</description>
+				<right>170</right>
+				<top>235</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Studio)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="label">
+				<description>Genre Label</description>
+				<right>170</right>
+				<top>260</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<right>170</right>
+				<top>285</top>
+				<height>30</height>
+				<width>660</width>
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<right>170</right>
+				<top>310</top>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Episode),$LOCALIZE[20359] ]$INFO[Window(Home).Property(RecommendedEpisode.1.Season), $LOCALIZE[1443] $LOCALIZE[20373] ]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+	</include>
+</includes>

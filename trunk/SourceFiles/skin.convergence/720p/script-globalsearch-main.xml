@@ -1,122 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window>
     <allowoverlay>no</allowoverlay>
+    <defaultcontrol>9000</defaultcontrol>
     <coordinates>
         <system>1</system>
         <left>0</left>
         <top>0</top>
     </coordinates>
     <controls>
-        <control type="group" id="100">
+        <control type="image">
+            <description>Blackout Screen</description>
+            <include>Dimensions_Fullscreen</include>
+            <aspectratio>scale</aspectratio>
             <include>VisibleFadeEffect</include>
-            <!-- control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(111).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(111)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(121).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(121)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(131).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(131)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(141).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(141)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(151).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(151)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(161).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(161)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(171).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(171)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<texture background="true">$INFO[Container(181).ListItem.Property(Fanart_Image)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
-				<visible>Control.HasFocus(181)</visible>
-			</control -->
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>1280</width>
-                <height>720</height>
-                <texture>black-back.png</texture>
-                <animation effect="fade" time="400">WindowOpen</animation>
-                <animation effect="fade" time="200">WindowClose</animation>
-            </control>
+            <texture>special://skin/backgrounds/media-overlay.jpg</texture>
+        </control>
+        <include>CommonBackground</include>
+        
+		<control type="image">
+			<include>Window_OpenClose_Animation</include>
+			<include>VisibleFadeEffect</include>
+			<include>Dimensions_Fullscreen</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>black-back.png</texture>
+			<colordiffuse>AAFFFFFF</colordiffuse>
+		</control>
+		
+        <include>MediaViewBackgrounds</include>
+        <include>CommonPageCount</include>
+        <include>FloorReturnButtons</include>
+        <include>CommonNowPlaying</include>
+        <include>BehindDialogFadeOut</include>
+        <control type="button" id="800">
+            <include>InvisibleButton</include>
+            <onleft>804</onleft>
+            <onright>802</onright>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+            <visible>false</visible>
+        </control>
+        <control type="group" id="100">
             <control type="group">
-                <left>90</left>
-                <top>30</top>
+                <left>80</left>
+                <top>20</top>
                 <animation type="WindowOpen" reversible="false">
                     <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
                     <effect type="fade" start="0" end="100" time="300" />
@@ -125,244 +51,110 @@
                     <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
                     <effect type="fade" start="100" end="0" time="300" />
                 </animation>
-                <control type="image">
-                    <left>5</left>
-                    <top>5</top>
-                    <width>1090</width>
-                    <height>630</height>
-                    <texture border="15">ContentPanel.png</texture>
-                </control>
-                <control type="image">
-                    <left>5</left>
-                    <top>5</top>
-                    <width>1090</width>
-                    <height>630</height>
-                    <texture border="15">ContentPanel.png</texture>
-                </control>
-                <control type="button">
-                    <description>Close Window button</description>
-                    <left>980</left>
-                    <top>11</top>
-                    <width>64</width>
-                    <height>32</height>
-                    <label>-</label>
-                    <font>-</font>
-                    <onclick>PreviousMenu</onclick>
-                    <texturefocus>DialogCloseButton-focus.png</texturefocus>
-                    <texturenofocus>DialogCloseButton.png</texturenofocus>
-                    <onleft>1</onleft>
-                    <onright>1</onright>
-                    <onup>1</onup>
-                    <ondown>1</ondown>
-                    <visible>system.getbool(input.enablemouse)</visible>
-                </control>
-                <control type="image">
-                    <description>LOGO</description>
-                    <left>30</left>
-                    <top>10</top>
-                    <width>220</width>
-                    <height>80</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>Confluence_Logo.png</texture>
-                </control>
                 <control type="list" id="9000">
-                    <left>10</left>
-                    <top>80</top>
-                    <width>260</width>
-                    <height>540</height>
-                    <onleft>9010</onleft>
+                    <left>-20</left>
+                    <top>120</top>
+                    <width>430</width>
+                    <height>600</height>
+                    <onleft>800</onleft>
                     <onright>101</onright>
                     <onup>9000</onup>
                     <ondown>9000</ondown>
                     <pagecontrol>-</pagecontrol>
                     <scrolltime>300</scrolltime>
-                    <itemlayout height="60" width="260">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>61</height>
-                            <texture border="5">MenuItemNF.png</texture>
-                        </control>
+                    <animation type="Focus" reversible="false">
+                        <effect type="zoom" start="90" end="100" center="auto" time="200" />
+                        <effect type="fade" start="90" end="100" time="200" />
+                    </animation>
+                    <animation type="UnFocus" reversible="false">
+                        <effect type="zoom" start="100" end="90" center="auto" time="200" />
+                        <effect type="fade" start="100" end="90" time="200" />
+                    </animation>
+                    <itemlayout height="42" width="380">
                         <control type="label">
-                            <left>10</left>
-                            <top>4</top>
-                            <width>240</width>
-                            <height>25</height>
-                            <font>font24_title</font>
+                            <left>0</left>
+                            <top>21</top>
+                            <width>380</width>
+                            <height>40</height>
+                            <font>font35_title</font>
                             <textcolor>grey3</textcolor>
                             <align>right</align>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="label">
-                            <left>10</left>
-                            <top>32</top>
-                            <width>240</width>
-                            <height>20</height>
-                            <font>font13</font>
-                            <textcolor>grey2</textcolor>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label2]</label>
+                            <label>$INFO[ListItem.label]</label>
+                            <animation effect="zoom" start="65" end="65" center="380,51" time="0" condition="true">Conditional</animation>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="60" width="260">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <width>260</width>
-                            <height>61</height>
-                            <texture border="5">MenuItemFO.png</texture>
-                            <animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
-                        </control>
+                    <focusedlayout height="62" width="430">
                         <control type="label">
-                            <left>10</left>
-                            <top>4</top>
-                            <width>240</width>
-                            <height>25</height>
-                            <font>font24_title</font>
+                            <top>21</top>
+                            <left>0</left>
+                            <width>400</width>
+                            <height>62</height>
+                            <font>font35_title</font>
                             <textcolor>white</textcolor>
                             <align>right</align>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="label">
-                            <left>10</left>
-                            <top>32</top>
-                            <width>240</width>
-                            <height>20</height>
-                            <font>font13</font>
-                            <textcolor>grey2</textcolor>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
+                            <label>$INFO[ListItem.label]</label>
+`							<animation effect="zoom" start="65" end="125" center="380,51" time="200">Focus</animation>
+							<animation effect="zoom" start="125" end="65" center="380,51" time="200">UnFocus</animation>
+						</control>
                     </focusedlayout>
                     <content>
                         <item id="1">
                             <label>$LOCALIZE[342]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(110)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(110)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(119)</visible>
                         </item>
                         <item id="2">
-                            <label>$LOCALIZE[344]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(210)] $LOCALIZE[31025]</label2>
-                            <onclick>noop</onclick>
-                            <visible>Control.IsVisible(219)</visible>
-                        </item>
-                        <item id="3">
                             <label>$LOCALIZE[20343]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(120)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(120)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(129)</visible>
                         </item>
-                        <item id="4">
+                        <item id="3">
                             <label>$LOCALIZE[33054]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(130)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(130)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(139)</visible>
                         </item>
-                        <item id="5">
+                        <item id="4">
                             <label>$LOCALIZE[20360]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(140)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(140)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(149)</visible>
                         </item>
-                        <item id="6">
+                        <item id="5">
                             <label>$LOCALIZE[20389]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(150)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(150)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(159)</visible>
                         </item>
-                        <item id="7">
+                        <item id="6">
                             <label>$LOCALIZE[133]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(160)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(160)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(169)</visible>
                         </item>
-                        <item id="8">
+                        <item id="7">
                             <label>$LOCALIZE[132]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(170)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(170)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(179)</visible>
                         </item>
-                        <item id="9">
+                        <item id="8">
                             <label>$LOCALIZE[134]</label>
-                            <label2>$LOCALIZE[31206] $INFO[Control.GetLabel(180)] $LOCALIZE[31025]</label2>
+                            <label2>$LOCALIZE[31368] $INFO[Control.GetLabel(180)] $LOCALIZE[31259]</label2>
                             <onclick>noop</onclick>
                             <visible>Control.IsVisible(189)</visible>
                         </item>
-                        <item id="10">
-                            <label>[COLOR=blue]$INFO[Control.GetLabel(198)][/COLOR]</label>
-                            <label2>$LOCALIZE[31207]</label2>
-                            <onclick>Control.Setfocus(9000,0)</onclick>
-                            <onclick>SendClick(198)</onclick>
-                            <visible>Control.IsVisible(198)</visible>
-                        </item>
                     </content>
                 </control>
-                <control type="image">
-                    <left>268</left>
-                    <top>10</top>
-                    <width>790</width>
-                    <height>618</height>
-                    <texture border="5">black-back2.png</texture>
-                </control>
-                <control type="image">
-                    <left>268</left>
-                    <top>10</top>
-                    <width>804</width>
-                    <height>52</height>
-                    <texture>dialogheader.png</texture>
-                </control>
-                <control type="label">
-                    <description>header label Finished Searching</description>
-                    <left>300</left>
-                    <top>20</top>
-                    <width>740</width>
-                    <height>30</height>
-                    <font>font16</font>
-                    <label>$INFO[Container(9000).ListItem.Label]</label>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                    <visible>Control.IsVisible(198)</visible>
-                </control>
-                <control type="label">
-                    <description>header Label Still Searching</description>
-                    <left>300</left>
-                    <top>20</top>
-                    <width>740</width>
-                    <height>30</height>
-                    <font>font16</font>
-                    <label>$INFO[Control.GetLabel(190)] $INFO[Control.GetLabel(191)]</label>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                    <visible>!Control.IsVisible(198)</visible>
-                </control>
                 <control type="label" id="190">
-                    <!-- Hide this Control off the screen because we use the label above instead -->
-                    <left>2000</left>
-                    <top>2000</top>
-                    <width>100</width>
-                    <height>0</height>
-                    <label>-</label>
-                    <font>-</font>
-                    <textcolor>-</textcolor>
+                    <include>InvisibleButton</include>
                 </control>
                 <control type="label" id="191">
-                    <!-- Hide this Control off the screen because we use the label above instead -->
-                    <left>2000</left>
-                    <top>2000</top>
-                    <width>100</width>
-                    <height>0</height>
-                    <label>-</label>
-                    <font>-</font>
+                    <include>InvisibleButton</include>
                 </control>
                 <control type="label" id="199">
                     <left>40</left>
@@ -371,7 +163,7 @@
                     <height>20</height>
                     <label>[B]$LOCALIZE[284][/B]</label>
                     <font>font16caps</font>
-                    <textcolor>white</textcolor>
+                    <textcolor>FFFFFFFF</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                 </control>
@@ -385,42 +177,19 @@
                     <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
                     <effect type="fade" start="100" end="0" time="300" />
                 </animation>
-                <left>380</left>
-                <top>90</top>
+                <left>475</left>
+                <top>105</top>
                 <control type="button" id="198">
-                    <!-- Hide this button  off the screen because we use the list above to pass to it instead -->
-                    <left>2000</left>
-                    <top>2000</top>
-                    <width>10</width>
-                    <height>10</height>
-                    <label>-</label>
-                    <font>font10</font>
-                    <textcolor>white</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <texturefocus border="5">button-focus.png</texturefocus>
-                    <texturenofocus border="5">button-nofocus.png</texturenofocus>
-                    <onup>101</onup>
-                    <ondown>101</ondown>
-                    <onleft>101</onleft>
-                    <onright>101</onright>
+                    <include>InvisibleButton</include>
                 </control>
                 <control type="group" id="101">
-                    <top>4</top>
                     <control type="group" id="119">
                         <left>0</left>
                         <top>0</top>
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="110">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="111">
                             <visible>Container(9000).HasFocus(1)</visible>
@@ -428,7 +197,7 @@
                             <left>0</left>
                             <top>0</top>
                             <width>750</width>
-                            <height>530</height>
+                            <height>520</height>
                             <onleft>9000</onleft>
                             <onright>118</onright>
                             <onup>111</onup>
@@ -449,8 +218,7 @@
                                     <top>5</top>
                                     <width>80</width>
                                     <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>50</left>
@@ -465,7 +233,7 @@
                                     <top>10</top>
                                     <width>265</width>
                                     <height>12</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -494,18 +262,18 @@
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(Tagline)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(PlotOutline)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -513,9 +281,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -535,8 +303,7 @@
                                     <top>5</top>
                                     <width>80</width>
                                     <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>50</left>
@@ -551,7 +318,7 @@
                                     <top>10</top>
                                     <width>265</width>
                                     <height>12</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -580,18 +347,18 @@
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(Tagline)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(PlotOutline)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -599,9 +366,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>47</top>
+                                    <top>45</top>
                                     <width>265</width>
-                                    <height>73</height>
+                                    <height>75</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -613,264 +380,17 @@
                             <left>770</left>
                             <top>0</top>
                             <width>25</width>
-                            <height>530</height>
+                            <height>520</height>
                             <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                             <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
                             <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>111</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
                             <visible>Container(9000).Hasfocus(1)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(111).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(111).CurrentPage]/$INFO[Container(111).NumPages][/COLOR])</label>
-                            <visible>Container(9000).Hasfocus(1)</visible>
-                        </control>
-                    </control>
-                    <control type="group" id="219">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>750</width>
-                        <height>530</height>
-                        <control type="label" id="210">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
-                        </control>
-                        <control type="panel" id="211">
-                            <visible>Container(9000).HasFocus(2)</visible>
-                            <include>VisibleFadeEffect</include>
-                            <left>0</left>
-                            <top>0</top>
-                            <width>750</width>
-                            <height>530</height>
-                            <onleft>9000</onleft>
-                            <onright>218</onright>
-                            <onup>211</onup>
-                            <ondown>211</ondown>
-                            <viewtype label="535">panel</viewtype>
-                            <preloaditems>2</preloaditems>
-                            <pagecontrol>118</pagecontrol>
-                            <itemlayout width="375" height="130">
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>0</top>
-                                    <width>370</width>
-                                    <height>125</height>
-                                    <texture border="5">button-nofocus.png</texture>
-                                </control>
-                                <control type="image">
-                                    <left>5</left>
-                                    <top>5</top>
-                                    <width>80</width>
-                                    <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
-                                </control>
-                                <control type="image">
-                                    <left>50</left>
-                                    <top>70</top>
-                                    <width>30</width>
-                                    <height>30</height>
-                                    <texture>OverlayWatched.png</texture>
-                                    <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>10</top>
-                                    <width>265</width>
-                                    <height>12</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
-                                    <font>font12</font>
-                                    <textcolor>white</textcolor>
-                                    <aligny>center</aligny>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>30</top>
-                                    <width>265</width>
-                                    <height>15</height>
-                                    <label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-                                    <font>font12</font>
-                                    <textcolor>grey2</textcolor>
-                                    <aligny>center</aligny>
-                                    <visible>!SubString(ListItem.Property(Duration),min)</visible>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>30</top>
-                                    <width>265</width>
-                                    <height>15</height>
-                                    <label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
-                                    <font>font12</font>
-                                    <textcolor>grey2</textcolor>
-                                    <aligny>center</aligny>
-                                    <visible>SubString(ListItem.Property(Duration),min)</visible>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(Tagline)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(PlotOutline)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                    <visible>IsEmpty(ListItem.Property(TagLine))</visible>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(Plot)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                    <visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout width="375" height="130">
-                                <control type="image">
-                                    <left>0</left>
-                                    <top>0</top>
-                                    <width>370</width>
-                                    <height>125</height>
-                                    <texture border="5">button-focus2.png</texture>
-                                </control>
-                                <control type="image">
-                                    <left>5</left>
-                                    <top>5</top>
-                                    <width>80</width>
-                                    <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
-                                </control>
-                                <control type="image">
-                                    <left>50</left>
-                                    <top>70</top>
-                                    <width>30</width>
-                                    <height>30</height>
-                                    <texture>OverlayWatched.png</texture>
-                                    <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>10</top>
-                                    <width>265</width>
-                                    <height>12</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
-                                    <font>font12</font>
-                                    <textcolor>white</textcolor>
-                                    <aligny>center</aligny>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>30</top>
-                                    <width>265</width>
-                                    <height>15</height>
-                                    <label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-                                    <font>font12</font>
-                                    <textcolor>grey2</textcolor>
-                                    <aligny>center</aligny>
-                                    <visible>!SubString(ListItem.Property(Duration),min)</visible>
-                                </control>
-                                <control type="label">
-                                    <left>100</left>
-                                    <top>30</top>
-                                    <width>265</width>
-                                    <height>15</height>
-                                    <label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
-                                    <font>font12</font>
-                                    <textcolor>grey2</textcolor>
-                                    <aligny>center</aligny>
-                                    <visible>SubString(ListItem.Property(Duration),min)</visible>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(Tagline)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(PlotOutline)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                    <visible>IsEmpty(ListItem.Property(TagLine))</visible>
-                                </control>
-                                <control type="textbox">
-                                    <left>100</left>
-                                    <top>47</top>
-                                    <width>265</width>
-                                    <height>73</height>
-                                    <label>$INFO[ListItem.Property(Plot)]</label>
-                                    <font>font10</font>
-                                    <textcolor>white</textcolor>
-                                    <visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
-                                </control>
-                            </focusedlayout>
-                        </control>
-                        <control type="scrollbar" id="218">
-                            <left>770</left>
-                            <top>0</top>
-                            <width>25</width>
-                            <height>530</height>
-                            <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-                            <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                            <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                            <textureslidernib>ScrollBarNib.png</textureslidernib>
-                            <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-                            <onleft>211</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
-                            <orientation>vertical</orientation>
-                            <visible>Container(9000).Hasfocus(2)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(211).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(211).CurrentPage]/$INFO[Container(211).NumPages][/COLOR])</label>
-                            <visible>Container(9000).Hasfocus(2)</visible>
                         </control>
                     </control>
                     <control type="group" id="129">
@@ -879,22 +399,15 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="120">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="121">
-                            <visible>Container(9000).HasFocus(3)</visible>
+                            <visible>Container(9000).HasFocus(2)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
                             <width>750</width>
-                            <height>530</height>
+                            <height>525</height>
                             <onleft>9000</onleft>
                             <onright>128</onright>
                             <onup>121</onup>
@@ -915,8 +428,7 @@
                                     <top>5</top>
                                     <width>360</width>
                                     <height>65</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>330</left>
@@ -927,18 +439,18 @@
                                     <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                                 </control>
                                 <control type="label">
-                                    <left>7</left>
+                                    <left>187</left>
                                     <top>75</top>
                                     <width>360</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <align>center</align>
                                     <aligny>center</aligny>
                                 </control>
                                 <control type="label">
-                                    <left>7</left>
+                                    <left>187</left>
                                     <top>95</top>
                                     <width>360</width>
                                     <height>15</height>
@@ -950,9 +462,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>5</left>
-                                    <top>112</top>
+                                    <top>110</top>
                                     <width>360</width>
-                                    <height>53</height>
+                                    <height>55</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -972,8 +484,7 @@
                                     <top>5</top>
                                     <width>360</width>
                                     <height>65</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>330</left>
@@ -984,18 +495,18 @@
                                     <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                                 </control>
                                 <control type="label">
-                                    <left>7</left>
+                                    <left>187</left>
                                     <top>75</top>
                                     <width>360</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <align>center</align>
                                     <aligny>center</aligny>
                                 </control>
                                 <control type="label">
-                                    <left>7</left>
+                                    <left>187</left>
                                     <top>95</top>
                                     <width>360</width>
                                     <height>15</height>
@@ -1007,9 +518,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>5</left>
-                                    <top>112</top>
+                                    <top>110</top>
                                     <width>360</width>
-                                    <height>53</height>
+                                    <height>55</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1021,31 +532,17 @@
                             <left>770</left>
                             <top>0</top>
                             <width>25</width>
-                            <height>530</height>
+                            <height>525</height>
                             <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                             <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
                             <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>121</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(3)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(121).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(121).CurrentPage]/$INFO[Container(121).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(3)</visible>
+                            <visible>Container(9000).Hasfocus(2)</visible>
                         </control>
                     </control>
                     <control type="group" id="139">
@@ -1054,22 +551,15 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="130">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="131">
-                            <visible>Container(9000).HasFocus(4)</visible>
+                            <visible>Container(9000).HasFocus(3)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
                             <width>750</width>
-                            <height>530</height>
+                            <height>520</height>
                             <onleft>9000</onleft>
                             <onright>138</onright>
                             <onup>131</onup>
@@ -1090,24 +580,23 @@
                                     <top>5</top>
                                     <width>80</width>
                                     <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>100</left>
                                     <top>10</top>
                                     <width>260</width>
                                     <height>15</height>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$INFO[ListItem.label]</label>
                                     <font>font12_title</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>32</top>
+                                    <top>30</top>
                                     <width>260</width>
-                                    <height>118</height>
+                                    <height>120</height>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <font>font12</font>
                                     <textcolor>grey2</textcolor>
@@ -1126,24 +615,23 @@
                                     <top>5</top>
                                     <width>80</width>
                                     <height>115</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>100</left>
                                     <top>10</top>
                                     <width>260</width>
                                     <height>15</height>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$INFO[ListItem.label]</label>
                                     <font>font12_title</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
                                 </control>
                                 <control type="textbox">
                                     <left>100</left>
-                                    <top>32</top>
+                                    <top>30</top>
                                     <width>260</width>
-                                    <height>118</height>
+                                    <height>120</height>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <font>font12</font>
                                     <textcolor>grey2</textcolor>
@@ -1154,31 +642,17 @@
                             <left>770</left>
                             <top>0</top>
                             <width>25</width>
-                            <height>530</height>
+                            <height>520</height>
                             <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                             <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
                             <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>131</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(4)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(131).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(131).CurrentPage]/$INFO[Container(131).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(4)</visible>
+                            <visible>Container(9000).Hasfocus(3)</visible>
                         </control>
                     </control>
                     <control type="group" id="149">
@@ -1187,17 +661,10 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="140">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="141">
-                            <visible>Container(9000).HasFocus(5)</visible>
+                            <visible>Container(9000).HasFocus(4)</visible>
                             <left>0</left>
                             <top>0</top>
                             <width>750</width>
@@ -1223,8 +690,7 @@
                                     <width>150</width>
                                     <height>90</height>
                                     <aspectratio>scale</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>120</left>
@@ -1239,7 +705,7 @@
                                     <top>10</top>
                                     <width>585</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1256,9 +722,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>160</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>585</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1278,8 +744,7 @@
                                     <width>150</width>
                                     <height>90</height>
                                     <aspectratio>scale</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>120</left>
@@ -1294,7 +759,7 @@
                                     <top>10</top>
                                     <width>585</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1311,9 +776,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>160</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>585</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Plot)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1331,24 +796,10 @@
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>141</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(5)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(141).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(141).CurrentPage]/$INFO[Container(141).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(5)</visible>
+                            <visible>Container(9000).Hasfocus(4)</visible>
                         </control>
                     </control>
                     <control type="group" id="159">
@@ -1357,17 +808,10 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="150">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="151">
-                            <visible>Container(9000).HasFocus(6)</visible>
+                            <visible>Container(9000).HasFocus(5)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
@@ -1393,8 +837,7 @@
                                     <top>5</top>
                                     <width>120</width>
                                     <height>90</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>100</left>
@@ -1409,7 +852,7 @@
                                     <top>10</top>
                                     <width>230</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1458,8 +901,7 @@
                                     <top>5</top>
                                     <width>120</width>
                                     <height>90</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="image">
                                     <left>100</left>
@@ -1474,7 +916,7 @@
                                     <top>10</top>
                                     <width>230</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1522,24 +964,10 @@
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>151</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(6)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(151).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(151).CurrentPage]/$INFO[Container(151).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(6)</visible>
+                            <visible>Container(9000).Hasfocus(5)</visible>
                         </control>
                     </control>
                     <control type="group" id="169">
@@ -1548,17 +976,10 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="160">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="161">
-                            <visible>Container(9000).HasFocus(7)</visible>
+                            <visible>Container(9000).HasFocus(6)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
@@ -1585,14 +1006,14 @@
                                     <width>150</width>
                                     <height>90</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>160</left>
                                     <top>10</top>
                                     <width>580</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1609,9 +1030,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>160</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>585</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Artist_Description)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1631,14 +1052,14 @@
                                     <width>150</width>
                                     <height>90</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>160</left>
                                     <top>10</top>
                                     <width>580</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1655,9 +1076,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>160</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>585</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Artist_Description)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1675,24 +1096,10 @@
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>161</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(7)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(161).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(161).CurrentPage]/$INFO[Container(161).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(7)</visible>
+                            <visible>Container(9000).Hasfocus(6)</visible>
                         </control>
                     </control>
                     <control type="group" id="179">
@@ -1701,17 +1108,10 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="170">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="171">
-                            <visible>Container(9000).HasFocus(8)</visible>
+                            <visible>Container(9000).HasFocus(7)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
@@ -1738,14 +1138,14 @@
                                     <width>100</width>
                                     <height>90</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>110</left>
                                     <top>10</top>
                                     <width>630</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1762,9 +1162,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>110</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>630</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Album_Description)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1784,14 +1184,14 @@
                                     <width>100</width>
                                     <height>90</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>110</left>
                                     <top>10</top>
                                     <width>630</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1808,9 +1208,9 @@
                                 </control>
                                 <control type="textbox">
                                     <left>110</left>
-                                    <top>52</top>
+                                    <top>50</top>
                                     <width>630</width>
-                                    <height>43</height>
+                                    <height>45</height>
                                     <label>$INFO[ListItem.Property(Album_Description)]</label>
                                     <font>font10</font>
                                     <textcolor>white</textcolor>
@@ -1828,24 +1228,10 @@
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>171</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(8)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(171).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(171).CurrentPage]/$INFO[Container(171).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(8)</visible>
+                            <visible>Container(9000).Hasfocus(7)</visible>
                         </control>
                     </control>
                     <control type="group" id="189">
@@ -1854,17 +1240,10 @@
                         <width>750</width>
                         <height>530</height>
                         <control type="label" id="180">
-                            <!-- Hide this Control off the screen because we use the list above to pass to it instead -->
-                            <left>2000</left>
-                            <top>2000</top>
-                            <width>100</width>
-                            <height>0</height>
-                            <label>-</label>
-                            <font>-</font>
-                            <textcolor>-</textcolor>
+                            <include>InvisibleButton</include>
                         </control>
                         <control type="panel" id="181">
-                            <visible>Container(9000).HasFocus(9)</visible>
+                            <visible>Container(9000).HasFocus(8)</visible>
                             <include>VisibleFadeEffect</include>
                             <left>0</left>
                             <top>0</top>
@@ -1890,15 +1269,14 @@
                                     <top>5</top>
                                     <width>90</width>
                                     <height>90</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>110</left>
                                     <top>10</top>
                                     <width>255</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -1947,15 +1325,14 @@
                                     <top>5</top>
                                     <width>90</width>
                                     <height>90</height>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.icon]</texture>
                                 </control>
                                 <control type="label">
                                     <left>110</left>
                                     <top>10</top>
                                     <width>255</width>
                                     <height>15</height>
-                                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                                    <label>[B]$INFO[ListItem.label][/B]</label>
                                     <font>font12</font>
                                     <textcolor>white</textcolor>
                                     <aligny>center</aligny>
@@ -2003,30 +1380,16 @@
                             <textureslidernib>ScrollBarNib.png</textureslidernib>
                             <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                             <onleft>181</onleft>
-                            <onright>9000</onright>
-                            <showonepage>false</showonepage>
+                            <onright>800</onright>
+                            <showonepage>true</showonepage>
                             <orientation>vertical</orientation>
-                            <visible>Container(9000).HasFocus(9)</visible>
-                        </control>
-                        <control type="label">
-                            <description>number of files/pages in list text label</description>
-                            <left>250</left>
-                            <top>530</top>
-                            <width>500</width>
-                            <height>35</height>
-                            <font>font12</font>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <textcolor>grey</textcolor>
-                            <label>([COLOR=blue]$INFO[Container(181).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(181).CurrentPage]/$INFO[Container(181).NumPages][/COLOR])</label>
-                            <visible>Container(9000).HasFocus(9)</visible>
+                            <visible>Container(9000).Hasfocus(8)</visible>
                         </control>
                     </control>
                 </control>
             </control>
         </control>
-        <include>BehindDialogFadeOut</include>
+        <include>BottomClock</include>
         <include>MainHeaderLabel</include>
     </controls>
 </window>
