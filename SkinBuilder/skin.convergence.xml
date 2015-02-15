@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <addonlist>
     <addon name="xbmc-skins/skin.convergence">
-        <localdir>D:\Repository\trunk\SourceFiles\skin.convergence\</localdir>
-		<skipenglish>true</skipenglish>
+        <localdir>C:\Repository\SourceFiles\skin.convergence\</localdir>
+		<skipenglish>false</skipenglish>
 	</addon>
 </addonlist>

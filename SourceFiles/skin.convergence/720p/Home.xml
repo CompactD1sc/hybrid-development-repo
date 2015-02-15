@@ -1,603 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-    <defaultcontrol always="true">9000</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
-    <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
-    <onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
-    <onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-    <onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
-    <onload condition="!IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
-    <onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(HolidayEffects)</onload>
-    <onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
-    <onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=10,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.1.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistOne)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.2.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.2.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTwo)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.3.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.3.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistThree)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.4.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.4.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistFour)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.5.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.5.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistFive)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.6.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.6.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistSix)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.7.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.7.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistSeven)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.8.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistEight)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.9.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistNine)</onload>
-    <onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.10.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTen)</onload>
-    <controls>
-        <include>CommonBackground</include>
-        <include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
-        <!-- Music Info -->
-        <control type="group">
-            <left>0</left>
-            <top>368r</top>
-            <visible>Player.HasAudio + !Skin.HasSetting(HomePageMusicInfo)</visible>
-            <include>VisibleFadeEffect</include>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="slide" end="0,30" time="0" condition="!Skin.HasSetting(HorizontalHomeScreen) + !system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
-            <animation effect="slide" start="0,0" end="0,-130" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
-            <control type="image">
-                <left>0</left>
-                <top>150</top>
-                <width>1280</width>
-                <height>250</height>
-                <texture>HomeNowPlayingBack.png</texture>
-            </control>
-            <control type="image">
-                <description>Cover image</description>
-                <left>200r</left>
-                <top>60</top>
-                <width>180</width>
-                <height>280</height>
-                <aspectratio aligny="bottom">keep</aspectratio>
-                <texture>$INFO[MusicPlayer.Cover]</texture>
-                <bordertexture border="8">ThumbBorder.png</bordertexture>
-                <bordersize>5</bordersize>
-            </control>
-            <control type="label">
-                <description>NowPlaying label</description>
-                <right>210</right>
-                <top>210</top>
-                <height>30</height>
-                <width>660</width>
-                <label>$LOCALIZE[31040]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font12_title</font>
-                <textcolor>blue</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="label">
-                <description>Artist label</description>
-                <right>210</right>
-                <top>235</top>
-                <height>30</height>
-                <width>660</width>
-                <label>$INFO[MusicPlayer.Artist]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font12_title</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="label">
-                <description>Album Label</description>
-                <right>210</right>
-                <top>260</top>
-                <height>30</height>
-                <width>660</width>
-                <label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font12</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="label">
-                <description>Title label</description>
-                <right>210</right>
-                <top>285</top>
-                <height>30</height>
-                <width>660</width>
-                <label>$INFO[MusicPlayer.Title]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font13_title</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="label">
-                <description>Time Label</description>
-                <right>210</right>
-                <top>310</top>
-                <height>30</height>
-                <width>325</width>
-                <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font12</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-        </control>
-        <!-- Video Info -->
-        <control type="group">
-            <left>0</left>
-            <top>368r</top>
-            <visible>Player.HasVideo + !Skin.HasSetting(HomePageVideoInfo)</visible>
-            <include>VisibleFadeEffect</include>
-            <include>Window_OpenClose_Animation</include>
-            <animation effect="slide" end="0,30" time="0" condition="!system.getbool(lookandfeel.enablerssfeeds)">conditional</animation>
-            <control type="image">
-                <left>0</left>
-                <top>150</top>
-                <width>1280</width>
-                <height>250</height>
-                <texture>HomeNowPlayingBack.png</texture>
-            </control>
-            <control type="group">
-                <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
-                <control type="image">
-                    <description>Cover image</description>
-                    <left>200r</left>
-                    <top>160</top>
-                    <width>180</width>
-                    <height>180</height>
-                    <aspectratio aligny="bottom">keep</aspectratio>
-                    <texture>$INFO[VideoPlayer.Cover]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
-                    <bordersize>5</bordersize>
-                </control>
-                <control type="label">
-                    <description>NowPlaying label</description>
-                    <right>210</right>
-                    <top>260</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$LOCALIZE[31040]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12_title</font>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Title label</description>
-                    <right>210</right>
-                    <top>285</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$INFO[VideoPlayer.Title]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font13_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Time Label</description>
-                    <right>210</right>
-                    <top>310</top>
-                    <height>30</height>
-                    <width>325</width>
-                    <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>VideoPlayer.Content(Movies)</visible>
-                <control type="image">
-                    <description>Cover image</description>
-                    <left>200r</left>
-                    <top>0</top>
-                    <width>180</width>
-                    <height>340</height>
-                    <aspectratio aligny="bottom">keep</aspectratio>
-                    <texture>$INFO[VideoPlayer.Cover]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
-                    <bordersize>5</bordersize>
-                </control>
-                <control type="label">
-                    <description>NowPlaying label</description>
-                    <right>210</right>
-                    <top>210</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$LOCALIZE[31040]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12_title</font>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Studio label</description>
-                    <right>210</right>
-                    <top>235</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$INFO[VideoPlayer.Studio]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Genre Label</description>
-                    <right>210</right>
-                    <top>260</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$INFO[VideoPlayer.Genre]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Title label</description>
-                    <right>210</right>
-                    <top>285</top>
-                    <height>30</height>
-                    <width>660</width>
-                    <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font13_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Time Label</description>
-                    <right>210</right>
-                    <top>310</top>
-                    <height>30</height>
-                    <width>325</width>
-                    <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-            </control>
-            <control type="group">
-                <visible>VideoPlayer.Content(Episodes)</visible>
-                <control type="image">
-                    <description>Cover image</description>
-                    <left>250r</left>
-                    <top>0</top>
-                    <width>230</width>
-                    <height>340</height>
-                    <aspectratio aligny="bottom">keep</aspectratio>
-                    <texture>$INFO[VideoPlayer.Cover]</texture>
-                    <bordertexture border="8">ThumbBorder.png</bordertexture>
-                    <bordersize>5</bordersize>
-                </control>
-                <control type="label">
-                    <description>NowPlaying label</description>
-                    <right>260</right>
-                    <top>210</top>
-                    <height>30</height>
-                    <width>610</width>
-                    <label>$LOCALIZE[31040]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12_title</font>
-                    <textcolor>blue</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>TV Show label</description>
-                    <right>260</right>
-                    <top>235</top>
-                    <height>30</height>
-                    <width>610</width>
-                    <label>$INFO[VideoPlayer.TVShowTitle]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Season Ep Label</description>
-                    <right>260</right>
-                    <top>260</top>
-                    <height>30</height>
-                    <width>610</width>
-                    <label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Title label</description>
-                    <right>260</right>
-                    <top>285</top>
-                    <height>30</height>
-                    <width>610</width>
-                    <label>$INFO[VideoPlayer.Title]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font13_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Time Label</description>
-                    <right>260</right>
-                    <top>310</top>
-                    <height>30</height>
-                    <width>325</width>
-                    <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <font>font12</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-            </control>
-        </control>
-        <!--########################################-->
-        <control type="group" id="9003">
-            <animation effect="fade" time="300" delay="1000">WindowOpen</animation>
-            <animation effect="fade" time="200">WindowClose</animation>
-            <animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(Favourites)">conditional</animation>
-            <animation effect="slide" start="0,0" end="-210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
-            <include>AddonsHomePanel</include>
-            <include>HomeWeatherForecast</include>
-            <include>PlayListContentPanel</include>
-            <include>RecentMoviePanel</include>
-            <include>UnWatchedMoviePanel</include>
-            <include>RecentTVShowPanel</include>
-            <include>RecentAlbumsPanel</include>
-            <include>RecentConcertsPanel</include>
-            <include>RandomMoviePanel</include>
-            <include>RandomTVShowPanel</include>
-            <include>RandomAlbumPanel</include>
-            <include>RandomConcertsPanel</include>
-            <include>SuggestedMoviePanel</include>
-            <include>SuggestedTVShowPanel</include>
-            <include>SuggestedAlbumPanel</include>
-        </control>
-        <control type="group">
-            <!-- Vertical Home Screen -->
-            <animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-            <animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-            <include>HomeVerticalSubBlade</include>
-            <include>HomeSubMenuControl</include>
-            <include>HomeVerticalBottomBlade</include>
-            <include>HomeVerticalMainMenu</include>
-            <include>HomeVerticalMenuBlade</include>
-            <!--include>WeatherInfo</include-->
-            <!--include>HomeMediaControl ##Already Commented Out##</include-->
-            <visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
-        </control>
-        <control type="group">
-            <!-- Horizontal Home Screen -->
-            <control type="group">
-                <top>555</top>
-                <animation type="WindowOpen" reversible="false">
-                    <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-                    <effect type="fade" start="0" end="100" time="300" />
-                </animation>
-                <animation type="WindowClose" reversible="false">
-                    <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-                    <effect type="fade" start="100" end="0" time="300" />
-                </animation>
-                <include>HomeSubMenuControl</include>
-                <include>HomeHorizontalOverlay</include>
-                <include condition="Skin.HasSetting(WrapAroundHomeMenu)">HorizontalWrapMenu</include>
-                <include condition="!Skin.HasSetting(WrapAroundHomeMenu)">HorizontalFixedMenu</include>
-                <include>HomeHorizontalSideFade</include>
-                <!--include>HomeMediaControl ##Already Commented Out##</include-->
-            </control>
-            <!--include>WeatherInfo</include-->
-            <visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
-        </control>
-        <!--include>Clock</include-->
-        <!--include>ShowHomeInfoBar</include-->
-        <!-- ######################## -->
-        <control type="group" id="10">
-            <left>20</left>
-            <top>55r</top>
-            <animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
-            <animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
-            <animation effect="slide" end="0,55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
-            <animation effect="slide" start="0,55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
-            <include>Window_OpenClose_Animation</include>
-            <control type="button" id="20">
-                <description>push button</description>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
-                <left>110</left>
-                <top>0</top>
-                <width>45</width>
-                <height>45</height>
-                <label>31003</label>
-                <font>-</font>
-                <onclick condition="Player.HasMedia">ActivateWindow(playercontrols)</onclick>
-                <onclick condition="!Player.HasMedia + System.HasMediaDVD">XBMC.PlayDVD()</onclick>
-                <onclick condition="!Player.HasMedia + !System.HasMediaDVD">EjectTray()</onclick>
-                <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <onleft>21</onleft>
-                <onright>22</onright>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <visible>!Skin.HasSetting(HideDvdMenuItem)</visible>
-            </control>
-            <control type="image">
-                <description>DVD Icon</description>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
-                <left>115</left>
-                <top>5</top>
-                <width>35</width>
-                <height>35</height>
-                <aspectratio>keep</aspectratio>
-                <texture>icon_dvd.png</texture>
-                <visible>!Skin.HasSetting(HideDvdMenuItem)</visible>
-            </control>
-            <control type="button" id="21">
-                <description>Power push button</description>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
-                <left>55</left>
-                <top>0</top>
-                <width>45</width>
-                <height>45</height>
-                <label>31003</label>
-                <font>-</font>
-                <onclick>$VAR[HomePowerBtnCommand]</onclick>
-                <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <onleft>22</onleft>
-                <onright>20</onright>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <visible>!Skin.HasSetting(HidePowerMenuItem)</visible>
-            </control>
-            <control type="image">
-                <description>Power Icon</description>
-                <animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
-                <left>60</left>
-                <top>5</top>
-                <width>35</width>
-                <height>35</height>
-                <aspectratio>keep</aspectratio>
-                <texture>icon_power.png</texture>
-                <visible>!Skin.HasSetting(HidePowerMenuItem)</visible>
-            </control>
-            <control type="button" id="22">
-                <description>Favourites push button</description>
-                <left>0</left>
-                <top>0</top>
-                <width>45</width>
-                <height>45</height>
-                <label>1036</label>
-                <font>-</font>
-                <onclick>ActivateWindow(Favourites)</onclick>
-                <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <onleft>20</onleft>
-                <onright>21</onright>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
-                <visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
-            </control>
-            <control type="image">
-                <description>Favourites Icon</description>
-                <left>5</left>
-                <top>5</top>
-                <width>35</width>
-                <height>35</height>
-                <aspectratio>keep</aspectratio>
-                <texture>icon_favourites.png</texture>
-                <visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
-            </control>
-        </control>
-        <control type="group">
-            <left>420</left>
-            <top>35r</top>
-            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-            <animation effect="slide" end="0,35" time="200" tween="quadratic" easing="out">WindowClose</animation>
-            <animation effect="slide" start="0,35" time="200" tween="quadratic" easing="out">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="-210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
-            <control type="image">
-                <description>RSS background</description>
-                <left>0</left>
-                <top>0</top>
-                <width>860</width>
-                <height>35</height>
-                <texture border="32,0,0,0">Rss_Back.png</texture>
-                <animation effect="zoom" start="0,0,860,35" end="-10,0,1080,35" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
-            </control>
-            <control type="rss">
-                <description>RSS feed</description>
-                <left>35</left>
-                <top>6</top>
-                <height>35</height>
-                <width>790</width>
-                <font>font12</font>
-                <urlset>1</urlset>
-                <textcolor>blue</textcolor>
-                <titlecolor>blue</titlecolor>
-                <headlinecolor>white</headlinecolor>
-                <visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
-            </control>
-            <control type="rss">
-                <description>RSS feed</description>
-                <left>35</left>
-                <top>6</top>
-                <height>35</height>
-                <width>1000</width>
-                <font>font12</font>
-                <urlset>1</urlset>
-                <textcolor>blue</textcolor>
-                <titlecolor>blue</titlecolor>
-                <headlinecolor>white</headlinecolor>
-                <visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
-            </control>
-            <control type="image">
-                <description>RSS background</description>
-                <left>0</left>
-                <top>0</top>
-                <width>100</width>
-                <height>35</height>
-                <texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
-            </control>
-            <control type="image">
-                <description>RSS background</description>
-                <left>832</left>
-                <top>8</top>
-                <width>24</width>
-                <height>24</height>
-                <texture>icon-rss.png</texture>
-                <animation effect="slide" start="0,0" end="210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
-            </control>
-        </control>
-        <control type="group">
-            <animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
-            <animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
-            <animation effect="slide" end="0,-55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
-            <animation effect="slide" start="0,-55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
-            <control type="label">
-                <description>time label</description>
-                <left>20</left>
-                <top>5</top>
-                <width>200</width>
-                <height>30</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <font>font28_title</font>
-                <textcolor>C0FFFFFF</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <label>$INFO[System.Time]</label>
-                <animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
-                <animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-            </control>
-            <control type="label">
-                <description>Date label</description>
-                <left>20</left>
-                <top>35</top>
-                <width>200</width>
-                <height>15</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <font>font10</font>
-                <textcolor>C0FFFFFF</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <label>$INFO[System.Date]</label>
-                <include>Window_OpenClose_Animation</include>
-                <animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-                <animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
-            </control>
-        </control>
-    </controls>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<onload condition="!IsEmpty(Window(Home).Property(SideBladeOpen))">ClearProperty(SideBladeOpen,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
+	<onload condition="Skin.HasSetting(EnableHolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(EnableHolidayEffects)</onload>
+	<onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
+	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=10,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.1.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistOne)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.2.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.2.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTwo)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.3.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.3.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistThree)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.4.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.4.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistFour)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.5.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.5.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistFive)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.6.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.6.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistSix)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.7.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.7.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistSeven)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.8.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistEight)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.9.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistNine)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeMenu.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.10.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTen)</onload>
+	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
+	<onload condition="Skin.HasSetting(HorizontalHomeScreen) + Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<onunload condition="!IsEmpty(Window(Home).Property(SideBladeOpen))">ClearProperty(SideBladeOpen,Home)</onunload>
+	<controls>
+		<control type="group">
+			<control type="list" id="8050">
+				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
+			</control>
+			<control type="list" id="8051">
+				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedepisodes.xml%2f/</content>
+			</control>
+			<control type="list" id="8052">
+				<content target="music" limit="10">$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/</content>
+			</control>
+			<control type="list" id="8053">
+				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/</content>
+			</control>
+			<visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,XBMC)</visible>
+		</control>
+		<include>CommonBackground</include>
+		<include condition="!Skin.HasSetting(HideRainDropEffect) | Skin.HasSetting(EnableHolidayEffects)">AnimatedBackgroundEffect</include>
+		<include>OnHomePlayingInfo</include>
+		<include>HomeWidgetPanels</include>
+		<control type="button" id="9003">
+			<left>-20</left>
+			<top>-20</top>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<visible>false</visible>
+		</control>
+		<control type="group">
+			<!-- Vertical Home Screen -->
+			<animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<include>HomeVerticalSubBlade</include>
+			<include>HomeSubMenuControl</include>
+			<include>HomeVerticalBottomBlade</include>
+			<include>HomeVerticalMainMenu</include>
+			<include>HomeVerticalMenuBlade</include>
+			<!--include>HomeMediaControl ##Already Commented Out##</include-->
+			<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+		</control>
+		<control type="group">
+			<!-- Horizontal Home Screen -->
+			<control type="group">
+				<top>555</top>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>
+				<include>HomeSubMenuControl</include>
+				<include>HomeHorizontalOverlay</include>
+				<include condition="Skin.HasSetting(WrapAroundHomeMenu)">HorizontalWrapMenu</include>
+				<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">HorizontalFixedMenu</include>
+				<include>HomeHorizontalSideFade</include>
+				<!--include>HomeMediaControl ##Already Commented Out##</include-->
+			</control>
+			<visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
+		</control>
+		<!--include>ShowHomeInfoBar</include-->
+		<!-- ######################## -->
+		<control type="group" id="10">
+			<left>20</left>
+			<top>55r</top>
+			<animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
+			<animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
+			<animation effect="slide" end="0,55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
+			<animation effect="slide" start="0,55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
+			<include>Window_OpenClose_Animation</include>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="20">
+				<description>push button</description>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
+				<left>110</left>
+				<top>0</top>
+				<width>45</width>
+				<height>45</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick condition="Player.HasMedia">ActivateWindow(playercontrols)</onclick>
+				<onclick condition="!Player.HasMedia + System.HasMediaDVD">XBMC.PlayDVD()</onclick>
+				<onclick condition="!Player.HasMedia + !System.HasMediaDVD">EjectTray()</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>21</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<visible>!Skin.HasSetting(HideDvdMenuItem)</visible>
+			</control>
+			<control type="image">
+				<description>DVD Icon</description>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HidePowerMenuItem)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
+				<left>115</left>
+				<top>5</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_dvd.png</texture>
+				<visible>!Skin.HasSetting(HideDvdMenuItem)</visible>
+			</control>
+			<control type="button" id="21">
+				<description>Power push button</description>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
+				<left>55</left>
+				<top>0</top>
+				<width>45</width>
+				<height>45</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>$VAR[HomePowerBtnCommand]</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>22</onleft>
+				<onright>20</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<visible>!Skin.HasSetting(HidePowerMenuItem)</visible>
+			</control>
+			<control type="image">
+				<description>Power Icon</description>
+				<animation effect="slide" start="0,0" end="-55,00" time="0" condition="Skin.HasSetting(HideFavouritesBtn)">conditional</animation>
+				<left>60</left>
+				<top>5</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_power.png</texture>
+				<visible>!Skin.HasSetting(HidePowerMenuItem)</visible>
+			</control>
+			<control type="button" id="22">
+				<description>Favourites push button</description>
+				<left>0</left>
+				<top>0</top>
+				<width>45</width>
+				<height>45</height>
+				<label>1036</label>
+				<font>-</font>
+				<onclick>ActivateWindow(Favourites)</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>21</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
+			</control>
+			<control type="image">
+				<description>Favourites Icon</description>
+				<left>5</left>
+				<top>5</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_favourites.png</texture>
+				<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<left>420</left>
+			<top>35r</top>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<animation effect="slide" end="0,35" time="200" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,35" time="200" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,35" time="0" condition="!Skin.HasSetting(HorizontalHomeScreen) + Player.HasVideo">conditional</animation>
+			<animation effect="slide" start="0,0" end="-210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<description>RSS background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>860</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1080</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back.png</texture>
+				<visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<left>35</left>
+				<top>6</top>
+				<height>35</height>
+				<width>790</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>!Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<left>35</left>
+				<top>6</top>
+				<height>35</height>
+				<width>1000</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>blue</textcolor>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>100</width>
+				<height>35</height>
+				<texture border="32,0,0,0">Rss_Back_Overlay.png</texture>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<left>832</left>
+				<top>8</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>icon-rss.png</texture>
+				<animation effect="slide" start="0,0" end="210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" end="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
+			<animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out" condition="!Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
+			<animation effect="slide" end="0,-55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowClose</animation>
+			<animation effect="slide" start="0,-55" time="100" tween="quadratic" easing="out" condition="Skin.HasSetting(HorizontalHomeScreen)">WindowOpen</animation>
+			<control type="label">
+				<description>time label</description>
+				<left>20</left>
+				<top>5</top>
+				<width>200</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font28_title</font>
+				<textcolor>C0FFFFFF</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Time]</label>
+				<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
+				<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			</control>
+			<control type="label">
+				<description>Date label</description>
+				<left>20</left>
+				<top>35</top>
+				<width>200</width>
+				<height>15</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>C0FFFFFF</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Date]</label>
+				<include>Window_OpenClose_Animation</include>
+				<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
+			</control>
+		</control>
+	</controls>
 </window>

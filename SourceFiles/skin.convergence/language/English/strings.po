@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Convergence
-# Addon id: skin.confluence
+# Addon id: skin.convergence
 # Addon Provider: Mudislander
 msgid ""
 msgstr ""
@@ -40,7 +40,9 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr ""
 
-#empty string with id 31007
+msgctxt "#31007"
+msgid "Found"
+msgstr ""
 
 msgctxt "#31008"
 msgid "Full Screen"
@@ -58,7 +60,45 @@ msgctxt "#31011"
 msgid "Raspberry OS"
 msgstr ""
 
-#empty strings from id 31012 to 31021
+msgctxt "#31012"
+msgid "No Background"
+msgstr ""
+
+msgctxt "#31013"
+msgid "Enable Single Global Background"
+msgstr ""
+
+msgctxt "#31014"
+msgid "Startup"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Single Image"
+msgstr ""
+
+msgctxt "#31016"
+msgid "Multi Image"
+msgstr ""
+
+msgctxt "#31017"
+msgid "Theme"
+msgstr ""
+
+msgctxt "#31018"
+msgid " UPnP Options"
+msgstr ""
+
+msgctxt "#31019"
+msgid "Setup UPnP Library"
+msgstr ""
+
+msgctxt "#31020"
+msgid "Enable UPnP Client Mode"
+msgstr ""
+
+msgctxt "#31021"
+msgid "UPnp Server Type"
+msgstr ""
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -94,7 +134,9 @@ msgctxt "#31029"
 msgid "Fanart"
 msgstr ""
 
-#empty string with id 31030
+msgctxt "#31030"
+msgid "Party"
+msgstr ""
 
 msgctxt "#31031"
 msgid "Pic Thumbs"
@@ -108,7 +150,25 @@ msgctxt "#31033"
 msgid "Info"
 msgstr ""
 
-#empty strings from id 31034 to 31038
+msgctxt "#31034"
+msgid "Darken watched"
+msgstr ""
+
+msgctxt "#31035"
+msgid "UPnP Catagory Not Found"
+msgstr ""
+
+msgctxt "#31036"
+msgid "Please Set Path to UPnP Server"
+msgstr ""
+
+msgctxt "#31037"
+msgid "Select Item to Swap"
+msgstr ""
+
+msgctxt "#31038"
+msgid "Alternate Artwork"
+msgstr ""
 
 msgctxt "#31039"
 msgid "Actions"
@@ -120,7 +180,9 @@ msgctxt "#31040"
 msgid "Now Playing"
 msgstr ""
 
-#empty string with id 31041
+msgctxt "#31041"
+msgid "UPnP Error"
+msgstr ""
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -142,7 +204,9 @@ msgctxt "#31046"
 msgid "SEEKING"
 msgstr ""
 
-#empty string with id 31047
+msgctxt "#31047"
+msgid "Performed by"
+msgstr ""
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
@@ -160,7 +224,11 @@ msgctxt "#31051"
 msgid "Sort: Descending"
 msgstr ""
 
-#empty strings from id 31052 to 31054
+msgctxt "#31052"
+msgid "Initial Focused Horizontal Menu Item "
+msgstr ""
+
+#empty strings from id 31053 to 31054
 #Playlist Editor labels
 
 msgctxt "#31055"
@@ -191,11 +259,88 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr ""
 
-#empty strings from id 31062 to 31100
+#empty strings from id 31062 to 31074
+
+msgctxt "#31075"
+msgid "Enable \"TVshow Art\" as Episode Thumbnails"
+msgstr ""
+
+msgctxt "#31076"
+msgid "System Menu Item"
+msgstr ""
+
+msgctxt "#31077"
+msgid "Shutdown Menu"
+msgstr ""
+
+msgctxt "#31078"
+msgid "Power Button Action"
+msgstr ""
+
+msgctxt "#31079"
+msgid "Enable Power Button"
+msgstr ""
+
+msgctxt "#31080"
+msgid "Enable \"DVD\" Disc Button"
+msgstr ""
+
+msgctxt "#31081"
+msgid "Enable Favourites Button"
+msgstr ""
+
+msgctxt "#31082"
+msgid "Enable System Menu Item"
+msgstr ""
+
+#empty string id 31083
+
+msgctxt "#31084"
+msgid "Enable Kodi Intro Movie"
+msgstr ""
+
+msgctxt "#31085"
+msgid "Enable Horizontal Menu"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Enable Visible Horizontal Submenu"
+msgstr ""
+
+msgctxt "#31087"
+msgid "Enable Submenu Advisor"
+msgstr ""
+
+msgctxt "#31088"
+msgid "Enable Vertical Menu Transparency"
+msgstr ""
+
+msgctxt "#31089"
+msgid "Enable Raindrop Effect"
+msgstr ""
+
+msgctxt "#31090"
+msgid "Enable Playing Artist Fanart"
+msgstr ""
+
+#empty strings from id 31091 to 31097
+
+msgctxt "#31098"
+msgid "Enable Kiosk Mode"
+msgstr ""
+
+msgctxt "#31099"
+msgid "Enable [COLOR=grey3](Slower)[/COLOR] File System Search for Additional Artwork"
+msgstr ""
+
+msgctxt "#31100"
+msgid "Weather FanArt"
+msgstr ""
+
 #Skin Settings labels
 
 msgctxt "#31101"
-msgid "Home screen options"
+msgid "Home Screen Options"
 msgstr ""
 
 msgctxt "#31102"
@@ -210,14 +355,16 @@ msgctxt "#31104"
 msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
 msgstr ""
 
-#empty string with id 31105
+msgctxt "#31105"
+msgid "Convergence"
+msgstr ""
 
 msgctxt "#31106"
-msgid "Miscellaneous options"
+msgid "Miscellaneous"
 msgstr ""
 
 msgctxt "#31107"
-msgid "Hide Flagging read from video filenames [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
+msgid "Enable Flagging From Video Filenames [COLOR=grey3](Blu-ray, HD-DVD)[/COLOR]"
 msgstr ""
 
 msgctxt "#31108"
@@ -240,7 +387,17 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-#empty strings from id 31113 to 31115
+msgctxt "#31113"
+msgid "Media View Options"
+msgstr ""
+
+msgctxt "#31114"
+msgid "Enable  \"Trailer\"  Floor Button"
+msgstr ""
+
+msgctxt "#31115"
+msgid "Enable  \"Global Search\"  Floor Button"
+msgstr ""
 
 msgctxt "#31116"
 msgid "Show Recently added Albums"
@@ -258,7 +415,19 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr ""
 
-#empty strings from id 31120 to 31123
+msgctxt "#31120"
+msgid "Artwork"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Choices"
+msgstr ""
+
+#empty string id 31122
+
+msgctxt "#31123"
+msgid "Popup:"
+msgstr ""
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -269,7 +438,7 @@ msgid "Show Background \"Now Playing\" Visualisation"
 msgstr ""
 
 msgctxt "#31126"
-msgid "Play TV theme songs in video library (TvTunes add-on)"
+msgid "Enable \"TvTunes Addon\" for Theme Songs"
 msgstr ""
 
 msgctxt "#31127"
@@ -281,16 +450,24 @@ msgid "Lyrics"
 msgstr ""
 
 msgctxt "#31129"
-msgid "Hide Fanart in full screen visualisation"
+msgid "Enable \"ArtistSlideShow\" for Extra Fanart of Playing Artist"
 msgstr ""
 
-#empty strings from id 31130 to 31131
+msgctxt "#31130"
+msgid "Enable \"Next Aired Addon\" for TVShows"
+msgstr ""
+
+msgctxt "#31131"
+msgid "Enable \"Watch it Later\" Option in Context Menu"
+msgstr ""
 
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr ""
 
-#empty string with id 31133
+msgctxt "#31133"
+msgid "Enable \"script.grab.fanart\" for Home Menu Items [COLOR=grey3](When Fanart Selected)[/COLOR]"
+msgstr ""
 
 msgctxt "#31134"
 msgid "Home Page Videos Sub-menu"
@@ -304,7 +481,15 @@ msgctxt "#31136"
 msgid "Home Page Pictures Sub-menu"
 msgstr ""
 
-#empty strings from id 31137 to 31139
+msgctxt "#31137"
+msgid "Hide checkmarks"
+msgstr ""
+
+msgctxt "#31138"
+msgid "New banner"
+msgstr ""
+
+#empty string id 31139
 
 msgctxt "#31140"
 msgid "Music OSD"
@@ -318,7 +503,27 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
-#empty strings from id 31143 to 31184
+msgctxt "#31143"
+msgid "Kodi"
+msgstr ""
+
+msgctxt "#31144"
+msgid "Windows Home Server"
+msgstr ""
+
+msgctxt "#31145"
+msgid "Power Button Action"
+msgstr ""
+
+msgctxt "#31146"
+msgid "Plex"
+msgstr ""
+
+msgctxt "#31147"
+msgid "Select Parent Folder of [COLOR=white]Kodi UPnp Server[/COLOR] Containing Video and Music Libraries"
+msgstr ""
+
+#empty strings from id 31148 to 31184
 
 msgctxt "#31185"
 msgid "Random Songs"
@@ -386,7 +591,11 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr ""
 
-#empty strings from id 31201 to 31202
+msgctxt "#31201"
+msgid "Concerts"
+msgstr ""
+
+#empty string id 31202
 
 msgctxt "#31203"
 msgid "Choose Your Song"
@@ -414,7 +623,77 @@ msgctxt "#31209"
 msgid "Global Search"
 msgstr ""
 
-#empty strings from id 31210 to 31229
+msgctxt "#31210"
+msgid "Nodes"
+msgstr ""
+
+msgctxt "#31211"
+msgid "Tags"
+msgstr ""
+
+msgctxt "#31212"
+msgid "Streaming Media"
+msgstr ""
+
+msgctxt "#31213"
+msgid "TvTunes"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Trakt List Manager"
+msgstr ""
+
+msgctxt "#31215"
+msgid "Watch it Later"
+msgstr ""
+
+#empty strings from id 31216 to 31217
+
+msgctxt "#31218"
+msgid "File Manager"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Add-Ons"
+msgstr ""
+
+msgctxt "#31220"
+msgid "In Progress"
+msgstr ""
+
+msgctxt "#31221"
+msgid "Monte Carlo"
+msgstr ""
+
+msgctxt "#31222"
+msgid "Virgin Rock"
+msgstr ""
+
+msgctxt "#31223"
+msgid "Movies Animation"
+msgstr ""
+
+msgctxt "#31224"
+msgid "Movies Children"
+msgstr ""
+
+msgctxt "#31225"
+msgid "Movies Comedy"
+msgstr ""
+
+msgctxt "#31226"
+msgid "Movies Family"
+msgstr ""
+
+msgctxt "#31227"
+msgid "HD-Movies"
+msgstr ""
+
+msgctxt "#31228"
+msgid "UnWatched Movies"
+msgstr ""
+
+#empty string 31229
 
 msgctxt "#31230"
 msgid "User Selection One"
@@ -468,13 +747,37 @@ msgctxt "#31242"
 msgid "User Selection Twelve"
 msgstr ""
 
-#empty strings from id 31243 to 31247
+msgctxt "#31243"
+msgid "Kodi Command"
+msgstr ""
+
+msgctxt "#31244"
+msgid "Skin Preset"
+msgstr ""
+
+msgctxt "#31245"
+msgid "Next Aired Episodes"
+msgstr ""
+
+msgctxt "#31246"
+msgid "Played"
+msgstr ""
+
+msgctxt "#31247"
+msgid "Move Menu Item"
+msgstr ""
 
 msgctxt "#31248"
 msgid "% Transparency"
 msgstr ""
 
-#empty strings from id 31249 to 31250
+msgctxt "#31249"
+msgid "Minimum"
+msgstr ""
+
+msgctxt "#31250"
+msgid "Maximum"
+msgstr ""
 
 msgctxt "#31251"
 msgid "Suggested"
@@ -484,7 +787,79 @@ msgctxt "#31252"
 msgid "No Suggested Media"
 msgstr ""
 
-#empty strings from id 31253 to 31299
+msgctxt "#31253"
+msgid "Enable Adding Production Year onto Movie Title"
+msgstr ""
+
+msgctxt "#31254"
+msgid "None"
+msgstr ""
+
+#empty string id 31255
+
+msgctxt "#31256"
+msgid "Random FanArt"
+msgstr ""
+
+msgctxt "#31257"
+msgid "Skin Default"
+msgstr ""
+
+msgctxt "#31258"
+msgid "User Select"
+msgstr ""
+
+msgctxt "#31259"
+msgid "Items"
+msgstr ""
+
+#empty strings from id 31260 to 31271
+
+msgctxt "#31272"
+msgid "Enable Holiday Theme"
+msgstr ""
+
+msgctxt "#31273"
+msgid "Holiday Theme"
+msgstr ""
+
+msgctxt "#31274"
+msgid "Global Background"
+msgstr ""
+
+#empty strings from id 31275 to 31281
+
+msgctxt "#31282"
+msgid "Home Menu"
+msgstr ""
+
+#empty strings from id 31283 to 31289
+
+msgctxt "#31290"
+msgid "Menu Item"
+msgstr ""
+
+msgctxt "#31291"
+msgid "Submenu Set"
+msgstr ""
+
+msgctxt "#31292"
+msgid "Add-on Set"
+msgstr ""
+
+msgctxt "#31293"
+msgid "Widget Set"
+msgstr ""
+
+msgctxt "#31294"
+msgid "Background Type"
+msgstr ""
+
+msgctxt "#31295"
+msgid "Live Content"
+msgstr ""
+
+#empty strings from id 31296 to 31299
 #Extra labels
 
 msgctxt "#31300"
@@ -501,7 +876,17 @@ msgctxt "#31303"
 msgid "Data provider"
 msgstr ""
 
-#empty strings from id 31304 to 31306
+msgctxt "#31304"
+msgid "Enable List Item Fanart Backgrounds"
+msgstr ""
+
+msgctxt "#31305"
+msgid "Up One Level"
+msgstr ""
+
+msgctxt "#31306"
+msgid "SubMenu Item"
+msgstr ""
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -535,13 +920,21 @@ msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr ""
 
-#empty strings from id 31315 to 31316
+msgctxt "#31315"
+msgid "Hide Item"
+msgstr ""
+
+msgctxt "#31316"
+msgid "Selected"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr ""
 
-#empty string with id 31318
+msgctxt "#31318"
+msgid "Clear Menu Option"
+msgstr ""
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -559,7 +952,13 @@ msgctxt "#31322"
 msgid "Aired"
 msgstr ""
 
-#empty strings from id 31323 to 31324
+msgctxt "#31323"
+msgid "Enable Automatic \"Party Mode\" Music on Screensaver"
+msgstr ""
+
+msgctxt "#31324"
+msgid "Enable Automatic Fullscreen Music Playback"
+msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -589,17 +988,76 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr ""
 
-#empty strings from id 31332 to 31345
+msgctxt "#31332"
+msgid "Recently Played"
+msgstr ""
+
+msgctxt "#31333"
+msgid "Clean Library"
+msgstr ""
+
+msgctxt "#31334"
+msgid "Shutdown Menu"
+msgstr ""
+
+msgctxt "#31335"
+msgid "ReSet"
+msgstr ""
+
+msgctxt "#31336"
+msgid "User Data"
+msgstr ""
+
+msgctxt "#31337"
+msgid "[COLOR=selected][B]Warning!![/B][/COLOR] - Reset Skin Values to Initial Install Defaults"
+msgstr ""
+
+msgctxt "#31338"
+msgid "Select SubMenu Set"
+msgstr ""
+
+msgctxt "#31339"
+msgid "Global Skin Options"
+msgstr ""
+
+#empty strings from id 31340 to 31341
+
+msgctxt "#31342"
+msgid "Enable Playing Artist Fanart and Music \"Viz\" Diffusion"
+msgstr ""
+
+msgctxt "#31343"
+msgid "Enable Background Playing Video to be Visible"
+msgstr ""
+
+msgctxt "#31344"
+msgid "Global Skin Options"
+msgstr ""
+
+msgctxt "#31345"
+msgid "Enable Global Background Music \"Visualisation\""
+msgstr ""
 
 msgctxt "#31346"
-msgid "Up One Level"
+msgid "Background Transparency Level"
 msgstr ""
 
 msgctxt "#31347"
 msgid "All Seasons"
 msgstr ""
 
-#empty strings from id 31348 to 31350
+msgctxt "#31348"
+msgid " Enable CD-Wall as Fallback for Missing \"Now Playing\" Fanart"
+msgstr ""
+
+msgctxt "#31349"
+msgid "Enable Video Playing Info"
+msgstr ""
+
+msgctxt "#31350"
+msgid "Enable Music Playing Info"
+msgstr ""
+
 #Video and Music OSD Labels
 
 msgctxt "#31351"
@@ -626,7 +1084,17 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr ""
 
-#empty strings from id 31357 to 31359
+msgctxt "#31357"
+msgid "Enable Suggested Media Info"
+msgstr ""
+
+msgctxt "#31358"
+msgid "Enable Full MPAA Description for Movies"
+msgstr ""
+
+msgctxt "#31359"
+msgid "Select Menu Item"
+msgstr ""
 
 # Stereoscopic labels
 msgctxt "#31360"
@@ -641,7 +1109,41 @@ msgctxt "#31362"
 msgid "Enabled"
 msgstr ""
 
-#empty strings from id 31363 to 31389
+msgctxt "#31363"
+msgid "Hidden"
+msgstr ""
+
+msgctxt "#31364"
+msgid "Instant"
+msgstr ""
+
+msgctxt "#31365"
+msgid "Delayed"
+msgstr ""
+
+msgctxt "#31366"
+msgid "Current Theme"
+msgstr ""
+
+msgctxt "#31367"
+msgid "Movie Sets"
+msgstr ""
+
+msgctxt "#31368"
+msgid "Found"
+msgstr ""
+
+#empty strings from id 31369 to 31380
+
+msgctxt "#31381"
+msgid "Configure script.randomandlastitems"
+msgstr ""
+
+msgctxt "#31382"
+msgid "Playlist widget should [B]Randomize[/B] the playlist sort order"
+msgstr ""
+
+#empty strings from id 31383 to 31389
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -709,7 +1211,7 @@ msgstr ""
 #empty strings from id 31414 to 31419
 
 msgctxt "#31420"
-msgid "Login"
+msgid "Log-in"
 msgstr ""
 
 msgctxt "#31421"
@@ -768,7 +1270,229 @@ msgctxt "#31512"
 msgid "Next Recording"
 msgstr ""
 
-#empty strings from id 31513 to 31900
+#empty strings from id 31513 to 31599
+
+msgctxt "#31600"
+msgid "Action"
+msgstr ""
+
+msgctxt "#31601"
+msgid "Adventure"
+msgstr ""
+
+msgctxt "#31602"
+msgid "Animation"
+msgstr ""
+
+msgctxt "#31603"
+msgid "Biography"
+msgstr ""
+
+msgctxt "#31604"
+msgid "Children"
+msgstr ""
+
+msgctxt "#31605"
+msgid "Comedy"
+msgstr ""
+
+msgctxt "#31606"
+msgid "Crime"
+msgstr ""
+
+msgctxt "#31607"
+msgid "Disaster"
+msgstr ""
+
+msgctxt "#31608"
+msgid "Documentary"
+msgstr ""
+
+msgctxt "#31609"
+msgid "Drama"
+msgstr ""
+
+msgctxt "#31610"
+msgid "Family"
+msgstr ""
+
+msgctxt "#31611"
+msgid "Fantasy"
+msgstr ""
+
+msgctxt "#31612"
+msgid "History"
+msgstr ""
+
+msgctxt "#31613"
+msgid "Holiday"
+msgstr ""
+
+msgctxt "#31614"
+msgid "Horror"
+msgstr ""
+
+#msgctxt "#31615"
+#msgid "Indie"
+#msgstr ""
+
+msgctxt "#31616"
+msgid "Musical"
+msgstr ""
+
+msgctxt "#31617"
+msgid "Mystery"
+msgstr ""
+
+msgctxt "#31618"
+msgid "Romance"
+msgstr ""
+
+msgctxt "#31619"
+msgid "Sci-Fi"
+msgstr ""
+
+#msgctxt "#31620"
+#msgid "Short"
+#msgstr ""
+
+msgctxt "#31621"
+msgid "Sport"
+msgstr ""
+
+#msgctxt "#31622"
+#msgid "Suspense"
+#msgstr ""
+
+msgctxt "#31623"
+msgid "Thriller"
+msgstr ""
+
+msgctxt "#31624"
+msgid "War"
+msgstr ""
+
+msgctxt "#31625"
+msgid "Western"
+msgstr ""
+
+#empty strings from id 31626 to 31637
+#View Type labels 31635 to 31660
+
+msgctxt "#31638"
+msgid "Animated Case"
+msgstr ""
+
+msgctxt "#31639"
+msgid "Fanart Info"
+msgstr ""
+
+msgctxt "#31640"
+msgid "Fanart Poster"
+msgstr ""
+
+msgctxt "#31641"
+msgid "Media Info"
+msgstr ""
+
+msgctxt "#31642"
+msgid "Banner Info"
+msgstr ""
+
+msgctxt "#31643"
+msgid "Music Info"
+msgstr ""
+
+msgctxt "#31644"
+msgid "Addon Info"
+msgstr ""
+
+msgctxt "#31645"
+msgid "Image Wrap"
+msgstr ""
+
+msgctxt "#31646"
+msgid "Pic Thumbs"
+msgstr ""
+
+msgctxt "#31647"
+msgid "Coverflow"
+msgstr ""
+
+msgctxt "#31648"
+msgid "Full Wall"
+msgstr ""
+
+msgctxt "#31649"
+msgid "Vertical Logo"
+msgstr ""
+
+msgctxt "#31650"
+msgid "Logo Wall"
+msgstr ""
+
+msgctxt "#31651"
+msgid "Banner List"
+msgstr ""
+
+msgctxt "#31652"
+msgid "Wide List"
+msgstr ""
+
+#empty strings from id 31653 to 31697
+
+msgctxt "#31698"
+msgid "Media Certification Country"
+msgstr ""
+
+#empty string with id 31699
+
+msgctxt "#31700"
+msgid "United States"
+msgstr ""
+
+msgctxt "#31701"
+msgid "Great Britian"
+msgstr ""
+
+msgctxt "#31702"
+msgid "Germany"
+msgstr ""
+
+msgctxt "#31703"
+msgid "Australia"
+msgstr ""
+
+msgctxt "#31704"
+msgid "Japan"
+msgstr ""
+
+msgctxt "#31705"
+msgid "Hong Kong"
+msgstr ""
+
+msgctxt "#31706"
+msgid "Brazil"
+msgstr ""
+
+msgctxt "#31707"
+msgid "Denmark"
+msgstr ""
+
+msgctxt "#31708"
+msgid "Canada"
+msgstr ""
+
+msgctxt "#31709"
+msgid "Ireland"
+msgstr ""
+
+msgctxt "#31710"
+msgid "Netherlands"
+msgstr ""
+
+#empty strings from id 31711 to 31900
+
 #Weather plugin
 
 msgctxt "#31901"
@@ -805,7 +1529,27 @@ msgctxt "#31910"
 msgid "Maps"
 msgstr ""
 
-#empty strings from id 31911 to 31957
+empty strings from id 31911 to 31918
+
+msgctxt "#31919"
+msgid "Parent Music Folder"
+msgstr ""
+
+msgctxt "#31920"
+msgid "Physical Media Path"
+msgstr ""
+
+empty strings from id 31921 to 31923
+
+msgctxt "#31924"
+msgid "Centralized \"CD-Wall\" Folder"
+msgstr ""
+
+msgctxt "#31925"
+msgid "Weather Fanart Pack"
+msgstr ""
+
+#empty strings from id 31926 to 31957
 
 msgctxt "#31957"
 msgid "Concerts"
@@ -823,15 +1567,27 @@ msgctxt "#31960"
 msgid "TV Shows"
 msgstr ""
 
-#empty strings from id 31961 to 31996
+msgctxt "#31961"
+msgid "Cinema"
+msgstr ""
+
+#empty strings from id 31962 to 31968
+
+msgctxt "#31969"
+msgid "Broadcast"
+msgstr ""
+
+#empty strings from id 31970 to 31995
+
+msgctxt "#31996"
+msgid "Add-On Panel"
+msgstr ""
 
 msgctxt "#31997"
-msgid "Addon Scripts"
+msgid "Addon Panel"
 msgstr ""
 
-msgctxt "#31998"
-msgid "Recently Added"
-msgstr ""
+#empty string id 31998
 
 msgctxt "#31999"
 msgid ":"
