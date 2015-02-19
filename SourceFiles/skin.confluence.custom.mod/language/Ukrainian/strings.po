@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/xbmc-skins/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,20 +37,12 @@ msgid "View Options"
 msgstr "Налаштування перегляду"
 
 msgctxt "#31008"
-msgid "Fullscreen"
+msgid "Full screen"
 msgstr "Повний екран"
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "Загальна тривалість"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "Знайдено"
-
-msgctxt "#31019"
-msgid "Trailers"
-msgstr "Трейлери"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -96,10 +88,6 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "Інформація"
 
-msgctxt "#31036"
-msgid "Coverflow"
-msgstr "Карусель постерів"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "Зараз відтворюється:"
@@ -121,7 +109,7 @@ msgid "REWIND"
 msgstr "ПЕРЕМОТКА НАЗАД"
 
 msgctxt "#31048"
-msgid "Visualization Presets"
+msgid "Visualisation Presets"
 msgstr "Налаштування візуалізації"
 
 msgctxt "#31049"
@@ -164,14 +152,6 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Поточне виділення"
 
-msgctxt "#31088"
-msgid "Next Tracks"
-msgstr "Список відтворювання"
-
-msgctxt "#31093"
-msgid "None"
-msgstr "Ні"
-
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Налаштування головного екрану"
@@ -185,7 +165,7 @@ msgid "Show \"Paused\" in picture slide show"
 msgstr "Показувати \"Пауза\" в режими слайдшоу"
 
 msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialog Only)[/COLOR]"
+msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
 msgstr "Відтворювати трейлери у вікні [COLOR=grey3](лише для вікна відомостей)[/COLOR]"
 
 msgctxt "#31106"
@@ -205,7 +185,7 @@ msgid "Hide Background Fanart"
 msgstr "Приховувати фанарт на тлі"
 
 msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualization"
+msgid "Show Background \"Now Playing\" Visualisation"
 msgstr "Музична візуалізація на тлі"
 
 msgctxt "#31127"
@@ -220,14 +200,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "Надбудова текстів пісень"
 
-msgctxt "#31133"
-msgid "Subtitle Add-on"
-msgstr "Надбудова субтитрів"
-
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "Приховані"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "OSD музики"
@@ -235,50 +207,6 @@ msgstr "OSD музики"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "OSD відео"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "Ярлики"
-
-msgctxt "#31149"
-msgid "Single Image"
-msgstr "Одна картинка"
-
-msgctxt "#31150"
-msgid "Multi Image"
-msgstr "Набір картинок"
-
-msgctxt "#31154"
-msgid "Preset"
-msgstr "Задані параметри"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "Виберіть пісню"
-
-msgctxt "#31205"
-msgid "Lyrics Source"
-msgstr "Джерело текстів пісень"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "Знайдено"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "Знайти більше об'єктів"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "Наступні серії"
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "Останні"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "Пошук"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -292,37 +220,9 @@ msgctxt "#31303"
 msgid "Data provider"
 msgstr "Джерело даних"
 
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "Відомості про фільм"
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "Використано пам'яті"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "Номер треку"
-
-msgctxt "#31311"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "Фанарт[CR][CR]недоступний,[CR][CR]натисніть кнопку, щоб вибрати"
-
-msgctxt "#31312"
-msgid "Current Scraper"
-msgstr "Поточний інфоресурс"
-
-msgctxt "#31313"
-msgid "Choose a Scraper"
-msgstr "Вибрати інфоресурс"
-
 msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr "Параметри сканування вмісту"
-
-msgctxt "#31317"
-msgid "Set Fanart Path"
-msgstr "Вибрати розташування фанарту"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -343,30 +243,6 @@ msgstr "Прем'єра"
 msgctxt "#31325"
 msgid "Playlist Options"
 msgstr "Параметри списку відтворення"
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "Створений"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "Розмір"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "Останні"
-
-msgctxt "#31329"
-msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]Встановлено таймер![/B] [COLOR=grey2] - Автоматичне відключення через[/COLOR]"
-
-msgctxt "#31330"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "Натисніть кнопку,[CR][CR]щоб переглянути кино-трейлер"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "Відомості про альбом"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -392,9 +268,9 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Завантажити субтитри"
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "Увімкн."
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Стандартні"
 
 msgctxt "#31391"
 msgid "Skin default with no Caps"
@@ -428,29 +304,21 @@ msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]НАЛАШТУВАННЯ ПАРАМЕТРІВ СИСТЕМИ[/B][CR][CR]Налаштування та калібрування дисплеїв • Налаштування виведення аудіо[CR]Налаштування дистанційного керування • Налаштування параметрів енергозбереження[CR]Увімкнення налагодження • Налаштування блокування"
 
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin · Add and remove home menu items[CR]Change skin backgrounds"
-msgstr "[B]НАЛАШТУВАННЯ ПАРАМЕТРІВ ОБКЛАДИНКИ[/B][CR][CR]Налаштування обкладинки Confluence[CR]Додавання та видалення пунктів головного меню • Зміна тла обкладинки"
-
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B]НАЛАШТУВАННЯ НАДБУДОВ[/B][CR][CR]Керування встановленими надбудовами • Встановлення надбудов з xbmc.org[CR]Зміна налаштувань надбудов"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
+msgstr "[B]НАЛАШТУВАННЯ НАДБУДОВ[/B][CR][CR]Керування встановленими надбудовами • Встановлення надбудов з kodi.tv[CR]Зміна налаштувань надбудов"
 
 msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change fullscreen info · Manage EPG data settings"
-msgstr "[B]НАЛАШТУВАННЯ ТБ[/B][CR][CR]Налаштування повноекранних відомостей · Керування параметрами EPG"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
+msgstr "[B]НАЛАШТУВАННЯ ТБ[/B][CR][CR]Параметри повноекранної інформації · Налаштування показу телепрограми (EPG)"
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]НАЛАШТУВАННЯ ПАРАМЕТРІВ СЛУЖБ[/B][CR][CR]Налаштування керування XBMC за UPnP і HTTP • Налаштування доступу до файлів[CR]Увімкнення Zeroconf • Налаштування AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgstr "[B]НАЛАШТУВАННЯ ПАРАМЕТРІВ СЛУЖБ[/B][CR][CR]Налаштування керування Kodi за UPnP і HTTP • Налаштування доступу до файлів[CR]Увімкнення Zeroconf • Налаштування AirPlay"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "Доступні локальні субтитри"
-
-msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
-msgstr "Виберіть профіль користувача XBMC,[CR]щоб увійти до системи"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -488,66 +356,6 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Параметри каналів"
 
-msgctxt "#31603"
-msgid "Biography"
-msgstr "Біографія"
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "Комедія"
-
-msgctxt "#31608"
-msgid "Documentary"
-msgstr "Документальний фільм"
-
-msgctxt "#31609"
-msgid "Drama"
-msgstr "Драма"
-
-msgctxt "#31618"
-msgid "Romance"
-msgstr "Романтика"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "Коротка"
-
-msgctxt "#31700"
-msgid "United States"
-msgstr "Сполучені Штати Америки"
-
-msgctxt "#31701"
-msgid "Great Britain"
-msgstr "Великобританія"
-
-msgctxt "#31702"
-msgid "Germany"
-msgstr "Німеччина"
-
-msgctxt "#31703"
-msgid "Australia"
-msgstr "Австралія"
-
-msgctxt "#31704"
-msgid "Japan"
-msgstr "Японія"
-
-msgctxt "#31705"
-msgid "Hong Kong"
-msgstr "Гонконг "
-
-msgctxt "#31706"
-msgid "Brazil"
-msgstr "Бразилія"
-
-msgctxt "#31708"
-msgid "Canada"
-msgstr "Канада"
-
-msgctxt "#31709"
-msgid "Ireland"
-msgstr "Ірландія"
-
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "Прогноз на 36 г."
@@ -561,8 +369,8 @@ msgid "Weekend Forecast"
 msgstr "Прогноз на вихідні"
 
 msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "Прогноз на 10 днів"
+msgid "Daily Forecast"
+msgstr "Щоденний прогноз"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -577,5 +385,5 @@ msgid "Fetching forecast info..."
 msgstr "Отримання прогнозу…"
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "Мапи та попередження"
+msgid "Maps"
+msgstr "Карти"

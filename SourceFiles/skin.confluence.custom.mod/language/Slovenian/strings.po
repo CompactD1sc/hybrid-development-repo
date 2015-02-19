@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/xbmc-skins/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,20 +37,12 @@ msgid "View Options"
 msgstr "Možnosti pogleda"
 
 msgctxt "#31008"
-msgid "Fullscreen"
-msgstr "Celozaslonski način"
+msgid "Full screen"
+msgstr "Celozaslonsko"
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "Celotno trajanje"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "Najdenih"
-
-msgctxt "#31019"
-msgid "Trailers"
-msgstr "Napovedniki"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -96,10 +88,6 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "Informacije"
 
-msgctxt "#31036"
-msgid "Coverflow"
-msgstr "Coverflow"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "Trenutno predvajam"
@@ -121,7 +109,7 @@ msgid "REWIND"
 msgstr "NAZAJ"
 
 msgctxt "#31048"
-msgid "Visualization Presets"
+msgid "Visualisation Presets"
 msgstr "Prednastavitve vizualizacije"
 
 msgctxt "#31049"
@@ -164,14 +152,6 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Trenutno izbrano"
 
-msgctxt "#31088"
-msgid "Next Tracks"
-msgstr "Seznam predvajanja"
-
-msgctxt "#31093"
-msgid "None"
-msgstr "Brez"
-
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Nastavitve domačega okna"
@@ -185,8 +165,8 @@ msgid "Show \"Paused\" in picture slide show"
 msgstr "Prikaži \"Prekinitev\" v projekciji slik"
 
 msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialog Only)[/COLOR]"
-msgstr "Predvajaj napovednike v oknu [COLOR=grey3](Le okno z informacijami o videu)[/COLOR]"
+msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
+msgstr "Predvajaj napovednike v oknu [COLOR=grey3](Samo okno z informacijami o videu)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -205,7 +185,7 @@ msgid "Hide Background Fanart"
 msgstr "Skrij ozadja"
 
 msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualization"
+msgid "Show Background \"Now Playing\" Visualisation"
 msgstr "V ozadju prikaži vizualizacijo \"Trenutno predvajam\""
 
 msgctxt "#31127"
@@ -220,14 +200,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "Dodatek besedil pesmi"
 
-msgctxt "#31133"
-msgid "Subtitle Add-on"
-msgstr "Dodatek podnapisov"
-
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "Skrito"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Glasbeni OSD"
@@ -235,62 +207,6 @@ msgstr "Glasbeni OSD"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "Video OSD"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "Bližnjice"
-
-msgctxt "#31149"
-msgid "Single Image"
-msgstr "Ena slika"
-
-msgctxt "#31150"
-msgid "Multi Image"
-msgstr "Več slik"
-
-msgctxt "#31154"
-msgid "Preset"
-msgstr "Prednastavitev"
-
-msgctxt "#31175"
-msgid "Recent Movies"
-msgstr "Nedavni filmi"
-
-msgctxt "#31178"
-msgid "Recent Episodes"
-msgstr "Nedavne epizode"
-
-msgctxt "#31181"
-msgid "Recent Albums"
-msgstr "Nedavni albumi"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "Izberite svojo pesem"
-
-msgctxt "#31205"
-msgid "Lyrics Source"
-msgstr "Vir besedila pesmi"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "Najdenih"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "Najdi več predmetov"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "Prihajajoče epizode"
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "Nedavno dodano"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "Išči"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -304,37 +220,9 @@ msgctxt "#31303"
 msgid "Data provider"
 msgstr "Ponudnik"
 
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "Podrobnosti o filmu"
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "Uporabljen pomnilnik:"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "Številka pesmi"
-
-msgctxt "#31311"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "Ozadje[CR][CR]Ni na voljo[CR][CR] Kliknite na gumb in ga nastavite"
-
-msgctxt "#31312"
-msgid "Current Scraper"
-msgstr "Trenutni ponudnik"
-
-msgctxt "#31313"
-msgid "Choose a Scraper"
-msgstr "Izberi ponudnika"
-
 msgctxt "#31314"
 msgid "Content Scanning Options"
-msgstr "Možnosti iskanja vsebine"
-
-msgctxt "#31317"
-msgid "Set Fanart Path"
-msgstr "Nastavi pot ozadij"
+msgstr "Možnosti pregledovanja vsebin"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -355,30 +243,6 @@ msgstr "Predvajano"
 msgctxt "#31325"
 msgid "Playlist Options"
 msgstr "Možnosti seznama predvajanja"
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "Ustvarjeno"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "Ločljivost"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "Nedavno dodano"
-
-msgctxt "#31329"
-msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]Zakasnitev nastavljena![/B] [COLOR=grey2] - Sistem se bo izključil po[/COLOR]"
-
-msgctxt "#31330"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "Kliknite gumb za predvajanje[CR][CR]Filmski napovednik"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "Podrobnosti o albumu"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -404,9 +268,9 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Prenesi podnapise"
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "Omogočeno"
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Privzeto"
 
 msgctxt "#31391"
 msgid "Skin default with no Caps"
@@ -440,29 +304,21 @@ msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]PRILAGODITE NASTAVITVE SISTEMA[/B][CR][CR]Nastavite in prilagodite zaslon · Nastavite zvočni izhod · Nastavite oddaljeno upravljanje[CR]Nastavite varčevanje z energijo · Vključite razhroščevanje · Določite glavno geslo"
 
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin · Add and remove home menu items[CR]Change skin backgrounds"
-msgstr "[B]PRILAGODITE NASTAVITVE PREOBLEKE[/B][CR][CR]Nastavite preobleko Confluence • Dodajte in odstranite elemente na domačem oknu[CR]Spremenite ozadja preobleke"
-
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B]PRILAGODITE DODATKE[/B][CR][CR]Upravljajte nameščene dodatke · Brskajte in namestite nove dodatke iz xbmc.org[CR]Nastavite dodatke"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
+msgstr "[B]PRILAGODITE DODATKE[/B][CR][CR]Upravljajte nameščene dodatke · Brskajte in namestite nove dodatke iz kodi.tv[CR]Nastavite dodatke"
 
 msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change fullscreen info · Manage EPG data settings"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
 msgstr "[B]PRILAGODITVE NASTAVITVE TV[/B][CR][CR]Spremenite informacije v celozaslonskem načinu · Upravljajte z nastavitvami EPG"
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]PRILAGODITE NASTAVITVE STORITEV[/B][CR][CR]Nastavite upravljanje XBMC preko UPnP in HTTP · Nastavite deljenje datotek[CR]Vključite Zeroconf · Prilagodite AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgstr "[B]PRILAGODITE NASTAVITVE STORITEV[/B][CR][CR]Nastavite upravljanje Kodi preko UPnP in HTTP · Nastavite deljenje datotek[CR]Vključite Zeroconf · Prilagodite AirPlay"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "Na voljo so krajevni podnapisi"
-
-msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
-msgstr "Izberite vaš XBMC uporabniški profil[CR]za prijavo in nadaljujte"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -500,66 +356,6 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Možnosti programa"
 
-msgctxt "#31603"
-msgid "Biography"
-msgstr "Življenjepis"
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "Komedija"
-
-msgctxt "#31608"
-msgid "Documentary"
-msgstr "Dokumentarec"
-
-msgctxt "#31609"
-msgid "Drama"
-msgstr "Drama"
-
-msgctxt "#31618"
-msgid "Romance"
-msgstr "Romanca"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "Kratko"
-
-msgctxt "#31700"
-msgid "United States"
-msgstr "ZDA"
-
-msgctxt "#31701"
-msgid "Great Britain"
-msgstr "Velika Britanija"
-
-msgctxt "#31702"
-msgid "Germany"
-msgstr "Nemčija"
-
-msgctxt "#31703"
-msgid "Australia"
-msgstr "Avstralija"
-
-msgctxt "#31704"
-msgid "Japan"
-msgstr "Japonska"
-
-msgctxt "#31705"
-msgid "Hong Kong"
-msgstr "Hong Kong"
-
-msgctxt "#31706"
-msgid "Brazil"
-msgstr "Brazilija"
-
-msgctxt "#31708"
-msgid "Canada"
-msgstr "Kanada"
-
-msgctxt "#31709"
-msgid "Ireland"
-msgstr "Irska"
-
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "36-urna napoved"
@@ -573,8 +369,8 @@ msgid "Weekend Forecast"
 msgstr "Tedenska napoved"
 
 msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "10-dnevna napoved"
+msgid "Daily Forecast"
+msgstr "Dnevna napoved"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -589,5 +385,5 @@ msgid "Fetching forecast info..."
 msgstr "Prenašam vremenske informacije..."
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "Karte & Opozorila"
+msgid "Maps"
+msgstr "Karte"

@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/xbmc-skins/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,20 +37,12 @@ msgid "View Options"
 msgstr "Ikusi aukerak"
 
 msgctxt "#31008"
-msgid "Fullscreen"
-msgstr "Pantaila-osoa"
+msgid "Full screen"
+msgstr "Pantaila osoa"
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "Iraupen osoa"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "Aurkitua"
-
-msgctxt "#31019"
-msgid "Trailers"
-msgstr "Trailerra"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -84,10 +76,6 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "Argb"
 
-msgctxt "#31036"
-msgid "Coverflow"
-msgstr "Coverflow"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "Orain erreproduzitzen"
@@ -107,10 +95,6 @@ msgstr "AZKAR AURRERA"
 msgctxt "#31045"
 msgid "REWIND"
 msgstr "ATZERA"
-
-msgctxt "#31048"
-msgid "Visualization Presets"
-msgstr "Ikuste aurrezpenak"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -152,14 +136,6 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "Unean hautatutakoak"
 
-msgctxt "#31088"
-msgid "Next Tracks"
-msgstr "Zerrenda"
-
-msgctxt "#31093"
-msgid "None"
-msgstr "Bat ere ez"
-
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr "Etxe pantaila aukerak"
@@ -180,45 +156,13 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "Aukera"
 
+msgctxt "#31119"
+msgid "Hide Background Fanart"
+msgstr "Ezkutatu Atzealdeko Fanarta"
+
 msgctxt "#31128"
 msgid "Lyrics"
 msgstr "Letrak"
-
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "Ezkutatua"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "Lasterbideak"
-
-msgctxt "#31154"
-msgid "Preset"
-msgstr "Aurrezarritakoa"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "Hautatu zure kanta"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "Aurkitua"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "Bilatu elementu gehiago"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "Hurrengo atalak"
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "Azkenaldiak gehituak"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "Bilatu"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -231,18 +175,6 @@ msgstr "Azken eguneraketa"
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "Datu hornitzailea"
-
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "Pelikula xehetasunak"
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "Erabilitako memoria:"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "Pista zenbakia"
 
 msgctxt "#31314"
 msgid "Content Scanning Options"
@@ -263,22 +195,6 @@ msgstr "Karaoke kanta antzemalea"
 msgctxt "#31325"
 msgid "Playlist Options"
 msgstr "Erreprodukzio-zerrenda aukerak"
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "Sortua"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "Bereizmena"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "Azkenaldiak gehituak"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "Album xehetasunak"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -304,17 +220,13 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "Deskargatu azpitituluak"
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "Gaituta"
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Skin lehenetsia"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "Azpititulu lokala erabilgarri"
-
-msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
-msgstr "Hautatu zure XBMC profila[CR] saio hasi eta jarraitzeko"
 
 msgctxt "#31502"
 msgid "Live TV"
@@ -340,46 +252,6 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Kate aukerak"
 
-msgctxt "#31603"
-msgid "Biography"
-msgstr "Biografia"
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "Komedia"
-
-msgctxt "#31608"
-msgid "Documentary"
-msgstr "Dokumentala"
-
-msgctxt "#31609"
-msgid "Drama"
-msgstr "Drama"
-
-msgctxt "#31618"
-msgid "Romance"
-msgstr "Amodioa"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "Motza"
-
-msgctxt "#31700"
-msgid "United States"
-msgstr "Estatu Batuak"
-
-msgctxt "#31704"
-msgid "Japan"
-msgstr "Japon"
-
-msgctxt "#31705"
-msgid "Hong Kong"
-msgstr "Hong Kong"
-
-msgctxt "#31709"
-msgid "Ireland"
-msgstr "Irlanda"
-
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "36 orduko iragarpena"
@@ -391,10 +263,6 @@ msgstr "Orduroko iragarpena"
 msgctxt "#31903"
 msgid "Weekend Forecast"
 msgstr "Astebukaerako iragarpena"
-
-msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "10 eguneko iragarpena"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -409,5 +277,5 @@ msgid "Fetching forecast info..."
 msgstr "Iragarpen argibideak eskuratzen"
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "Mapa eta alertak"
+msgid "Maps"
+msgstr "Mapak"
