@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Burmese (http://www.transifex.com/projects/p/xbmc-skins/language/my/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,20 +25,12 @@ msgid "Hide Information"
 msgstr "အချက်အလက်များကိုဖျောက်ထားမည်"
 
 msgctxt "#31008"
-msgid "Fullscreen"
-msgstr "စခရင်မျက်နှာပြင်အပြည့်"
+msgid "Full screen"
+msgstr "မျက်နှာပြင်အပြည့် "
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "စုစုပေါင်းကြာချိန်"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "တွေ့ရှိသည်"
-
-msgctxt "#31019"
-msgid "Trailers"
-msgstr "ကြော်ငြာများ"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -112,10 +104,6 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "ယခုရွေးထားသော"
 
-msgctxt "#31093"
-msgid "None"
-msgstr "ဘာမှမဟုတ်"
-
 msgctxt "#31102"
 msgid "Background"
 msgstr "နောက်ခံ"
@@ -128,45 +116,9 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "စာသား Add-on"
 
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "ဖျောက်ထားသော"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Music OSD"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "အမြန်ခလုတ်များ"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "သင်၏သီချင်းကိုရွေးပါ"
-
-msgctxt "#31205"
-msgid "Lyrics Source"
-msgstr "စာသားရင်းမြစ်"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "တွေ့ရှိသည်"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "နောက်ထပ်အမျိုးအစားများကိုရှာမည်"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "နောက်လာမည့်အပိုင်းများ"
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "မကြာသေးခင်ကပေါင်းထည့်ခဲ့သော"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "ရှာဖွေမည်"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -175,26 +127,6 @@ msgstr "နောက်ဆုံး Update ဖြစ်ခဲ့စဉ်"
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "အချက်အလက်များထောက်ပံ့သူ"
-
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "ရုပ်ရှင်အချက်အလက်များ"
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "အသုံးပြုထားသော Memory -"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "အပုဒ်ရေနံပါတ်"
-
-msgctxt "#31312"
-msgid "Current Scraper"
-msgstr "Current Scraper"
-
-msgctxt "#31313"
-msgid "Choose a Scraper"
-msgstr " Scraper တစ်ခုကိုရွေးမည်"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -207,22 +139,6 @@ msgstr "နောက်ဆုံးဝင်ခဲ့ချိန်"
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
 msgstr "ကာရာအိုကေ သီချင်းရွေးချယ်ခြင်း"
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "ဖန်တီးခဲ့သည်"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "Resolution"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "မကြာသေးခင်ကပေါင်းထည့်ခဲ့သော"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "အယ်ဘမ် အချက်အလက်များ"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -248,13 +164,9 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "စာတန်းထိုးများကို ဒေါင်းလုတ်ဆွဲမည်"
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "ဖွင့်ထားမည်"
-
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B]ADD-ONS ပြုပြင်ခြင်း[/B][CR][CR] သွင်းထားသည့် Add-on များကို ထိန်းညှိခြင်း ။ xbmc.org မှ Add-on များကို သွင်းရန် ကြည့်ရှုခြင်း[CR]Add-on များကို ပြုပြင် ပြောင်းလဲခြင်း"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
+msgstr "[B]ADD-ONS ပြုပြင်ခြင်း[/B][CR][CR] သွင်းထားသည့် Add-on များကို ထိန်းညှိခြင်း ။ kodi.tv မှ Add-on များကို သွင်းရန် ကြည့်ရှုခြင်း[CR]Add-on များကို ပြုပြင် ပြောင်းလဲခြင်း"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -280,18 +192,6 @@ msgctxt "#31506"
 msgid "Available[CR]Groups"
 msgstr "ရရှိနိုင်သော [CR]Groups"
 
-msgctxt "#31603"
-msgid "Biography"
-msgstr "Biography"
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "ဟာ"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "တို"
-
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "၃၆ နာရီ အကြိုခန့်မှန်းခြင်း"
@@ -300,10 +200,10 @@ msgctxt "#31902"
 msgid "Hourly Forecast"
 msgstr "နာရီနှင့်အမျှ ခန့်မှန်းခြင်း"
 
-msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "၁၀ ရက် ကြိုတင်ခန့်မှန်းခြင်း"
-
 msgctxt "#31905"
 msgid "Forecast"
 msgstr "ခန့်မှန်းခြင်း"
+
+msgctxt "#31910"
+msgid "Maps"
+msgstr "မြေပုံများ"

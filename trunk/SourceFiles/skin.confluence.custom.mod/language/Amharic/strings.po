@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/xbmc-skins/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,16 +37,12 @@ msgid "View Options"
 msgstr "ምርጫዎችን መመልከቻ"
 
 msgctxt "#31008"
-msgid "Fullscreen"
-msgstr "በሙሉ መመልከቻ ዘዴ"
+msgid "Full screen"
+msgstr "በሙል መመልከቻ ዘዴ "
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "ጠቅላላ የሚፈጀው ጊዜ"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "ተገኝቷል"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -136,17 +132,13 @@ msgctxt "#31059"
 msgid "Current playlist"
 msgstr "አሁን የሚጫወተው ዝርዝር"
 
+msgctxt "#31060"
+msgid "This file is stacked, select the part you want to play from."
+msgstr "ይህ ፋይል በጣም ትልቅ ነው ማጫወት የሚፈልጉትን ክፍል ይምረጡ"
+
 msgctxt "#31061"
 msgid "Current Selected"
 msgstr "አሁን የተመረጠው"
-
-msgctxt "#31088"
-msgid "Next Tracks"
-msgstr "የሚጫወተው ዝርዝር "
-
-msgctxt "#31093"
-msgid "None"
-msgstr "ምንም "
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -172,10 +164,6 @@ msgctxt "#31112"
 msgid "Options"
 msgstr "ምርጫዎች"
 
-msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualization"
-msgstr "መደቡን ማሳያ \"አሁን የሚታየውን\"  Visualization"
-
 msgctxt "#31128"
 msgid "Lyrics"
 msgstr "ግጥም"
@@ -184,14 +172,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "ግጥም መጨ - መሪያ "
 
-msgctxt "#31133"
-msgid "Subtitle Add-on"
-msgstr "የንዑስ አርእስት ተጨማ-ሪዎች "
-
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "የተደበቀ"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "ሙዚቃ OSD"
@@ -199,42 +179,6 @@ msgstr "ሙዚቃ OSD"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "ቪዲዮ OSD"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "አቋራጮች"
-
-msgctxt "#31150"
-msgid "Multi Image"
-msgstr "ተንሸራታች"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "ዘፈን ይምረጡ"
-
-msgctxt "#31205"
-msgid "Lyrics Source"
-msgstr "የግጥም ምንጭ"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "ተገኝቷል"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "ተጨማሪ እቃዎች ያግኙ"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "ወደ ፊት የሚመጡ "
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "በቅርብ ጊዜ የተጨመር"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "መፈለጊያ"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -247,18 +191,6 @@ msgstr "መጨረሻ የተሻሻለው"
 msgctxt "#31303"
 msgid "Data provider"
 msgstr "ዳታ አቅራቢ "
-
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "የሙቪ ዝርዝር "
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "የተጠቀሙት Memory:"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "ተራ ቁጥር"
 
 msgctxt "#31314"
 msgid "Content Scanning Options"
@@ -276,29 +208,13 @@ msgctxt "#31321"
 msgid "Karaoke Song Selector"
 msgstr "ካሪዮኪ ዘፈን መራጭ"
 
+msgctxt "#31322"
+msgid "Aired"
+msgstr "የተላለፈ"
+
 msgctxt "#31325"
 msgid "Playlist Options"
 msgstr "የሚያጫውቱት ምርጫዎች "
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "የተፈጠረው"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "Resolution"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "በቅርብ ጊዜ የተጨመር"
-
-msgctxt "#31330"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "ለማጫወት ቁልፉን ይጫኑ [CR][CR]Movie trailer"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "የአልበም ዝርዝሮች"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -324,9 +240,9 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "ንዑስ አርእስቶች ማውረጃ "
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "ተችሏል"
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "መደበኛ "
 
 msgctxt "#31392"
 msgid "Arial based"
@@ -360,45 +276,13 @@ msgctxt "#31509"
 msgid "Channel Group"
 msgstr "የ ጣቢያ ቡድን"
 
+msgctxt "#31510"
+msgid "Timer Set"
+msgstr "ሰአት ማሰናጃ"
+
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr "የጣቢያ ምርጫዎች "
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "አስቂኝ"
-
-msgctxt "#31618"
-msgid "Romance"
-msgstr "የ ፍቅር"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "አጭር "
-
-msgctxt "#31700"
-msgid "United States"
-msgstr "ዩናይትድ ስቴትስ"
-
-msgctxt "#31703"
-msgid "Australia"
-msgstr "አውስትራሊያ"
-
-msgctxt "#31704"
-msgid "Japan"
-msgstr "ጃፓን "
-
-msgctxt "#31706"
-msgid "Brazil"
-msgstr "ብራዚል"
-
-msgctxt "#31708"
-msgid "Canada"
-msgstr "ካናዳ"
-
-msgctxt "#31709"
-msgid "Ireland"
-msgstr "አየርላንድ"
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
@@ -412,18 +296,18 @@ msgctxt "#31903"
 msgid "Weekend Forecast"
 msgstr "የሳምንቱ መጨረሻ ግምት "
 
-msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "የ 10 ቀን ግምት "
-
 msgctxt "#31905"
 msgid "Forecast"
 msgstr "ግምት "
+
+msgctxt "#31908"
+msgid "Chance of Precipitation"
+msgstr "የ መዝነብ እድል "
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr "ግምት በመፈለግ ላይ..."
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "ካርታ & ማስጠንቀቂያ"
+msgid "Maps"
+msgstr "ካርታ "

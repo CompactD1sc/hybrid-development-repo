@@ -1,5 +1,5 @@
-# XBMC Media Center language file
-# Addon Name: Confluence Customizable Mod
+# Kodi Media Center language file
+# Addon Name: CCM Helix
 # Addon id: skin.confluence.custom.mod
 # Addon Provider: Mudislander
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/xbmc-skins/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,20 +37,12 @@ msgid "View Options"
 msgstr "表示オプション"
 
 msgctxt "#31008"
-msgid "Fullscreen"
+msgid "Full screen"
 msgstr "フルスクリーン"
 
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr "総時間"
-
-msgctxt "#31010"
-msgid "Found"
-msgstr "見つかりました"
-
-msgctxt "#31019"
-msgid "Trailers"
-msgstr "予告編"
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -96,10 +88,6 @@ msgctxt "#31033"
 msgid "Info"
 msgstr "情報"
 
-msgctxt "#31036"
-msgid "Coverflow"
-msgstr "カバーフロー"
-
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr "現在再生中"
@@ -121,8 +109,8 @@ msgid "REWIND"
 msgstr "巻戻し"
 
 msgctxt "#31048"
-msgid "Visualization Presets"
-msgstr "ビジュアライザーのプリセット"
+msgid "Visualisation Presets"
+msgstr "視覚化プリセット"
 
 msgctxt "#31049"
 msgid "End Time"
@@ -164,13 +152,13 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr "現在選択中"
 
-msgctxt "#31088"
-msgid "Next Tracks"
-msgstr "プレイリスト"
+msgctxt "#31085"
+msgid "Shuffle On"
+msgstr "シャッフル：オン"
 
-msgctxt "#31093"
-msgid "None"
-msgstr "なし"
+msgctxt "#31086"
+msgid "Repeat All On"
+msgstr "全体リピート：オン"
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -185,7 +173,7 @@ msgid "Show \"Paused\" in picture slide show"
 msgstr "ピクチャスライドショーで「静止中」と表示"
 
 msgctxt "#31104"
-msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialog Only)[/COLOR]"
+msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialogue Only)[/COLOR]"
 msgstr "ウィンドウ内で予告を再生 [COLOR=grey3](ビデオ情報ダイアログのみ)[/COLOR]"
 
 msgctxt "#31106"
@@ -205,8 +193,8 @@ msgid "Hide Background Fanart"
 msgstr "背景のファンアートを隠す"
 
 msgctxt "#31125"
-msgid "Show Background \"Now Playing\" Visualization"
-msgstr "背景に「現在再生中」視覚化を表示"
+msgid "Show Background \"Now Playing\" Visualisation"
+msgstr "背景に「現在再生中」の視覚化を表示"
 
 msgctxt "#31127"
 msgid "TvTunes"
@@ -220,14 +208,6 @@ msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr "歌詞アドオン"
 
-msgctxt "#31133"
-msgid "Subtitle Add-on"
-msgstr "字幕アドオン"
-
-msgctxt "#31138"
-msgid "Hidden"
-msgstr "隠された"
-
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "ミュージック OSD"
@@ -235,54 +215,6 @@ msgstr "ミュージック OSD"
 msgctxt "#31141"
 msgid "Video OSD"
 msgstr "ビデオ OSD"
-
-msgctxt "#31142"
-msgid "Shortcuts"
-msgstr "ショートカット"
-
-msgctxt "#31149"
-msgid "Single Image"
-msgstr "単一イメージ"
-
-msgctxt "#31150"
-msgid "Multi Image"
-msgstr "複数イメージ"
-
-msgctxt "#31154"
-msgid "Preset"
-msgstr "プリセット"
-
-msgctxt "#31203"
-msgid "Choose Your Song"
-msgstr "曲を選択"
-
-msgctxt "#31205"
-msgid "Lyrics Source"
-msgstr "歌詞の情報源"
-
-msgctxt "#31206"
-msgid "Found"
-msgstr "見つかりました"
-
-msgctxt "#31207"
-msgid "Find More Items"
-msgstr "もっと見つける"
-
-msgctxt "#31208"
-msgid "Upcoming Episodes"
-msgstr "今後のエピソード"
-
-msgctxt "#31213"
-msgid "Recently Added"
-msgstr "最近追加"
-
-msgctxt "#31214"
-msgid "Recently Played"
-msgstr "最近再生したメディア"
-
-msgctxt "#31217"
-msgid "Search"
-msgstr "検索"
 
 msgctxt "#31300"
 msgid "Current Temp"
@@ -296,37 +228,9 @@ msgctxt "#31303"
 msgid "Data provider"
 msgstr "気象データ提供元"
 
-msgctxt "#31308"
-msgid "Movie Details"
-msgstr "ムービーの詳細"
-
-msgctxt "#31309"
-msgid "Memory Used:"
-msgstr "メモリ使用量:"
-
-msgctxt "#31310"
-msgid "Track Number"
-msgstr "トラック番号"
-
-msgctxt "#31311"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "ファンアート画像[CR][CR]使用不可[CR][CR] ボタンを押して設定"
-
-msgctxt "#31312"
-msgid "Current Scraper"
-msgstr "現在のメタデータスクレーパー"
-
-msgctxt "#31313"
-msgid "Choose a Scraper"
-msgstr "メタデータスクレーパーを選択"
-
 msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr "コンテントスキャンオプション"
-
-msgctxt "#31317"
-msgid "Set Fanart Path"
-msgstr "ファンアートのパスを設定"
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -347,30 +251,6 @@ msgstr "放映日"
 msgctxt "#31325"
 msgid "Playlist Options"
 msgstr "プレイリストオプション"
-
-msgctxt "#31326"
-msgid "Created"
-msgstr "制作日"
-
-msgctxt "#31327"
-msgid "Resolution"
-msgstr "解像度"
-
-msgctxt "#31328"
-msgid "Recently Added"
-msgstr "最近追加"
-
-msgctxt "#31329"
-msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]タイマーセット完了![/B] [COLOR=grey2] - システムがシャットダウンします[/COLOR]"
-
-msgctxt "#31330"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "ボタンを押して再生[CR][CR]ムービー予告編"
-
-msgctxt "#31331"
-msgid "Album Details"
-msgstr "アルバム詳細"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -396,9 +276,9 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "字幕をダウンロード"
 
-msgctxt "#31389"
-msgid "Enabled"
-msgstr "LCD有効"
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "スキンのデフォルト"
 
 msgctxt "#31391"
 msgid "Skin default with no Caps"
@@ -432,29 +312,21 @@ msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]システム設定[/B][CR][CR]画面の設定・調整 - オーディオ出力設定 - リモートコントローラー設定[CR]省電力設定 - デバッグの有効化 - マスターロック設定"
 
-msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin · Add and remove home menu items[CR]Change skin backgrounds"
-msgstr "[B]スキン設定[/B][CR][CR]Confluence スキン設定 - ホームメニュー項目の追加と削除[CR]スキン背景設定"
-
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
-msgstr "[B]アドオン設定[/B][CR][CR]インストール済みアドオン管理 - xbmc.orgからアドオンを検索・インストール[CR]アドオン設定変更"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
+msgstr "[B]アドオン設定[/B][CR][CR]インストール済みアドオン管理 - kodi.tvからアドオンを検索・インストール[CR]アドオン設定変更"
 
 msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change fullscreen info · Manage EPG data settings"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
 msgstr "[B]TV設定[/B][CR][CR]フルスクリーン情報の変更 · EPGデータ設定"
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]サービス設定[/B][CR][CR]UPnP や HTTP 経由による XBMC 操作設定 · ファイル共有設定[CR]Zeroconf を有効に · AirPlay 設定"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgstr "[B]サービス設定[/B][CR][CR]UPnP や HTTP 経由による Kodi 操作設定 · ファイル共有設定[CR]Zeroconf を有効に · AirPlay 設定"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr "ローカルの字幕が利用可能"
-
-msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
-msgstr "XBMC ユーザープロファイルを選択して[CR]ログインしてください"
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -492,66 +364,6 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr "チャンネルオプション"
 
-msgctxt "#31603"
-msgid "Biography"
-msgstr "バイオグラフィー"
-
-msgctxt "#31605"
-msgid "Comedy"
-msgstr "コメディー・お笑い"
-
-msgctxt "#31608"
-msgid "Documentary"
-msgstr "ドキュメンタリー"
-
-msgctxt "#31609"
-msgid "Drama"
-msgstr "ドラマ"
-
-msgctxt "#31618"
-msgid "Romance"
-msgstr "恋愛もの"
-
-msgctxt "#31620"
-msgid "Short"
-msgstr "Short"
-
-msgctxt "#31700"
-msgid "United States"
-msgstr "アメリカ合衆国"
-
-msgctxt "#31701"
-msgid "Great Britain"
-msgstr "イギリス"
-
-msgctxt "#31702"
-msgid "Germany"
-msgstr "ドイツ"
-
-msgctxt "#31703"
-msgid "Australia"
-msgstr "オーストラリア"
-
-msgctxt "#31704"
-msgid "Japan"
-msgstr "日本"
-
-msgctxt "#31705"
-msgid "Hong Kong"
-msgstr "香港"
-
-msgctxt "#31706"
-msgid "Brazil"
-msgstr "ブラジル"
-
-msgctxt "#31708"
-msgid "Canada"
-msgstr "カナダ"
-
-msgctxt "#31709"
-msgid "Ireland"
-msgstr "アイルランド"
-
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "36時間予報"
@@ -565,8 +377,8 @@ msgid "Weekend Forecast"
 msgstr "週末の予報"
 
 msgctxt "#31904"
-msgid "10 Day Forecast"
-msgstr "10日予報"
+msgid "Daily Forecast"
+msgstr "1日ごとの予報"
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -581,5 +393,5 @@ msgid "Fetching forecast info..."
 msgstr "天気予報データ取得中..."
 
 msgctxt "#31910"
-msgid "Map & Alerts"
-msgstr "マップ＆アラート"
+msgid "Maps"
+msgstr "マップ"
