@@ -34,7 +34,7 @@
 						<top>10</top>
 						<width>450</width>
 						<height>140</height>
-						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						<texture background="true">$VAR[MediaLogoArt]</texture>
 						<fadetime>300</fadetime>
 						<aspectratio align="right" aligny="center" scalediffuse="false">keep</aspectratio>
 						<animation effect="zoom" start="65" end="65" center="auto" time="0" condition="true">Conditional</animation>
@@ -72,7 +72,7 @@
 						<top>30</top>
 						<width>450</width>
 						<height>140</height>
-						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						<texture background="true">$VAR[MediaLogoArt]</texture>
 						<fadetime>300</fadetime>
 						<aspectratio align="right" aligny="center" scalediffuse="false">keep</aspectratio>
 						<animation effect="zoom" start="65" end="100" center="auto" time="200">Focus</animation>
@@ -126,42 +126,12 @@
 				<align>left</align>
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
-				<!--include>VideoExtraInfoFlagging</include-->
+				<include>VideoMPAAFlaggingConditions</include>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>
 				<include>AspectCodecFlaggingConditions</include>
-				<include condition="!Skin.HasSetting(EnableFullMPAA)">VideoMPAAFlaggingConditions</include>
-				<visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-				<!--visible>Skin.HasSetting(hidegenreicons)</visible-->
 			</control>
-			<!--control type="grouplist">
-                <description>Media Genre Flagging</description>
-                <left>50</left>
-                <top>620</top>
-                <width>580</width>
-                <align>left</align>
-                <itemgap>5</itemgap>
-                <orientation>horizontal</orientation>
-                <include>SmallVideoGenreFlagging</include>
-                <control type="image">
-                    <description>Rating image</description>
-                    <width>96</width>
-                    <height>46</height>
-                    <aspectratio align="right">keep</aspectratio>
-                    <texture>$VAR[RatingMPAA,flagging/ratings/,.png]</texture>
-                    <visible>!IsEmpty(ListItem.Mpaa)</visible>
-                </control>
-                <control type="image">
-                    <description>Studio image</description>
-                    <width>96</width>
-                    <height>46</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Studio,flagging/studio/,.png]</texture>
-                    <visible>!IsEmpty(ListItem.Studio)</visible>
-                </control>
-                <visible>Container.Content(TVShows) | Container.Content(Seasons) | !Skin.HasSetting(hidegenreicons)</visible>
-            </control-->
 			<control type="group">
 				<left>0</left>
 				<top>190</top>

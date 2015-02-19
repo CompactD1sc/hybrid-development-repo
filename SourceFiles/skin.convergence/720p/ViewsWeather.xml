@@ -2,7 +2,7 @@
 <includes>
 	<include name="WeatherDaily">
 		<control type="group">
-				<control type="list" id="51">
+			<control type="list" id="51">
 				<left>15</left>
 				<top>60</top>
 				<width>600</width>
@@ -473,7 +473,7 @@
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>51</onleft>
 				<onright>800</onright>
-                    <showonepage>true</showonepage>
+				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
@@ -1219,7 +1219,7 @@
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>52</onleft>
 				<onright>800</onright>
-                    <showonepage>true</showonepage>
+				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(52)</visible>

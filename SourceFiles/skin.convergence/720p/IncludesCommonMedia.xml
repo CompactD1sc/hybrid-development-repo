@@ -66,13 +66,6 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 			<!-- Multi Image Backgounds on Home  -->
 			<visible>Window.IsVisible(Home) + Skin.HasSetting(MultiImageBackground) + !Skin.HasSetting(EnableHolidayEffects)</visible>
 			<visible>!Player.HasVideo | Skin.HasSetting(HidePlayingVideoBehind)</visible>
-			<control type="group">
-				<include>Window_OpenClose_Animation</include>
-				<include>BackgroundFade</include>
-				<fadetime>FanartCrossfadeTime</fadetime>
-				<include>LiveContentBackgrounds</include>
-				<visible>StringCompare(Container(9000).ListItem.Property(Background),Live) + !StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
-			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
 				<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
@@ -81,7 +74,7 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 				<include>BackgroundFade</include>
 				<fadetime>FanartCrossfadeTime</fadetime>
 				<include>Window_OpenClose_Animation</include>
-				<visible>StringCompare(Container(9000).ListItem.Property(Background),Live)  + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
+				<visible>!Skin.HasSetting(HideWeatherFanArt) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
 			</control>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
@@ -90,7 +83,7 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 				<timeperimage>8000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
-				<visible>StringCompare(Container(9000).ListItem.Property(Background),Database) | StringCompare(Container(9000).ListItem.Property(Background),Default) | IsEmpty(Container(9000).ListItem.Property(Background))</visible>
+				<visible>Skin.HasSetting(HideWeatherFanArt)  | !StringCompare(Container(9000).ListItem.Property(HiLiteItem),Weather)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -99,41 +92,17 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 			<visible>!Player.HasVideo | Skin.HasSetting(HidePlayingVideoBehind)</visible>
 			<control type="multiimage">
 				<include>Dimensions_Fullscreen</include>
-				<imagepath background="true">$VAR[WeatherBackground]</imagepath>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>FanartCrossfadeTime</fadetime>
-				<!--visible>StringCompare(Window(Home).Property(MenuItemSelected),Weather)</visible-->
-				<visible>Window.IsVisible(weather)</visible>
-			</control>
-			
-			
-			
-			<control type="multiimage">
-				<include>Dimensions_Fullscreen</include>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
 				<timeperimage>8000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
-				<visible>!StringCompare(Window(Home).Property(MenuItemSelected),Weather) + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
+				<visible>[!StringCompare(Window(Home).Property(MenuItemSelected),Weather) | Skin.HasSetting(HideWeatherFanArt)] + !Container.Content(Seasons) + !Container.Content(Episodes)</visible>
 			</control>
-			
-			
-            <control type="image">
-                <include>Dimensions_Fullscreen</include>
-                <texture background="true">$VAR[SearchBackground]</texture>
-                <aspectratio>scale</aspectratio>
-                <fadetime>FanartCrossfadeTime</fadetime>
-                <include>VisibleFadeEffect</include>
-                <visible>Window.IsActive(script-globalsearch-main.xml)</visible>
-            </control>
-       
-			
-			
 		</control>
 		<control type="group">
 			<!--Not Home + Not Playing Video + Not HideListItemArtWork 	-->
+			<!-- SHOW FAN ART -->
 			<visible>!Window.IsVisible(Home) + !Skin.HasSetting(HideListItemArtWork)</visible>
 			<visible>!Player.HasVideo | Skin.HasSetting(HidePlayingVideoBehind)</visible>
 			<control type="image">
@@ -154,6 +123,15 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 				<include>Window_OpenClose_Animation</include>
 				<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			</control>
+			<control type="multiimage">
+				<include>Dimensions_Fullscreen</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$VAR[CommonMenuItemBackground]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>[StringCompare(ListItem.Label,..) | IsEmpty(ListItem.Property(Fanart_Image))] + Container.Content(Episodes) + IsEmpty(Fanart.Image)</visible>
+			</control>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -163,8 +141,6 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<!--visible>!Window.IsVisible(Home)</visible-->
-			<!--visible>!Window.IsVisible(fullscreenvideo)</visible-->
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -228,6 +204,14 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 			<include>InvisibleButton</include>
 			<texture background="true">$INFO[ListItem.Studio,flagging/studio/,.png]</texture>
 			<visible>!IsEmpty(ListItem.Studio)</visible>
+		</control>
+	</include>
+	<include name="FanArtExtraThumbs">
+		<control type="multiimage" id="5045">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[ListItem.path,,extrathumbs/]</imagepath>
+			<visible>!IsEmpty(ListItem.Title)</visible>
+			<visible>Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 		</control>
 	</include>
 	<include name="MediaViewBackgrounds">
@@ -313,7 +297,7 @@ Skin.HasSetting(EnableAdditionalArtWork) - Allows Alternative Artwork (Movies)
 				<orientation>horizontal</orientation>
 				<include>SmallVideoGenreFlagging</include>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-				<visible>!Control.IsVisible(508)</visible>
+				<visible>!Control.IsVisible(508) + !Control.IsVisible(529) + !Control.IsVisible(555)</visible>
 			</control>
 		</control>
 		<control type="image">
