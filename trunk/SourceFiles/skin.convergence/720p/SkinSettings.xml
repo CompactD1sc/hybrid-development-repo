@@ -6,6 +6,7 @@
 	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
 	<onload condition="stringcompare(Container(9011).Position,0) + !stringcompare(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
 	<onunload condition="IsEmpty(Skin.String(WeatherFanartDir)) | SubString(Skin.String(WeatherFanartDir),skin.convergence\extras\Weather\,right)">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onunload>
+	<onunload condition="!Skin.HasSetting(DisableGlobalSearch) + Skin.HasSetting(UPnP_Mode)">Skin.Setbool(DisableGlobalSearch)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="button" id="800">
@@ -472,9 +473,6 @@
 						<selected>Skin.HasSetting(AutoPartySaver)</selected>
 						<enable>Library.HasContent(Music)</enable>
 					</control>
-					
-					
-					
 					<control type="radiobutton" id="131">
 						<width>750</width>
 						<height>40</height>
@@ -569,7 +567,7 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(DisableGlobalSearch)</onclick>
 						<selected>!Skin.HasSetting(DisableGlobalSearch)</selected>
-						<enable>System.HasAddon(script.globalsearch)</enable>
+						<enable>System.HasAddon(script.globalsearch) + !Skin.HasSetting(UPnP_Mode)</enable>
 					</control>
 					<control type="radiobutton" id="143">
 						<width>750</width>
@@ -595,20 +593,6 @@
 						<onclick>Skin.ToggleSetting(DisableTVNextAired)</onclick>
 						<selected>!Skin.HasSetting(DisableTVNextAired)</selected>
 						<enable>System.HasAddon(script.tv.show.next.aired)</enable>
-					</control>
-					<control type="radiobutton" id="145">
-						<description>TVShow Thumbnails</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31075]</label>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(HideEpisodeThumb)</onclick>
-						<selected>Skin.HasSetting(HideEpisodeThumb)</selected>
-						<enable>false</enable>
 					</control>
 					<control type="radiobutton" id="146">
 						<description>Full MPPA Description</description>
@@ -636,16 +620,16 @@
 						<onclick condition="IsEmpty(Skin.String(MPAACertificate))">Skin.SetString(MPAACertificate,UK)</onclick>
 						<onclick condition="Skin.String(MPAACertificate,USA)">Skin.SetString(MPAACertificate,UK)</onclick>
 						<onclick condition="Skin.String(MPAACertificate,UK)">Skin.SetString(MPAACertificate,Aus)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,Aus)">Skin.SetString(MPAACertificate,Bra)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,Bra)">Skin.SetString(MPAACertificate,Can)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,Can)">Skin.SetString(MPAACertificate,DK)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,DK)">Skin.SetString(MPAACertificate,DE)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,DE)">Skin.SetString(MPAACertificate,HK)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,HK)">Skin.SetString(MPAACertificate,Ire)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,Ire)">Skin.SetString(MPAACertificate,Jpn)</onclick>
-						<onclick condition="Skin.String(MPAACertificate,Jpn)">Skin.SetString(MPAACertificate,NL)</onclick>
+						<!--onclick condition="Skin.String(MPAACertificate,Aus)">Skin.SetString(MPAACertificate,Bra)</onclick-->
+						<!--onclick condition="Skin.String(MPAACertificate,Aus)">Skin.SetString(MPAACertificate,Can)</onclick-->
+						<!--onclick condition="Skin.String(MPAACertificate,Can)">Skin.SetString(MPAACertificate,DK)</onclick-->
+						<onclick condition="Skin.String(MPAACertificate,Aus)">Skin.SetString(MPAACertificate,DE)</onclick>
+						<!--onclick condition="Skin.String(MPAACertificate,DE)">Skin.SetString(MPAACertificate,HK)</onclick-->
+						<!--onclick condition="Skin.String(MPAACertificate,HK)">Skin.SetString(MPAACertificate,Ire)</onclick-->
+						<!--onclick condition="Skin.String(MPAACertificate,Ire)">Skin.SetString(MPAACertificate,Jpn)</onclick-->
+						<onclick condition="Skin.String(MPAACertificate,DE)">Skin.SetString(MPAACertificate,NL)</onclick>
 						<onclick condition="Skin.String(MPAACertificate,NL)">Skin.SetString(MPAACertificate,USA)</onclick>
-						<enable>!Skin.HasSetting(EnableFullMPAA)</enable>
+						<enable>!Skin.HasSetting(enablefullmpaa)</enable>
 					</control>
 					<control type="radiobutton" id="148">
 						<width>750</width>
@@ -853,21 +837,6 @@
 						<onclick>ActivateWindow(2118)</onclick>
 						<visible>!Skin.String(HomeMenu.1.Path,Hidden)</visible>
 					</control>
-					<control type="button" id="204">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuOneBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.1.Display,$VAR[MenuOneBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.1.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.1.Type,Music) | Skin.String(HomeMenu.1.Type,MusicPlayList) | Skin.String(HomeMenu.1.Type,Movies) | Skin.String(HomeMenu.1.Type,TVShows) | Skin.String(HomeMenu.1.Type,VideoPlayList) | Skin.String(HomeMenu.1.Type,Concerts) | Skin.String(HomeMenu.1.Type,Videos)]]]</enable>
-						<visible>!Skin.String(HomeMenu.1.Path,Hidden)</visible>
-					</control>
 					<control type="button" id="205">
 						<width>750</width>
 						<height>40</height>
@@ -945,21 +914,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>SetProperty(UsrSelectBtn,HomeMenu.2,Home)</onclick>
 						<onclick>ActivateWindow(2118)</onclick>
-						<visible>!Skin.String(HomeMenu.2.Path,Hidden)</visible>
-					</control>
-					<control type="button" id="210">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuTwoBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.2.Display,$VAR[MenuTwoBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.2.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.2.Type,Music) | Skin.String(HomeMenu.2.Type,MusicPlayList) | Skin.String(HomeMenu.2.Type,Movies) | Skin.String(HomeMenu.2.Type,TVShows) | Skin.String(HomeMenu.2.Type,VideoPlayList) | Skin.String(HomeMenu.2.Type,Concerts) | Skin.String(HomeMenu.2.Type,Videos)]]]</enable>
 						<visible>!Skin.String(HomeMenu.2.Path,Hidden)</visible>
 					</control>
 					<control type="button" id="211">
@@ -1041,21 +995,6 @@
 						<onclick>ActivateWindow(2118)</onclick>
 						<visible>!Skin.String(HomeMenu.3.Path,Hidden)</visible>
 					</control>
-					<control type="button" id="216">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuThreeBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.3.Display,$VAR[MenuThreeBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.3.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.3.Type,Music) | Skin.String(HomeMenu.3.Type,MusicPlayList) | Skin.String(HomeMenu.3.Type,Movies) | Skin.String(HomeMenu.3.Type,TVShows) | Skin.String(HomeMenu.3.Type,VideoPlayList) | Skin.String(HomeMenu.3.Type,Concerts) | Skin.String(HomeMenu.3.Type,Videos)]]]</enable>
-						<visible>!Skin.String(HomeMenu.3.Path,Hidden)</visible>
-					</control>
 					<control type="button" id="217">
 						<width>750</width>
 						<height>40</height>
@@ -1133,21 +1072,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>SetProperty(UsrSelectBtn,HomeMenu.4,Home)</onclick>
 						<onclick>ActivateWindow(2118)</onclick>
-						<visible>!Skin.String(HomeMenu.4.Path,Hidden)</visible>
-					</control>
-					<control type="button" id="222">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuFourBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.4.Display,$VAR[MenuFourBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.4.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.4.Type,Music) | Skin.String(HomeMenu.4.Type,MusicPlayList) | Skin.String(HomeMenu.4.Type,Movies) | Skin.String(HomeMenu.4.Type,TVShows) | Skin.String(HomeMenu.4.Type,VideoPlayList) | Skin.String(HomeMenu.4.Type,Concerts) | Skin.String(HomeMenu.4.Type,Videos)]]]</enable>
 						<visible>!Skin.String(HomeMenu.4.Path,Hidden)</visible>
 					</control>
 					<control type="button" id="223">
@@ -1229,21 +1153,6 @@
 						<onclick>ActivateWindow(2118)</onclick>
 						<visible>!Skin.String(HomeMenu.5.Path,Hidden)</visible>
 					</control>
-					<control type="button" id="228">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuFiveBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.5.Display,$VAR[MenuFiveBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.5.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.5.Type,Music) | Skin.String(HomeMenu.5.Type,MusicPlayList) | Skin.String(HomeMenu.5.Type,Movies) | Skin.String(HomeMenu.5.Type,TVShows) | Skin.String(HomeMenu.5.Type,VideoPlayList) | Skin.String(HomeMenu.5.Type,Concerts) | Skin.String(HomeMenu.5.Type,Videos)]]]</enable>
-						<visible>!Skin.String(HomeMenu.5.Path,Hidden)</visible>
-					</control>
 					<control type="button" id="229">
 						<width>750</width>
 						<height>40</height>
@@ -1321,21 +1230,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>SetProperty(UsrSelectBtn,HomeMenu.6,Home)</onclick>
 						<onclick>ActivateWindow(2118)</onclick>
-						<visible>!Skin.String(HomeMenu.6.Path,Hidden)</visible>
-					</control>
-					<control type="button" id="234">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuSixBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.6.Display,$VAR[MenuSixBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.6.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.6.Type,Music) | Skin.String(HomeMenu.6.Type,MusicPlayList) | Skin.String(HomeMenu.6.Type,Movies) | Skin.String(HomeMenu.6.Type,TVShows) | Skin.String(HomeMenu.6.Type,VideoPlayList) | Skin.String(HomeMenu.6.Type,Concerts) | Skin.String(HomeMenu.6.Type,Videos)]]]</enable>
 						<visible>!Skin.String(HomeMenu.6.Path,Hidden)</visible>
 					</control>
 					<control type="button" id="235">
@@ -1417,21 +1311,6 @@
 						<onclick>ActivateWindow(2118)</onclick>
 						<visible>!Skin.String(HomeMenu.7.Path,Hidden)</visible>
 					</control>
-					<control type="button" id="240">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuSevenBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.7.Display,$VAR[MenuSevenBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.7.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.7.Type,Music) | Skin.String(HomeMenu.7.Type,MusicPlayList) | Skin.String(HomeMenu.7.Type,Movies) | Skin.String(HomeMenu.7.Type,TVShows) | Skin.String(HomeMenu.7.Type,VideoPlayList) | Skin.String(HomeMenu.7.Type,Concerts) | Skin.String(HomeMenu.7.Type,Videos)]]]</enable>
-						<visible>!Skin.String(HomeMenu.7.Path,Hidden)</visible>
-					</control>
 					<control type="button" id="241">
 						<width>750</width>
 						<height>40</height>
@@ -1509,21 +1388,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>SetProperty(UsrSelectBtn,HomeMenu.8,Home)</onclick>
 						<onclick>ActivateWindow(2118)</onclick>
-						<visible>!Skin.String(HomeMenu.8.Path,Hidden)</visible>
-					</control>
-					<control type="button" id="246">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuEightBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.8.Display,$VAR[MenuEightBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.8.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.8.Type,Music) | Skin.String(HomeMenu.8.Type,MusicPlayList) | Skin.String(HomeMenu.8.Type,Movies) | Skin.String(HomeMenu.8.Type,TVShows) | Skin.String(HomeMenu.8.Type,VideoPlayList) | Skin.String(HomeMenu.8.Type,Concerts) | Skin.String(HomeMenu.8.Type,Videos)]]]</enable>
 						<visible>!Skin.String(HomeMenu.8.Path,Hidden)</visible>
 					</control>
 					<control type="button" id="247">
@@ -1605,21 +1469,6 @@
 						<onclick>ActivateWindow(2118)</onclick>
 						<visible>!Skin.String(HomeMenu.9.Path,Hidden)</visible>
 					</control>
-					<control type="button" id="252">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuNineBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.9.Display,$VAR[MenuNineBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.9.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.9.Type,Music) | Skin.String(HomeMenu.9.Type,MusicPlayList) | Skin.String(HomeMenu.9.Type,Movies) | Skin.String(HomeMenu.9.Type,TVShows) | Skin.String(HomeMenu.9.Type,VideoPlayList) | Skin.String(HomeMenu.9.Type,Concerts) | Skin.String(HomeMenu.9.Type,Videos)]]]</enable>
-						<visible>!Skin.String(HomeMenu.9.Path,Hidden)</visible>
-					</control>
 					<control type="button" id="253">
 						<width>750</width>
 						<height>40</height>
@@ -1697,21 +1546,6 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>SetProperty(UsrSelectBtn,HomeMenu.10,Home)</onclick>
 						<onclick>ActivateWindow(2118)</onclick>
-						<visible>!Skin.String(HomeMenu.10.Path,Hidden)</visible>
-					</control>
-					<control type="button" id="259">
-						<description>Menu BackGround Type</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label> - $LOCALIZE[31294]</label>
-						<label2>[COLOR=grey2]$VAR[MenuTenBackgroundLabel][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetString(HomeMenu.10.Display,$VAR[MenuTenBackgroundType])</onclick>
-						<enable>!Skin.HasSetting(EnableHolidayEffects) + Skin.HasSetting(MultiImageBackground) + [Skin.String(HomeMenu.10.Type,Weather) |[!Skin.HasSetting(UPnP_Mode) + [Skin.String(HomeMenu.10.Type,Music) | Skin.String(HomeMenu.10.Type,MusicPlayList) | Skin.String(HomeMenu.10.Type,Movies) | Skin.String(HomeMenu.10.Type,TVShows) | Skin.String(HomeMenu.10.Type,VideoPlayList) | Skin.String(HomeMenu.10.Type,Concerts) | Skin.String(HomeMenu.10.Type,Videos)]]]</enable>
 						<visible>!Skin.String(HomeMenu.10.Path,Hidden)</visible>
 					</control>
 					<control type="button" id="260">
@@ -4950,7 +4784,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<label>$VAR[SettingsSectionFour]</label>
-					<autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(disableautoscroll)</autoscroll>
+					<autoscroll delay="3000" time="1800" repeat="10000">!Skin.HasSetting(DisableAutoScroll)</autoscroll>
 					<visible>Container(9000).Hasfocus(4)</visible>
 				</control>
 				<control type="scrollbar" id="60">
@@ -5278,7 +5112,19 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="button" id="710">
+					<control type="radiobutton" id="710">
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>Use Weather FanArt</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(HideWeatherFanArt)</onclick>
+						<selected>!Skin.HasSetting(HideWeatherFanArt)</selected>
+					</control>
+					<control type="button" id="711">
 						<description>User Weather FanArt Path</description>
 						<width>750</width>
 						<height>40</height>
@@ -5291,29 +5137,7 @@
 						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="label" id="711">
-						<width>750</width>
-						<height>45</height>
-						<font>font13_title</font>
-						<label>31256</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="712">
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>31133</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(EnableFanartScript)</onclick>
-						<selected>Skin.HasSetting(EnableFanartScript)</selected>
-						<enable>System.HasAddon(script.grab.fanart)</enable>
+						<enable>!Skin.HasSetting(HideWeatherFanArt)</enable>
 					</control>
 					<control type="label" id="720">
 						<width>750</width>

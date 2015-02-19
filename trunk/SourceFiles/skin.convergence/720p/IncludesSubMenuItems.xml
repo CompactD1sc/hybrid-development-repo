@@ -969,9 +969,7 @@
 			<visible>!Skin.String(SubSetFour.6.Path,Hidden)</visible>
 		</item>
 		<item>
-		
 			<label>$LOCALIZE[31219]</label>
-			
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
 			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
 			<visible>!Library.HasContent(Music) + IsEmpty(Skin.String(SubSetFour.6.Path))</visible>
