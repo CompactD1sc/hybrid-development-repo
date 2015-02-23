@@ -1,3 +1,6 @@
+[B]3.0.1[/B] [I]Feb 2015[/I]
+- Quick Dirty Hack to Get PVR
+
 [B]3.0.0[/B] [I]Feb 2015[/I]
 - Updated language files from Transifex
 - Start Kodi-Heli Update [WIP]

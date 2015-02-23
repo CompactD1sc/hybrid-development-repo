@@ -245,7 +245,7 @@
                         <visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
                     </control>
                     <control type="label">
-                        <left>96</left>
+                        <left>2</left>
                         <top>147</top>
                         <width>190</width>
                         <height>25</height>
@@ -281,7 +281,7 @@
                         <visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
                     </control>
                     <control type="label">
-                        <left>96</left>
+                        <left>2</left>
                         <top>147</top>
                         <width>190</width>
                         <height>25</height>

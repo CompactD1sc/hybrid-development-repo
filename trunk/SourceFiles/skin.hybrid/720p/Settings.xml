@@ -88,7 +88,7 @@
                 <animation effect="fade" start="0" end="100" time="200">Visible</animation>
                 <itemlayout height="42" width="380">
                     <control type="label">
-                        <left>380</left>
+                        <left>0</left>
                         <top>21</top>
                         <width>380</width>
                         <height>40</height>
@@ -103,7 +103,7 @@
                 <focusedlayout height="62" width="430">
                     <control type="label">
                         <top>21</top>
-                        <left>380</left>
+                        <left>0</left>
                         <width>400</width>
                         <height>62</height>
                         <font>font35_title</font>

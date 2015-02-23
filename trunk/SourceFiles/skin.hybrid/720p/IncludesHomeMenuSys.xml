@@ -336,7 +336,7 @@
         <onload>Skin.SetString(homeitem.2.type,Pictures)</onload>
         <onload>Skin.SetString(homeitem.2.fanart,special://skin/backgrounds/homescreen/pictures.jpg)</onload>
         <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.label,$LOCALIZE[31502])</onload>
-        <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.path,ActivateWindow(PVR))</onload>
+        <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.path,ActivateWindow(TVChannels))</onload>
         <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.icon,DefaultTVShows.png.png)</onload>
         <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.display,Default)</onload>
         <onload condition="System.GetBool(pvrmanager.enabled)">Skin.SetString(homeitem.3.sub,LiveTV)</onload>
