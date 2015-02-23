@@ -13,6 +13,8 @@
     <include file="IncludesListItemCount.xml" />
     <include file="IncludesGenreFlagging.xml" />
     <include file="IncludesOnScreenDisplay.xml" />
+	<include file="ViewsLiveTV.xml" />
+	<include file="ViewsPVRGuide.xml" />
     <include file="ViewsInfoFanart.xml" />
     <include file="ViewsFanArt.xml" />
     <include file="ViewsPosterWrap.xml" />
@@ -30,11 +32,11 @@
     <include file="ViewsWideList.xml" />
     <include file="ViewsEpisodes.xml" />
     <include file="ViewsAddonBrowser.xml" />
-    <include file="ViewsLiveTV.xml" />
-    <include file="ViewsPVR.xml" />
+   
     <include file="ViewsPictures.xml" />
     <include file="IncludesCodecFlagging.xml" />
     <include file="IncludesAltMenuIcons.xml" />
+	<include file="IncludesPVR.xml" />
     <constant name="FanartCrossfadeTime">600</constant>
     <constant name="IconCrossfadeTime">500</constant>
 	

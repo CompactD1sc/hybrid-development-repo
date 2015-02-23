@@ -1209,10 +1209,10 @@
             <icon>DefaultShortcut.png</icon>
             <thumb>$INFO[Skin.String(sublivetv.2.icon)]</thumb>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + !IsEmpty(Skin.String(sublivetv.2.path))">Skin.SetString(homeitemlastaction,$INFO[Skin.String(sublivetv.2.path)])</onclick>
-            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.2.path))">Skin.SetString(homeitemlastaction,ActivateWindowAndFocus(MyPVR, 33,0, 12,0))</onclick>
+            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.2.path))">Skin.SetString(homeitemlastaction,ActivateWindow(RadioChannels))</onclick>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction)">Skin.SetString(homeitemlastlabel,$VAR[SubMenuLiveTVTwo])</onclick>
             <onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-            <onclick condition="IsEmpty(Skin.String(sublivetv.2.path))">ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</onclick>
+            <onclick condition="IsEmpty(Skin.String(sublivetv.2.path))">ActivateWindow(RadioChannels)</onclick>
             <onclick condition="!IsEmpty(Skin.String(sublivetv.2.path))">$INFO[Skin.String(sublivetv.2.path)]</onclick>
             <visible>System.GetBool(pvrmanager.enabled) | !IsEmpty(Skin.String(sublivetv.2.path))</visible>
             <visible>!stringcompare(Skin.String(sublivetv.2.path),Hidden)</visible>
@@ -1222,10 +1222,10 @@
             <icon>DefaultShortcut.png</icon>
             <thumb>$INFO[Skin.String(sublivetv.3.icon)]</thumb>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + !IsEmpty(Skin.String(sublivetv.3.path))">Skin.SetString(homeitemlastaction,$INFO[Skin.String(sublivetv.3.path)])</onclick>
-            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.3.path))">Skin.SetString(homeitemlastaction,ActivateWindowAndFocus(MyPVR, 31,0, 10,0))</onclick>
+            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.3.path))">Skin.SetString(homeitemlastaction,ActivateWindow(TVGuide))</onclick>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction)">Skin.SetString(homeitemlastlabel,$VAR[SubMenuLiveTVThree])</onclick>
             <onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-            <onclick condition="IsEmpty(Skin.String(sublivetv.3.path))">ActivateWindowAndFocus(MyPVR, 31,0, 10,0)</onclick>
+            <onclick condition="IsEmpty(Skin.String(sublivetv.3.path))">ActivateWindow(TVGuide)</onclick>
             <onclick condition="!IsEmpty(Skin.String(sublivetv.3.path))">$INFO[Skin.String(sublivetv.3.path)]</onclick>
             <visible>System.GetBool(pvrmanager.enabled) | !IsEmpty(Skin.String(sublivetv.3.path))</visible>
             <visible>!stringcompare(Skin.String(sublivetv.3.path),Hidden)</visible>
@@ -1235,10 +1235,10 @@
             <icon>DefaultShortcut.png</icon>
             <thumb>$INFO[Skin.String(sublivetv.4.icon)]</thumb>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + !IsEmpty(Skin.String(sublivetv.4.path))">Skin.SetString(homeitemlastaction,$INFO[Skin.String(sublivetv.4.path)])</onclick>
-            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.4.path))">Skin.SetString(homeitemlastaction,ActivateWindowAndFocus(MyPVR, 34,0, 13,0))</onclick>
+            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.4.path))">Skin.SetString(homeitemlastaction,ActivateWindow(TVRecordings))</onclick>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction)">Skin.SetString(homeitemlastlabel,$VAR[SubMenuLiveTVFour])</onclick>
             <onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-            <onclick condition="IsEmpty(Skin.String(sublivetv.4.path))">ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</onclick>
+            <onclick condition="IsEmpty(Skin.String(sublivetv.4.path))">ActivateWindow(TVRecordings)</onclick>
             <onclick condition="!IsEmpty(Skin.String(sublivetv.4.path))">$INFO[Skin.String(sublivetv.4.path)]</onclick>
             <visible>System.GetBool(pvrmanager.enabled) | !IsEmpty(Skin.String(sublivetv.4.path))</visible>
             <visible>!stringcompare(Skin.String(sublivetv.4.path),Hidden)</visible>
@@ -1248,10 +1248,10 @@
             <icon>DefaultShortcut.png</icon>
             <thumb>$INFO[Skin.String(sublivetv.5.icon)]</thumb>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + !IsEmpty(Skin.String(sublivetv.5.path))">Skin.SetString(homeitemlastaction,$INFO[Skin.String(sublivetv.5.path)])</onclick>
-            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.5.path))">Skin.SetString(homeitemlastaction,ActivateWindowAndFocus(MyPVR, 35,0, 14,0))</onclick>
+            <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction) + IsEmpty(Skin.String(sublivetv.5.path))">Skin.SetString(homeitemlastaction,ActivateWindow(TVTimers))</onclick>
             <onclick condition="Container(9000).Hasfocus(1) + Skin.HasSetting(stickyhomemenuaction)">Skin.SetString(homeitemlastlabel,$VAR[SubMenuLiveTVFive])</onclick>
             <onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-            <onclick condition="IsEmpty(Skin.String(sublivetv.5.path))">ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</onclick>
+            <onclick condition="IsEmpty(Skin.String(sublivetv.5.path))">ActivateWindow(TVTimers)</onclick>
             <onclick condition="!IsEmpty(Skin.String(sublivetv.5.path))">$INFO[Skin.String(sublivetv.5.path)]</onclick>
             <visible>System.GetBool(pvrmanager.enabled) | !IsEmpty(Skin.String(sublivetv.5.path))</visible>
             <visible>!stringcompare(Skin.String(sublivetv.5.path),Hidden)</visible>

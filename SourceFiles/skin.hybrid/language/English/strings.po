@@ -125,7 +125,9 @@ msgctxt "#31026"
 msgid "Darken watched"
 msgstr ""
 
-#empty string with id 31027
+msgctxt "#31027"
+msgid "Hidden channels"
+msgstr ""
 
 msgctxt "#31028"
 msgid "Plot Unavailable"

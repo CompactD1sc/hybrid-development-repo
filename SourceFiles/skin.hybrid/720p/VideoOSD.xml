@@ -16,7 +16,7 @@
             <animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(hideartworkosd) | Skin.HasSetting(hideseekbarosd) + !Player.ShowInfo" reversible="true">Conditional</animation>
             <animation effect="slide" end="-55,0" time="0" tween="back" easing="out" condition="Window.IsActive(script.pseudotv.TVOverlay.xml)" reversible="true">Conditional</animation>
             <animation effect="fade" time="200">VisibleChange</animation>
-            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/XBMC-Intro-Video.mkv)</visible>
+            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mp4)</visible>
             <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <control type="button" id="200">
@@ -261,7 +261,7 @@
             <top>60r</top>
             <animation effect="fade" time="200">VisibleChange</animation>
             <animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(hideartworkosd) | Skin.HasSetting(hideseekbarosd) + !Player.ShowInfo" reversible="true">Conditional</animation>
-            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/XBMC-Intro-Video.mkv)</visible>
+            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mp4)</visible>
             <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
             <visible>!VideoPlayer.Content(LiveTV)</visible>
             <control type="button" id="255">
@@ -751,7 +751,7 @@
             <textureslidernibfocus>Slider/Slider_nib.png</textureslidernibfocus>
             <animation effect="fade" time="200">VisibleChange</animation>
             <animation effect="slide" end="-145,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(hideartworkosd) | Skin.HasSetting(hideseekbarosd) + !Player.ShowInfo" reversible="true">Conditional</animation>
-            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/XBMC-Intro-Video.mkv) + IntegerGreaterThan(Player.time,8)</visible>
+            <visible>!StringCompare(Player.Filenameandpath,special://skin/extras/Intro/KODI-Intro-Video.mp4) + IntegerGreaterThan(Player.time,8)</visible>
             <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
         </control>
     </controls>
