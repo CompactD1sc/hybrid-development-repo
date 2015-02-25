@@ -23,6 +23,7 @@
 	<include file="ViewsCoverFlow.xml" />
 	<include file="ViewsBannerInfo.xml" />
 	<include file="ViewsFullWidthList.xml" />
+	<include file="ViewsLowlist.xml" />
 	<include file="IncludesListItemCount.xml" />
 	<include file="IncludesCDWall.xml" />
 	<include file="IncludesGenreFlagging.xml" />
@@ -30,6 +31,7 @@
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeNowPlaying.xml" />
 	<include file="IncludesMenuContentItems.xml" />
+	<include file="IncludesOnScreenDisplay.xml" />
 	<include file="IncludesPVR.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
@@ -39,12 +41,6 @@
 		<width>700</width>
 		<height>380</height>
 	</include>
-	<!--include name="DimensionsLandscapePanel">
-		<left>15</left>
-		<top>70</top>
-		<width>840</width>
-		<height>370</height>
-	</include-->
 	<include name="ClearButtonChoice">
 		<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 		<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
@@ -77,27 +73,53 @@
 		<height>330</height>
 	</include>
 	<include name="HomePanelBackground">
-		<include>VisibleFadeEffect</include>
-		<left>415</left>
-		<top>5</top>
-		<control type="image">
-			<description>background</description>
-			<!--left>5</left-->
-			<left>45</left>
-			<top>0</top>
-			<!--width>860</width-->
-			<width>780</width>
-			<height>455</height>
-			<texture border="20">ContentPanel.png</texture>
-			<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
-		</control>
-		<control type="image">
-			<left>15</left>
-			<top>10</top>
-			<width>820</width>
-			<height>90</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>GlassTitleBar.png</texture>
+		<control type="group">
+			<visible>!StringCompare(Container(9000).ListItem.Property(WidgetSet),None) + !IsEmpty(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+			<include>VisibleFadeEffect</include>
+			<left>415</left>
+			<top>5</top>
+			<animation effect="slide" start="0,0" end="0,-460" delay="0" time="400" tween="back" easing="out" condition="!ControlGroup(9003).HasFocus + !Control.HasFocus(8998) + Skin.HasSetting(CleanHomeScreen)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<control type="image">
+				<description>background</description>
+				<left>45</left>
+				<top>0</top>
+				<width>780</width>
+				<height>455</height>
+				<texture border="20">ContentPanel.png</texture>
+				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>10</top>
+				<width>820</width>
+				<height>90</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>GlassTitleBar.png</texture>
+			</control>
+			<control type="image">
+				<left>371</left>
+				<top>446</top>
+				<width>128</width>
+				<height>42</height>
+				<aspectratio>Keep</aspectratio>
+				<texture>HasWidget.png</texture>
+				<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="400">Hidden</animation>
+				<visible>!ControlGroup(9003).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideSubAdvisor)</visible>
+			</control>
+			<control type="button" id="8998">
+				<left>45</left>
+				<top>-5</top>
+				<width>780</width>
+				<height>500</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+			</control>
 		</control>
 	</include>
 	<include name="TransparentEffect">
@@ -108,9 +130,6 @@
 		<animation effect="fade" start="100" end="75" time="0" condition="SubString(skin.string(MediaPanelTrans),25)">Conditional</animation>
 		<animation effect="fade" start="100" end="90" time="0" condition="SubString(skin.string(MediaPanelTrans),10)">Conditional</animation>
 	</include>
-	<!--include name="TransparentEffect"> 
-		<colordiffuse>$INFO[Skin.String(MediaPanelTrans)]</colordiffuse>
-	</include-->
 	<include name="BackgroundFade">
 		<animation effect="fade" time="600">Visible</animation>
 		<animation effect="fade" time="600">Hidden</animation>
@@ -127,6 +146,10 @@
 		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
+	<include name="KBurnsAnimateFanart">
+		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateVizFanart)">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateVizFanart)">Conditional</animation>
+	</include>
 	<include name="KeyboardButton">
 		<width>50</width>
 		<height>50</height>
@@ -142,6 +165,20 @@
 		<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Skin.String(MediaPopUpControl,Instant)">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="1600" delay="3000" condition="Skin.String(MediaPopUpControl,Delayed)">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+	</include>
+	<include name="CDArtSpinner">
+		<animation effect="slide" start="0,0" end="70,0" time="1200" delay="500" condition="Player.Playing | Player.Forwarding | Player.Rewinding">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2400" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1600" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="800" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="400" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1600" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1200" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="800" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="400" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<left>0</left>
@@ -250,16 +287,6 @@
 			<height>720</height>
 			<texture border="0,0,10,0">MediaBladeSub.png</texture>
 		</control>
-		<!--control type="image">
-			<description>LOGO</description>
-			<left>15</left>
-			<top>0</top>
-			<width>220</width>
-			<height>80</height>
-			<aspectratio>keep</aspectratio>
-			<texture>Convergence_Logo.png</texture>
-			
-		</control-->
 		<include>BottonLogoImage</include>
 	</include>
 	<include name="MainHeaderLabel">
@@ -431,6 +458,7 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
+			<visible>!Window.IsActive(script-globalsearch-main.xml)</visible>
 			<control type="label">
 				<left>10</left>
 				<top>45</top>
@@ -548,7 +576,7 @@
 				<onright>803</onright>
 				<onup>800</onup>
 				<ondown>800</ondown>
-				<onclick>RunScript(script.globalsearch)</onclick>
+				<onclick>$VAR[GlobalSearchAction]</onclick>
 				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 				<visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
 				<visible>Window.IsVisible(musiclibrary) | Window.IsVisible(videolibrary)</visible>
@@ -624,65 +652,6 @@
 			<visible>!Player.HasMedia | SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 		</control>
 	</include>
-	<!--include name="MainWindowMouseButtons">
-        <control type="group">
-            <left>120r</left>
-            <top>55r</top>
-            <animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
-            <animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-            <visible>system.getbool(input.enablemouse)</visible>
-            <control type="button">
-                <description>Back push button</description>
-                <left>0</left>
-                <top>0</top>
-                <width>45</width>
-                <height>45</height>
-                <label>1036</label>
-                <font>-</font>
-                <onclick>back</onclick>
-                <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <onleft>50</onleft>
-                <onright>50</onright>
-                <onup>50</onup>
-                <ondown>50</ondown>
-            </control>
-            <control type="image">
-                <description>Back Icon</description>
-                <left>5</left>
-                <top>5</top>
-                <width>35</width>
-                <height>35</height>
-                <aspectratio>keep</aspectratio>
-                <texture>icon_back.png</texture>
-            </control>
-            <control type="button">
-                <description>Home push button</description>
-                <left>55</left>
-                <top>0</top>
-                <width>45</width>
-                <height>45</height>
-                <label>31003</label>
-                <font>-</font>
-                <onclick>ActivateWindow(home)</onclick>
-                <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <texturenofocus border="5">floor_button.png</texturenofocus>
-                <onleft>50</onleft>
-                <onright>50</onright>
-                <onup>50</onup>
-                <ondown>50</ondown>
-            </control>
-            <control type="image">
-                <description>Home Icon</description>
-                <left>60</left>
-                <top>5</top>
-                <width>35</width>
-                <height>35</height>
-                <aspectratio>keep</aspectratio>
-                <texture>icon_home.png</texture>
-            </control>
-        </control>
-    </include-->
 	<include name="CommonNowPlaying">
 		<control type="group">
 			<left>605r</left>
@@ -1213,10 +1182,6 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-			<!--
-            <animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			-->
 		</control>
 	</include>
 	<include name="MenuMoviePlayListCheck">

@@ -91,7 +91,6 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
-				<!--include>CommonNowPlaying_Controls</include-->
 			</control>
 		</control>
 		<include>BottomClock</include>

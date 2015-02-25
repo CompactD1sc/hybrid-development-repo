@@ -154,8 +154,6 @@
 					<label>19051</label>
 					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 				</control>
-				<!-- Playback controls -->
-				<!--include>CommonNowPlaying_Controls</include-->
 			</control>
 		</control>
 	</include>

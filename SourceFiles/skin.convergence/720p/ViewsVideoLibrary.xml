@@ -10,11 +10,11 @@
 				<width>390</width>
 				<height>520</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>51560</onright>
 				<onup>515</onup>
 				<ondown>515</ondown>
 				<viewtype label="$LOCALIZE[31639]">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>51560</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
 				<itemlayout condition="[!Container.Content(TVShows) + !Container.Content(Movies)] | Skin.HasSetting(View515HideBanners)" height="40" width="390">
@@ -226,7 +226,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="51560">
 				<left>435</left>
 				<top>109</top>
 				<width>25</width>
@@ -299,12 +299,23 @@
 					<description>Media Codec Flagging Images</description>
 					<left>0</left>
 					<top>500</top>
-					<width>561</width>
+					<width>151</width>
 					<align>left</align>
 					<itemgap>1</itemgap>
 					<orientation>horizontal</orientation>
 					<include condition="!Skin.HasSetting(EnableFullMPAA)">VideoMPAAFlaggingConditions</include>
 					<include>VideoStudioFlagging</include>
+					<include>MovieSetFlaggingConditions</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="grouplist">
+					<description>Media Codec Flagging Images</description>
+					<left>280</left>
+					<top>500</top>
+					<width>275</width>
+					<align>right</align>
+					<itemgap>1</itemgap>
+					<orientation>horizontal</orientation>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
@@ -321,7 +332,7 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>IsEmpty(ListItem.FileExtension)</visible>
+					<visible>stringcompare(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>593</left>
@@ -331,7 +342,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="ClearCase/EmptyCaseMask.png" background="true">$VAR[PosterThumb]</texture>
-					<visible>!IsEmpty(ListItem.FileExtension)</visible>
+					<visible>!stringcompare(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>560</left>
@@ -340,7 +351,7 @@
 					<height>316</height>
 					<aspectratio>stretch</aspectratio>
 					<texture fallback="ClearCase/dv.png">$VAR[VideoListCase,ClearCase/,.png]</texture>
-					<visible>!IsEmpty(ListItem.FileExtension)</visible>
+					<visible>!stringcompare(ListItem.Label,..)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -398,7 +409,7 @@
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
 					<left>0</left>
-					<top>490</top>
+					<top>480</top>
 					<width>561</width>
 					<align>left</align>
 					<itemgap>5</itemgap>
@@ -539,7 +550,7 @@
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
 					<left>0</left>
-					<top>490</top>
+					<top>480</top>
 					<width>561</width>
 					<align>left</align>
 					<itemgap>5</itemgap>
@@ -630,11 +641,23 @@
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
-					<left>-10</left>
-					<top>490</top>
-					<width>488</width>
+					<left>0</left>
+					<top>480</top>
+					<width>192</width>
 					<align>left</align>
-					<itemgap>2</itemgap>
+					<itemgap>1</itemgap>
+					<orientation>horizontal</orientation>
+					<include>VideoMPAAFlaggingConditions</include>
+					<include>VideoStudioFlagging</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="grouplist">
+					<description>Media Codec Flagging Images</description>
+					<left>200</left>
+					<top>480</top>
+					<width>275</width>
+					<align>right</align>
+					<itemgap>1</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
@@ -686,9 +709,9 @@
 				<onleft>508</onleft>
 				<onright>508</onright>
 				<onup>2</onup>
-				<ondown>60</ondown>
+				<ondown>50860</ondown>
 				<viewtype label="31029">wrap</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50860</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<focusposition>5</focusposition>
 				<movement>3</movement>
@@ -810,7 +833,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50860">
 				<left>310</left>
 				<top>185</top>
 				<width>660</width>
@@ -1083,21 +1106,31 @@
 				<top>275</top>
 				<width>390</width>
 				<height>65</height>
-				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<texture background="true">$VAR[MediaLogoArt]</texture>
 				<visible>!Skin.HasSetting(EnableAdditionalArtWork) + !IsEmpty(ListItem.Art(clearlogo))</visible>
 			</control>
 			<control type="grouplist">
 				<description>Media Codec Flagging Images</description>
-				<left>332</left>
+				<left>760</left>
 				<top>305</top>
-				<width>561</width>
+				<width>151</width>
 				<align>right</align>
 				<itemgap>1</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(EnableFullMPAA)">VideoMPAAFlaggingConditions</include>
 				<include>VideoStudioFlagging</include>
+				<include>VideoMPAAFlaggingConditions</include>
+			</control>
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<animation effect="slide" start="0,0" end="-420,0" delay="0" time="0" condition="Skin.HasSetting(EnableAdditionalArtWork)">conditional</animation>
+				<left>432</left>
+				<top>312</top>
+				<width>275</width>
+				<align>left</align>
+				<itemgap>1</itemgap>
+				<orientation>horizontal</orientation>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>
@@ -1120,11 +1153,11 @@
 				<width>610</width>
 				<height>520</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>50460</onright>
 				<onup>504</onup>
 				<ondown>504</ondown>
 				<viewtype label="$LOCALIZE[31641]">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50460</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
 				<itemlayout height="40" width="610">
@@ -1265,7 +1298,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50460">
 				<left>650</left>
 				<top>96</top>
 				<width>25</width>
@@ -1335,11 +1368,11 @@
 						<itemgap>2</itemgap>
 						<orientation>horizontal</orientation>
 						<include condition="!Skin.HasSetting(EnableFullMPAA)">VideoMPAAFlaggingConditions</include>
-						<include>VideoStudioFlagging</include>
 						<include>VideoCodecFlaggingConditions</include>
 						<include>AudioCodecFlaggingConditions</include>
 						<include>AudioChannelsFlaggingConditions</include>
-						<include condition="Skin.HasSetting(EnableFullMPAA)">AspectCodecFlaggingConditions</include>
+						<include>AspectCodecFlaggingConditions</include>
+						<include>VideoStudioFlagging</include>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -1507,16 +1540,16 @@
 				<texture background="true">black-back.png</texture>
 			</control>
 			<control type="panel" id="732">
-				<left>70</left>
+				<left>45</left>
 				<top>85</top>
 				<width>1189</width>
 				<height>570</height>
 				<onleft>2</onleft>
-				<onright>800</onright>
+				<onright>73260</onright>
 				<onup>732</onup>
 				<ondown>732</ondown>
 				<viewtype label="31648">panel</viewtype>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol>73260</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>200</preloaditems>
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(MusicVideos)</visible>
@@ -1582,6 +1615,8 @@
 						<top>0</top>
 						<animation effect="slide" end="0,27" time="200" reversible="true" condition="Container.Row(0)">conditional</animation>
 						<animation effect="slide" end="0,-37" time="200" reversible="true" condition="Container.Row(2)">conditional</animation>
+						<animation effect="slide" end="26,0" time="200" reversible="true" condition="Container.Column(0)">conditional</animation>
+						<animation effect="slide" end="-26,0" time="200" reversible="true" condition="Container.Column(8)">conditional</animation>
 						<animation reversible="false" effect="zoom" end="-27,-33,185,267" time="100">focus</animation>
 						<animation reversible="false" effect="zoom" start="-27,-33,185,267" time="100">unfocus</animation>
 						<control type="image">
@@ -1628,11 +1663,28 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="scrollbar" id="73260">
+				<left>40r</left>
+				<top>95</top>
+				<width>25</width>
+				<height>550</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>732</onleft>
+				<onright>800</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(732)</visible>
+			</control>
 		</control>
 	</include>
 	<include name="LogoWallView">
 		<control type="group">
 			<visible>Control.IsVisible(594)</visible>
+			<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -1641,26 +1693,26 @@
 				<texture>black_content.png</texture>
 			</control>
 			<control type="panel" id="594">
-				<posx>70</posx>
-				<posy>85</posy>
+				<left>70</left>
+				<top>80</top>
 				<width>1200</width>
 				<height>525</height>
 				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>59460</pagecontrol>
 				<viewtype label="$LOCALIZE[31650]">Panel</viewtype>
 				<onleft>594</onleft>
 				<onright>594</onright>
 				<onup>9000</onup>
-				<ondown>60</ondown>
+				<ondown>59460</ondown>
 				<preloaditems>4</preloaditems>
 				<include>VisibleFadeEffect</include>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 				<itemlayout width="300" height="100">
 					<control type="image">
 						<visible>stringcompare(ListItem.Label,..)</visible>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>230</width>
 						<height>89</height>
 						<texture background="true">DefaultLogoReturn.png</texture>
@@ -1673,8 +1725,8 @@
 						<control type="image">
 							<visible>Container.Content(tvshows)| Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 							<visible>!IsEmpty(ListItem.Art(clearlogo)) + !IsEmpty(ListItem.Title)</visible>
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>230</width>
 							<height>89</height>
 							<texture background="true">$VAR[MediaLogoArt]</texture>
@@ -1684,8 +1736,8 @@
 						</control>
 						<control type="label">
 							<visible>IsEmpty(ListItem.Title) | IsEmpty(ListItem.Art(clearlogo))</visible>
-							<posx>0</posx>
-							<posy>30</posy>
+							<left>0</left>
+							<top>30</top>
 							<width>270</width>
 							<height>89</height>
 							<align>center</align>
@@ -1698,8 +1750,8 @@
 				<focusedlayout width="340" height="125">
 					<control type="image">
 						<visible>stringcompare(ListItem.Label,..)</visible>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>116</height>
 						<texture background="true">DefaultLogoReturn.png</texture>
@@ -1717,8 +1769,8 @@
 						<control type="image">
 							<visible>Container.Content(tvshows)| Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 							<visible>!IsEmpty(ListItem.Art(clearlogo)) + !IsEmpty(ListItem.Title)</visible>
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>300</width>
 							<height>116</height>
 							<texture background="true">$VAR[MediaLogoArt]</texture>
@@ -1733,8 +1785,8 @@
 						</control>
 						<control type="image">
 							<visible>IsEmpty(ListItem.Title) | IsEmpty(ListItem.Art(clearlogo))</visible>
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>270</width>
 							<height>84</height>
 							<texture background="true" border="5">folder-focus.png</texture>
@@ -1747,8 +1799,8 @@
 						</control>
 						<control type="label">
 							<visible>IsEmpty(ListItem.Title) | IsEmpty(ListItem.Art(clearlogo))</visible>
-							<posx>0</posx>
-							<posy>30</posy>
+							<left>0</left>
+							<top>30</top>
 							<width>270</width>
 							<height>84</height>
 							<align>center</align>
@@ -1763,9 +1815,9 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
-				<posx>90</posx>
-				<posy>638</posy>
+			<control type="scrollbar" id="59460">
+				<left>90</left>
+				<top>638</top>
 				<width>1100</width>
 				<height>25</height>
 				<texturesliderbackground border="14,0,14,0">ScrollBarH.png</texturesliderbackground>
@@ -1777,6 +1829,7 @@
 				<orientation>horizontal</orientation>
 				<onup>594</onup>
 				<ondown>803</ondown>
+				<visible>Control.IsVisible(594)</visible>
 			</control>
 			<control type="group">
 				<left>90</left>

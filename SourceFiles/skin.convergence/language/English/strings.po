@@ -228,7 +228,11 @@ msgctxt "#31052"
 msgid "Initial Focused Horizontal Menu Item "
 msgstr ""
 
-#empty strings from id 31053 to 31054
+msgctxt "#31053"
+msgid "Results"
+msgstr ""
+
+#empty string id 31054
 #Playlist Editor labels
 
 msgctxt "#31055"
@@ -259,7 +263,23 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr ""
 
-#empty strings from id 31062 to 31073
+msgctxt "#31062"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31063"
+msgid "Permanently"
+msgstr ""
+
+msgctxt "#31064"
+msgid "Info Button"
+msgstr ""
+
+msgctxt "#31065"
+msgid "Show Media Info on Fullscreen"
+msgstr ""
+
+#empty strings from id 31066 to 31073
 
 msgctxt "#31074"
 msgid "Hide Thumbnails"
@@ -297,7 +317,9 @@ msgctxt "#31082"
 msgid "Enable System Menu Item"
 msgstr ""
 
-#empty string id 31083
+msgctxt "#31083"
+msgid "of"
+msgstr ""
 
 msgctxt "#31084"
 msgid "Enable Kodi Intro Movie"
@@ -312,7 +334,7 @@ msgid "Enable Visible Horizontal Submenu"
 msgstr ""
 
 msgctxt "#31087"
-msgid "Enable Submenu Advisor"
+msgid "Enable Submenu or Widget Advisor"
 msgstr ""
 
 msgctxt "#31088"
@@ -327,7 +349,31 @@ msgctxt "#31090"
 msgid "Enable Playing Artist Fanart"
 msgstr ""
 
-#empty strings from id 31091 to 31097
+msgctxt "#31091"
+msgid "Hide DVD Case"
+msgstr ""
+
+msgctxt "#31092"
+msgid "Enable Clean Home Screen"
+msgstr ""
+
+msgctxt "#31093"
+msgid "Shuffle On"
+msgstr ""
+
+msgctxt "#31094"
+msgid "Repeat All On"
+msgstr ""
+
+msgctxt "#31095"
+msgid "Repeat One On"
+msgstr ""
+
+msgctxt "#31096"
+msgid "Next Tracks"
+msgstr ""
+
+#empty string id 31097
 
 msgctxt "#31098"
 msgid "Enable Kiosk Mode"
@@ -619,9 +665,9 @@ msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr ""
 
-msgctxt "#31206"
-msgid "Found"
-msgstr ""
+#msgctxt "#31206"
+#msgid "Found"
+#msgstr ""
 
 msgctxt "#31207"
 msgid "Find More Items"
@@ -821,9 +867,9 @@ msgctxt "#31258"
 msgid "User Select"
 msgstr ""
 
-msgctxt "#31259"
-msgid "Items"
-msgstr ""
+#msgctxt "#31259"
+#msgid "Items"
+#msgstr ""
 
 #empty strings from id 31260 to 31271
 
@@ -839,7 +885,13 @@ msgctxt "#31274"
 msgid "Global Background"
 msgstr ""
 
-#empty strings from id 31275 to 31281
+#empty strings from id 31275 to 31278
+
+msgctxt "#31279"
+msgid "Enable Next 5 Songs Scroller"
+msgstr ""
+
+#empty strings from id 31280 to 31281
 
 msgctxt "#31282"
 msgid "Home Menu"
@@ -868,7 +920,7 @@ msgid "Background Type"
 msgstr ""
 
 msgctxt "#31295"
-msgid "Live Content"
+msgid "Live Weather"
 msgstr ""
 
 #empty strings from id 31296 to 31299
@@ -889,7 +941,7 @@ msgid "Data provider"
 msgstr ""
 
 msgctxt "#31304"
-msgid "Enable List Item Fanart Backgrounds"
+msgid "Enable Fanart Backgrounds while Browsing"
 msgstr ""
 
 msgctxt "#31305"
@@ -1032,7 +1084,11 @@ msgctxt "#31339"
 msgid "Global Skin Options"
 msgstr ""
 
-#empty strings from id 31340 to 31341
+msgctxt "#31340"
+msgid "Enable Music Visualization Fanart Animation"
+msgstr ""
+
+#empty string id 31341
 
 msgctxt "#31342"
 msgid "Enable Playing Artist Fanart and Music \"Viz\" Diffusion"
@@ -1059,7 +1115,7 @@ msgid "All Seasons"
 msgstr ""
 
 msgctxt "#31348"
-msgid " Enable CD-Wall as Fallback for Missing \"Now Playing\" Fanart"
+msgid "Enable CD-Wall as Fallback for Missing or Hidden \"Now Playing\" Fanart"
 msgstr ""
 
 msgctxt "#31349"
@@ -1145,7 +1201,25 @@ msgctxt "#31368"
 msgid "Found"
 msgstr ""
 
-#empty strings from id 31369 to 31380
+#empty strings from id 31369 to 31370
+
+msgctxt "#31371"
+msgid "Enable Video Artwork on OSD"
+msgstr ""
+
+msgctxt "#31372"
+msgid "Enable Video OSD Start Playing Introduction"
+msgstr ""
+
+msgctxt "#31373"
+msgid "Enable Video OSD Plot on Pause"
+msgstr ""
+
+msgctxt "#31374"
+msgid "Enable Video OSD Information on Pause"
+msgstr ""
+
+#empty strings from id 31375 to 31380
 
 msgctxt "#31381"
 msgid "Configure script.randomandlastitems"
@@ -1159,7 +1233,23 @@ msgctxt "#31383"
 msgid "Use Banners"
 msgstr ""
 
-#empty strings from id 31384 to 31389
+msgctxt "#31384"
+msgid "Enable Album and Disc Artwork on Playback"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Enable Artist FanArt on Playback"
+msgstr ""
+
+msgctxt "#31386"
+msgid "Music Playback Settings"
+msgstr ""
+
+msgctxt "#31387"
+msgid "Video OSD Settings"
+msgstr ""
+
+#empty strings from id 31388 to 31389
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -1224,7 +1314,11 @@ msgctxt "#31413"
 msgid "Local subtitle available"
 msgstr ""
 
-#empty strings from id 31414 to 31419
+msgctxt "#31414"
+msgid "Enable Clock and Profile on Fullscreen Media OSD"
+msgstr ""
+
+#empty strings from id 31415 to 31419
 
 msgctxt "#31420"
 msgid "Log-in"
@@ -1455,7 +1549,11 @@ msgctxt "#31652"
 msgid "Wide List"
 msgstr ""
 
-#empty strings from id 31653 to 31697
+msgctxt "#31653"
+msgid "Low List"
+msgstr ""
+
+#empty strings from id 31654 to 31697
 
 msgctxt "#31698"
 msgid "Media Certification Country"
@@ -1565,7 +1663,19 @@ msgctxt "#31925"
 msgid "Weather Fanart Pack"
 msgstr ""
 
-#empty strings from id 31926 to 31957
+msgctxt "#31926"
+msgid "Random Home Fanart Options"
+msgstr ""
+
+msgctxt "#31927"
+msgid "Seconds"
+msgstr ""
+
+msgctxt "#31928"
+msgid "Adjust FanArt Cycle Rate"
+msgstr ""
+
+#empty strings from id 31929 to 31957
 
 msgctxt "#31957"
 msgid "Concerts"

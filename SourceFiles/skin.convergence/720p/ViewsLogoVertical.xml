@@ -17,10 +17,10 @@
 				<height>530</height>
 				<width>650</width>
 				<onleft>9000</onleft>
-				<onright>60</onright>
+				<onright>73060</onright>
 				<onup>730</onup>
 				<ondown>730</ondown>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>73060</pagecontrol>
 				<viewtype label="$LOCALIZE[31649]">list</viewtype>
 				<orientation>vertical</orientation>
 				<scrolltime>300</scrolltime>
@@ -102,7 +102,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="73060">
 				<left>35r</left>
 				<top>95</top>
 				<width>25</width>
@@ -122,15 +122,16 @@
 				<description>Media Codec Flagging Images</description>
 				<left>50</left>
 				<top>622</top>
-				<width>580</width>
+				<width>530</width>
 				<align>left</align>
-				<itemgap>5</itemgap>
+				<itemgap>2</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoMPAAFlaggingConditions</include>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>
 				<include>AspectCodecFlaggingConditions</include>
+				<include>VideoStudioFlagging</include>
 			</control>
 			<control type="group">
 				<left>0</left>

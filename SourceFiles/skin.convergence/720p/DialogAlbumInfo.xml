@@ -46,7 +46,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>container.content(Albums)</visible>
+					<visible>Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
 					<description>Artist header label</description>
@@ -60,7 +60,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>container.content(Artists)</visible>
+					<visible>Container.Content(Artists)</visible>
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(12)</visible>
@@ -108,7 +108,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(Albums) + !Control.HasFocus(12)</visible>
+					<visible>Container.Content(Albums) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
 					<include>VisibleFadeEffect</include>
@@ -261,7 +261,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(Artists) + !Control.HasFocus(12)</visible>
+					<visible>Container.Content(Artists) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
 					<include>VisibleFadeEffect</include>

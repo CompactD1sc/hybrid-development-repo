@@ -21,7 +21,7 @@
 				<onleft>2</onleft>
 				<onright>800</onright>
 				<pagecontrol>-</pagecontrol>
-				<visible>Window.IsActive(videolibrary) + Container.Content(episodes)</visible>
+				<visible>Window.IsActive(videolibrary) + Container.Content(Episodes)</visible>
 				<itemlayout width="600" height="60">
 					<control type="label">
 						<left>20</left>
@@ -173,7 +173,7 @@
 				<fadetime>IconCrossfadeTime</fadetime>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
-				<visible>Control.IsVisible(728) + !StringCompare(ListItem.Label,..) + Container.Content(episodes)</visible>
+				<visible>Control.IsVisible(728) + !StringCompare(ListItem.Label,..) + Container.Content(Episodes)</visible>
 			</control>
 			<control type="textbox">
 				<animation effect="slide" end="0,60" time="0" condition="Container(728).Row(1)">Conditional</animation>

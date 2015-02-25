@@ -11,15 +11,6 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!--control type="image">
-                <left>0</left>
-                <top>100r</top>
-                <width>1280</width>
-                <height>100</height>
-                <texture>floor.png</texture>
-                <animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-                <animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
-            </control-->
 			<control type="image">
 				<description>LOGO</description>
 				<left>10</left>
@@ -37,13 +28,6 @@
 				<height>600</height>
 				<texture border="10">ContentPanel.png</texture>
 			</control>
-			<!--control type="image">
-                <left>265</left>
-                <top>652</top>
-                <width>750</width>
-                <height>64</height>
-                <texture border="10">ContentPanelMirror.png</texture>
-            </control-->
 			<control type="label">
 				<left>295</left>
 				<top>100</top>

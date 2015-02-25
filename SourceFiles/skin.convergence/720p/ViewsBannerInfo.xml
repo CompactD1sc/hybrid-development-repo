@@ -10,11 +10,11 @@
 				<width>610</width>
 				<height>520</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>50360</onright>
 				<onup>503</onup>
 				<ondown>503</ondown>
 				<viewtype label="$LOCALIZE[31642]">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50360</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				<itemlayout height="40" width="610">
@@ -155,7 +155,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50360">
 				<left>650</left>
 				<top>92</top>
 				<width>25</width>
@@ -199,41 +199,20 @@
 					<bordersize>8</bordersize>
 					<visible>StringCompare(ListItem.label,..)</visible>
 				</control>
-				<control type="group">
-					<control type="image">
-						<description>Rating image</description>
-						<left>0</left>
-						<top>120</top>
-						<width>96</width>
-						<height>46</height>
-						<aspectratio align="right">keep</aspectratio>
-						<texture>$VAR[RatingMPAA,flagging/ratings/,.png]</texture>
-						<visible>!IsEmpty(ListItem.Mpaa)</visible>
-					</control>
-					<control type="grouplist">
-						<left>97</left>
-						<top>120</top>
-						<width>315</width>
-						<align>center</align>
-						<itemgap>2</itemgap>
-						<orientation>horizontal</orientation>
-						<include>VideoCodecFlaggingConditions</include>
-						<include>AudioCodecFlaggingConditions</include>
-						<include>AudioChannelsFlaggingConditions</include>
-						<!--include>AspectCodecFlaggingConditions</include-->
-						<!--include condition="!Skin.HasSetting(EnableFullMPAA)">VideoMPAAFlaggingConditions</include-->
-						<visible>Container.Content(Episodes)</visible>
-					</control>
-					<control type="image">
-						<description>Studio image</description>
-						<left>412</left>
-						<top>120</top>
-						<width>96</width>
-						<height>46</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Studio,flagging/studio/,.png]</texture>
-						<visible>!IsEmpty(ListItem.Studio)</visible>
-					</control>
+				<control type="grouplist">
+					<description>Media Codec Flagging Images</description>
+					<left>0</left>
+					<top>120</top>
+					<width>530</width>
+					<align>center</align>
+					<itemgap>2</itemgap>
+					<orientation>horizontal</orientation>
+					<include>VideoMPAAFlaggingConditions</include>
+					<include>VideoCodecFlaggingConditions</include>
+					<include>AudioCodecFlaggingConditions</include>
+					<include>AudioChannelsFlaggingConditions</include>
+					<include>AspectCodecFlaggingConditions</include>
+					<include>VideoStudioFlagging</include>
 				</control>
 				<control type="label">
 					<description>Episodes txt</description>

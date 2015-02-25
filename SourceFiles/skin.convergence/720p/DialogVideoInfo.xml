@@ -62,8 +62,6 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<!--include>VideoStereoscopicsFlaggingConditions</include-->
-					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(12)</visible>
@@ -154,7 +152,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
+					<visible>[!Container.Content(tvshows) + !Container.Content(Episodes) + !Container.Content(musicvideos)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
 					<top>90</top>
 					<left>210</left>
 					<include>VisibleFadeEffect</include>
@@ -478,7 +476,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(episodes) + !Control.HasFocus(12)</visible>
+					<visible>Container.Content(Episodes) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
 					<include>VisibleFadeEffect</include>
@@ -653,7 +651,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(musicvideos) + !Control.HasFocus(12)</visible>
+					<visible>Container.Content(musicvideos) + !Control.HasFocus(12)</visible>
 					<top>90</top>
 					<left>210</left>
 					<include>VisibleFadeEffect</include>
@@ -973,15 +971,16 @@
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
-						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
+						<!--visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible-->
+						<visible>!IsEmpty(ListItem.Trailer)</visible>
 					</control>
-					<control type="button" id="15">
+					<!--control type="button" id="15">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 						<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer)</visible>
-					</control>
+					</control-->
 					<control type="button" id="100">
 						<description>Fetch TvTunes stuff</description>
 						<include>ButtonInfoDialogsCommonValues</include>

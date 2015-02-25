@@ -2366,7 +2366,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.1.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.1.Art(Fanart))]</thumb>
@@ -2378,7 +2377,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.2.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.2.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.2.Art(Fanart))]</thumb>
@@ -2390,7 +2388,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.3.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.3.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.3.Art(Fanart))]</thumb>
@@ -2402,7 +2399,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.4.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.4.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.4.Art(Fanart))]</thumb>
@@ -2414,7 +2410,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.5.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.5.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.5.Art(Fanart))]</thumb>
@@ -2426,7 +2421,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.6.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.6.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.6.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.6.Art(Fanart))]</thumb>
@@ -2438,7 +2432,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.7.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.7.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.7.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.7.Art(Fanart))]</thumb>
@@ -2450,7 +2443,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.8.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.8.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.8.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.8.Art(Fanart))]</thumb>
@@ -2462,7 +2454,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.9.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.9.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.9.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.9.Art(Fanart))]</thumb>
@@ -2474,7 +2465,6 @@
 				<label>$INFO[Window(Home).Property(RecommendedMovie.10.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedMovie.10.Year)]</label2>
 				<onclick>PlayList.Clear</onclick>
-				<!--onclick>Dialog.Close(2118)</onclick-->
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.10.Art(poster))]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedMovie.10.Art(Fanart))]</thumb>
@@ -3748,6 +3738,158 @@
 				<!--onclick>PlayMedia($INFO[Container(8051).ListItem(9).FilenameAndPath])</onclick-->
 				<icon>$INFO[Container(8051).ListItem(9).Art(tvshow.poster)]</icon>
 				<thumb>$INFO[Container(8051).ListItem(9).Art(fanart)]</thumb>
+			</item>
+		</content>
+	</include>
+	<include name="UPnPRecentAlbums">
+		<content>
+			<item id="1">
+				<label>$INFO[Container(8054).ListItem(1).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(1).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(1).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(1).Art(fanart)]</thumb>
+			</item>
+			<item id="2">
+				<label>$INFO[Container(8054).ListItem(2).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(2).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(2).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(2).Art(fanart)]</thumb>
+			</item>
+			<item id="3">
+				<label>$INFO[Container(8054).ListItem(3).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(3).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(3).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(3).Art(fanart)]</thumb>
+			</item>
+			<item id="4">
+				<label>$INFO[Container(8054).ListItem(4).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(4).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(4).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(4).Art(fanart)]</thumb>
+			</item>
+			<item id="5">
+				<label>$INFO[Container(8054).ListItem(5).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(5).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(5).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(5).Art(fanart)]</thumb>
+			</item>
+			<item id="6">
+				<label>$INFO[Container(8054).ListItem(6).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(6).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(6).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(6).Art(fanart)]</thumb>
+			</item>
+			<item id="7">
+				<label>$INFO[Container(8054).ListItem(7).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(7).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(7).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(7).Art(fanart)]</thumb>
+			</item>
+			<item id="8">
+				<label>$INFO[Container(8054).ListItem(8).Label]</label>
+				<!--onclick>$VAR[MusicRecentAddCmd]</onclick-->
+				<onclick>PlayMedia("$INFO[Container(8054).ListItem(8).FilenameAndPath]")</onclick>
+				<icon>$INFO[Container(8054).ListItem(8).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(8).Art(fanart)]</thumb>
+			</item>
+			<!--
+			<item id="9">
+				<label>$INFO[Container(8054).ListItem(9).Label]</label>
+				<onclick>$VAR[MusicRecentAddCmd]</onclick>
+				<onclick>PlayMedia($ESCINFO[Container(9054).ListItem(9).File])</onclick>
+				<onclick>PlayMedia($INFO[Container(9054).ListItem(9).FilenameAndPath])</onclick>
+				<icon>$INFO[Container(9054).ListItem(9).Icon]</icon>
+				<thumb>$INFO[Container(9054).ListItem(9).Art(fanart)]</thumb>
+			</item>
+			<item id="10">
+				<label>$INFO[Container(8054).ListItem(10).Label]</label>
+				<onclick>$VAR[MusicRecentAddCmd]</onclick>
+				<onclick>PlayMedia($ESCINFO[Container(8054).ListItem(10).File])</onclick>
+				<onclick>PlayMedia($INFO[Container(8054).ListItem(10).FilenameAndPath])</onclick>
+				<icon>$INFO[Container(8054).ListItem(10).Icon]</icon>
+				<thumb>$INFO[Container(8054).ListItem(10).Art(fanart)]</thumb>
+			</item>
+			-->
+		</content>
+	</include>
+	<include name="UPnPRecentConcerts">
+		<content>
+			<item id="1">
+				<label>$INFO[Container(8053).ListItem(0).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(0).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(0).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(0).Art(fanart)]</thumb>
+			</item>
+			<item id="2">
+				<label>$INFO[Container(8053).ListItem(1).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(1).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(1).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(1).Art(fanart)]</thumb>
+			</item>
+			<item id="3">
+				<label>$INFO[Container(8053).ListItem(2).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(2).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(2).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(2).Art(fanart)]</thumb>
+			</item>
+			<item id="4">
+				<label>$INFO[Container(8053).ListItem(3).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(3).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(3).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(3).Art(fanart)]</thumb>
+			</item>
+			<item id="5">
+				<label>$INFO[Container(8053).ListItem(4).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(4).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(4).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(4).Art(fanart)]</thumb>
+			</item>
+			<item id="6">
+				<label>$INFO[Container(8053).ListItem(5).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(5).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(5).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(5).Art(fanart)]</thumb>
+			</item>
+			<item id="7">
+				<label>$INFO[Container(8053).ListItem(6).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(6).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(6).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(6).Art(fanart)]</thumb>
+			</item>
+			<item id="8">
+				<label>$INFO[Container(8053).ListItem(7).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(7).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(7).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(7).Art(fanart)]</thumb>
+			</item>
+			<item id="9">
+				<label>$INFO[Container(8053).ListItem(8).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(8).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(8).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(8).Art(fanart)]</thumb>
+			</item>
+			<item id="10">
+				<label>$INFO[Container(8053).ListItem(9).Title]</label>
+				<onclick>$VAR[ConcertsRecentCmd]</onclick>
+				<!--onclick>PlayMedia(&quot;$INFO[Container(8053).ListItem(9).FilenameAndPath]&quot;)</onclick-->
+				<icon>$INFO[Container(8053).ListItem(9).Art(poster)]</icon>
+				<thumb>$INFO[Container(8053).ListItem(9).Art(fanart)]</thumb>
 			</item>
 		</content>
 	</include>

@@ -91,7 +91,6 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<!--include>CommonNowPlaying_Controls</include-->
 			</control>
 		</control>
 		<include>BottomClock</include>
