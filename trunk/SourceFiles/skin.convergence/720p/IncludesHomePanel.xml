@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="HomeWidgetPanels">
+		<include>HomePanelBackground</include>
 		<control type="group" id="9003">
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(Favourites)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-210,0" delay="0" time="0" condition="Skin.HasSetting(HorizontalHomeScreen)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-460" delay="0" time="400" tween="back" easing="out" condition="!ControlGroup(9003).HasFocus + !Control.HasFocus(8998) + Skin.HasSetting(CleanHomeScreen)">conditional</animation>
 			<onup condition="Skin.HasSetting(HorizontalHomeScreen)">9000</onup>
 			<ondown condition="Skin.HasSetting(HorizontalHomeScreen)">9000</ondown>
 			<onright condition="!Skin.HasSetting(HorizontalHomeScreen)">9000</onright>
@@ -38,7 +40,8 @@
 			</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -135,14 +138,14 @@
 			</control>
 		</control>
 	</include>
-	<!--####################################################################################################-->
 	<include name="RecentMoviePanel">
 		<control type="group">
 			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentMovies) + [!IsEmpty(Window(Home).Property(RecentMovie.1.Title)) | !IsEmpty(Container(8050).ListItem(0).Title)]</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | Control.HasFocus(9002)]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Latest Movies Title label</description>
 				<left>10</left>
@@ -195,7 +198,8 @@
 			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentEpisodes) + [!IsEmpty(Window(Home).Property(RecentEpisode.1.TVshowTitle)) | !IsEmpty(Container(8051).ListItem(0).Title)]</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Latest Episodes label</description>
 				<left>10</left>
@@ -245,10 +249,11 @@
 	</include>
 	<include name="RecentAlbumsPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums) + !IsEmpty(Window(Home).Property(RecentAlbum.1.Title))</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentAlbums) + [!IsEmpty(Window(Home).Property(RecentAlbum.1.Title)) | !IsEmpty(Container(8054).ListItem(0).Label)]</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -291,16 +296,18 @@
 				<scrolltime>150</scrolltime>
 				<pagecontrol>-</pagecontrol>
 				<include>MusicCDThumbLayout</include>
-				<include>HomeRecentAlbums</include>
+				<include condition="!Skin.HasSetting(UPnP_Mode)">HomeRecentAlbums</include>
+				<include condition="Skin.HasSetting(UPnP_Mode)">UPnPRecentAlbums</include>
 			</control>
 		</control>
 	</include>
 	<include name="RecentConcertsPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts) + !IsEmpty(Window(Home).Property(RecentMusicVideo.1.Title))</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RecentConcerts) + [!IsEmpty(Window(Home).Property(RecentAlbum.1.Title)) | !IsEmpty(Container(8053).ListItem(0).Title)]</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -343,16 +350,18 @@
 				<scrolltime>150</scrolltime>
 				<pagecontrol>-</pagecontrol>
 				<include>MoviePosterLayout</include>
-				<include>HomeRecentConcerts</include>
+				<include condition="!Skin.HasSetting(UPnP_Mode)">HomeRecentConcerts</include>
+				<include condition="Skin.HasSetting(UPnP_Mode)">UPnPRecentConcerts</include>
 			</control>
 		</control>
 	</include>
 	<include name="RandomMoviePanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies) + !IsEmpty(Window.Property(RandomMovie.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomMovies) + !IsEmpty(Window.Property(RandomMovie.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Random Movies Title label</description>
 				<left>10</left>
@@ -402,10 +411,11 @@
 	</include>
 	<include name="RandomTVShowPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes) + !IsEmpty(Window(Home).Property(RandomEpisode.1.TVshowTitle))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomEpisodes) + !IsEmpty(Window(Home).Property(RandomEpisode.1.TVshowTitle))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -454,10 +464,11 @@
 	</include>
 	<include name="RandomAlbumPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomAlbums) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -506,10 +517,11 @@
 	</include>
 	<include name="RandomConcertsPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts) + !IsEmpty(Window.Property(RandomMusicVideo.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),RandomConcerts) + !IsEmpty(Window.Property(RandomMusicVideo.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -558,10 +570,11 @@
 	</include>
 	<include name="SuggestedMoviePanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies) + !IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedMovies) + !IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Suggested Movies Title label</description>
 				<left>10</left>
@@ -610,10 +623,11 @@
 	</include>
 	<include name="SuggestedTVShowPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes) + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedEpisodes) + !IsEmpty(Window(Home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -662,10 +676,11 @@
 	</include>
 	<include name="SuggestedAlbumPanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),SuggestedAlbums) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Title label</description>
 				<left>10</left>
@@ -714,10 +729,11 @@
 	</include>
 	<include name="UnWatchedMoviePanel">
 		<control type="group">
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatched) + !IsEmpty(Window(Home).Property(PlaylistRandomMovieUnWatched.1.Title))</visible>
+			<visible>!Skin.HasSetting(UPnP_Mode) + StringCompare(Container(9000).ListItem.Property(WidgetSet),UnWatched) + !IsEmpty(Window(Home).Property(PlaylistRandomMovieUnWatched.1.Title))</visible>
 			<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 			<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-			<include>HomePanelBackground</include>
+			<left>415</left>
+			<top>5</top>
 			<control type="label">
 				<description>Latest Movies Title label</description>
 				<left>10</left>
@@ -784,7 +800,8 @@
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-				<include>HomePanelBackground</include>
+				<left>415</left>
+				<top>5</top>
 				<control type="label">
 					<description>Random Title label</description>
 					<left>10</left>
@@ -1000,7 +1017,8 @@
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-				<include>HomePanelBackground</include>
+				<left>415</left>
+				<top>5</top>
 				<control type="label">
 					<description>Random Title label</description>
 					<left>10</left>
@@ -1216,7 +1234,8 @@
 				</visible>
 				<animation effect="fade" start="100" end="30" time="200" condition="!Skin.HasSetting(HorizontalHomeScreen) + [ControlGroup(9001).HasFocus | !IsEmpty(Window(Home).Property(SideBladeOpen))]">conditional</animation>
 				<animation effect="fade" start="100" end="30" time="500" condition="Window.IsVisible(CustomSuggestedMovies.xml) | Window.IsVisible(CustomSuggestedEpisodes.xml) | Window.IsVisible(CustomSuggestedAlbums.xml) | Window.IsVisible(CustomPlaylistsVideos.xml)">Conditional</animation>
-				<include>HomePanelBackground</include>
+				<left>415</left>
+				<top>5</top>
 				<control type="label">
 					<description>Random Title label</description>
 					<left>10</left>

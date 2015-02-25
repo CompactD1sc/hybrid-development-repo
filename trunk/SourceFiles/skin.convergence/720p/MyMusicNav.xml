@@ -156,7 +156,6 @@
 					<alttexturenofocus>-</alttexturenofocus>
 					<usealttexture>library.isscanningmusic</usealttexture>
 				</control>
-				<!--include>CommonNowPlaying_Controls</include-->
 			</control>
 		</control>
 		<include>BottomClock</include>

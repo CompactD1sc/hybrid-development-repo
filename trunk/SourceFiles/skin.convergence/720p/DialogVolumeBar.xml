@@ -5,13 +5,14 @@
 	<animation effect="slide" start="0,0" end="0,-40" delay="400" time="100">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<left>820</left>
+			<left>930</left>
 			<top>0</top>
+			<animation effect="slide" start="0,0" end="0,-50" time="100" condition="Window.IsVisible(busydialog)">conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>-10</top>
 				<width>300</width>
-				<height>50</height>
+				<height>65</height>
 				<texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
 			</control>
 			<control type="group">
@@ -19,7 +20,7 @@
 				<control type="image">
 					<description>Lite Volume Logo</description>
 					<left>10</left>
-					<top>0</top>
+					<top>5</top>
 					<width>40</width>
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
@@ -28,7 +29,7 @@
 				<control type="progress" id="1">
 					<description>progress control</description>
 					<left>50</left>
-					<top>8</top>
+					<top>13</top>
 					<width>230</width>
 					<height>18</height>
 					<info>Player.Volume</info>
@@ -39,7 +40,7 @@
 				<control type="image">
 					<description>Lite Volume Logo</description>
 					<left>10</left>
-					<top>0</top>
+					<top>5</top>
 					<width>40</width>
 					<height>35</height>
 					<aspectratio>keep</aspectratio>
@@ -49,7 +50,7 @@
 				<control type="label">
 					<description>Passthrough Label</description>
 					<left>50</left>
-					<top>6</top>
+					<top>11</top>
 					<width>230</width>
 					<height>20</height>
 					<label>$LOCALIZE[29802]</label>

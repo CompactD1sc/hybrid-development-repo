@@ -71,7 +71,6 @@
 							<height>105</height>
 							<fadetime>IconCrossfadeTime</fadetime>
 							<texture>StatusBanner/3DBanner.png</texture>
-							<!--visible>SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS)| SubString(ListItem.FilenameAndPath,TAB)</visible-->
 							<visible>ListItem.IsStereoscopic</visible>
 						</control>
 						<control type="image">
@@ -229,7 +228,6 @@
 								<effect type="rotatey" center="20" start="85" end="0" time="250" reversible="true" />
 								<effect type="fade" start="0" end="100" time="250" />
 							</animation>
-							<!--visible>SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS)| SubString(ListItem.FilenameAndPath,TAB)</visible-->
 							<visible>ListItem.IsStereoscopic</visible>
 							<visible>!Skin.HasSetting(DisableAnimatedCase)</visible>
 						</control>
@@ -246,7 +244,6 @@
 							<animation type="UnFocus" reversible="true">
 								<effect type="zoom" start="102,-20,110,110" end="90,10,105,105" time="250" reversible="true" />
 							</animation>
-							<!--visible>SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS)| SubString(ListItem.FilenameAndPath,TAB)</visible-->
 							<visible>ListItem.IsStereoscopic</visible>
 							<visible>Skin.HasSetting(DisableAnimatedCase)</visible>
 						</control>

@@ -107,7 +107,6 @@
 					<include>ButtonCommonValues</include>
 					<label>24999</label>
 				</control>
-				<!--include>CommonNowPlaying_Controls</include-->
 			</control>
 		</control>
 		<include>BottomClock</include>

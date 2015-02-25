@@ -7,14 +7,6 @@
 	<onunload>Skin.SetString(LastWeatherView,$INFO[Window.Property(Weather.CurrentView)])</onunload>
 	<controls>
 		<include>CommonBackground</include>
-		<control type="multiimage">
-			<include>Dimensions_Fullscreen</include>
-			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>!Skin.HasSetting(HideWeatherFanArt)</visible>
-		</control>
 		<control type="image">
 			<include>Window_OpenClose_Animation</include>
 			<include>VisibleFadeEffect</include>

@@ -3,6 +3,9 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<!-- TEMP -->
+	<onload>WakeOnLan(00:1F:D0:D1:09:07)</onload>
+	<!-- END OF TEMP -->
 	<onload condition="!IsEmpty(Window(Home).Property(SideBladeOpen))">ClearProperty(SideBladeOpen,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
@@ -22,25 +25,48 @@
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !Skin.HasSetting(UPnP_Mode) + !IsEmpty(Skin.String(HomeMenu.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.8.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistEight)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !Skin.HasSetting(UPnP_Mode) + !IsEmpty(Skin.String(HomeMenu.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.9.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistNine)</onload>
 	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !Skin.HasSetting(UPnP_Mode) + !IsEmpty(Skin.String(HomeMenu.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeMenu.10.Playlist)],method=Random,limit=10,unwatched=False,resume=False,property=HomeplaylistTen)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">AlarmClock(UPnPVideoFanArt,Control.Move(8055,6),00:$INFO[Skin.String(UPnPArtCycleRate)],silent,loop)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8055,$INFO[Window.Property(VideoFanArtContent)])</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">AlarmClock(UPnPTVShowFanArt,Control.Move(8056,6),00:$INFO[Skin.String(UPnPArtCycleRate)],silent,loop)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8056,$INFO[Window.Property(TVShowoFanArtContent)])</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">AlarmClock(UPnPArtistFanArt,Control.Move(8052,6),00:$INFO[Skin.String(UPnPArtCycleRate)],silent,loop)</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8052,$INFO[Window.Property(ArtistFanArtContent)])</onload>
+	<onload condition="Skin.HasSetting(UPnP_Mode)">Control.Move(8053,1)</onload>
 	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
 	<onload condition="Skin.HasSetting(HorizontalHomeScreen) + Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<onunload>CancelAlarm(UPnPVideoFanArt,true)</onunload>
+	<onunload>CancelAlarm(UPnPTVShowFanArt,true)</onunload>
+	<onunload>CancelAlarm(UPnPArtistFanArt,true)</onunload>
+	<onunload condition="Skin.HasSetting(UPnP_Mode)">SetProperty(VideoFanArtContent,$INFO[Container(8055).CurrentItem])</onunload>
+	<onunload condition="Skin.HasSetting(UPnP_Mode)">SetProperty(TVShowFanArtContent,$INFO[Container(8056).CurrentItem])</onunload>
+	<onunload condition="Skin.HasSetting(UPnP_Mode)">SetProperty(ArtistFanArtContent,$INFO[Container(8052).CurrentItem])</onunload>
 	<onunload condition="!IsEmpty(Window(Home).Property(SideBladeOpen))">ClearProperty(SideBladeOpen,Home)</onunload>
+	<!-- TEMP to make sure all users have value -->
+	<onload condition="IsEmpty(Skin.String(FanArtCycleRate))">Skin.SetString(FanArtCycleRate,10)</onload>
+	<onload condition="IsEmpty(Skin.String(UPnPArtCycleRate))">Skin.SetString(UPnPArtCycleRate,10)</onload>
+	<!-- END OF TEMP -->
 	<controls>
 		<control type="group">
-			<control type="list" id="8050">
+			<control type="wraplist" id="8050">
 				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedmovies.xml%2f/</content>
 			</control>
-			<control type="list" id="8051">
+			<control type="wraplist" id="8051">
 				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2frecentlyaddedepisodes.xml%2f/</content>
 			</control>
-			<control type="list" id="8052">
-				<content target="music" limit="10">$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/</content>
-			</control>
-			<control type="list" id="8053">
+			<control type="wraplist" id="8053">
 				<content target="video" limit="10">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmusicvideos%2ftitles.xml%2f/</content>
 			</control>
-			<control type="list" id="8054">
+			<control type="wraplist" id="8054">
 				<content target="music" limit="12">$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2frecentlyplayedalbums%2f/</content>
+			</control>
+			<control type="wraplist" id="8052">
+				<content target="music" limit="50">$INFO[Skin.String(UPnP_Path)]musicdb%3a%2f%2fartists%2f/</content>
+			</control>
+			<control type="wraplist" id="8055">
+				<content target="video" limit="50">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2fmovies%2ftitles.xml%2f/</content>
+			</control>
+			<control type="wraplist" id="8056">
+				<content target="video" limit="50">$INFO[Skin.String(UPnP_Path)]library%3a%2f%2fvideo%2ftvshows%2ftitles.xml%2f/</content>
 			</control>
 			<visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,XBMC)</visible>
 		</control>
@@ -97,7 +123,6 @@
 			<visible>Skin.HasSetting(HorizontalHomeScreen)</visible>
 		</control>
 		<!--include>ShowHomeInfoBar</include-->
-		<!-- ######################## -->
 		<control type="group" id="10">
 			<left>20</left>
 			<top>55r</top>
@@ -285,8 +310,8 @@
 				<textcolor>C0FFFFFF</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
-				<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
-				<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				<!--animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
+				<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation-->
 			</control>
 			<control type="label">
 				<description>Date label</description>
@@ -301,8 +326,8 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Date]</label>
 				<include>Window_OpenClose_Animation</include>
-				<animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation>
+				<!--animation effect="slide" start="0,0" end="40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-60" time="200" condition="Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(extendedprogressdialog)">conditional</animation-->
 			</control>
 		</control>
 	</controls>

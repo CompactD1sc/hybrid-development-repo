@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <addonlist>
     <addon name="xbmc-skins/skin.convergence">
-        <localdir>C:\Repository\SourceFiles\skin.convergence\</localdir>
+        <localdir>C:\Repository\Transifex\skin.convergence\</localdir>
 		<skipenglish>false</skipenglish>
 	</addon>
 </addonlist>

@@ -10,11 +10,11 @@
 				<width>690</width>
 				<height>521</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>5060</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<viewtype label="535">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>5060</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40" width="580">
 					<control type="image">
@@ -180,7 +180,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="5060">
 				<left>760</left>
 				<top>95</top>
 				<width>25</width>
@@ -210,7 +210,7 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>!Container.Content(episodes) | IsEmpty(ListItem.Title) | [Container.Content(episodes) + !Skin.HasSetting(HideEpisodeThumb)]</visible>
+					<visible>!Container.Content(Episodes) | IsEmpty(ListItem.Title) | [Container.Content(Episodes) + !Skin.HasSetting(HideEpisodeThumb)]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -222,10 +222,20 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes) + Skin.HasSetting(HideEpisodeThumb)</visible>
+					<visible>!IsEmpty(ListItem.Title) + Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb)</visible>
 				</control>
 			</control>
 			<include>VideoLogoArt</include>
+			<control type="image">
+				<description>Rating image</description>
+				<left>1172</left>
+				<top>615</top>
+				<width>96</width>
+				<height>46</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>$VAR[RatingMPAA,flagging/ratings/,.png]</texture>
+				<visible>!IsEmpty(ListItem.Mpaa)</visible>
+			</control>
 		</control>
 	</include>
 	<include name="FullWidthList">
@@ -234,15 +244,15 @@
 			<include>VisibleFadeEffect</include>
 			<control type="list" id="51">
 				<left>45</left>
-				<top>100</top>
+				<top>110</top>
 				<width>1175</width>
-				<height>520</height>
+				<height>480</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>5160</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
 				<viewtype label="537">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>5160</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40" width="1175">
 					<control type="image">
@@ -408,11 +418,11 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="5160">
 				<left>1230</left>
-				<top>104</top>
+				<top>114</top>
 				<width>25</width>
-				<height>512</height>
+				<height>472</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -423,6 +433,12 @@
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(51)</visible>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(51)</visible>
+				<left>90</left>
+				<top>610</top>
+				<include>FullScreenMediaFlagging</include>
 			</control>
 			<include>VideoLogoArt</include>
 		</control>
@@ -437,11 +453,11 @@
 				<width>1080</width>
 				<height>558</height>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>50060</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>
 				<viewtype label="21371">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>50060</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
 				<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="186" width="216">
@@ -488,14 +504,6 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
-					<!--control type="image">
-						<left>170</left>
-						<top>130</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control-->
 					<control type="image">
 						<left>170</left>
 						<top>130</top>
@@ -559,14 +567,6 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
-					<!--control type="image">
-						<left>170</left>
-						<top>130</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control-->
 					<control type="image">
 						<left>170</left>
 						<top>130</top>
@@ -618,14 +618,6 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
-					<!--control type="image">
-						<left>170</left>
-						<top>210</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control-->
 					<control type="image">
 						<left>170</left>
 						<top>210</top>
@@ -677,14 +669,6 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
-					<!--control type="image">
-						<left>170</left>
-						<top>210</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control-->
 					<control type="image">
 						<left>170</left>
 						<top>210</top>
@@ -705,7 +689,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="50060">
 				<left>1170</left>
 				<top>80</top>
 				<width>25</width>

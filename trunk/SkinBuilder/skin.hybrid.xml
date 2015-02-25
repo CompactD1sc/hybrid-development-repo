@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <addonlist>
     <addon name="xbmc-skins/skin.hybrid">
-        <localdir>C:\Repository\SourceFiles\skin.hybrid</localdir>
+        <localdir>C:\Repository\Transifex\skin.hybrid</localdir>
 		<skipenglish>false</skipenglish>
 	</addon>
 </addonlist>
