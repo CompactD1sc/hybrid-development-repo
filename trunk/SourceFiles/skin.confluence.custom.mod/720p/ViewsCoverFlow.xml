@@ -3,31 +3,32 @@
 	<include name="Coverflowview">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">black-back.png</texture>
+			<texture background="true">black_content.png</texture>
+			<include condition="!IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
 			<visible>Control.IsVisible(555)</visible>
 		</control>
 		<control type="group" id="7001">
 			<include>Window_OpenClose_Animation</include>
-			<posy>150</posy>
+			<top>200</top>
 			<visible>Control.IsVisible(555) + Container.OnNext</visible>
 			<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
 			<control type="group">
-				<posx>80</posx>
+				<left>80</left>
 				<visible>Container.OnNext</visible>
 				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
 				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-4).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -35,43 +36,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-4).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-4).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseOne,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-4).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-4).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-4).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-4).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -81,20 +66,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>180</posx>
+				<left>180</left>
 				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -102,43 +87,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseTwo,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -148,20 +117,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>280</posx>
+				<left>280</left>
 				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -169,43 +138,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-2).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseThree,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -215,22 +168,22 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>1000</posx>
+				<left>1000</left>
 				<visible>!Container.OnNext</visible>
 				<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
 				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -238,43 +191,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseEight,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -284,20 +221,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>900</posx>
+				<left>900</left>
 				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -305,43 +242,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(2).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSeven,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -351,20 +272,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>800</posx>
+				<left>800</left>
 				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -372,43 +293,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(1).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSix,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(1).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(1).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -421,22 +326,22 @@
 				<visible>Container.OnNext</visible>
 				<animation effect="slide" end="-110,0" time="250" reversible="false">Hidden</animation>
 				<control type="group">
-					<posx>700</posx>
+					<left>700</left>
 					<visible>Container.OnNext</visible>
 					<animation effect="rotatey" center="1020" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 					<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<control type="group">
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -444,43 +349,27 @@
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>455</posy>
-							<width>248</width>
-							<height>410</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>300</width>
 							<height>440</height>
 							<aspectratio>stretch</aspectratio>
-							<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(0).FileExtension,ClearCase/,.png]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>440</posy>
-							<width>300</width>
-							<height>440</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+							<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFive,ClearCase/,.png]</texture>
 						</control>
 						<visible>!IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>$INFO[Container(555).ListItem(0).Icon]</texture>
+						<texture>$INFO[Container(555).ListItem(0).icon]</texture>
 						<visible>IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
@@ -490,21 +379,21 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>490</posx>
+					<left>490</left>
 					<visible>Container.OnNext</visible>
 					<animation effect="rotatey" center="470" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 					<control type="group">
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -512,43 +401,27 @@
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>455</posy>
-							<width>248</width>
-							<height>410</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>300</width>
 							<height>440</height>
 							<aspectratio>stretch</aspectratio>
-							<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-1).FileExtension,ClearCase/,.png]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>440</posy>
-							<width>300</width>
-							<height>440</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+							<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFour,ClearCase/,.png]</texture>
 						</control>
 						<visible>!IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>$INFO[Container(555).ListItem(-1).Icon]</texture>
+						<texture>$INFO[Container(555).ListItem(-1).icon]</texture>
 						<visible>IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
@@ -561,26 +434,26 @@
 		</control>
 		<control type="group" id="7002">
 			<include>Window_OpenClose_Animation</include>
-			<posy>150</posy>
+			<top>200</top>
 			<visible>Control.IsVisible(555) + Container.OnPrevious</visible>
 			<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
 			<control type="group">
-				<posx>900</posx>
+				<left>900</left>
 				<visible>Container.OnPrevious</visible>
 				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
 				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(4).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -588,43 +461,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(4).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(4).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseNine,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(4).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(4).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(4).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(4).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -634,20 +491,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>800</posx>
+				<left>800</left>
 				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -655,43 +512,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseEight,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -701,20 +542,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>700</posx>
+				<left>700</left>
 				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -722,43 +563,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(2).FileExtension(2),ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSeven,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -768,22 +593,22 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>-20</posx>
+				<left>-20</left>
 				<visible>!Container.OnPrevious</visible>
 				<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
 				<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -791,43 +616,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseTwo,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -837,20 +646,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>80</posx>
+				<left>80</left>
 				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -858,43 +667,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-2).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseThree,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -904,20 +697,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>180</posx>
+				<left>180</left>
 				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -925,43 +718,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-1).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFour,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-1).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-1).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -974,22 +751,22 @@
 				<visible>Container.OnPrevious</visible>
 				<animation effect="slide" end="110,0" time="250" reversible="false">Hidden</animation>
 				<control type="group">
-					<posx>280</posx>
+					<left>280</left>
 					<visible>Container.OnPrevious</visible>
 					<animation effect="rotatey" center="260" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 					<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 					<control type="group">
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -997,43 +774,27 @@
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>455</posy>
-							<width>248</width>
-							<height>410</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>300</width>
 							<height>440</height>
 							<aspectratio>stretch</aspectratio>
-							<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(0).FileExtension,ClearCase/,.png]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>440</posy>
-							<width>300</width>
-							<height>440</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+							<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFive,ClearCase/,.png]</texture>
 						</control>
 						<visible>!IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>$INFO[Container(555).ListItem(0).Icon]</texture>
+						<texture>$INFO[Container(555).ListItem(0).icon]</texture>
 						<visible>IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
@@ -1043,21 +804,21 @@
 					</control>
 				</control>
 				<control type="group">
-					<posx>490</posx>
+					<left>490</left>
 					<visible>Container.OnPrevious</visible>
 					<animation effect="rotatey" center="810" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 					<control type="group">
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>15</posy>
+							<left>38</left>
+							<top>15</top>
 							<width>248</width>
 							<height>410</height>
 							<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1065,43 +826,27 @@
 							<aspectratio aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>38</posx>
-							<posy>455</posy>
-							<width>248</width>
-							<height>410</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>300</width>
 							<height>440</height>
 							<aspectratio>stretch</aspectratio>
-							<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(1).FileExtension,ClearCase/,.png]</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>440</posy>
-							<width>300</width>
-							<height>440</height>
-							<aspectratio aligny="top">stretch</aspectratio>
-							<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+							<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSix,ClearCase/,.png]</texture>
 						</control>
 						<visible>!IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>$INFO[Container(555).ListItem(1).Icon]</texture>
+						<texture>$INFO[Container(555).ListItem(1).icon]</texture>
 						<visible>IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
@@ -1114,23 +859,23 @@
 		</control>
 		<control type="group" id="7000">
 			<include>Window_OpenClose_Animation</include>
-			<posy>150</posy>
+			<top>200</top>
 			<visible>Control.IsVisible(555) + !Control.IsVisible(7001)  + !Control.IsVisible(7002)</visible>
 			<control type="group">
-				<posx>80</posx>
+				<left>80</left>
 				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1138,43 +883,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseTwo,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1184,20 +913,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>180</posx>
+				<left>180</left>
 				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1205,43 +934,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-2).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseThree,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1251,20 +964,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>280</posx>
+				<left>280</left>
 				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1272,43 +985,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(-1).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(-1).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFour,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(-1).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(-1).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(-1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1318,20 +1015,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>900</posx>
+				<left>900</left>
 				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1339,43 +1036,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(3).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(3).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseEight,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(3).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(3).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(3).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1385,20 +1066,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>800</posx>
+				<left>800</left>
 				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1406,43 +1087,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(2).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(2).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSeven,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(2).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(2).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(2).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1452,20 +1117,20 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>700</posx>
+				<left>700</left>
 				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
 				<control type="group">
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1473,43 +1138,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(1).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(1).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseSix,ClearCase/,.png]</texture>
 					</control>
 					<visible>!IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(1).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(1).icon]</texture>
 					<visible>IsEmpty(Container(555).ListItem(1).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1519,21 +1168,21 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>490</posx>
+				<left>490</left>
 				<control type="group">
 					<visible>Control.HasFocus(555)</visible>
 					<visible>!IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1541,43 +1190,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(0).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFive,ClearCase/,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(0).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(0).icon]</texture>
 					<visible>Control.HasFocus(555)</visible>
 					<visible>IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1588,21 +1221,21 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>490</posx>
+				<left>490</left>
 				<control type="group">
 					<visible>!Control.HasFocus(555)</visible>
 					<visible>!IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1610,43 +1243,27 @@
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[Container(555).ListItem(0).Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[Container(555).ListItem(0).FileExtension,ClearCase/,.png]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>440</posy>
-						<width>300</width>
-						<height>440</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">ClearCase/ClearCase.png</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[CoverFlowCaseFive,ClearCase/,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Container(555).ListItem(0).Icon]</texture>
+					<texture>$INFO[Container(555).ListItem(0).icon]</texture>
 					<visible>!Control.HasFocus(555)</visible>
 					<visible>IsEmpty(Container(555).ListItem(0).Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1660,16 +1277,17 @@
 		<control type="wraplist" id="555">
 			<description>Fake list to control coverflow movement</description>
 			<include>Window_OpenClose_Animation</include>
-			<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
-			<posx>490</posx>
-			<posy>150</posy>
+			<!--visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible-->
+			<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(MusicVideos)</visible>
+			<left>490</left>
+			<top>200</top>
 			<width>306</width>
 			<height>440</height>
-			<onleft>57</onleft>
-			<onright>57</onright>
+			<onleft>555</onleft>
+			<onright>555</onright>
 			<onup>9000</onup>
 			<ondown>60</ondown>
-			<viewtype label="31036">list</viewtype>
+			<viewtype label="31647">list</viewtype>
 			<pagecontrol>60</pagecontrol>
 			<orientation>horizontal</orientation>
 			<scrolltime>250</scrolltime>
@@ -1680,16 +1298,16 @@
 					<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
 					<visible>!IsEmpty(ListItem.Art(poster))</visible>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[ListItem.Art(poster)]</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>15</posy>
+						<left>38</left>
+						<top>15</top>
 						<width>248</width>
 						<height>410</height>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">black-back.png</texture>
@@ -1698,35 +1316,27 @@
 						<visible>!Control.HasFocus(555)</visible>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>455</posy>
-						<width>248</width>
-						<height>410</height>
-						<aspectratio aligny="top">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>300</width>
 						<height>440</height>
 						<aspectratio>stretch</aspectratio>
-						<texture fallback="ClearCase/dv.png">$INFO[ListItem.FileExtension,ClearCase/,.png]</texture>
+						<texture fallback="ClearCase/dv.png">$VAR[VideoListCase,ClearCase/,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.icon]</texture>
 					<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
 					<visible>IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>440</height>
 					<aspectratio>stretch</aspectratio>
@@ -1739,11 +1349,28 @@
 			</focusedlayout>
 		</control>
 		<control type="group">
+			<visible>Control.IsVisible(555)</visible>
+			<control type="image">
+				<left>-2</left>
+				<top>0</top>
+				<width>531</width>
+				<height>780</height>
+				<texture>SideFade.png</texture>
+			</control>
+			<control type="image">
+				<left>753</left>
+				<top>0</top>
+				<width>531</width>
+				<height>780</height>
+				<texture flipx="true">SideFade.png</texture>
+			</control>
+		</control>
+		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<visible>Control.IsVisible(555)</visible>
 			<control type="label">
-				<posx>20</posx>
-				<posy>60</posy>
+				<left>20</left>
+				<top>90</top>
 				<width>1240</width>
 				<height>35</height>
 				<font>font28_title</font>
@@ -1755,8 +1382,8 @@
 				<label>$VAR[DescriptiveLabel]</label>
 			</control>
 			<control type="label">
-				<posx>40</posx>
-				<posy>100</posy>
+				<left>40</left>
+				<top>130</top>
 				<width>1200</width>
 				<height>35</height>
 				<font>font13</font>
@@ -1767,11 +1394,40 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Tagline]</label>
-				<visible>!IsEmpty(ListItem.Tagline)</visible>
+				<visible>!IsEmpty(ListItem.Tagline) + !Container.Content(TVShows)</visible>
+			</control>
+			<control type="label">
+				<left>40</left>
+				<top>130</top>
+				<width>1200</width>
+				<height>35</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<scroll>false</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label fallback="416">[COLOR=$VAR[MainColorOne]]$LOCALIZE[20360]:[/COLOR] $INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
+				<visible>Container.Content(TVShows)</visible>
+			</control>
+			<control type="label">
+				<left>40</left>
+				<top>170</top>
+				<width>1200</width>
+				<height>35</height>
+				<font>font12</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<scroll>false</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$VAR[CoverFlowInfo]</label>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>90</posx>
-				<posy>630</posy>
+				<left>90</left>
+				<top>635</top>
 				<width>1100</width>
 				<height>25</height>
 				<texturesliderbackground border="14,0,14,0">ScrollBarH.png</texturesliderbackground>
@@ -1782,27 +1438,7 @@
 				<showonepage>true</showonepage>
 				<orientation>horizontal</orientation>
 				<onup>555</onup>
-				<ondown condition="Skin.HasSetting(DisableHomeReturnButtons)">9000</ondown>
-				<ondown condition="!Skin.HasSetting(DisableHomeReturnButtons)">82</ondown>
-			</control>
-		</control>
-		<control type="group">
-			<include>Window_OpenClose_Animation</include>
-			<visible>Control.IsVisible(555)</visible>
-			<control type="grouplist">
-				<description>Media Codec Flagging Images</description>
-				<posx>0</posx>
-				<posy>595</posy>
-				<width>1280</width>
-				<align>center</align>
-				<itemgap>2</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoMPAAFlaggingConditions</include>
-				<include>VideoCodecFlaggingConditions</include>
-				<include>AudioCodecFlaggingConditions</include>
-				<include>AudioChannelsFlaggingConditions</include>
-				<include>AspectCodecFlaggingConditions</include>
-				<include>VideoTypeHackFlaggingConditions</include>
+				<ondown>803</ondown>
 			</control>
 		</control>
 	</include>

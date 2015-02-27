@@ -1,47 +1,490 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<include condition="!Skin.HasSetting(InitialSetUpRun) | Skin.HasSetting(ToggleUPnPMode)">DefaultInitialSetup</include>
-	<onload condition="!IsEmpty(Window(home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-	<onload condition="!IsEmpty(Window(home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
-	<onload condition="Skin.HasSetting(UPnP_Mode) + IsEmpty(Skin.String(UPnP_Path))">Skin.Reset(UPnP_Mode)</onload>
-	<onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-7,11-23)">Skin.Reset(HolidayEffects)</onload>
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
+	<onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(HolidayEffects)</onload>
 	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
-	<onload condition="System.HasAddon(script.artistslideshow) + IsEmpty(Window.Property(ArtistSlideshowRunning)) + [Skin.HasSetting(AllowSlideShowArt) | Skin.HasSetting(AllowSlideShowBio)]">RunScript(script.artistslideshow, daemon=True)</onload>
-	<onload condition="!Skin.HasSetting(HideHomeSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(HideHomeSearch)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlayList)</onload>
-	<onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/backgrounds/weather/)</onload>
-	<onload condition="IsEmpty(Skin.String(UsrGenreFanartDir))">Skin.SetString(UsrGenreFanartDir,special://skin/backgrounds/moviegenre/)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=10,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListOne)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.2.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.2.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListTwo)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.3.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.3.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListThree)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.4.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.4.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListFour)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.5.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.5.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListFive)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.6.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.6.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListSix)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.7.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.7.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListSeven)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.8.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListEight)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.9.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListNine)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlayList) + !IsEmpty(Skin.String(HomeItem.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.10.Playlist)],method=$VAR[RandomOrLastAction],limit=10,unwatched=$VAR[RandomOrLastUnWatched],resume=False,property=HomePlayListTen)</onload>
+	<onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
+	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=12,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.1.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistOne)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.2.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.2.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwo)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.3.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.3.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThree)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.4.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.4.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFour)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.5.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.5.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFive)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.6.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.6.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSix)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.7.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.7.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSeven)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.8.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.8.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEight)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.9.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.9.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistNine)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.10.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.10.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTen)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.11.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !IsEmpty(Skin.String(HomeItem.12.Playlist))">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
+	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
+	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
 	<controls>
 		<include>CommonBackground</include>
-		<include condition="!Skin.HasSetting(EnableMinSpec) | Skin.HasSetting(HolidayEffects)">BackgroundRainDropEffect</include>
+		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
 		<control type="image">
-			<posx>0</posx>
-			<posy>100r</posy>
+			<left>0</left>
+			<top>90r</top>
 			<width>1280</width>
-			<height>100</height>
-			<texture>homefloor.png</texture>
+			<height>90</height>
+			<texture>floor.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<include condition="!Skin.HasSetting(HideNowPlayingInfo) + !Skin.HasSetting(EnableLargeWidget)">MediaNowPlaying</include>
-		<include>HomeWidgetPanel</include>
+		<control type="image">
+			<description>LOGO</description>
+			<left>10</left>
+			<top>5</top>
+			<width>120</width>
+			<height>49</height>
+			<aspectratio aligny="top" align="left">keep</aspectratio>
+			<texture>kodi-logo.png</texture>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+		</control>
+		<control type="label">
+			<description>profile label</description>
+			<left>10</left>
+			<top>10</top>
+			<width>450</width>
+			<height>30</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font28_title</font>
+			<textcolor>C0FFFFFF</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<info>System.ProfileName</info>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!StringCompare(System.ProfileName,Master user) + StringCompare(Skin.String(TopLeftHomeInfo),Profile)</visible>
+		</control>
+		<!-- Music Info -->
+		<control type="group">
+			<left>0</left>
+			<top>65</top>
+			<visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+			<control type="image">
+				<description>Cover image</description>
+				<left>20</left>
+				<top>45</top>
+				<width>130</width>
+				<height>295</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>Album Label</description>
+				<left>170</left>
+				<top>265</top>
+				<height>25</height>
+				<width>1000</width>
+				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<left>170</left>
+				<top>285</top>
+				<height>30</height>
+				<width>1000</width>
+				<label>$INFO[Player.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<left>170</left>
+				<top>310</top>
+				<height>30</height>
+				<width>300</width>
+				<label>$INFO[Player.Time][COLOR=$VAR[MainColorOne]] / [/COLOR]$INFO[Player.Duration]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<!-- LiveTV Info -->
+		<control type="group">
+			<left>490r</left>
+			<top>70</top>
+			<visible>StringCompare(Container(9000).ListItem.Property(WidgetSet),None)</visible>
+			<visible>!Skin.HasSetting(HideTVRecordingInfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,100" time="0" condition="PVR.IsRecording">conditional</animation>
+				<visible>PVR.HasNonRecordingTimer</visible>
+				<control type="image">
+					<left>0</left>
+					<top>-5</top>
+					<width>490</width>
+					<height>90</height>
+					<texture>gradient.png</texture>
+				</control>
+				<control type="image">
+					<left>400</left>
+					<top>0</top>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<left>365</left>
+					<top>5</top>
+					<width>25</width>
+					<height>25</height>
+					<aspectratio>keep</aspectratio>
+					<texture>PVR-HasTimer.png</texture>
+				</control>
+				<control type="label">
+					<description>Next Timer Header label</description>
+					<left>-45</left>
+					<top>5</top>
+					<height>25</height>
+					<width>400</width>
+					<label>$LOCALIZE[19157]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>NextRecordingDateTime</description>
+					<left>-10</left>
+					<top>30</top>
+					<height>25</height>
+					<width>400</width>
+					<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<scroll>true</scroll>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>NextRecordingTitle Channel</description>
+					<left>-410</left>
+					<top>50</top>
+					<height>25</height>
+					<width>800</width>
+					<label>$INFO[PVR.NextRecordingTitle][COLOR=grey]$INFO[PVR.NextRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="group">
+				<visible>PVR.IsRecording</visible>
+				<control type="image">
+					<left>0</left>
+					<top>-5</top>
+					<width>490</width>
+					<height>90</height>
+					<texture>gradient.png</texture>
+				</control>
+				<control type="image">
+					<left>400</left>
+					<top>0</top>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				<control type="image">
+					<left>360</left>
+					<top>5</top>
+					<width>30</width>
+					<height>25</height>
+					<aspectratio>keep</aspectratio>
+					<texture>PVR-IsRecording.png</texture>
+				</control>
+				<control type="label">
+					<description>Is Recording Header label</description>
+					<left>-50</left>
+					<top>5</top>
+					<height>25</height>
+					<width>400</width>
+					<label>$LOCALIZE[19158]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>NextRecordingDateTime</description>
+					<left>-10</left>
+					<top>30</top>
+					<height>25</height>
+					<width>400</width>
+					<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<scroll>true</scroll>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>NextRecordingTitle Channel</description>
+					<left>-410</left>
+					<top>50</top>
+					<height>30</height>
+					<width>800</width>
+					<label>$INFO[PVR.NowRecordingTitle][COLOR=grey]$INFO[PVR.NowRecordingChannel, - [COLOR=grey3]([/COLOR],[COLOR=grey3])[/COLOR]][/COLOR]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+			</control>
+		</control>
+		<!-- Video Info -->
+		<control type="group">
+			<left>0</left>
+			<top>60</top>
+			<visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingInfo)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+			<control type="group">
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>20</left>
+					<top>45</top>
+					<width>150</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoCover.png">$VAR[StreamingVideoIcon]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<left>190</left>
+					<top>285</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$VAR[VideoNowPlaying]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<left>190</left>
+					<top>310</top>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>20</left>
+					<top>45</top>
+					<width>120</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<left>160</left>
+					<top>265</top>
+					<height>25</height>
+					<width>660</width>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<left>160</left>
+					<top>285</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<left>160</left>
+					<top>310</top>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>20</left>
+					<top>45</top>
+					<width>120</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>Studio label</description>
+					<left>160</left>
+					<top>265</top>
+					<height>25</height>
+					<width>1000</width>
+					<label>$INFO[VideoPlayer.Studio]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<left>160</left>
+					<top>285</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<left>160</left>
+					<top>310</top>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.Content(Episodes)</visible>
+				<control type="image">
+					<description>Cover image</description>
+					<left>20</left>
+					<top>225</top>
+					<width>180</width>
+					<height>120</height>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>TV Show Season Ep Label</description>
+					<left>210</left>
+					<top>265</top>
+					<height>25</height>
+					<width>1000</width>
+					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.episode,$LOCALIZE[20359] ,])</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<left>210</left>
+					<top>285</top>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Player.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<left>210</left>
+					<top>310</top>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=grey3] / [/COLOR]]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<include>HomeWidgetDisplay</include>
 		<control type="button" id="9003">
-			<posx>-20</posx>
-			<posy>-20</posy>
+			<description>Hidden Button to pass through navigation when recently added is disabled</description>
+			<left>-20</left>
+			<top>-20</top>
 			<width>1</width>
 			<height>1</height>
 			<label>-</label>
@@ -50,46 +493,20 @@
 			<texturenofocus>-</texturenofocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
-			<onup condition="!Skin.HasSetting(HideFavouritesBtn)">21</onup>
-			<onup condition="Skin.HasSetting(HideFavouritesBtn) + !Skin.HasSetting(AutoHidePowerBtn)">20</onup>
-			<ondown condition="Skin.HasSetting(RaiseMainMenuBar)">9004</ondown>
-			<ondown condition="!Skin.HasSetting(RaiseMainMenuBar)">9002</ondown>
+			<onup>21</onup>
+			<ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch)">608</ondown>
+			<ondown condition="!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(DisableGlobalSearch)">603</ondown>
 			<visible>false</visible>
-		</control>
-		<control type="button" id="9004">
-			<posx>34r</posx>
-			<posy>240</posy>
-			<width>42</width>
-			<height>128</height>
-			<font>-</font>
-			<texturefocus flipx="true">HasSubFO.png</texturefocus>
-			<texturenofocus flipx="true">HasSub.png</texturenofocus>
-			<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9003</onup>
-			<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9002</onup>
-			<ondown condition="!Skin.HasSetting(HideHomeSearch) + Player.HasMedia">611</ondown>
-			<ondown condition="!Skin.HasSetting(HideHomeSearch) + !Skin.HasSetting(UPnP_Mode) + !Player.HasMedia">612</ondown>
-			<ondown condition="Skin.HasSetting(HideHomeSearch) | [Skin.HasSetting(UPnP_Mode) + !Player.HasMedia]">9000</ondown>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies)">ActivateWindow(2125)</onclick>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows)">ActivateWindow(2124)</onclick>
-			<onclick condition="StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music)">ActivateWindow(2123)</onclick>
-			<animation effect="slide" start="0,0" end="0,175" time="0" condition="!Skin.HasSetting(RaiseMainMenuBar)">Conditional</animation>
-			<animation effect="slide" start="50,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="0" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">Conditional</animation>
-			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) | StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows)  | StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music)</visible>
-			<visible>!Skin.HasSetting(HideSuggestedMedia) + !Skin.HasSetting(UPnP_Mode)</visible>
 		</control>
 		<control type="group">
 			<description>Controls for currently playing media</description>
-			<posx>545r</posx>
-			<posy>370</posy>
-			<animation effect="slide" start="0,0" end="0,175" time="0" condition="!Skin.HasSetting(RaiseMainMenuBar)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-100,0" time="300" condition="!Player.HasMedia + !Skin.HasSetting(HideHomeStats)">conditional</animation>
+			<left>545r</left>
+			<top>370</top>
+			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-100,0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
 			<animation effect="fade" start="100" end="65" time="200" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation>
-			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia + Skin.HasSetting(HideHomeStats)">conditional</animation>
-			<animation effect="slide" start="0,0" end="-60,0" time="0" condition="System.HasAddon(plugin.audio.lastfm) + Player.HasAudio">conditional</animation>
-			<animation effect="slide" start="0,0" end="-60,0" time="0" condition="!Skin.HasSetting(DisableFloorVolumeButtons) + Player.HasMedia">conditional</animation>
+			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia + !Skin.HasSetting(EnableHomeStats)">conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -100,19 +517,19 @@
 			</animation>
 			<control type="image">
 				<description>Background End image</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>35</width>
 				<height>35</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
-				<animation effect="slide" start="0,0" end="145,0" time="0" condition="Skin.HasSetting(HideHomeSearch) | Skin.HasSetting(UPnP_Mode)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="145,0" time="0" condition="Skin.HasSetting(DisableGlobalSearch)">Conditional</animation>
 			</control>
-			<control type="radiobutton" id="612">
+			<control type="radiobutton" id="608">
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<description>Global Search</description>
-				<posx>35</posx>
-				<posy>0</posy>
+				<left>35</left>
+				<top>0</top>
 				<height>35</height>
 				<width>145</width>
 				<textwidth>150</textwidth>
@@ -127,55 +544,56 @@
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
-				<textureradiofocus>icon_search.png</textureradiofocus>
-				<textureradionofocus>icon_search.png</textureradionofocus>
-				<onleft>611</onleft>
+				<textureradioonfocus>icon_search.png</textureradioonfocus>
+				<textureradioonnofocus>icon_search.png</textureradioonnofocus>
+				<textureradioofffocus>icon_search.png</textureradioofffocus>
+				<textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
+				<onleft>607</onleft>
 				<onright>601</onright>
-				<onup>9004</onup>
+				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
-				<visible>!Skin.HasSetting(HideHomeSearch) + !Skin.HasSetting(UPnP_Mode)</visible>
+				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
 			</control>
 			<control type="group" id="600">
-				<posx>180</posx>
-				<onup>9004</onup>
+				<left>180</left>
+				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
 				<defaultcontrol>-</defaultcontrol>
 				<enable>Player.HasMedia</enable>
 				<control type="image">
 					<description>Background image</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>205</width>
 					<height>35</height>
 					<texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
 					<colordiffuse>CCFFFFFF</colordiffuse>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,465,35" delay="0" time="300" condition="!Player.HasMedia + !Skin.HasSetting(HideHomeStats)">conditional</animation>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,265,35" delay="0" time="0" condition="!Skin.HasSetting(DisableFloorVolumeButtons) + Player.HasVideo">conditional</animation>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,265,35" delay="0" time="0" condition="Skin.HasSetting(DisableFloorVolumeButtons) + System.HasAddon(plugin.audio.lastfm) + Player.HasAudio">conditional</animation>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,325,35" delay="0" time="0" condition="!Skin.HasSetting(DisableFloorVolumeButtons) + System.HasAddon(plugin.audio.lastfm) + Player.HasAudio">conditional</animation>
-					<animation effect="zoom" start="0,0,205,35" end="0,0,265,35" delay="0" time="0" condition="!Skin.HasSetting(DisableFloorVolumeButtons) + !System.HasAddon(plugin.audio.lastfm) + Player.HasAudio">conditional</animation>
-					<visible>Player.HasMedia | !Skin.HasSetting(HideHomeStats)</visible>
+					<animation effect="zoom" start="0,0,205,35" end="0,0,465,35" delay="0" time="300" condition="!Player.HasMedia + Skin.HasSetting(EnableHomeStats)">conditional</animation>
+					<visible>Player.HasMedia | Skin.HasSetting(EnableHomeStats)</visible>
 				</control>
 				<control type="group">
-					<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
 					<control type="button" id="601">
-						<posx>10</posx>
-						<posy>2</posy>
+						<left>10</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
 						<texturefocus>OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>612</onleft>
+						<onleft>608</onleft>
 						<onright>602</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Previous)</onclick>
+						<onclick>PlayerControl(Previous)</onclick>
 					</control>
 					<control type="button" id="602">
-						<posx>40</posx>
-						<posy>2</posy>
+						<left>40</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -183,13 +601,14 @@
 						<texturenofocus>OSDRewindNF.png</texturenofocus>
 						<onleft>601</onleft>
 						<onright>603</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+						<onclick>PlayerControl(Rewind)</onclick>
 					</control>
 					<control type="togglebutton" id="603">
-						<posx>70</posx>
-						<posy>2</posy>
+						<left>70</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -200,13 +619,14 @@
 						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 						<onleft>602</onleft>
 						<onright>604</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Play)</onclick>
+						<onclick>PlayerControl(Play)</onclick>
 					</control>
 					<control type="button" id="604">
-						<posx>100</posx>
-						<posy>2</posy>
+						<left>100</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -214,14 +634,15 @@
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>603</onleft>
 						<onright>605</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
 						<onclick>down</onclick>
-						<onclick>XBMC.PlayerControl(Stop)</onclick>
+						<onclick>PlayerControl(Stop)</onclick>
 					</control>
 					<control type="button" id="605">
-						<posx>130</posx>
-						<posy>2</posy>
+						<left>130</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -229,13 +650,14 @@
 						<texturenofocus>OSDForwardNF.png</texturenofocus>
 						<onleft>604</onleft>
 						<onright>606</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Forward)</onclick>
+						<onclick>PlayerControl(Forward)</onclick>
 					</control>
 					<control type="button" id="606">
-						<posx>160</posx>
-						<posy>2</posy>
+						<left>160</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -243,96 +665,32 @@
 						<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 						<onleft>605</onleft>
 						<onright>607</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Next)</onclick>
-					</control>
-					<control type="button" id="607">
-						<posx>190</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDVolUpFO.png</texturefocus>
-						<texturenofocus>OSDVolUpNF.png</texturenofocus>
-						<onleft>606</onleft>
-						<onright>608</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>$VAR[VolumeStepUp]</onclick>
-						<onclick>VolumeUp</onclick>
-						<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-					</control>
-					<control type="button" id="608">
-						<posx>220</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDVolDownFO.png</texturefocus>
-						<texturenofocus>OSDVolDownNF.png</texturenofocus>
-						<onleft>607</onleft>
-						<onright>609</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>$VAR[VolumeStepDown]</onclick>
-						<onclick>VolumeDown</onclick>
-						<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-					</control>
-					<control type="button" id="609">
-						<posx>250</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>lastfm/lastfm-love-focus.png</texturefocus>
-						<texturenofocus>lastfm/lastfm-love-nofocus.png</texturenofocus>
-						<onleft>608</onleft>
-						<onright>610</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>RunScript(plugin.audio.lastfm,action=LastFM.Love&amp;artist=$INFO[MusicPlayer.Artist]&amp;song=$INFO[MusicPlayer.Title])</onclick>
-						<enable>SubString(Window(Home).Property(LastFM.CanLove),true)</enable>
-						<visible>System.HasAddon(plugin.audio.lastfm) + Player.HasAudio</visible>
-						<animation effect="slide" start="0,0" end="-60,0" time="0" condition="Skin.HasSetting(DisableFloorVolumeButtons)">conditional</animation>
-					</control>
-					<control type="button" id="610">
-						<posx>280</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>lastfm/lastfm-hate-focus.png</texturefocus>
-						<texturenofocus>lastfm/lastfm-hate-nofocus.png</texturenofocus>
-						<onleft>609</onleft>
-						<onright>611</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>RunScript(plugin.audio.lastfm,action=LastFM.Ban&amp;artist=$INFO[MusicPlayer.Artist]&amp;song=$INFO[MusicPlayer.Title])</onclick>
-						<enable>SubString(Window(Home).Property(LastFM.CanBan),true)</enable>
-						<visible>System.HasAddon(plugin.audio.lastfm) + Player.HasAudio</visible>
-						<animation effect="slide" start="0,0" end="-60,0" time="0" condition="Skin.HasSetting(DisableFloorVolumeButtons)">conditional</animation>
+						<onclick>PlayerControl(Next)</onclick>
 					</control>
 				</control>
 				<control type="group" id="600">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 					<control type="button" id="601">
-						<posx>10</posx>
-						<posy>2</posy>
+						<left>10</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
 						<texturefocus>OSDChannelUPFO.png</texturefocus>
 						<texturenofocus>OSDChannelUPNF.png</texturenofocus>
-						<onleft>612</onleft>
+						<onleft>608</onleft>
 						<onright>602</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Previous)</onclick>
+						<onclick>ChannelDown</onclick>
 					</control>
 					<control type="button" id="602">
-						<posx>40</posx>
-						<posy>2</posy>
+						<left>40</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -340,13 +698,14 @@
 						<texturenofocus>OSDChannelDownNF.png</texturenofocus>
 						<onleft>601</onleft>
 						<onright>603</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Next)</onclick>
+						<onclick>ChannelUp</onclick>
 					</control>
 					<control type="button" id="603">
-						<posx>70</posx>
-						<posy>2</posy>
+						<left>70</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -354,14 +713,15 @@
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>602</onleft>
 						<onright>604</onright>
-						<onup>9004</onup>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
 						<onclick>down</onclick>
-						<onclick>XBMC.PlayerControl(Stop)</onclick>
+						<onclick>PlayerControl(Stop)</onclick>
 					</control>
 					<control type="togglebutton" id="604">
-						<posx>100</posx>
-						<posy>2</posy>
+						<left>100</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
@@ -371,70 +731,37 @@
 						<alttexturefocus>OSDPlayFO.png</alttexturefocus>
 						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 						<onleft>603</onleft>
-						<onright>605</onright>
-						<onup>9004</onup>
+						<onright>606</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(Play)</onclick>
+						<onclick>PlayerControl(Play)</onclick>
 						<enable>Player.PauseEnabled</enable>
 						<animation effect="fade" start="100" end="30" time="100" condition="!Player.PauseEnabled">Conditional</animation>
 					</control>
-					<control type="button" id="605">
-						<posx>145</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDVolUpFO.png</texturefocus>
-						<texturenofocus>OSDVolUpNF.png</texturenofocus>
-						<onleft>604</onleft>
-						<onright>606</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>$VAR[VolumeStepUp]</onclick>
-						<onclick>VolumeUp</onclick>
-						<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-					</control>
 					<control type="button" id="606">
-						<posx>175</posx>
-						<posy>2</posy>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDVolDownFO.png</texturefocus>
-						<texturenofocus>OSDVolDownNF.png</texturenofocus>
-						<onleft>605</onleft>
-						<onright>607</onright>
-						<onup>9004</onup>
-						<ondown>9000</ondown>
-						<onclick>$VAR[VolumeStepDown]</onclick>
-						<onclick>VolumeDown</onclick>
-						<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-					</control>
-					<control type="button" id="607">
-						<posx>220</posx>
-						<posy>2</posy>
+						<left>160</left>
+						<top>2</top>
 						<width>30</width>
 						<height>30</height>
 						<label>-</label>
 						<texturefocus>OSDRecordOffFO.png</texturefocus>
 						<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-						<onleft>606</onleft>
-						<onright>611</onright>
-						<onup>9004</onup>
+						<onleft>604</onleft>
+						<onright>607</onright>
+						<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+						<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 						<ondown>9000</ondown>
-						<onclick>XBMC.PlayerControl(record)</onclick>
-						<animation effect="slide" start="0,0" end="-60,0" time="0" condition="Skin.HasSetting(DisableFloorVolumeButtons)">conditional</animation>
+						<onclick>PlayerControl(record)</onclick>
 					</control>
 				</control>
 			</control>
-			<control type="radiobutton" id="611">
+			<control type="radiobutton" id="607">
 				<animation effect="slide" end="0,35" time="300" condition="!Player.HasMedia">conditional</animation>
-				<animation effect="slide" start="0,0" end="60,0" time="0" condition="System.HasAddon(plugin.audio.lastfm) + Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="60,0" time="0" condition="!Skin.HasSetting(DisableFloorVolumeButtons)">conditional</animation>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<description>Go to fullscreen Playback</description>
-				<posx>385</posx>
-				<posy>0</posy>
+				<left>385</left>
+				<top>0</top>
 				<height>35</height>
 				<width>160</width>
 				<textwidth>150</textwidth>
@@ -449,17 +776,20 @@
 				<pulseonselect>false</pulseonselect>
 				<label>31008</label>
 				<onclick>fullscreen</onclick>
-				<textureradiofocus>GoFullscreen.png</textureradiofocus>
-				<textureradionofocus>GoFullscreen.png</textureradionofocus>
-				<onleft>603</onleft>
-				<onright>612</onright>
-				<onup>9004</onup>
+				<textureradioonfocus>GoFullscreen.png</textureradioonfocus>
+				<textureradioonnofocus>GoFullscreen.png</textureradioonnofocus>
+				<textureradioofffocus>GoFullscreen.png</textureradioofffocus>
+				<textureradiooffnofocus>GoFullscreen.png</textureradiooffnofocus>
+				<onleft>606</onleft>
+				<onright>608</onright>
+				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9003</onup>
+				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9002</onup>
 				<ondown>9000</ondown>
 				<enable>Player.HasMedia</enable>
 			</control>
 			<control type="label">
-				<posx>190</posx>
-				<posy>7</posy>
+				<left>190</left>
+				<top>7</top>
 				<height>20</height>
 				<width>450</width>
 				<label>$VAR[InfoBarStats]</label>
@@ -468,12 +798,12 @@
 				<font>font12_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<visible>!Player.HasMedia + !Skin.HasSetting(HideHomeStats)</visible>
+				<visible>!Player.HasMedia + Skin.HasSetting(EnableHomeStats)</visible>
 			</control>
 		</control>
 		<control type="group">
-			<posy>400</posy>
-			<animation effect="slide" start="0,0" end="0,175" time="0" condition="!Skin.HasSetting(RaiseMainMenuBar)">Conditional</animation>
+			<top>400</top>
+			<animation effect="slide" start="0,0" end="0,160" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -484,15 +814,15 @@
 			</animation>
 			<include>HomeSubMenuControl</include>
 			<control type="image">
-				<posx>-100</posx>
-				<posy>0</posy>
+				<left>-100</left>
+				<top>0</top>
 				<width>1480</width>
 				<height>75</height>
 				<texture border="0,6,0,6">HomeBack.png</texture>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>5</posy>
+				<left>0</left>
+				<top>5</top>
 				<width>1280</width>
 				<height>6</height>
 				<texture>HomeOverlay1.png</texture>
@@ -500,59 +830,59 @@
 			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
 			<include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
 			<control type="image">
-				<posx>0</posx>
-				<posy>6</posy>
+				<left>0</left>
+				<top>6</top>
 				<width>128</width>
-				<height>50</height>
+				<height>63</height>
 				<texture>SideFade.png</texture>
 			</control>
 			<control type="image">
-				<posx>128r</posx>
-				<posy>6</posy>
+				<left>128r</left>
+				<top>6</top>
 				<width>128</width>
-				<height>60</height>
+				<height>63</height>
 				<texture flipx="true">SideFade.png</texture>
 			</control>
 		</control>
-		<include>HomeAddonSystem</include>
+		<include>HomeAddonsDisplay</include>
 		<control type="group">
-			<posx>0</posx>
-			<posy>33r</posy>
+			<left>0</left>
+			<top>33r</top>
 			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
-			<animation effect="fade" start="100" end="65" time="200" condition="Window.IsVisible(2123) | Window.IsVisible(2124) | Window.IsVisible(2125) | Window.IsVisible(Favourites)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,35" time="150" condition="Skin.HasSetting(HidePopUpSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
 				<description>RSS feed</description>
-				<posx>100</posx>
-				<posy>0</posy>
+				<left>100</left>
+				<top>0</top>
 				<height>30</height>
-				<width>1045</width>
+				<width>1145</width>
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>blue</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+				<visible>!Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
 			<control type="rss">
 				<description>RSS feed</description>
-				<posx>45</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<height>30</height>
-				<width>1100</width>
+				<width>1190</width>
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>blue</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-				<visible>Skin.HasSetting(AutoHidePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+				<visible>Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
 			</control>
 			<control type="fadelabel" id="1">
 				<description>Next Five Songs</description>
-				<posx>100</posx>
-				<posy>0</posy>
+				<left>100</left>
+				<top>0</top>
 				<height>30</height>
-				<width>1045</width>
+				<width>1145</width>
 				<scroll>true</scroll>
 				<scrollout>true</scrollout>
 				<pauseatend>200</pauseatend>
@@ -561,14 +891,14 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<textoffsetx>20</textoffsetx>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+				<visible>!Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
 			</control>
 			<control type="fadelabel" id="1">
 				<description>Next Five Songs</description>
-				<posx>45</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<height>30</height>
-				<width>1100</width>
+				<width>1190</width>
 				<scroll>true</scroll>
 				<scrollout>true</scrollout>
 				<pauseatend>200</pauseatend>
@@ -577,25 +907,25 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<textoffsetx>20</textoffsetx>
-				<visible>Skin.HasSetting(AutoHidePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
+				<visible>Skin.HasSetting(HideHomePowerBtn) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)</visible>
 			</control>
 			<control type="image">
 				<description>RSS background</description>
-				<posx>1150</posx>
-				<posy>2</posy>
+				<left>1250</left>
+				<top>2</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>icon-rss.png</texture>
 			</control>
 		</control>
 		<control type="group" id="10">
-			<posx>20</posx>
-			<posy>55r</posy>
+			<left>20</left>
+			<top>55r</top>
 			<include>Window_OpenClose_Animation</include>
 			<control type="button" id="20">
 				<description>Power push button</description>
-				<posx>55</posx>
-				<posy>0</posy>
+				<left>55</left>
+				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31003</label>
@@ -605,77 +935,135 @@
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
 				<onright>21</onright>
-				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9002</onup>
-				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
+				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<ondown>9003</ondown>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + !Skin.HasSetting(HideFavouritesBtn)</visible>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 			<control type="image">
 				<description>Power Icon</description>
-				<posx>60</posx>
-				<posy>5</posy>
+				<left>60</left>
+				<top>5</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + !Skin.HasSetting(HideFavouritesBtn)</visible>
-			</control>
-			<control type="button" id="20">
-				<description>Power push button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<onclick>$VAR[HomePowerBtnCommand]</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9002</onup>
-				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
-				<ondown>9003</ondown>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + Skin.HasSetting(HideFavouritesBtn)</visible>
-			</control>
-			<control type="image">
-				<description>Power Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_power.png</texture>
-				<visible>!Skin.HasSetting(AutoHidePowerBtn) + Skin.HasSetting(HideFavouritesBtn)</visible>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
 			</control>
 			<control type="button" id="21">
 				<description>Favourites push button</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>1036</label>
 				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>ActivateWindow(Favourites)</onclick>
+				<onclick>$VAR[FavBtnCommand]</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onleft>
-				<onright condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onright>
-				<onup condition="Skin.HasSetting(RaiseMainMenuBar)">9002</onup>
-				<onup condition="!Skin.HasSetting(RaiseMainMenuBar)">9001</onup>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup condition="!Skin.HasSetting(LowerMainMenuBar)">9002</onup>
+				<onup condition="Skin.HasSetting(LowerMainMenuBar)">9001</onup>
 				<ondown>9003</ondown>
-				<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
 			</control>
 			<control type="image">
 				<description>Favourites Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
+				<left>5</left>
+				<top>5</top>
 				<width>35</width>
 				<height>35</height>
 				<aspectratio>keep</aspectratio>
+				<!--texture>$INFO[Skin.String(UsrFavBtnCmd.Icon)]</texture-->
 				<texture>icon_favourites.png</texture>
-				<visible>!Skin.HasSetting(HideFavouritesBtn)</visible>
 			</control>
 		</control>
-		<include>UserLocalInfo</include>
+		<control type="group">
+			<left>20</left>
+			<top>0</top>
+			<visible>!IsEmpty(Weather.Plugin) + StringCompare(Skin.String(TopLeftHomeInfo),Weather)</visible>
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Weather image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Weather.Conditions]</texture>
+			</control>
+			<control type="label">
+				<description>Location label</description>
+				<left>65</left>
+				<top>5</top>
+				<width>500</width>
+				<height>15</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+			</control>
+			<control type="grouplist">
+				<left>65</left>
+				<top>20</top>
+				<width>1000</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<control type="label">
+					<description>Temp label</description>
+					<width min="0" max="300">auto</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+				</control>
+				<control type="label">
+					<description>Temp Units</description>
+					<width min="0" max="100">auto</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[System.TemperatureUnits]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+				</control>
+				<control type="label">
+					<description>Conditions Label</description>
+					<width>500</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<include>Clock</include>
+		<control type="label">
+			<description>Date label</description>
+			<right>20</right>
+			<top>35</top>
+			<width>200</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>C0FFFFFF</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="200" condition="Window.IsVisible(busydialog)">conditional</animation>
+			<visible>!Skin.HasSetting(HideSystemTime)</visible>
+		</control>
 	</controls>
 </window>

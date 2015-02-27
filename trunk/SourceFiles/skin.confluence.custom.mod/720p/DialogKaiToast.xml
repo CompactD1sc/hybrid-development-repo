@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<coordinates>
-		<posx>-5</posx>
-		<posy>-5</posy>
+		<left>1</left>
+		<top>1</top>
 	</coordinates>
 	<controls>
 		<control type="group">
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>400</width>
+				<height>70</height>
+				<colordiffuse>EEFFFFFF</colordiffuse>
+				<texture border="12">OverlayDialogBackground.png</texture>
+			</control>
 			<control type="image" id="400">
 				<description>avatar</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
@@ -19,8 +27,8 @@
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
-				<posx>75</posx>
-				<posy>15</posy>
+				<left>75</left>
+				<top>15</top>
 				<width>310</width>
 				<height>18</height>
 				<font>font12_title</font>
@@ -32,8 +40,8 @@
 			</control>
 			<control type="fadelabel" id="402">
 				<description>Line 2 Label</description>
-				<posx>75</posx>
-				<posy>35</posy>
+				<left>75</left>
+				<top>35</top>
 				<width>310</width>
 				<height>20</height>
 				<font>font12_title</font>
@@ -45,8 +53,8 @@
 			</control>
 			<control type="image" id="403">
 				<description>avatar</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
@@ -55,8 +63,8 @@
 			</control>
 			<control type="image" id="404">
 				<description>avatar</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
@@ -65,8 +73,8 @@
 			</control>
 			<control type="image" id="405">
 				<description>avatar</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>

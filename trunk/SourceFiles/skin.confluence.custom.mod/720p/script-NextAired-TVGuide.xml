@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ClearProperty(TVGuide.MondayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
@@ -7,14 +7,15 @@
 	<onload>ClearProperty(TVGuide.FridayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SundayList,Home)</onload>
+	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
-			<visible>!IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
+			<visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -25,8 +26,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -37,8 +38,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -49,8 +50,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -61,8 +62,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -73,8 +74,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -85,8 +86,8 @@
 				<animation effect="fade" time="600">Hidden</animation>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -98,18 +99,47 @@
 			</control>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>100r</posy>
+			<left>0</left>
+			<top>100r</top>
 			<width>1280</width>
 			<height>100</height>
-			<aspectratio>stretch</aspectratio>
-			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<left>20</left>
+			<top>3</top>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_video.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+		</control>
+		<control type="grouplist">
+			<left>65</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$ADDON[script.tv.show.next.aired 450]</label>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$LOCALIZE[31207]</label>
+			</control>
 		</control>
 		<control type="grouplist" id="2000">
 			<include>Window_OpenClose_Animation</include>
-			<posx>40</posx>
-			<posy>60</posy>
+			<left>40</left>
+			<top>60</top>
 			<width>1200</width>
 			<height>660</height>
 			<orientation>horizontal</orientation>
@@ -121,22 +151,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[11]</label>
@@ -146,8 +176,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="200">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -164,22 +194,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[12]</label>
@@ -189,8 +219,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="201">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -207,22 +237,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[13]</label>
@@ -232,8 +262,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="202">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -250,22 +280,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[14]</label>
@@ -275,8 +305,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="203">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -293,22 +323,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[15]</label>
@@ -318,8 +348,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="204">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -336,22 +366,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[16]</label>
@@ -361,8 +391,8 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="205">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
@@ -379,22 +409,22 @@
 				<width>300</width>
 				<height>660</height>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>300</width>
 					<height>600</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>592</posy>
+					<left>0</left>
+					<top>592</top>
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>13</posy>
+					<left>20</left>
+					<top>13</top>
 					<width>260</width>
 					<height>20</height>
 					<label>$LOCALIZE[17]</label>
@@ -404,15 +434,15 @@
 					<textcolor>white</textcolor>
 				</control>
 				<control type="panel" id="206">
-					<posx>10</posx>
-					<posy>40</posy>
+					<left>10</left>
+					<top>40</top>
 					<width>280</width>
 					<height>530</height>
 					<scrolltime>200</scrolltime>
 					<onup>206</onup>
 					<ondown>206</ondown>
 					<onleft>205</onleft>
-					<onright>80</onright>
+					<onright>206</onright>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
 			</control>
@@ -421,8 +451,8 @@
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<description>left Arrow</description>
-				<posx>10</posx>
-				<posy>120</posy>
+				<left>10</left>
+				<top>120</top>
 				<width>30</width>
 				<height>40</height>
 				<texture>arrow-big-left.png</texture>
@@ -431,8 +461,8 @@
 			</control>
 			<control type="image">
 				<description>left Arrow</description>
-				<posx>10</posx>
-				<posy>170r</posy>
+				<left>10</left>
+				<top>170r</top>
 				<width>30</width>
 				<height>40</height>
 				<texture>arrow-big-left.png</texture>
@@ -441,8 +471,8 @@
 			</control>
 			<control type="image">
 				<description>right Arrow</description>
-				<posx>1240</posx>
-				<posy>120</posy>
+				<left>1240</left>
+				<top>120</top>
 				<width>30</width>
 				<height>40</height>
 				<texture>arrow-big-right.png</texture>
@@ -451,8 +481,8 @@
 			</control>
 			<control type="image">
 				<description>right Arrow</description>
-				<posx>1240</posx>
-				<posy>170r</posy>
+				<left>1240</left>
+				<top>170r</top>
 				<width>30</width>
 				<height>40</height>
 				<texture>arrow-big-right.png</texture>
@@ -461,143 +491,24 @@
 			</control>
 		</control>
 		<include>CommonNowPlaying</include>
-		<control type="group">
-			<posx>240r</posx>
-			<posy>55r</posy>
-			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(DisableHomeReturnButtons)</visible>
-			<control type="button" id="80">
-				<description>Volume Up button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>$VAR[VolumeStepUp]</onclick>
-				<onclick>VolumeUp</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft condition="Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)">84</onleft>
-				<onleft condition="!Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)">206</onleft>
-				<onright>81</onright>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="image">
-				<description>volume Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_volplus.png</texture>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="button" id="81">
-				<description>Volume Down button</description>
-				<posx>55</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>$VAR[VolumeStepDown]</onclick>
-				<onclick>VolumeDown</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>80</onleft>
-				<onright>82</onright>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="image">
-				<description>Volume Icon</description>
-				<posx>60</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_volminus.png</texture>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="button" id="82">
-				<description>Back push button</description>
-				<posx>110</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>81</onleft>
-				<onright>83</onright>
-				<onup>200</onup>
-				<ondown>200</ondown>
-			</control>
-			<control type="image">
-				<description>Back Icon</description>
-				<posx>115</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_back.png</texture>
-			</control>
-			<control type="button" id="83">
-				<description>Home push button</description>
-				<posx>165</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>82</onleft>
-				<onright>9000</onright>
-				<onup>200</onup>
-				<ondown>200</ondown>
-			</control>
-			<control type="image">
-				<description>Home Icon</description>
-				<posx>170</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
-			</control>
-		</control>
+		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
-			<posx>-250</posx>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			<left>-251</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
-				<posx>0</posx>
-				<posy>110</posy>
+				<left>0</left>
+				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onleft condition="Skin.HasSetting(DisableHomeReturnButtons)">9000</onleft>
-				<onleft condition="!Skin.HasSetting(DisableHomeReturnButtons)">83</onleft>
-				<onright>200</onright>
+				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onleft>ClearProperty(SideBladeOpen)</onleft>
+				<onright>ClearProperty(SideBladeOpen)</onright>
+				<!--onright>200</onright-->
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<onback>200</onback>
+				<onback>ClearProperty(SideBladeOpen)</onback>
 				<itemgap>0</itemgap>
 				<control type="image" id="2">
 					<description>LOGO</description>
@@ -620,10 +531,13 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>5</label>
+					<onleft>ClearProperty(SideBladeOpen)</onleft>
 					<onright>200</onright>
+					<!--onclick>ClearProperty(SideBladeOpen)</onclick-->
 				</control>
+				<!-- include>CommonNowPlaying_Controls</include -->
 			</control>
 		</control>
-		<include>UserLocalInfo</include>
+		<include>Clock</include>
 	</controls>
 </window>
