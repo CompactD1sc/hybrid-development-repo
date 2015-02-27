@@ -3,28 +3,26 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
 	<controls>
 		<control type="group">
 			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<posx>400r</posx>
-				<posy>0</posy>
+				<left>400r</left>
+				<top>0</top>
 				<width>400</width>
 				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<posx>380r</posx>
-				<posy>0</posy>
+				<left>380r</left>
+				<top>0</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -35,8 +33,8 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="label">
-				<posx>380r</posx>
-				<posy>35</posy>
+				<left>380r</left>
+				<top>35</top>
 				<width>360</width>
 				<height>40</height>
 				<font>font13_title</font>
@@ -44,11 +42,11 @@
 				<aligny>center</aligny>
 				<textcolor>blue</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>$LOCALIZE[31118]</label>
+				<label>$LOCALIZE[31316]</label>
 			</control>
 			<control type="list" id="450">
-				<posx>390r</posx>
-				<posy>130</posy>
+				<left>390r</left>
+				<top>130</top>
 				<width>440</width>
 				<height>480</height>
 				<onup>450</onup>
@@ -59,15 +57,15 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>360</width>
 						<height>40</height>
 						<texture border="5">button-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>font12_title</font>
@@ -79,24 +77,24 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>360</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(450)</visible>
 						<texture border="3">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>360</width>
 						<height>40</height>
 						<visible>Control.HasFocus(450)</visible>
 						<texture border="3">button-focus.png</texture>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>340</width>
 						<height>40</height>
 						<font>font12_title</font>
@@ -109,134 +107,100 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31144]</label>
+						<label>$LOCALIZE[31317]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,None)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 1</description>
-						<label fallback="31135">$INFO[Skin.String(UserSelectAddon.1.Label)]</label>
+						<label fallback="31230">$INFO[Skin.String(UserSelectAddon.1.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetOne)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetOne)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 2</description>
-						<label fallback="31136">$INFO[Skin.String(UserSelectAddon.2.Label)]</label>
+						<label fallback="31231">$INFO[Skin.String(UserSelectAddon.2.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetTwo)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetTwo)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 3</description>
-						<label fallback="31190">$INFO[Skin.String(UserSelectAddon.3.Label)]</label>
+						<label fallback="31232">$INFO[Skin.String(UserSelectAddon.3.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetThree)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetThree)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 4</description>
-						<label fallback="31191">$INFO[Skin.String(UserSelectAddon.4.Label)]</label>
+						<label fallback="31233">$INFO[Skin.String(UserSelectAddon.4.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetFour)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetFour)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 5</description>
-						<label fallback="31196">$INFO[Skin.String(UserSelectAddon.5.Label)]</label>
+						<label fallback="31234">$INFO[Skin.String(UserSelectAddon.5.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetFive)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetFive)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 6</description>
-						<label fallback="31197">$INFO[Skin.String(UserSelectAddon.6.Label)]</label>
+						<label fallback="31235">$INFO[Skin.String(UserSelectAddon.6.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetSix)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetSix)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 7</description>
-						<label fallback="31198">$INFO[Skin.String(UserSelectAddon.7.Label)]</label>
+						<label fallback="31236">$INFO[Skin.String(UserSelectAddon.7.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetseven)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetSeven)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 8</description>
-						<label fallback="31199">$INFO[Skin.String(UserSelectAddon.8.Label)]</label>
+						<label fallback="31237">$INFO[Skin.String(UserSelectAddon.8.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetEight)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetEight)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 9</description>
-						<label fallback="31200">$INFO[Skin.String(UserSelectAddon.9.Label)]</label>
+						<label fallback="31238">$INFO[Skin.String(UserSelectAddon.9.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetNine)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetNine)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
 						<description>User Addon Set 10</description>
-						<label fallback="31201">$INFO[Skin.String(UserSelectAddon.10.Label)]</label>
+						<label fallback="31239">$INFO[Skin.String(UserSelectAddon.10.Label)]</label>
 						<onclick>Dialog.Close(2117)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Addon,AddonSetTen)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetTen)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>User Addon Set 11</description>
+						<label fallback="31241">$INFO[Skin.String(UserSelectAddon.11.Label)]</label>
+						<onclick>Dialog.Close(2117)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetEleven)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+					</item>
+					<item>
+						<description>User Addon Set 12</description>
+						<label fallback="31242">$INFO[Skin.String(UserSelectAddon.12.Label)]</label>
+						<onclick>Dialog.Close(2117)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,AddonSetTwelve)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 				</content>
 			</control>
-			<control type="button">
-				<description>Up Arrow</description>
-				<posx>390r</posx>
-				<posy>95</posy>
-				<width>30</width>
-				<height>40</height>
-				<texturefocus>arrow-big-up.png</texturefocus>
-				<texturenofocus>arrow-big-up.png</texturenofocus>
-				<onclick>Control.Move(450,-1)</onclick>
-				<visible>Container(450).HasPrevious</visible>
-				<include>VisibleFadeEffect</include>
-			</control>
-			<control type="button">
-				<description>Up Arrow</description>
-				<posx>60r</posx>
-				<posy>95</posy>
-				<width>30</width>
-				<height>40</height>
-				<texturefocus>arrow-big-up.png</texturefocus>
-				<texturenofocus>arrow-big-up.png</texturenofocus>
-				<onclick>Control.Move(450,-1)</onclick>
-				<visible>Container(450).HasPrevious</visible>
-				<include>VisibleFadeEffect</include>
-			</control>
-			<control type="button">
-				<description>Down Arrow</description>
-				<posx>390r</posx>
-				<posy>605</posy>
-				<width>30</width>
-				<height>40</height>
-				<texturefocus>arrow-big-down.png</texturefocus>
-				<texturenofocus>arrow-big-down.png</texturenofocus>
-				<onclick>Control.Move(450,1)</onclick>
-				<visible>Container(450).HasNext</visible>
-				<include>VisibleFadeEffect</include>
-			</control>
-			<control type="button">
-				<description>Down Arrow</description>
-				<posx>60r</posx>
-				<posy>605</posy>
-				<width>30</width>
-				<height>40</height>
-				<texturefocus>arrow-big-down.png</texturefocus>
-				<texturenofocus>arrow-big-down.png</texturenofocus>
-				<onclick>Control.Move(450,1)</onclick>
-				<visible>Container(450).HasNext</visible>
-				<include>VisibleFadeEffect</include>
-			</control>
 			<control type="scrollbar" id="60">
-				<posx>1250</posx>
-				<posy>95</posy>
+				<left>1250</left>
+				<top>95</top>
 				<width>25</width>
 				<height>550</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>

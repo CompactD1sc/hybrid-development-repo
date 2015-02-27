@@ -2,8 +2,7 @@
 <window type="dialog" id="2122">
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
-	<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
-	<visible>Player.HasAudio</visible>
-	<visible>Skin.HasSetting(AutoStartVisualization)</visible>
+	<visible>Player.HasAudio + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+	<visible>!Skin.HasSetting(HideAutoMusicViz)</visible>
 	<controls></controls>
 </window>

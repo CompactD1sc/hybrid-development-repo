@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
-	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
-	<onload>SetProperty(MenuItemActive,Settings,Home)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
-			<posx>0</posx>
-			<posy>100r</posy>
+			<left>0</left>
+			<top>100r</top>
 			<width>1280</width>
 			<height>100</height>
-			<aspectratio>stretch</aspectratio>
-			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
+			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="group">
-			<posx>90</posx>
-			<posy>30</posy>
+			<left>90</left>
+			<top>30</top>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -28,23 +27,23 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
+				<left>5</left>
+				<top>5</top>
 				<width>1090</width>
 				<height>630</height>
 				<texture border="15">ContentPanel.png</texture>
 			</control>
 			<control type="image">
-				<posx>5</posx>
-				<posy>625</posy>
+				<left>5</left>
+				<top>625</top>
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
-				<posx>980</posx>
-				<posy>11</posy>
+				<left>980</left>
+				<top>11</top>
 				<width>64</width>
 				<height>32</height>
 				<label>-</label>
@@ -60,64 +59,62 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<posx>30</posx>
-				<posy>15</posy>
-				<width>220</width>
-				<height>80</height>
+				<left>65</left>
+				<top>18</top>
+				<width>150</width>
+				<height>55</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Confluence_Logo.png</texture>
 			</control>
 			<control type="list" id="9000">
-				<posx>10</posx>
-				<posy>82</posy>
+				<left>10</left>
+				<top>82</top>
 				<width>260</width>
 				<height>541</height>
-				<onright condition="Skin.HasSetting(DisableHomeReturnButtons)">9000</onright>
-				<onright condition="!Skin.HasSetting(DisableHomeReturnButtons)">82</onright>
-				<onleft condition="Skin.HasSetting(DisableHomeReturnButtons)">9000</onleft>
-				<onleft condition="!Skin.HasSetting(DisableHomeReturnButtons)">83</onleft>
+				<onleft>9000</onleft>
+				<onright>9001</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<itemlayout height="54" width="260">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>260</width>
 						<height>55</height>
 						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
-						<posx>250</posx>
-						<posy>0</posy>
-						<width>380</width>
+						<left>10</left>
+						<top>0</top>
+						<width>240</width>
 						<height>55</height>
 						<font>font24_title</font>
 						<textcolor>grey3</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$VAR[MainItemLabel]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="54" width="260">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>260</width>
 						<height>55</height>
 						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="label">
-						<posx>250</posx>
-						<posy>0</posy>
-						<width>380</width>
+						<left>10</left>
+						<top>0</top>
+						<width>240</width>
 						<height>55</height>
 						<font>font24_title</font>
 						<textcolor>white</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$VAR[MainItemLabel]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 				<content>
@@ -137,7 +134,7 @@
 						<label>31502</label>
 						<label2>31409</label2>
 						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>special://skin/backgrounds/homescreen/tv.jpg</icon>
+						<icon>special://skin/backgrounds/tv.jpg</icon>
 					</item>
 					<item id="4">
 						<label>2</label>
@@ -175,78 +172,71 @@
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<icon>-</icon>
 					</item>
-					<item id="10">
-						<label>166</label>
-						<label2>$LOCALIZE[31407]</label2>
-						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<icon>-</icon>
-					</item>
 				</content>
 			</control>
 			<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
+				<left>268</left>
+				<top>10</top>
 				<width>804</width>
 				<height>50</height>
 				<texture border="5">black-back2.png</texture>
 			</control>
 			<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
+				<left>268</left>
+				<top>10</top>
 				<width>804</width>
-				<height>70</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>GlassTitleBar.png</texture>
+				<height>54</height>
+				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<posx>300</posx>
-				<posy>20</posy>
+				<left>300</left>
+				<top>20</top>
 				<width>740</width>
 				<height>30</height>
 				<font>font16</font>
 				<label>$LOCALIZE[31000] $LOCALIZE[5]</label>
-				<align>left</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="image">
-				<posx>270</posx>
-				<posy>60</posy>
+				<left>270</left>
+				<top>60</top>
 				<width>800</width>
 				<height>450</height>
 				<texture border="5">button-nofocus.png</texture>
 			</control>
 			<control type="image">
-				<posx>272</posx>
-				<posy>62</posy>
+				<left>272</left>
+				<top>62</top>
 				<width>796</width>
 				<height>446</height>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>600</fadetime>
-				<texture background="true">special://skin/backgrounds/homescreen/addons.jpg</texture>
+				<texture background="true">special://skin/backgrounds/system.jpg</texture>
 			</control>
-			<control type="image">
-				<posx>272</posx>
-				<posy>62</posy>
+			<!--control type="image">
+				<left>272</left>
+				<top>62</top>
 				<width>600</width>
 				<height>340</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassOverlay.png</texture>
 				<colordiffuse>AAFFFFFF</colordiffuse>
-			</control>
+			</control-->
 			<control type="image">
-				<posx>268</posx>
-				<posy>510</posy>
+				<left>268</left>
+				<top>510</top>
 				<width>804</width>
 				<height>118</height>
 				<texture border="5">black-back2.png</texture>
 			</control>
 			<control type="textbox">
 				<description>Appearance Description</description>
-				<posx>300</posx>
-				<posy>520</posy>
+				<left>300</left>
+				<top>520</top>
 				<width>740</width>
 				<height>100</height>
 				<font>font12</font>
@@ -257,129 +247,31 @@
 			</control>
 		</control>
 		<include>CommonNowPlaying</include>
-		<control type="group">
-			<posx>240r</posx>
-			<posy>55r</posy>
-			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(DisableHomeReturnButtons)</visible>
-			<control type="button" id="80">
-				<description>Volume Up button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>$VAR[VolumeStepUp]</onclick>
-				<onclick>VolumeUp</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft condition="Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)">84</onleft>
-				<onleft condition="!Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)">9000</onleft>
-				<onright>81</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="image">
-				<description>volume Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_volplus.png</texture>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="button" id="81">
-				<description>Volume Down button</description>
-				<posx>55</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>$VAR[VolumeStepDown]</onclick>
-				<onclick>VolumeDown</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>80</onleft>
-				<onright>82</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="image">
-				<description>Volume Icon</description>
-				<posx>60</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_volminus.png</texture>
-				<visible>!Skin.HasSetting(DisableFloorVolumeButtons)</visible>
-				<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			</control>
-			<control type="button" id="82">
-				<description>Back push button</description>
-				<posx>110</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>back</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>81</onleft>
-				<onright>83</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-			</control>
-			<control type="image">
-				<description>Back Icon</description>
-				<posx>115</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_back.png</texture>
-			</control>
-			<control type="button" id="83">
-				<description>Home push button</description>
-				<posx>165</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>ActivateWindow(home)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>82</onleft>
-				<onright>9000</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-			</control>
-			<control type="image">
-				<description>Home Icon</description>
-				<posx>170</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_home.png</texture>
+		<include>FloorReturnButtons</include>
+		<include>BehindDialogFadeOut</include>
+		<control type="image">
+			<description>Section header image</description>
+			<left>20</left>
+			<top>3</top>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+		</control>
+		<control type="grouplist">
+			<left>65</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$LOCALIZE[5]</label>
 			</control>
 		</control>
-		<include>BehindDialogFadeOut</include>
-		<include>UserLocalInfo</include>
+		<include>Clock</include>
 	</controls>
 </window>
