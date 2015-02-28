@@ -371,7 +371,27 @@ msgctxt "#31090"
 msgid "Use Wide Banners"
 msgstr ""
 
-#empty strings from id 31091 to 31098
+msgctxt "#31091"
+msgid "Wake On Lan Ping"
+msgstr ""
+
+msgctxt "#31092"
+msgid "FF:FF:FF:FF:FF:FF "
+msgstr ""
+
+msgctxt "#31093"
+msgid "Ping MAC Address"
+msgstr ""
+
+msgctxt "#31094"
+msgid "Enable WOL Ping"
+msgstr ""
+
+msgctxt "#31095"
+msgid "WOL Ping Timer"
+msgstr ""
+
+#empty strings from id 31096 to 31098
 
 msgctxt "#31099"
 msgid "Enable [COLOR=grey3](Slower)[/COLOR] File System Search for Additional Artwork"
@@ -517,7 +537,7 @@ msgctxt "#31137"
 msgid "Enable Low Main Menu Bar"
 msgstr ""
 
-msgctxt "#31338"
+msgctxt "#31138"
 msgid "Play Party Mode Music on Screensaver"
 msgstr ""
 
@@ -549,9 +569,9 @@ msgctxt "#31145"
 msgid "Plex"
 msgstr ""
 
-msgctxt "#31146"
-msgid "Select Parent Folder of [COLOR=white]Kodi UPnp Server[/COLOR] Containing Video and Music Libraries"
-msgstr ""
+#msgctxt "#31146"
+#msgid "Select Parent Folder of [COLOR=white]Kodi UPnp Server[/COLOR] Containing Video and Music Libraries"
+#msgstr ""
 
 msgctxt "#31147"
 msgid "Setup UPnP Library"
@@ -565,7 +585,11 @@ msgctxt "#31149"
 msgid "UPnp Server Type"
 msgstr ""
 
-#empty strings from id 31150 to 31151
+msgctxt "#31150"
+msgid "Select UPnP Server"
+msgstr ""
+
+#empty string id 31151
 
 msgctxt "#31152"
 msgid "Enable Kiosk Mode"
@@ -1132,7 +1156,11 @@ msgctxt "#31337"
 msgid "Global Skin Options"
 msgstr ""
 
-#empty strings from id 31338 to 31345
+msgctxt "#31338"
+msgid "Favourites Window"
+msgstr ""
+
+#empty strings from id 31339 to 31345
 
 msgctxt "#31346"
 msgid "Up One Level"
@@ -1661,7 +1689,15 @@ msgctxt "#31938"
 msgid "Movie Details"
 msgstr ""
 
-#empty strings from id 31937 to 31942
+msgctxt "#31939"
+msgid "Adjust FanArt Script Cycle Rate"
+msgstr ""
+
+msgctxt "#31940"
+msgid "Seconds"
+msgstr ""
+
+#empty strings from id 31941 to 31942
 
 msgctxt "#31943"
 msgid "Choose a Scraper"

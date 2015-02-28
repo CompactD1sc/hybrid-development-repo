@@ -626,7 +626,10 @@
 		<value>$LOCALIZE[1036]</value>
 	</variable>
 	<variable name="FavBtnCommand">
-		<onclick condition="!Skin.String(UsrFavBtnCmd.Path)">ActivateWindow(Favourites),return</onclick>
+		
+		
+		<value condition="IsEmpty(Skin.String(UsrFavBtnCmd.Path))">ActivateWindow(Favourites),return</value>
+		
 		<value condition="Skin.String(UsrFavBtnCmd.Path,LastVideo) + Skin.String(LastVideoPlayed)">$INFO[Skin.String(LastVideoPlayed)]</value>
 		<value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies)">ActivateWindow(2125)</value>
 		<value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows)">ActivateWindow(2124)</value>
@@ -2589,9 +2592,18 @@
 		<value>$LOCALIZE[31143]</value>
 	</variable>
 	<variable name="UPnPPathDesc" type="text">
+		<value condition="!IsEmpty(Skin.String(UPnP_Name))">$INFO[Skin.String(UPnP_Name)]</value>
 		<value condition="!IsEmpty(Skin.String(UPnP_Path))">$INFO[Skin.String(UPnP_Path)]</value>
-		<value>$LOCALIZE[31146]</value>
+		<value>$LOCALIZE[31150]</value>
 	</variable>
+	
+	
+	<variable name="PingMacDesc" type="text">
+		<value condition="!IsEmpty(Skin.String(PingMacAddr))">$INFO[Skin.String(PingMacAddr)]</value>
+		<value>$LOCALIZE[31092]</value>
+	</variable>
+	
+	
 	<variable name="VideoFilesCmd" type="text">
 		<value condition="Skin.String(UPnPServer,Kodi)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]sources%3a%2f%2fvideo%2f/",return)</value>
 		<value condition="Skin.String(UPnPServer,WinHomeServer)">ActivateWindow(VideoLibrary,"$INFO[Skin.String(UPnP_Path)]2/",return)</value>
