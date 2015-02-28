@@ -113,10 +113,21 @@
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Icon)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
+						<visible>!StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
+					</item>
+					<item>
+						<description>Favourites Window</description>
+						<label>$LOCALIZE[31338]</label>
+						<onclick>Dialog.Close(2119)</onclick>
+						
+						<onclick>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(Favourites),return)</onclick>
+						<onclick>Skin.SetString(UsrFavBtnCmd.Label,$LOCALIZE[31338])</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
+						<visible>StringCompare(Window(Home).Property(UsrSelectBtn),UsrFavBtnCmd)</visible>
 					</item>
 					<item>
 						<description>Favourites</description>
-						<label>$LOCALIZE[1036]</label>
+						<label>$LOCALIZE[31329] $LOCALIZE[1036]</label>
 						<onclick>Dialog.Close(2119)</onclick>
 						<onclick>RunScript(script.favourites,changetitle=true&amp;property=$INFO[Window(Home).Property(UsrSelectBtn)])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>
