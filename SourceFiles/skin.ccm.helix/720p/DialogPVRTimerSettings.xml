@@ -106,7 +106,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		</control>
 		<control type="radiobutton" id="8">
@@ -115,7 +115,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		</control>
 		<control type="spincontrolex" id="9">
@@ -123,7 +123,7 @@
 			<height>40</height>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<font>font13</font>
 			<aligny>center</aligny>
@@ -132,7 +132,7 @@
 		<control type="sliderex" id="13">
 			<description>Default Slider</description>
 			<height>40</height>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
@@ -149,7 +149,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		</control>
 	</controls>

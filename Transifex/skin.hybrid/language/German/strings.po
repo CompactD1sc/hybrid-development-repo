@@ -60,6 +60,10 @@ msgctxt "#31011"
 msgid "Misc Options"
 msgstr "Verschiedene Optionen"
 
+msgctxt "#31012"
+msgid "Enable Disk Type Media Cases"
+msgstr "DVD/CD-Hüllen-Ansicht aktivieren"
+
 msgctxt "#31013"
 msgid "Enable Single Global Background"
 msgstr "Einzelnen globalen Hintergrund aktivieren"
@@ -74,11 +78,11 @@ msgstr "Extras"
 
 msgctxt "#31016"
 msgid "Hide extra art"
-msgstr "Extra Art verstecken"
+msgstr "Extra Art verbergen"
 
 msgctxt "#31017"
 msgid "Hide clearart"
-msgstr "Clearart verstecken"
+msgstr "Clearart verbergen"
 
 msgctxt "#31018"
 msgid "Enable Home Page Widget Panel Transparency"
@@ -118,7 +122,7 @@ msgstr "Gesehene abdunkeln"
 
 msgctxt "#31028"
 msgid "Plot Unavailable"
-msgstr "Plot nicht verfügbar"
+msgstr "Handlung nicht verfügbar"
 
 msgctxt "#31031"
 msgid "Never"
@@ -874,7 +878,7 @@ msgstr "Wähle Widget Satz"
 
 msgctxt "#31327"
 msgid "Hide Item"
-msgstr "Verstecke Eintrag"
+msgstr "Verberge Eintrag"
 
 msgctxt "#31328"
 msgid "Hidden"
@@ -1071,6 +1075,10 @@ msgstr "Wiedergabelisten-Widget-Skript aktivieren"
 msgctxt "#31381"
 msgid "Configure script.randomandlastitems"
 msgstr "script.randomandlastitems konfigurieren"
+
+msgctxt "#31382"
+msgid "Playlist widget should [B]Randomize[/B] the playlist sort order"
+msgstr "Wiedergabelisten-Widget sollte die Wiedergabelisten-Sortierreihenfolge [B]zufällig[/B] auswählen"
 
 msgctxt "#31383"
 msgid "Enable Video Artwork on OSD"

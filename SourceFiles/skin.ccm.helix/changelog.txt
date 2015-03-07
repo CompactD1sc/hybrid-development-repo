@@ -1,3 +1,7 @@
+[B]3.0.14[/B]
+- Get Playing Music back on Home Screen
+- Colordiffuse Icons with selected font colour
+
 [B]3.0.13[/B]
 - Returned various stuff
 - Added more settings

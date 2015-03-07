@@ -101,7 +101,7 @@
 						<top>0</top>
 						<width>270</width>
 						<height>48</height>
-						<texture border="2">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -188,7 +188,7 @@
 						<height>48</height>
 						<left>0</left>
 						<top>0</top>
-						<texture border="5">folder-focus.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>40</width>
@@ -376,7 +376,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="image">
 							<left>960</left>
@@ -384,7 +384,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="label">
 							<left>0</left>
@@ -495,7 +495,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(11)</visible>
 						</control>
 						<control type="image">
@@ -504,7 +504,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(11)</visible>
 						</control>
 						<control type="image">
@@ -513,7 +513,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 						<control type="image">
@@ -522,7 +522,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 						<control type="label">
@@ -633,9 +633,9 @@
 					<height>500</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 					<onleft>11</onleft>
 					<onright>101</onright>
 					<showonepage>false</showonepage>
@@ -754,7 +754,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="image">
 							<left>960</left>
@@ -762,7 +762,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="label">
 							<left>0</left>
@@ -873,7 +873,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(12)</visible>
 						</control>
 						<control type="image">
@@ -882,7 +882,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(12)</visible>
 						</control>
 						<control type="image">
@@ -891,7 +891,7 @@
 							<width>250</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(12)</visible>
 						</control>
 						<control type="image">
@@ -900,7 +900,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(12)</visible>
 						</control>
 						<control type="label">
@@ -1011,9 +1011,9 @@
 					<height>500</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 					<onleft>12</onleft>
 					<onright>101</onright>
 					<showonepage>false</showonepage>
@@ -1119,7 +1119,7 @@
 							<width>300</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="image">
 							<left>960</left>
@@ -1127,7 +1127,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>33FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -1218,7 +1218,7 @@
 							<width>300</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(13)</visible>
 						</control>
 						<control type="image">
@@ -1227,7 +1227,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>!Control.HasFocus(13)</visible>
 						</control>
 						<control type="image">
@@ -1236,7 +1236,7 @@
 							<width>300</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(13)</visible>
 						</control>
 						<control type="image">
@@ -1245,7 +1245,7 @@
 							<width>140</width>
 							<height>40</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
-							<texture border="5">StackFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">StackFO.png</texture>
 							<visible>Control.HasFocus(13)</visible>
 						</control>
 						<control type="label">
@@ -1336,9 +1336,9 @@
 					<height>500</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 					<onleft>13</onleft>
 					<onright>101</onright>
 					<showonepage>false</showonepage>

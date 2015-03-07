@@ -114,7 +114,7 @@
 					<top>2</top>
 					<width>235</width>
 					<height>211</height>
-					<texture border="3">folder-focus.png</texture>
+					<texture border="3" colordiffuse="$VAR[MainColorOne]">folder-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>7</left>

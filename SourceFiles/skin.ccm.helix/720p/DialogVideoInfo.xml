@@ -221,7 +221,7 @@
 								<width>740</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -401,7 +401,7 @@
 								<width>740</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -546,7 +546,7 @@
 								<width>640</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -711,7 +711,7 @@
 								<width>640</width>
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture>MenuItemFO.png</texture>
+								<texture colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -918,7 +918,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">button-focus2.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -949,7 +949,7 @@
 						<description>Play/browse to Show</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
-						<alttexturefocus border="2">button-focus.png</alttexturefocus>
+						<alttexturefocus border="2" colordiffuse="$VAR[MainColorOne]">button-focus.png</alttexturefocus>
 						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
 						<usealttexture>Container.Content(TVShows)</usealttexture>

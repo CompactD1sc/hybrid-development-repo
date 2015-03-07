@@ -46,7 +46,7 @@
 			<top>0</top>
 			<width>128</width>
 			<height>128</height>
-			<texturefocus>CalibrateTopLeft.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">CalibrateTopLeft.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="mover" id="9">
@@ -55,7 +55,7 @@
 			<top>500</top>
 			<width>128</width>
 			<height>128</height>
-			<texturefocus>CalibrateBottomRight.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">CalibrateBottomRight.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="mover" id="10">
@@ -64,7 +64,7 @@
 			<top>500</top>
 			<width>512</width>
 			<height>128</height>
-			<texturefocus>CalibrateSubtitles.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">CalibrateSubtitles.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="resize" id="11">
@@ -73,7 +73,7 @@
 			<top>232</top>
 			<width>256</width>
 			<height>256</height>
-			<texturefocus>CalibratePixelRatio.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorOne]">CalibratePixelRatio.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="group">

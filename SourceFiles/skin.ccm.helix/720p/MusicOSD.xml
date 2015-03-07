@@ -37,8 +37,8 @@
 			<ondown>26</ondown>
 			<action>seek</action>
 			<texturesliderbar>seekslider2.png</texturesliderbar>
-			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
-			<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+			<textureslidernib colordiffuse="$VAR[MainColorOne]">osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">osd_slider_nib.png</textureslidernibfocus>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<animation effect="slide" end="-150,0" time="0" tween="back" easing="out" condition="Skin.String(MusicOSDInfo,never) +  !Skin.HasSetting(HidePopUpSeekBar)" reversible="true">Conditional</animation>
@@ -57,7 +57,7 @@
 				<height>55</height>
 				<label>210</label>
 				<font>-</font>
-				<texturefocus>OSDPrevTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
 				<onleft>704</onleft>
 				<onright>601</onright>
@@ -72,7 +72,7 @@
 				<height>55</height>
 				<label>31354</label>
 				<font>-</font>
-				<texturefocus>OSDRewindFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRewindFO.png</texturefocus>
 				<texturenofocus>OSDRewindNF.png</texturenofocus>
 				<onleft>600</onleft>
 				<onright>602</onright>
@@ -88,10 +88,10 @@
 				<label>31351</label>
 				<altlabel>208</altlabel>
 				<font>-</font>
-				<texturefocus>OSDPauseFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPauseFO.png</texturefocus>
 				<texturenofocus>OSDPauseNF.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
+				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDPlayFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 				<onleft>601</onleft>
 				<onright>603</onright>
@@ -106,7 +106,7 @@
 				<height>55</height>
 				<label>31352</label>
 				<font>-</font>
-				<texturefocus>OSDStopFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onleft>602</onleft>
 				<onright>604</onright>
@@ -121,7 +121,7 @@
 				<height>55</height>
 				<label>31353</label>
 				<font>-</font>
-				<texturefocus>OSDForwardFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDForwardFO.png</texturefocus>
 				<texturenofocus>OSDForwardNF.png</texturenofocus>
 				<onleft>603</onleft>
 				<onright>605</onright>
@@ -136,7 +136,7 @@
 				<height>55</height>
 				<label>209</label>
 				<font>-</font>
-				<texturefocus>OSDNextTrackFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 				<onleft>604</onleft>
 				<onright>606</onright>
@@ -173,7 +173,7 @@
 				<top>0</top>
 				<width>55</width>
 				<height>55</height>
-				<texture>OSDRepeatFO.png</texture>
+				<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatFO.png</texture>
 				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
@@ -191,7 +191,7 @@
 				<top>0</top>
 				<width>55</width>
 				<height>55</height>
-				<texture>OSDRepeatOneFO.png</texture>
+				<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatOneFO.png</texture>
 				<visible>Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
@@ -209,7 +209,7 @@
 				<top>0</top>
 				<width>55</width>
 				<height>55</height>
-				<texture>OSDRepeatAllFO.png</texture>
+				<texture colordiffuse="$VAR[MainColorOne]">OSDRepeatAllFO.png</texture>
 				<visible>Playlist.IsRepeat</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
@@ -220,10 +220,10 @@
 				<height>55</height>
 				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
 				<font>-</font>
-				<texturefocus>OSDRandomOffFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRandomOffFO.png</texturefocus>
 				<texturenofocus>OSDRandomOffNF.png</texturenofocus>
 				<usealttexture>Playlist.IsRandom</usealttexture>
-				<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
+				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDRandomOnFO.png</alttexturefocus>
 				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
 				<onclick>PlayerControl(Random)</onclick>
 				<onleft>606</onleft>
@@ -246,9 +246,9 @@
 				<height>55</height>
 				<label>31128</label>
 				<font>-</font>
-				<texturefocus>OSDLyricsFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDLyricsFO.png</texturefocus>
 				<texturenofocus>OSDLyricsNF.png</texturenofocus>
-				<alttexturefocus>OSDLyricsFO.png</alttexturefocus>
+				<alttexturefocus colordiffuse="$VAR[MainColorOne]">OSDLyricsFO.png</alttexturefocus>
 				<alttexturenofocus>OSDLyricsNF.png</alttexturenofocus>
 				<onleft>607</onleft>
 				<onright>500</onright>
@@ -268,7 +268,7 @@
 				<height>55</height>
 				<label>12006</label>
 				<font>-</font>
-				<texturefocus>OSDVizFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDVizFO.png</texturefocus>
 				<texturenofocus>OSDVizNF.png</texturenofocus>
 				<onleft>701</onleft>
 				<onright>702</onright>
@@ -282,7 +282,7 @@
 				<height>55</height>
 				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
 				<font>-</font>
-				<texturefocus>OSDPresetSettingsFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPresetSettingsFO.png</texturefocus>
 				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
 				<onleft>500</onleft>
 				<onright>703</onright>
@@ -297,7 +297,7 @@
 				<height>55</height>
 				<label>31048</label>
 				<font>-</font>
-				<texturefocus>OSDPreFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDPreFO.png</texturefocus>
 				<texturenofocus>OSDPreNF.png</texturenofocus>
 				<onleft>702</onleft>
 				<onright>704</onright>
@@ -312,7 +312,7 @@
 				<height>55</height>
 				<label>264</label>
 				<font>-</font>
-				<texturefocus>OSDRecordOffFO.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">OSDRecordOffFO.png</texturefocus>
 				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
 				<onleft>703</onleft>
 				<onright>600</onright>

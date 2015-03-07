@@ -433,8 +433,8 @@
 				<width>240</width>
 				<height>12</height>
 				<texturesliderbar>seekslider.png</texturesliderbar>
-				<textureslidernib>osd_slider_nib.png</textureslidernib>
-				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorOne]">osd_slider_nib.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">osd_slider_nib.png</textureslidernibfocus>
 				<visible>Player.Seeking</visible>
 				<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
 			</control>

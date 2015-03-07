@@ -94,7 +94,7 @@
 						<width>360</width>
 						<height>40</height>
 						<visible>Control.HasFocus(450)</visible>
-						<texture border="3">button-focus.png</texture>
+						<texture border="3" colordiffuse="$VAR[MainColorOne]">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -117,9 +117,9 @@
 				<height>550</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<showonepage>true</showonepage>

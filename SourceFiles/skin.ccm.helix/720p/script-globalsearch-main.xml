@@ -117,7 +117,7 @@
 							<top>0</top>
 							<width>260</width>
 							<height>61</height>
-							<texture border="5">MenuItemFO.png</texture>
+							<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 							<animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="label">
@@ -302,7 +302,7 @@
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<onup>101</onup>
 					<ondown>101</ondown>
@@ -432,7 +432,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -520,9 +520,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>111</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -665,7 +665,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -753,9 +753,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>211</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -869,7 +869,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>170</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -928,9 +928,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>121</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1023,7 +1023,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>125</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1061,9 +1061,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>131</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1174,7 +1174,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1231,9 +1231,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>141</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1355,7 +1355,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1422,9 +1422,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>151</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1527,7 +1527,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1575,9 +1575,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>161</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1680,7 +1680,7 @@
 									<top>0</top>
 									<width>750</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1728,9 +1728,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>171</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
@@ -1844,7 +1844,7 @@
 									<top>0</top>
 									<width>370</width>
 									<height>101</height>
-									<texture border="5">button-focus2.png</texture>
+									<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
 								</control>
 								<control type="image">
 									<left>5</left>
@@ -1903,9 +1903,9 @@
 							<height>530</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-							<textureslidernib>ScrollBarNib.png</textureslidernib>
-							<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+							<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+							<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+							<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 							<onleft>181</onleft>
 							<onright>9000</onright>
 							<showonepage>false</showonepage>
