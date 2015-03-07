@@ -84,7 +84,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>20037</label>
@@ -99,7 +99,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13277</label>
@@ -114,7 +114,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13279</label>
@@ -129,7 +129,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13280</label>
@@ -144,7 +144,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>13281</label>
@@ -159,7 +159,7 @@
 					<font>font13_title</font>
 					<textcolor>grey2</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
+					<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>19191</label>

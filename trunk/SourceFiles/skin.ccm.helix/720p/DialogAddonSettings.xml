@@ -84,7 +84,7 @@
 			<top>80</top>
 			<width>20</width>
 			<height>20</height>
-			<texture>scroll-left-focus.png</texture>
+			<texture colordiffuse="$VAR[MainColorOne]">scroll-left-focus.png</texture>
 			<visible>Container(9).HasPrevious</visible>
 		</control>
 		<control type="image">
@@ -93,7 +93,7 @@
 			<top>80</top>
 			<width>20</width>
 			<height>20</height>
-			<texture>scroll-right-focus.png</texture>
+			<texture colordiffuse="$VAR[MainColorOne]">scroll-right-focus.png</texture>
 			<visible>Container(9).HasNext</visible>
 		</control>
 		<control type="grouplist" id="2">
@@ -116,9 +116,9 @@
 			<height>380</height>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-			<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-			<textureslidernib>ScrollBarNib.png</textureslidernib>
-			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<texturesliderbarfocus border="2,16,2,16" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 			<onleft>2</onleft>
 			<onright>2</onright>
 			<showonepage>false</showonepage>
@@ -189,7 +189,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 		</control>
 		<control type="radiobutton" id="4">
 			<description>Default RadioButton</description>
@@ -197,7 +197,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 		</control>
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
@@ -205,7 +205,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 			<font>font13</font>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
@@ -230,7 +230,7 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="5">button-focus2.png</texturefocus>
+			<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texturefocus>
 		</control>
 	</controls>
 </window>

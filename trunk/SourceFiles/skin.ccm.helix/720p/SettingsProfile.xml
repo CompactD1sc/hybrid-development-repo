@@ -103,7 +103,7 @@
 						<top>0</top>
 						<width>260</width>
 						<height>55</height>
-						<texture border="5">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 						<animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -238,7 +238,7 @@
 						<label>20096</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="button" id="5">
@@ -250,7 +250,7 @@
 						<label2>$INFO[System.ProfileAutoLogin]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>!System.HasLoginScreen</enable>
 					</control>
@@ -340,7 +340,7 @@
 							<top>0</top>
 							<width>188</width>
 							<height>145</height>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
@@ -366,9 +366,9 @@
 					<height>530</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 					<onleft>2</onleft>
 					<onright>9000</onright>
 					<showonepage>false</showonepage>

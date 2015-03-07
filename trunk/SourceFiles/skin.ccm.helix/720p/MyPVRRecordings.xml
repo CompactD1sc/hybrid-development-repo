@@ -143,7 +143,7 @@
 						<top>0</top>
 						<width>760</width>
 						<height>41</height>
-						<texture border="2">MenuItemFO.png</texture>
+						<texture border="2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -161,7 +161,7 @@
 						<top>5</top>
 						<width>200</width>
 						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
+						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Date)</visible>
 					</control>
 					<control type="image">
@@ -222,9 +222,9 @@
 				<height>560</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>50</onleft>
 				<onright>102</onright>
 				<showonepage>false</showonepage>

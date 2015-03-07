@@ -99,7 +99,7 @@
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8000)</visible>
 						</control>
@@ -227,7 +227,7 @@
 							<height>268</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8001)</visible>
 						</control>
@@ -346,7 +346,7 @@
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8002)</visible>
 						</control>
@@ -474,7 +474,7 @@
 							<height>268</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8003)</visible>
 						</control>
@@ -593,7 +593,7 @@
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8004)</visible>
 						</control>
@@ -722,7 +722,7 @@
 							<height>268</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8005)</visible>
 						</control>
@@ -841,7 +841,7 @@
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8006)</visible>
 						</control>
@@ -969,7 +969,7 @@
 							<height>268</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8007)</visible>
 						</control>
@@ -1111,7 +1111,7 @@
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8008)</visible>
 						</control>
@@ -1296,7 +1296,7 @@
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8009)</visible>
 						</control>
@@ -1485,7 +1485,7 @@
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8010)</visible>
 						</control>
@@ -1670,7 +1670,7 @@
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8011)</visible>
 						</control>
@@ -1859,7 +1859,7 @@
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8012)</visible>
 						</control>
@@ -2044,7 +2044,7 @@
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[EpisodeThumbImage]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8013)</visible>
 						</control>
@@ -2222,7 +2222,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8014)</visible>
 						</control>
@@ -2388,7 +2388,7 @@
 							<height>225</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8015)</visible>
 						</control>
@@ -2557,7 +2557,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8016)</visible>
 						</control>
@@ -2723,7 +2723,7 @@
 							<height>225</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8017)</visible>
 						</control>
@@ -2892,7 +2892,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8018)</visible>
 						</control>
@@ -3058,7 +3058,7 @@
 							<height>225</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8019)</visible>
 						</control>
@@ -3229,7 +3229,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8020)</visible>
 						</control>
@@ -3396,7 +3396,7 @@
 							<height>215</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8021)</visible>
 						</control>
@@ -3567,7 +3567,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8022)</visible>
 						</control>
@@ -3734,7 +3734,7 @@
 							<height>215</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8023)</visible>
 						</control>
@@ -3905,7 +3905,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8024)</visible>
 						</control>
@@ -4072,7 +4072,7 @@
 							<height>215</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8025)</visible>
 						</control>
@@ -5623,7 +5623,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8030)</visible>
 						</control>
@@ -5806,7 +5806,7 @@
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8032)</visible>
 						</control>
@@ -5991,7 +5991,7 @@
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8033)</visible>
 						</control>
@@ -6157,7 +6157,7 @@
 							<height>170</height>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8035)</visible>
 						</control>
@@ -6286,7 +6286,7 @@
 							<height>268</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 							<bordersize>5</bordersize>
 							<visible>Control.HasFocus(8036)</visible>
 						</control>
@@ -6367,7 +6367,7 @@
 				<height>170</height>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio>keep</aspectratio>
-				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>Control.HasFocus(8026)</visible>
 			</control>
@@ -6444,7 +6444,7 @@
 				<height>268</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>Control.HasFocus(8027)</visible>
 			</control>
@@ -6522,7 +6522,7 @@
 				<height>155</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
-				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>Control.HasFocus(8028)</visible>
 			</control>
@@ -6625,7 +6625,7 @@
 				<height>215</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$VAR[EpisodeThumbImage]</texture>
-				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>Control.HasFocus(8029)</visible>
 			</control>
