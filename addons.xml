@@ -17,6 +17,32 @@
   </extension>
 </addon>
 <addon
+  id="skin.hybrid.dev"
+  version="3.1.0"
+  name="Hybrid Development"
+  provider-name="Mudislander">
+  <requires>
+    <import addon="xbmc.gui" version="5.3.0"/>
+	<import addon="script.favourites" version="6.0.1"/>
+	<import addon="service.library.data.provider" version="0.0.4"/>
+	<import addon="script.simpleplaylists" version="1.1.1"/>
+	<import addon="script.grab.fanart" version="0.13.2"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+     <summary lang="en">Hybrid Skin - Development Version</summary>
+    <description lang="en">Hybrid Development is the initial test release of new ideas and development for Hybrid. This version is [B]UNSTABLE[/B] and only to be used by the adventurous and is [B]NOT[/B] a skin for beginners!</description>
+     <disclaimer lang="en">Skin is under constant development - settings may get lost or changed at anytime.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+<addon
   id="skin.hybrid"
   version="3.0.1"
   name="Hybrid"
