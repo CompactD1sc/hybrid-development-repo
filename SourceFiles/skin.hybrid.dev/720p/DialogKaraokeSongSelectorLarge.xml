@@ -30,10 +30,10 @@
                 <width>370</width>
                 <height>30</height>
                 <font>font13_title</font>
-                <label>$LOCALIZE[31325]</label>
+                <label>$LOCALIZE[31321]</label>
                 <align>center</align>
                 <aligny>center</aligny>
-                <textcolor>selected</textcolor>
+                <textcolor>$VAR[SelectedColor]</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="button">
@@ -42,13 +42,23 @@
                 <top>15</top>
                 <width>64</width>
                 <height>32</height>
+                <label>-</label>
+                <font>-</font>
                 <onclick>PreviousMenu</onclick>
-                <texturefocus>DialogCloseButton-focus.png</texturefocus>
-                <texturenofocus>DialogCloseButton.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[MainColorOne]">DialogClose.png</texturefocus>
+                <texturenofocus>DialogClose.png</texturenofocus>
                 <onleft>10</onleft>
                 <onright>10</onright>
                 <onup>10</onup>
                 <ondown>10</ondown>
+                <visible>system.getbool(input.enablemouse)</visible>
+            </control>
+            <control type="image">
+                <left>360</left>
+                <top>15</top>
+                <width>64</width>
+                <height>32</height>
+                <texture>DialogCloseBtn.png</texture>
                 <visible>system.getbool(input.enablemouse)</visible>
             </control>
             <control type="label" id="401">
@@ -58,7 +68,7 @@
                 <width>390</width>
                 <height>30</height>
                 <font>font28_title</font>
-                <textcolor>white</textcolor>
+                <textcolor>$VAR[MainColorTwo]</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
             </control>
@@ -71,7 +81,7 @@
                 <font>font24</font>
                 <align>center</align>
                 <aligny>center</aligny>
-                <textcolor>blue</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
                 <scroll>true</scroll>
             </control>
         </control>

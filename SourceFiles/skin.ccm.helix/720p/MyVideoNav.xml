@@ -9,6 +9,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
+		<include>VideoExtrasIcon</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<include>CommonRootView</include>
@@ -192,8 +193,6 @@
 					<selected>Skin.HasSetting(EnableStatusBanner)</selected>
 					<visible>Control.IsVisible(732)</visible>
 				</control>
-				
-				
 				<control type="radiobutton" id="104">
 					<description>Show Watched Banners</description>
 					<textwidth>170</textwidth>
@@ -214,9 +213,6 @@
 					<visible>Skin.HasSetting(EnableStatusBanner)</visible>
 					<visible>Control.IsVisible(732)</visible>
 				</control>
-				
-				
-				
 				<control type="radiobutton" id="106">
 					<description>Episode Backgrounds</description>
 					<textwidth>170</textwidth>

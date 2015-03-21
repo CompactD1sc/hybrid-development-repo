@@ -248,6 +248,34 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Omogući Kiosk način"
 
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "Nasumični izvođač"
+
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Slučajno odabrani albumi"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Nedavni albumi"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Nedavne epizode"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Nedavni filmovi"
+
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "TV uživo"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Nijedan"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "Sljedeća Izvedba"
@@ -287,6 +315,10 @@ msgstr "Izbornik karaoke pjesama"
 msgctxt "#31322"
 msgid "Aired"
 msgstr "Emitirano"
+
+msgctxt "#31323"
+msgid "Use Banners"
+msgstr "Koristi transparente"
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -403,6 +435,10 @@ msgstr "Postavljanje zakazanog snimanja"
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr "Mogućnosti programa"
+
+msgctxt "#31648"
+msgid "Low List"
+msgstr "Niski popis"
 
 msgctxt "#31698"
 msgid "Media Certification Country"

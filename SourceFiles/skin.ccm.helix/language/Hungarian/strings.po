@@ -272,6 +272,30 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Kiosk mód engedélyezése"
 
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Véletlen albumok"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Jelenlegi albumok"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Jelenlegi részek"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Jelenlegi filmek"
+
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "Élő TV"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Nincs"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "Új Számok"
@@ -311,6 +335,10 @@ msgstr "Karaoke dalválasztó"
 msgctxt "#31322"
 msgid "Aired"
 msgstr "Játszva"
+
+msgctxt "#31323"
+msgid "Use Banners"
+msgstr "Bannerek használata"
 
 msgctxt "#31325"
 msgid "Playlist Options"

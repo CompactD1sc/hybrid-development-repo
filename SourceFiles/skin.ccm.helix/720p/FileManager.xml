@@ -425,7 +425,6 @@
 				<font>-</font>
 				<onclick>back</onclick>
 				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
-				
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>

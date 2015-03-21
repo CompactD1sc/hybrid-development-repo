@@ -280,6 +280,30 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Ενεργοποίηση Λειτουργίας Kiosk"
 
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Τυχαία Άλμπουμ"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Πρόσφατα Άλμπουμ"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Πρόσφατα Επεισόδια"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Πρόσφατες Ταινίες"
+
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Καμία"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "Επόμενα Κομμάτια"
@@ -319,6 +343,10 @@ msgstr "Επιλογή Τραγουδιού Karaoke"
 msgctxt "#31322"
 msgid "Aired"
 msgstr "Πρώτη Προβολή"
+
+msgctxt "#31323"
+msgid "Use Banners"
+msgstr "Χρήση Πανό"
 
 msgctxt "#31325"
 msgid "Playlist Options"

@@ -114,15 +114,31 @@
 					</item>
 					<item>
 						<description>Playlist Movies</description>
-						<label>$LOCALIZE[136]</label>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<include>MenuMoviePlayListCheck</include>
 					</item>
 					<item>
+						<description>Video Node</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31211]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Widget,VideoNode)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<include>MenuVideoNodeListCheck</include>
+					</item>
+					<item>
+						<description>UPnP Movies</description>
+						<label>$LOCALIZE[31115] $LOCALIZE[342]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UPnPMovies)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</visible>
+					</item>
+					<item>
 						<description>Playlist Music</description>
-						<label>$LOCALIZE[136]</label>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,MusicPlayList)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
@@ -168,14 +184,6 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<visible>!Skin.HasSetting(DisableScriptPlaylist)</visible>
 						<visible>Library.HasContent(Movies)</visible>
-					</item>
-					<item>
-						<description>UPnP Movies</description>
-						<label>$LOCALIZE[31115] $LOCALIZE[342]</label>
-						<onclick>Dialog.Close(2118)</onclick>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UPnPMovies)</onclick>
-						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-						<visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</visible>
 					</item>
 					<item>
 						<description>Recent Episodes</description>
@@ -224,13 +232,6 @@
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomAlbums)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
-					<!--item>
-                        <description>Random Artists</description>
-                        <label>$LOCALIZE[31186]</label>
-                        <onclick>Dialog.Close(2118)</onclick>
-                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomArtists)</onclick>
-                        <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-                    </item-->
 					<item>
 						<description>Suggested Albums</description>
 						<label>$LOCALIZE[31191]</label>

@@ -244,6 +244,30 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Activar o modo Quiosco"
 
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Álbums Ó Chou"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Álbums Recentes"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Episodios recentes"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Filmes recentes"
+
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "TV en Directo"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Ningún"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "Lista de reprodución"
@@ -283,6 +307,10 @@ msgstr "Selecionador de cancións do Karaoke"
 msgctxt "#31322"
 msgid "Aired"
 msgstr "Emitido"
+
+msgctxt "#31323"
+msgid "Use Banners"
+msgstr "Usar Pancartas"
 
 msgctxt "#31325"
 msgid "Playlist Options"

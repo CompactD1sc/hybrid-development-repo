@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!--onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload-->
+	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -147,7 +147,6 @@
 					<texture>$INFO[Skin.String(PhysicalMusicFolder)]$INFO[MusicPlayer.Artist]/logo.png</texture>
 					<aspectratio aligny="bottom" align="left">keep</aspectratio>
 					<visible>!IsEmpty(Skin.String(PhysicalMusicFolder))</visible>
-					<!--visible>!Player.IsInternetStream</visible-->
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
@@ -227,7 +226,6 @@
 				<top>45r</top>
 				<width>1280</width>
 				<height>25</height>
-				<align>center</align>
 				<label>$LOCALIZE[19031]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 				<align>center</align>
 				<aligny>center</aligny>

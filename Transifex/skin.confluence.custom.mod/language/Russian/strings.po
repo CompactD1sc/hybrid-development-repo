@@ -252,6 +252,30 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Включить Режим \"Киоск\""
 
+msgctxt "#31190"
+msgid "Random Albums"
+msgstr "Случайные альбомы"
+
+msgctxt "#31192"
+msgid "Recent Albums"
+msgstr "Последние альбомы"
+
+msgctxt "#31195"
+msgid "Recent Episodes"
+msgstr "Последние серии"
+
+msgctxt "#31198"
+msgid "Recent Movies"
+msgstr "Последние фильмы"
+
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "ТВ"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "Нет"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "Следующие треки"
@@ -295,6 +319,10 @@ msgstr "Выбор песен для караоке"
 msgctxt "#31322"
 msgid "Aired"
 msgstr "Премьера"
+
+msgctxt "#31323"
+msgid "Use Banners"
+msgstr "Использовать баннеры"
 
 msgctxt "#31325"
 msgid "Playlist Options"

@@ -712,7 +712,9 @@ msgctxt "#31210"
 msgid "Nodes"
 msgstr ""
 
-#empty string with id 31211
+msgctxt "#31211"
+msgid "Node"
+msgstr ""
 
 msgctxt "#31212"
 msgid "Streaming Media"
@@ -1194,7 +1196,15 @@ msgctxt "#31342"
 msgid "Enable DiscArt for All Media"
 msgstr ""
 
-#empty strings from id 31343 to 31345
+msgctxt "#31343"
+msgid "Download Art"
+msgstr ""
+
+msgctxt "#31344"
+msgid "ExtraFanArt"
+msgstr ""
+
+#empty strings from id 31345 to 31345
 
 msgctxt "#31346"
 msgid "Up One Level"
@@ -1396,7 +1406,9 @@ msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr ""
 
-#empty string with id 31407
+msgctxt "#31407"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin · Add and remove home menu items[CR]Change skin backgrounds"
+msgstr ""
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
@@ -1554,7 +1566,9 @@ msgctxt "#31698"
 msgid "Media Certification Country"
 msgstr ""
 
-#empty string with id 31699
+msgctxt "#31699"
+msgid "Extras"
+msgstr ""
 
 msgctxt "#31700"
 msgid "United States"

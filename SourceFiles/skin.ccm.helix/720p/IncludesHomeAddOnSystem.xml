@@ -608,7 +608,6 @@
 			<effect type="fade" start="0" end="100" delay="200" time="200" />
 		</animation>
 		<animation type="Hidden">
-			<!--effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="300" /-->
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 		<hitrect x="0" y="530" w="1280" h="120" />

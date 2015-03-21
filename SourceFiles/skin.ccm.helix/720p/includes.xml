@@ -114,6 +114,17 @@
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
+	<include name="VideoInfoDialogsValues">
+		<height>40</height>
+		<width>152</width>
+		<textoffsetx>20</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font12_title</font>
+		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="!IsEmpty(Window.Property(SideBladeOpen)) | ControlGroup(9000).HasFocus">WindowClose</animation>
@@ -1512,6 +1523,18 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<include name="VideoNodeStatsList">
+		<control type="list" id="8051">
+			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoNode)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1</width>
+			<height>1</height>
+			<focusedlayout />
+			<itemlayout />
+			<content>$VAR[VideoNodeStats]</content>
+		</control>
+	</include>
 	<include name="BackgroundFade">
 		<animation effect="fade" time="600">Visible</animation>
 		<animation effect="fade" time="600">Hidden</animation>
@@ -1611,6 +1634,22 @@
 			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.10) |
 			!IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.11) |
 			!IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,MusicPlaylist) + StringCompare(Window(Home).Property(UsrSelectBtn),HomeItem.12)
+		</visible>
+	</include>
+	<include name="MenuVideoNodeListCheck">
+		<visible>
+			!IsEmpty(Skin.String(HomeItem.1.Playlist)) + Skin.String(HomeItem.1.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.1) |
+			!IsEmpty(Skin.String(HomeItem.2.Playlist)) + Skin.String(HomeItem.2.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.2) |
+			!IsEmpty(Skin.String(HomeItem.3.Playlist)) + Skin.String(HomeItem.3.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.3) |
+			!IsEmpty(Skin.String(HomeItem.4.Playlist)) + Skin.String(HomeItem.4.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.4) |
+			!IsEmpty(Skin.String(HomeItem.5.Playlist)) + Skin.String(HomeItem.5.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.5) |
+			!IsEmpty(Skin.String(HomeItem.6.Playlist)) + Skin.String(HomeItem.6.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.6) |
+			!IsEmpty(Skin.String(HomeItem.7.Playlist)) + Skin.String(HomeItem.7.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.7) |
+			!IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.8) |
+			!IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.9) |
+			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.10) |
+			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.11) |
+			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.12)
 		</visible>
 	</include>
 </includes>

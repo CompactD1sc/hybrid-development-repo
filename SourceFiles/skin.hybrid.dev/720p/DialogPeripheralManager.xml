@@ -47,7 +47,7 @@
                 <label>$LOCALIZE[35000]</label>
                 <align>center</align>
                 <aligny>center</aligny>
-                <textcolor>selected</textcolor>
+                <textcolor>$VAR[SelectedColor]</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="button">
@@ -56,13 +56,23 @@
                 <top>15</top>
                 <width>64</width>
                 <height>32</height>
+                <label>-</label>
+                <font>-</font>
                 <onclick>PreviousMenu</onclick>
-                <texturefocus>DialogCloseButton-focus.png</texturefocus>
-                <texturenofocus>DialogCloseButton.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[MainColorOne]">DialogClose.png</texturefocus>
+                <texturenofocus>DialogClose.png</texturenofocus>
                 <onleft>10</onleft>
                 <onright>10</onright>
                 <onup>10</onup>
                 <ondown>10</ondown>
+                <visible>system.getbool(input.enablemouse)</visible>
+            </control>
+            <control type="image">
+                <left>520</left>
+                <top>15</top>
+                <width>64</width>
+                <height>32</height>
+                <texture>DialogCloseBtn.png</texture>
                 <visible>system.getbool(input.enablemouse)</visible>
             </control>
             <control type="list" id="20">
@@ -70,9 +80,9 @@
                 <top>65</top>
                 <width>550</width>
                 <height>510</height>
-                <onup>20</onup>
-                <ondown>20</ondown>
-                <onleft>10</onleft>
+                <onup>10</onup>
+                <ondown>10</ondown>
+                <onleft>61</onleft>
                 <onright>61</onright>
                 <pagecontrol>61</pagecontrol>
                 <scrolltime>200</scrolltime>
@@ -91,11 +101,11 @@
                         <top>5</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$INFO[ListItem.label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>white</textcolor>
+                        <textcolor>$VAR[MainColorTwo]</textcolor>
                     </control>
                     <control type="label">
                         <description>Product ID Vendor ID</description>
@@ -103,11 +113,11 @@
                         <top>30</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$LOCALIZE[35504]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Product)][/COLOR]    $LOCALIZE[35503]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Vendor)][/COLOR]</label>
+                        <label>$LOCALIZE[35504]:  [COLOR=grey2]$INFO[ListItem.Property(Product)][/COLOR]    $LOCALIZE[35503]:  [COLOR=grey2]$INFO[ListItem.Property(Vendor)][/COLOR]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
-                        <textcolor>blue</textcolor>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>class</description>
@@ -115,11 +125,11 @@
                         <top>50</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$LOCALIZE[35501]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Class)][/COLOR]     $LOCALIZE[19114]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Version)][/COLOR]</label>
+                        <label>$LOCALIZE[35501]:  [COLOR=grey2]$INFO[ListItem.Property(Class)][/COLOR]     $LOCALIZE[19114]:  [COLOR=grey2]$INFO[ListItem.Property(Version)][/COLOR]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
-                        <textcolor>blue</textcolor>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                 </itemlayout>
                 <focusedlayout height="85" width="550">
@@ -137,7 +147,7 @@
                         <top>0</top>
                         <width>550</width>
                         <height>80</height>
-                        <texture border="5">button-focus2.png</texture>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
                         <visible>Control.HasFocus(20)</visible>
                         <include>VisibleFadeEffect</include>
                     </control>
@@ -147,11 +157,11 @@
                         <top>5</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$INFO[ListItem.label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font13</font>
-                        <textcolor>white</textcolor>
+                        <textcolor>$VAR[MainColorTwo]</textcolor>
                     </control>
                     <control type="label">
                         <description>Product ID Vendor ID</description>
@@ -159,11 +169,11 @@
                         <top>30</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$LOCALIZE[35504]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Product)][/COLOR]    $LOCALIZE[35503]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Vendor)][/COLOR]</label>
+                        <label>$LOCALIZE[35504]:  [COLOR=grey2]$INFO[ListItem.Property(Product)][/COLOR]    $LOCALIZE[35503]:  [COLOR=grey2]$INFO[ListItem.Property(Vendor)][/COLOR]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
-                        <textcolor>blue</textcolor>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                     <control type="label">
                         <description>class</description>
@@ -171,11 +181,11 @@
                         <top>50</top>
                         <width>520</width>
                         <height>20</height>
-                        <label>$LOCALIZE[35501]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Class)][/COLOR]     $LOCALIZE[19114]$LOCALIZE[31000]  [COLOR=grey2]$INFO[ListItem.Property(Version)][/COLOR]</label>
+                        <label>$LOCALIZE[35501]:  [COLOR=grey2]$INFO[ListItem.Property(Class)][/COLOR]     $LOCALIZE[19114]:  [COLOR=grey2]$INFO[ListItem.Property(Version)][/COLOR]</label>
                         <align>left</align>
                         <aligny>center</aligny>
                         <font>font12</font>
-                        <textcolor>blue</textcolor>
+                        <textcolor>$VAR[MainColorOne]</textcolor>
                     </control>
                 </focusedlayout>
             </control>
@@ -186,14 +196,14 @@
                 <height>510</height>
                 <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                 <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                 <textureslidernib>ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
                 <onleft>20</onleft>
                 <onright>10</onright>
                 <ondown>61</ondown>
                 <onup>61</onup>
-                <showonepage>true</showonepage>
+                <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
             </control>
             <control type="label">
@@ -207,7 +217,7 @@
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <textcolor>grey</textcolor>
-                <label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31259] - $LOCALIZE[31319] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+                <label>([COLOR=$VAR[MainColorOne]]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31319] ([COLOR=$VAR[MainColorOne]]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
             </control>
             <control type="button" id="10">
                 <description>OK button</description>
@@ -217,11 +227,9 @@
                 <height>40</height>
                 <label>186</label>
                 <font>font12_title</font>
-                <textcolor>white</textcolor>
-                <focusedcolor>white</focusedcolor>
+                <textcolor>$VAR[MainColorTwo]</textcolor>
+                <focusedcolor>$VAR[MainColorTwo]</focusedcolor>
                 <align>center</align>
-                <onleft>61</onleft>
-                <onright>20</onright>
                 <onup>20</onup>
                 <ondown>20</ondown>
             </control>
