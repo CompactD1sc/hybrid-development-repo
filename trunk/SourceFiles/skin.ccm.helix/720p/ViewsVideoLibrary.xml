@@ -181,7 +181,7 @@
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>
 				<include>AspectCodecFlaggingConditions</include>
-				<include>VideoStereoscopicsFlaggingConditions</include>
+				<include>VideoExtrasFlaggingConditions</include>
 				<include>VideoTypeHackFlaggingConditions</include>
 			</control>
 		</control>
@@ -746,7 +746,7 @@
 				<include>AudioCodecFlaggingConditions</include>
 				<include>AudioChannelsFlaggingConditions</include>
 				<include>AspectCodecFlaggingConditions</include>
-				<include>VideoStereoscopicsFlaggingConditions</include>
+				<include>VideoExtrasFlaggingConditions</include>
 				<include>VideoTypeHackFlaggingConditions</include>
 			</control>
 			<control type="grouplist">
@@ -1182,7 +1182,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="label">
@@ -1192,7 +1192,6 @@
 					<width>510</width>
 					<height>30</height>
 					<label>$INFO[ListItem.Season, $LOCALIZE[20373] : ] $INFO[ListItem.episode, $LOCALIZE[20359] : ] $INFO[ListItem.premiered, $LOCALIZE[31322] : ]</label>
-					
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -1290,7 +1289,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="textbox">
@@ -1517,8 +1516,6 @@
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
 					<imagepath background="true">$INFO[ListItem.path,,extrathumbs/]</imagepath>
-					<bordertexture background="true" border="8">ThumbShadow.png</bordertexture>
-					<bordersize>8</bordersize>
 					<visible>!IsEmpty(Control.GetLabel(5045))</visible>
 					<visible>!Skin.HasSetting(Disable504FanArt) + Container.Content(Movies)</visible>
 				</control>
@@ -1560,7 +1557,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">
@@ -1680,7 +1677,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">
@@ -2070,7 +2067,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">
@@ -2265,7 +2262,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
-					<include>VideoStereoscopicsFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="image">

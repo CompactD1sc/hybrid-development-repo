@@ -733,7 +733,6 @@
 						<onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
 						<selected>!Skin.HasSetting(HideBackGroundFanart)</selected>
 					</control>
-					
 					<control type="button" id="148">
 						<width>750</width>
 						<height>40</height>

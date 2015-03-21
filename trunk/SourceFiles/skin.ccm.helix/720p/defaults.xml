@@ -23,8 +23,6 @@
 		<width>300</width>
 		<height>42</height>
 		<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">button-focus.png</texturefocus>
-		
-		
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>

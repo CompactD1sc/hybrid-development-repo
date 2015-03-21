@@ -35,7 +35,7 @@
                 <label>$LOCALIZE[31048]</label>
                 <align>center</align>
                 <aligny>center</aligny>
-                <textcolor>selected</textcolor>
+                <textcolor>$VAR[SelectedColor]</textcolor>
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="button">
@@ -44,13 +44,23 @@
                 <top>15</top>
                 <width>64</width>
                 <height>32</height>
+                <label>-</label>
+                <font>-</font>
                 <onclick>PreviousMenu</onclick>
-                <texturefocus>DialogCloseButton-focus.png</texturefocus>
-                <texturenofocus>DialogCloseButton.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[MainColorOne]">DialogClose.png</texturefocus>
+                <texturenofocus>DialogClose.png</texturenofocus>
                 <onleft>2</onleft>
                 <onright>2</onright>
                 <onup>2</onup>
                 <ondown>2</ondown>
+                <visible>system.getbool(input.enablemouse)</visible>
+            </control>
+            <control type="image">
+                <left>710</left>
+                <top>15</top>
+                <width>64</width>
+                <height>32</height>
+                <texture>DialogCloseBtn.png</texture>
                 <visible>system.getbool(input.enablemouse)</visible>
             </control>
             <control type="label" id="4">
@@ -88,10 +98,10 @@
                         <height>40</height>
                         <font>font13</font>
                         <textcolor>grey2</textcolor>
-                        <selectedcolor>selected</selectedcolor>
+                        <selectedcolor>$VAR[SelectedColor]</selectedcolor>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
                 <focusedlayout height="45" width="720">
@@ -109,7 +119,7 @@
                         <top>0</top>
                         <width>720</width>
                         <height>40</height>
-                        <texture border="5">button-focus2.png</texture>
+                        <texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
                         <visible>Control.HasFocus(2)</visible>
                         <include>VisibleFadeEffect</include>
                     </control>
@@ -119,11 +129,11 @@
                         <width>700</width>
                         <height>40</height>
                         <font>font13</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>selected</selectedcolor>
+                        <textcolor>$VAR[MainColorTwo]</textcolor>
+                        <selectedcolor>$VAR[SelectedColor]</selectedcolor>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
             </control>
@@ -134,14 +144,14 @@
                 <height>495</height>
                 <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
                 <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-                <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
                 <textureslidernib>ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+                <textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
                 <onleft>2</onleft>
                 <onright>2</onright>
                 <ondown>60</ondown>
                 <onup>60</onup>
-                <showonepage>true</showonepage>
+                <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
             </control>
             <control type="label">
@@ -155,7 +165,7 @@
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <textcolor>grey</textcolor>
-                <label>([COLOR=blue]$INFO[Container(2).NumItems][/COLOR]) $LOCALIZE[31259] - $LOCALIZE[31319] ([COLOR=blue]$INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages][/COLOR])</label>
+                <label>([COLOR=$VAR[MainColorOne]]$INFO[Container(2).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31319] ([COLOR=$VAR[MainColorOne]]$INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages][/COLOR])</label>
             </control>
         </control>
     </controls>

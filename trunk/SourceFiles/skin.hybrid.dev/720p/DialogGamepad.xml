@@ -33,7 +33,7 @@
             <label>$LOCALIZE[13406]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>selected</textcolor>
+            <textcolor>$VAR[SelectedColor]</textcolor>
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="button">
@@ -42,13 +42,23 @@
             <top>15</top>
             <width>64</width>
             <height>32</height>
+            <label>-</label>
+            <font>-</font>
             <onclick>PreviousMenu</onclick>
-            <texturefocus>DialogCloseButton-focus.png</texturefocus>
-            <texturenofocus>DialogCloseButton.png</texturenofocus>
+            <texturefocus colordiffuse="$VAR[MainColorOne]">DialogClose.png</texturefocus>
+            <texturenofocus>DialogClose.png</texturenofocus>
             <onleft>10</onleft>
             <onright>10</onright>
             <onup>10</onup>
             <ondown>10</ondown>
+            <visible>system.getbool(input.enablemouse)</visible>
+        </control>
+        <control type="image">
+            <left>520</left>
+            <top>15</top>
+            <width>64</width>
+            <height>32</height>
+            <texture>DialogCloseBtn.png</texture>
             <visible>system.getbool(input.enablemouse)</visible>
         </control>
         <control type="label" id="2">
@@ -59,6 +69,7 @@
             <height>30</height>
             <align>left</align>
             <aligny>center</aligny>
+            <label>-</label>
             <font>font13</font>
         </control>
         <control type="label" id="3">
@@ -69,6 +80,7 @@
             <height>30</height>
             <align>left</align>
             <aligny>center</aligny>
+            <label>-</label>
             <font>font13</font>
         </control>
         <control type="label" id="4">
@@ -79,6 +91,7 @@
             <height>30</height>
             <align>left</align>
             <aligny>center</aligny>
+            <label>-</label>
             <font>font35_title</font>
         </control>
     </controls>

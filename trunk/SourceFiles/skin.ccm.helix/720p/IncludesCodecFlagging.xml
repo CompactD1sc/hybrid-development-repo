@@ -27,14 +27,14 @@
 			<texture>$VAR[videocodec,flagging/video/,.png]</texture>
 		</control>
 	</include>
-	<include name="VideoStereoscopicsFlaggingConditions">
+	<include name="VideoExtrasFlaggingConditions">
 		<control type="image">
-			<description>Video stereoscopics flagging image</description>
+			<description>Extra Info Flag</description>
 			<width>55</width>
 			<height>35</height>
-			<aspectratio align="right">keep</aspectratio>
-			<texture>flagging/video/3D.png</texture>
-			<visible>ListItem.IsStereoscopic</visible>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$VAR[ExtraInfoFlag]</texture>
+			<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 		</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">

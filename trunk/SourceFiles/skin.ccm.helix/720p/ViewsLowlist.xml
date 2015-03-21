@@ -252,6 +252,7 @@
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
+					<include>VideoExtrasFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
 				<control type="textbox">

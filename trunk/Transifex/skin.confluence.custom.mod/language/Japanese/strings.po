@@ -236,6 +236,14 @@ msgctxt "#31144"
 msgid "Windows Home Server"
 msgstr "Windows Home Server"
 
+msgctxt "#31202"
+msgid "Live TV"
+msgstr "ライブTV"
+
+msgctxt "#31254"
+msgid "None"
+msgstr "なし"
+
 msgctxt "#31261"
 msgid "Next Tracks"
 msgstr "プレイリスト"

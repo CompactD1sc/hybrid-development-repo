@@ -125,11 +125,6 @@
 						<width>200</width>
 						<height>33</height>
 						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
-						
-						
-					
-						
-						
 						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
@@ -217,9 +212,6 @@
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColorOne]">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				
-				
-				
 				<textureslidernib colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="$VAR[MainColorOne]">ScrollBarNib.png</textureslidernibfocus>
 				<onleft>50</onleft>

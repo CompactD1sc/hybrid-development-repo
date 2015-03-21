@@ -44,7 +44,7 @@
             <label>$LOCALIZE[19053]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>selected</textcolor>
+            <textcolor>$VAR[SelectedColor]</textcolor>
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="button">
@@ -53,13 +53,23 @@
             <top>15</top>
             <width>64</width>
             <height>32</height>
+            <label>-</label>
+            <font>-</font>
             <onclick>PreviousMenu</onclick>
-            <texturefocus>DialogCloseButton-focus.png</texturefocus>
-            <texturenofocus>DialogCloseButton.png</texturenofocus>
+            <texturefocus colordiffuse="$VAR[MainColorOne]">DialogClose.png</texturefocus>
+            <texturenofocus>DialogClose.png</texturenofocus>
             <onleft>10</onleft>
             <onright>10</onright>
             <onup>10</onup>
             <ondown>10</ondown>
+            <visible>system.getbool(input.enablemouse)</visible>
+        </control>
+        <control type="image">
+            <left>640</left>
+            <top>15</top>
+            <width>64</width>
+            <height>32</height>
+            <texture>DialogCloseBtn.png</texture>
             <visible>system.getbool(input.enablemouse)</visible>
         </control>
         <control type="label">
@@ -72,7 +82,7 @@
             <label>$INFO[ListItem.Title]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>blue</textcolor>
+            <textcolor>$VAR[MainColorOne]</textcolor>
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="group">
@@ -87,8 +97,8 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
-                <label>$LOCALIZE[552]$LOCALIZE[31000]</label>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>$LOCALIZE[552]:</label>
             </control>
             <control type="label">
                 <description>Start date value</description>
@@ -99,7 +109,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>white</textcolor>
+                <textcolor>$VAR[MainColorTwo]</textcolor>
                 <label>$INFO[ListItem.StartDate]</label>
             </control>
             <control type="label">
@@ -111,7 +121,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
                 <label>$LOCALIZE[142]</label>
             </control>
             <control type="label">
@@ -123,7 +133,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>white</textcolor>
+                <textcolor>$VAR[MainColorTwo]</textcolor>
                 <label>$INFO[ListItem.StartTime]</label>
             </control>
             <control type="label">
@@ -135,8 +145,8 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
-                <label>$LOCALIZE[19148]$LOCALIZE[31000]</label>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>$LOCALIZE[19148]:</label>
             </control>
             <control type="fadelabel">
                 <description>Channel Value</description>
@@ -147,7 +157,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>white</textcolor>
+                <textcolor>$VAR[MainColorTwo]</textcolor>
                 <label>$INFO[ListItem.ChannelName]</label>
             </control>
             <control type="label">
@@ -159,8 +169,8 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
-                <label>$LOCALIZE[180]$LOCALIZE[31000]</label>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>$LOCALIZE[180]:</label>
             </control>
             <control type="label">
                 <description>Duration value</description>
@@ -181,8 +191,8 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
-                <label>$LOCALIZE[135]$LOCALIZE[31000]</label>
+                <textcolor>$VAR[MainColorOne]</textcolor>
+                <label>$LOCALIZE[135]:</label>
             </control>
             <control type="label">
                 <description>Genre value</description>
@@ -202,7 +212,7 @@
                 <label>$INFO[ListItem.PlotOutline]</label>
                 <align>center</align>
                 <font>font13</font>
-                <textcolor>blue</textcolor>
+                <textcolor>$VAR[MainColorOne]</textcolor>
                 <scroll>true</scroll>
                 <visible>!IsEmpty(ListItem.PlotOutline)</visible>
             </control>
@@ -218,19 +228,20 @@
             <scroll>true</scroll>
             <align>right</align>
             <aligny>center</aligny>
-            <label>[COLOR=blue]$LOCALIZE[207][/COLOR]$INFO[Container(400).CurrentPage, ( $LOCALIZE[31319] ]$INFO[Container(400).NumPages,/, )]</label>
+            <label>[COLOR=$VAR[MainColorOne]]$LOCALIZE[207][/COLOR]$INFO[Container(400).CurrentPage, ( $LOCALIZE[31319] ]$INFO[Container(400).NumPages,/, )]</label>
         </control>
         <control type="spincontrol" id="60">
             <description>Next page button</description>
             <left>620</left>
             <top>375</top>
             <subtype>page</subtype>
+            <font>-</font>
             <onleft>60</onleft>
             <onright>60</onright>
             <ondown>9000</ondown>
             <onup>9000</onup>
             <textcolor>-</textcolor>
-            <showonepage>true</showonepage>
+            <showonepage>false</showonepage>
         </control>
         <control type="textbox" id="400">
             <description>PLOT</description>
