@@ -1,4 +1,0 @@
-.svn
-.git
-D:\Repository\SourceFiles\skin.hybrid.dev\media
-D:\Repository\SourceFiles\skin.hybrid.dev\themes
