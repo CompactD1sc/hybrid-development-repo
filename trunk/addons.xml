@@ -238,7 +238,7 @@
 </addon>
 <addon
   id="skin.ccm.helix"
-  version="3.0.14"
+  version="3.0.15"
   name="CCM Helix"
   provider-name="Mudislander">
   <requires>
